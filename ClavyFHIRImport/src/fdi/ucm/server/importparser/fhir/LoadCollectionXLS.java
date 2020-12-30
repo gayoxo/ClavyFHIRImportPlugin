@@ -31,12 +31,18 @@ public class LoadCollectionXLS extends LoadCollection{
 
 		 ArrayList<String> Log = new ArrayList<String>();
 		 CollectionFHIR C=null;
-		 if (dateEntrada.size()>0 && !dateEntrada.get(0).isEmpty())
+		 if (dateEntrada.size()>1 && !dateEntrada.get(0).isEmpty() && !dateEntrada.get(1).isEmpty())
 			{ 
 			String fileName = dateEntrada.get(0);
-			 System.out.println(fileName);
+			int limit=10;
+			try {
+				limit = Integer.parseInt(dateEntrada.get(1));
+			} catch (Exception e) {
+				Log.add("Error: limit set to 10 by default");
+			}
+			
 			 C = new CollectionFHIR();
-			 C.procesaFHIR(fileName,Log);
+			 C.procesaFHIR(fileName,Log,limit);
 			}
 			else
 			{
@@ -44,6 +50,8 @@ public class LoadCollectionXLS extends LoadCollection{
 						Log.add("Error: Numero de Elementos de entrada invalidos");
 				if (dateEntrada.get(0).isEmpty()) 
 					Log.add("Error: Direccion de FHIR incorrecta");
+				if (dateEntrada.get(1).isEmpty()) 
+					Log.add("Error: Limite no encontrado");
 			}
 		 
 
@@ -56,6 +64,7 @@ public class LoadCollectionXLS extends LoadCollection{
 		{
 			ArrayList<ImportExportPair> ListaCampos=new ArrayList<ImportExportPair>();
 			ListaCampos.add(new ImportExportPair(ImportExportDataEnum.Text, "URL BASE FHIR"));
+			ListaCampos.add(new ImportExportPair(ImportExportDataEnum.Number, "Limit of patients page"));
 			Parametros=ListaCampos;
 			return ListaCampos;
 		}

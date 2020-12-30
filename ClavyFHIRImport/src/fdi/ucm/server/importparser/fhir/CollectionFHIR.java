@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 
 import com.google.gson.Gson;
@@ -32,22 +33,27 @@ public class CollectionFHIR {
 	private CompleteCollection Collection;
 	public boolean debugfile=false;
 	private ArrayList<String> log=new ArrayList<String>();
+	private Map<String, HashMap<String,Object>> PACIENTES;
+	
+	
 	
 
-	public void procesaFHIR(String URLBase, ArrayList<String> log) {
+	public void procesaFHIR(String URLBase, ArrayList<String> log, int limit) {
 
 		this.log=log;
 		
-		cargaPacientes(URLBase);
+		PACIENTES=new HashMap<String, HashMap<String,Object>>();
+
 		
+		cargaPacientes(URLBase,limit);
 		
-		
+				
 		
 		
 		
 	}
 
-	private void cargaPacientes(String URLBase) {
+	private void cargaPacientes(String URLBase, int limit) {
 		if (debugfile&& (new File("pacientes.json").exists()))
 		{
 			System.out.println("//////////Leido archivo de pacientes");
@@ -56,14 +62,15 @@ public class CollectionFHIR {
 			int indice=1;
 			while ((new File(actual).exists()))
 			{
+				StringBuffer SB= new StringBuffer();
 				try {
 					File myObj = new File(actual);
 				      Scanner myReader = new Scanner(myObj);
 				      System.out.println("//////////INICIO "+actual);
 				      while (myReader.hasNextLine()) {
 				        String data = myReader.nextLine();
-
-				        System.out.println(data);
+				        SB.append(data);
+//				        System.out.println(data);
 				      }
 				      myReader.close();
 				      System.out.println("//////////FIN "+actual);
@@ -73,6 +80,12 @@ public class CollectionFHIR {
 				
 				actual= "pacientes.json."+indice+".json";
 				indice++;
+				
+				JsonElement JSONELEM = new JsonParser().parse(SB.toString());
+				
+					
+				processJSON(JSONELEM.getAsJsonObject());
+				
 			}
 		}else
 		{
@@ -100,7 +113,7 @@ public class CollectionFHIR {
 			String ActualURL = querryBuffer.toString();
 			int conteoFile=0;
 
-			while (ActualURL!=null &&!ActualURL.isEmpty())
+			while (ActualURL!=null &&!ActualURL.isEmpty() && conteoFile<limit)
 			
 			{
 			try {
@@ -176,7 +189,7 @@ public class CollectionFHIR {
 					JsonObject obj=LINKNEXT_arra.get(i).getAsJsonObject();
 					if (obj.get("relation").getAsJsonPrimitive().getAsString().toLowerCase().equals("next"))
 					{
-						next_link=obj.get("url").getAsJsonPrimitive().toString();
+						next_link=obj.get("url").getAsJsonPrimitive().getAsString();
 						System.out.println(next_link);
 					}
 					
@@ -186,6 +199,7 @@ public class CollectionFHIR {
 				ActualURL=next_link;
 				
 				
+				processJSON(JSONELEM.getAsJsonObject());
 				
 			} catch (MalformedURLException e) {
 				log.add(e.getMessage());
@@ -202,6 +216,74 @@ public class CollectionFHIR {
 
 	}
 
+	private void processJSON(JsonObject asJsonObject) {
+		JsonElement ENTRYNEXT = asJsonObject.get("entry");
+		JsonArray ENTRYNEXT_Array=ENTRYNEXT.getAsJsonArray();
+		
+		for (int i = 0; i < ENTRYNEXT_Array.size(); i++) {
+			
+			
+			
+			
+			JsonObject paciente=ENTRYNEXT_Array.get(i).getAsJsonObject();
+			
+			HashMap<String, Object> Propiedades=new HashMap<String, Object>();
+			
+			Propiedades.put("URL", paciente.get("fullUrl").getAsJsonPrimitive().getAsString());
+			
+			JsonObject Recurso = paciente.get("resource").getAsJsonObject();
+			
+			String ID = Recurso.get("id").getAsJsonPrimitive().getAsString();
+			
+			Propiedades.put("ID", ID);
+			
+			
+			StringBuffer DESC= new StringBuffer();
+			
+			DESC.append(ID);
+			DESC.append("  ");
+			
+			if (Recurso.get("text")!=null)
+			{
+				
+				if (Recurso.get("text").getAsJsonObject().get("status")!=null)
+					{
+					DESC.append(Recurso.get("text").getAsJsonObject().get("status").getAsJsonPrimitive().getAsString());
+					DESC.append("  ");
+					}
+				
+				if (Recurso.get("text").getAsJsonObject().get("div")!=null)
+					{
+					DESC.append(Recurso.get("text").getAsJsonObject().get("div").getAsJsonPrimitive().getAsString());
+					DESC.append("  ");
+					}
+					
+			}
+			
+			Propiedades.put("DESC", DESC.toString());
+			
+		
+			if (debugfile)
+			{
+			System.out.println("///////Paciente START");
+			
+			for (Entry<String, Object> jsonElement : Propiedades.entrySet()) {
+				
+				if (jsonElement.getValue() instanceof String)
+					System.out.println(jsonElement.getKey()+":"+jsonElement.getValue().toString());
+			}
+			
+			
+			System.out.println("///////Paciente END");
+			}
+			
+			
+			PACIENTES.put(ID,Propiedades);
+			
+		}
+		
+	}
+
 	public CompleteCollection getColeccion() {
 		return Collection;
 	}
@@ -210,7 +292,7 @@ public class CollectionFHIR {
 		CollectionFHIR C=new CollectionFHIR();
 		ArrayList<String> log = new ArrayList<String>();
 		C.debugfile=true;
-		C.procesaFHIR("http://hapi.fhir.org/baseR4", log);
+		C.procesaFHIR("http://hapi.fhir.org/baseR4", log,10);
 		
 //		 try {
 //				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";

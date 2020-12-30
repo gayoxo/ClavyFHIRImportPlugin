@@ -1,0 +1,2161 @@
+{
+  "resourceType": "Bundle",
+  "id": "8198f9e1-a1ed-442b-b477-05d8fb4270e6",
+  "meta": {
+    "lastUpdated": "2020-12-30T10:56:58.456+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d8198f9e1-a1ed-442b-b477-05d8fb4270e6\u0026_getpagesoffset\u003d100\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    },
+    {
+      "relation": "next",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d8198f9e1-a1ed-442b-b477-05d8fb4270e6\u0026_getpagesoffset\u003d120\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    },
+    {
+      "relation": "previous",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d8198f9e1-a1ed-442b-b477-05d8fb4270e6\u0026_getpagesoffset\u003d80\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606940",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606940",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T13:58:03.514+00:00",
+          "source": "#K9lpzIBqP85sNdgy"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003ePeter James \u003cb\u003eCHALMERS \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e12345\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e534 Erewhon St \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003ePleasantVille \u003c/span\u003e\u003cspan\u003eVic \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e25 December 1974\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "system": "urn:oid:1.2.36.146.595.217.0.1",
+            "value": "12345",
+            "period": {
+              "start": "2001-05-06"
+            },
+            "assigner": {
+              "display": "Acme Healthcare"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Chalmers",
+            "given": [
+              "Peter",
+              "James"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "(03) 5555 6473",
+            "use": "work",
+            "rank": 1
+          },
+          {
+            "system": "phone",
+            "value": "(03) 3410 5613",
+            "use": "mobile",
+            "rank": 2
+          },
+          {
+            "system": "phone",
+            "value": "(03) 5555 8834",
+            "use": "old",
+            "period": {
+              "end": "2014"
+            }
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1974-12-25",
+        "_birthDate": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+              "valueDateTime": "1974-12-25T14:35:45-05:00"
+            }
+          ]
+        },
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "type": "both",
+            "text": "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+            "line": [
+              "534 Erewhon St"
+            ],
+            "city": "PleasantVille",
+            "district": "Rainbow",
+            "state": "Vic",
+            "postalCode": "3999",
+            "period": {
+              "start": "1974-12-25"
+            }
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "N"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "family": "du Marché",
+              "_family": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                    "valueString": "VV"
+                  }
+                ]
+              },
+              "given": [
+                "Bénédicte"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "+33 (237) 998327"
+              }
+            ],
+            "address": {
+              "use": "home",
+              "type": "both",
+              "line": [
+                "534 Erewhon St"
+              ],
+              "city": "PleasantVille",
+              "district": "Rainbow",
+              "state": "Vic",
+              "postalCode": "3999",
+              "period": {
+                "start": "1974-12-25"
+              }
+            },
+            "gender": "female",
+            "period": {
+              "start": "2012"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606941",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606941",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T14:00:24.965+00:00",
+          "source": "#3tKVZTMSlFdXxofu"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eHYANG SUK \u003cb\u003eBAEK \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e12366541\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e16 August 1959\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "value": "12366541"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "BAEK",
+            "given": [
+              "HYANG SUK"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1959-08-16"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606942",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606942",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T14:00:54.393+00:00",
+          "source": "#doG3HCdr6vHA3Zqx"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eHYANG SUK \u003cb\u003eBAEK \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e12366541\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e16 August 1959\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "value": "12366541"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "BAEK",
+            "given": [
+              "HYANG SUK"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1959-08-16"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606943",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606943",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T14:01:21.298+00:00",
+          "source": "#hCixRdfa6uSQPjQw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eHYANG SUK \u003cb\u003eBAEK \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e12366541\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e16 August 1959\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "value": "12366541"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "BAEK",
+            "given": [
+              "HYANG SUK"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1959-08-16"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606952",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606952",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T16:08:07.087+00:00",
+          "source": "#Mmx5qLpAQPaQmLtK"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eJesuis \u003cb\u003eSANSMAILETSANSTELEPHONE \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e1980011535000\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e15 January 1980\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "1980011535000",
+            "assigner": {
+              "display": "NEHS DIGITAL"
+            }
+          }
+        ],
+        "name": [
+          {
+            "family": "Sansmailetsanstelephone",
+            "given": [
+              "Jesuis"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "use": "mobile"
+          },
+          {
+            "system": "phone",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1980-01-15"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606983",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606983",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T18:49:21.300+00:00",
+          "source": "#4qdWNd2sqM5y1pJF"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eFranz \u003cb\u003eMUSTER \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e12345\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003eLeidensweg 10 \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003ePleasantVille \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e02 October 1967\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "system": "urn:oid:1.2.36.146.595.217.0.1",
+            "value": "12345"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Muster",
+            "given": [
+              "Franz"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1967-10-02",
+        "address": [
+          {
+            "use": "home",
+            "type": "both",
+            "line": [
+              "Leidensweg 10"
+            ],
+            "city": "PleasantVille",
+            "district": "Specimendorf",
+            "postalCode": "9876"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606987",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606987",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T19:05:49.968+00:00",
+          "source": "#MGZuq4aV8RpYskcv"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eFranz \u003cb\u003eMUSTER \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e12345\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003eLeidensweg 10 \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003eSpecimendorf \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e02 October 1967\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "system": "urn:oid:1.2.36.146.595.217.0.1",
+            "value": "12345"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Muster",
+            "given": [
+              "Franz"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1967-10-02",
+        "address": [
+          {
+            "use": "home",
+            "type": "both",
+            "line": [
+              "Leidensweg 10"
+            ],
+            "city": "Specimendorf",
+            "postalCode": "9876"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606988",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606988",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T19:06:18.496+00:00",
+          "source": "#ARqQmDXqzjiNYTGi"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eFranz \u003cb\u003eMUSTER \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e12345\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003eLeidensweg 10 \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003eSpecimendorf \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e02 October 1967\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "system": "urn:oid:1.2.36.146.595.217.0.1",
+            "value": "12345"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Muster",
+            "given": [
+              "Franz"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1967-10-02",
+        "address": [
+          {
+            "use": "home",
+            "type": "both",
+            "line": [
+              "Leidensweg 10"
+            ],
+            "city": "Specimendorf",
+            "postalCode": "9876"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606944",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606944",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2020-10-19T13:09:00.544+00:00",
+          "source": "#qdOAflJLGfW61tm8"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e \u003cdiv class\u003d\"hapiHeaderText\"\u003eJeremy \u003cb\u003eLAPURÉE \u003c/b\u003e \u003c/div\u003e \u003ctable class\u003d\"hapiPropertyTable\"\u003e \u003ctbody\u003e \u003ctr\u003e \u003ctd\u003eIdentifier\u003c/td\u003e \u003ctd\u003e1990010135000\u003c/td\u003e \u003c/tr\u003e \u003ctr\u003e \u003ctd\u003eDate of birth\u003c/td\u003e \u003ctd\u003e \u003cspan\u003e01 January 1990\u003c/span\u003e \u003c/td\u003e \u003c/tr\u003e \u003c/tbody\u003e \u003c/table\u003e \u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "1990010135000",
+            "assigner": {
+              "display": "NEHS DIGITAL"
+            }
+          }
+        ],
+        "name": [
+          {
+            "family": "Lapurée",
+            "given": [
+              "Jeremy"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "06.28.05.72.37",
+            "use": "mobile"
+          },
+          {
+            "system": "phone",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "   jeremy.lapuree@mailinator.com   ",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1990-01-01"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606904",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606904",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T12:20:32.372+00:00",
+          "source": "#TvKXpZZvlELal9TP"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: v2.4.0-404-ge7ce2295\n .   Person seed: -2998428632519719896  Population seed: 0\u003c/div\u003e"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Jeanett771 Brown30"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Millis",
+              "state": "Massachusetts",
+              "country": "US"
+            }
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+            "valueDecimal": 1.084289124346244
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+            "valueDecimal": 64.91571087565376
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "417e0431-e087-4c77-8ab2-17f135fdd596"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "417e0431-e087-4c77-8ab2-17f135fdd596"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-90-2795"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver\u0027s License"
+                }
+              ],
+              "text": "Driver\u0027s License"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99927368"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X55198215X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Schimmel440",
+            "given": [
+              "Alfred550"
+            ],
+            "prefix": [
+              "Mr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-309-5367",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1952-02-13",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 42.1454553804842
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -71.36416815814376
+                  }
+                ]
+              }
+            ],
+            "line": [
+              "1044 Medhurst Divide Unit 41"
+            ],
+            "city": "Franklin",
+            "state": "Massachusetts",
+            "postalCode": "02038",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "M"
+            }
+          ],
+          "text": "M"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606905",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606905",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T12:21:19.744+00:00",
+          "source": "#xTxfeGqSPIxSsJi1"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: v2.4.0-404-ge7ce2295\n .   Person seed: 3480315076809301941  Population seed: 0\u003c/div\u003e"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Gertie348 Reynolds644"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Lawrence",
+              "state": "Massachusetts",
+              "country": "US"
+            }
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+            "valueDecimal": 0.0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+            "valueDecimal": 21.0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "32be366a-6138-41e4-a41b-fc533ce3dafc"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "32be366a-6138-41e4-a41b-fc533ce3dafc"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-17-2807"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver\u0027s License"
+                }
+              ],
+              "text": "Driver\u0027s License"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99974307"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X31022586X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "King743",
+            "given": [
+              "Alfredo17"
+            ],
+            "prefix": [
+              "Mr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-945-1353",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1997-09-24",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 42.17434283863935
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -72.62170109274997
+                  }
+                ]
+              }
+            ],
+            "line": [
+              "148 Langworth Trace"
+            ],
+            "city": "West Springfield",
+            "state": "Massachusetts",
+            "postalCode": "01089",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "S",
+              "display": "Never Married"
+            }
+          ],
+          "text": "Never Married"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606906",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606906",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T12:22:10.670+00:00",
+          "source": "#LfO7sTtIkW9KYOUj"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: v2.4.0-404-ge7ce2295\n .   Person seed: -3156855528388275691  Population seed: 0\u003c/div\u003e"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Kyong970 Senger904"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Duxbury",
+              "state": "Massachusetts",
+              "country": "US"
+            }
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+            "valueDecimal": 2.6904362823508423
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+            "valueDecimal": 60.309563717649155
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "e1288217-b7d3-4e8a-a953-863b5cd584c6"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "e1288217-b7d3-4e8a-a953-863b5cd584c6"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-64-2303"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver\u0027s License"
+                }
+              ],
+              "text": "Driver\u0027s License"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99955689"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X82519936X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Emard19",
+            "given": [
+              "Ali918"
+            ],
+            "prefix": [
+              "Mr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-662-2309",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1917-08-06",
+        "deceasedDateTime": "1981-10-26T09:04:10-05:00",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 42.40851286691169
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -71.10603366307292
+                  }
+                ]
+              }
+            ],
+            "line": [
+              "949 Jast Street"
+            ],
+            "city": "Boston",
+            "state": "Massachusetts",
+            "postalCode": "02108",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "M"
+            }
+          ],
+          "text": "M"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606907",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606907",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T12:23:18.797+00:00",
+          "source": "#nntanVVr9iTyAtDw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: v2.4.0-404-ge7ce2295\n .   Person seed: -310554611065081879  Population seed: 0\u003c/div\u003e"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2028-9",
+                  "display": "Asian"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Asian"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Cinda869 Stoltenberg489"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Quincy",
+              "state": "Massachusetts",
+              "country": "US"
+            }
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+            "valueDecimal": 0.008823461325921409
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+            "valueDecimal": 6.991176538674079
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "f5aa3408-57b3-4c05-a1d3-e4511b4be50e"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "f5aa3408-57b3-4c05-a1d3-e4511b4be50e"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-13-6570"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Stokes453",
+            "given": [
+              "Ali918"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-392-8217",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2011-05-14",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 42.36528540576506
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -71.01917099354793
+                  }
+                ]
+              }
+            ],
+            "line": [
+              "734 Kertzmann Byway Apt 88"
+            ],
+            "city": "Boston",
+            "state": "Massachusetts",
+            "postalCode": "02108",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "S",
+              "display": "Never Married"
+            }
+          ],
+          "text": "Never Married"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606908",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606908",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T12:23:54.136+00:00",
+          "source": "#INjo2zAjOQm7hkny"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: v2.4.0-404-ge7ce2295\n .   Person seed: -2594458883112823912  Population seed: 0\u003c/div\u003e"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Jeni110 Schmidt332"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Quincy",
+              "state": "Massachusetts",
+              "country": "US"
+            }
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+            "valueDecimal": 0.0
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+            "valueDecimal": 1.0
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "e2129449-9c68-4155-a826-e22091aa4742"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "e2129449-9c68-4155-a826-e22091aa4742"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-61-2551"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Walter473",
+            "given": [
+              "Alicia629"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-479-5597",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2017-08-29",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 42.06462535758789
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -72.4916424992471
+                  }
+                ]
+              }
+            ],
+            "line": [
+              "277 Barton Harbor Suite 79"
+            ],
+            "city": "East Longmeadow",
+            "state": "Massachusetts",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "S",
+              "display": "Never Married"
+            }
+          ],
+          "text": "Never Married"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606963",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606963",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T18:08:31.272+00:00",
+          "source": "#irYj21uWpl5drBB8"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eChloe \u003cb\u003eLIND \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e972 Barrows Crest \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003eJoechester \u003c/span\u003e\u003cspan\u003eCA \u003c/span\u003e\u003cspan\u003eUS \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e03 March 1971\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.server/fhir/dstu2/StructureDefinition/e007a65133dbc792e0107eed8629794b35f1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "2.16.840.1.113883.5.104",
+                  "code": "2131-1",
+                  "display": "Other Race"
+                }
+              ],
+              "text": "\u003c---removed---\u003e"
+            }
+          },
+          {
+            "url": "https://fhir.server/fhir/dstu2/StructureDefinition/c0e881f12e770b210c6b440c148ea27aaf62",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "2.16.840.1.113883.5.50",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              ],
+              "text": "\u003c---removed---\u003e"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "family": "Lind",
+            "given": [
+              "Chloe"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "476-321-4543",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "374-466-2459",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "476-321-4543",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "Rashad.Stehr62@hotmail.com"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1971-03-03T07:55:51.746Z",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "972 Barrows Crest"
+            ],
+            "city": "Joechester",
+            "state": "CA",
+            "postalCode": "94000",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "text": "\u003c---removed---\u003e"
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.6.99",
+                  "code": "en",
+                  "display": "English"
+                }
+              ],
+              "text": "\u003c---removed---\u003e"
+            },
+            "preferred": true
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606971",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606971",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T18:18:29.658+00:00",
+          "source": "#IuP5X4beDaR1n94K"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eChloe \u003cb\u003eLIND \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e972 Barrows Crest \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003eJoechester \u003c/span\u003e\u003cspan\u003eCA \u003c/span\u003e\u003cspan\u003eUS \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e03 March 1971\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.server/fhir/dstu2/StructureDefinition/e007a65133dbc792e0107eed8629794b35f1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "2.16.840.1.113883.5.104",
+                  "code": "2131-1",
+                  "display": "Other Race"
+                }
+              ],
+              "text": "\u003c---removed---\u003e"
+            }
+          },
+          {
+            "url": "https://fhir.server/fhir/dstu2/StructureDefinition/c0e881f12e770b210c6b440c148ea27aaf62",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "2.16.840.1.113883.5.50",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              ],
+              "text": "\u003c---removed---\u003e"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "family": "Lind",
+            "given": [
+              "Chloe"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "476-321-4543",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "374-466-2459",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "476-321-4543",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "Rashad.Stehr62@hotmail.com"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1971-03-03T07:55:51.746Z",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "972 Barrows Crest"
+            ],
+            "city": "Joechester",
+            "state": "CA",
+            "postalCode": "94000",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "text": "\u003c---removed---\u003e"
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.6.99",
+                  "code": "en",
+                  "display": "English"
+                }
+              ],
+              "text": "\u003c---removed---\u003e"
+            },
+            "preferred": true
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606982",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606982",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T18:35:03.656+00:00",
+          "source": "#XqWRVyuUHdJdFFeY"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e佳穎 \u003cb\u003e徐 \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003eP293423636\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e平和巷1號 \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003e岡山區 \u003c/span\u003e\u003cspan\u003e臺灣省 \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e30 March 1975\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "system": "https://www.dicom.org.tw/cs/identityCardNumber_tw",
+            "value": "P293423636"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "text": "徐佳穎",
+            "family": "徐",
+            "given": [
+              "佳穎"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "pzhu@hotmail.com"
+          },
+          {
+            "system": "phone",
+            "value": "0948117175",
+            "use": "mobile"
+          },
+          {
+            "system": "url",
+            "value": "https://line.me/ti/p/CNXGBv7lka"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1975-03-30",
+        "address": [
+          {
+            "text": "000 臺灣省高雄市岡山區平和巷1號",
+            "line": [
+              "平和巷1號"
+            ],
+            "city": "岡山區",
+            "district": "高雄市",
+            "postalCode": "000",
+            "country": "臺灣省"
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+                    "code": "S"
+                  }
+                ],
+                "text": "State Agency"
+              }
+            ],
+            "name": {
+              "text": "朱宇軒",
+              "family": "朱",
+              "given": [
+                "宇軒"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "email",
+                "value": "yongyang@hotmail.com"
+              },
+              {
+                "system": "phone",
+                "value": "092809125",
+                "use": "mobile"
+              },
+              {
+                "system": "url",
+                "value": "https://line.me/ti/p/1eCoM2IcgP"
+              }
+            ],
+            "address": {
+              "text": "806 臺灣省高雄市前鎮區永和街626號",
+              "line": [
+                "永和街626號"
+              ],
+              "city": "前鎮區",
+              "district": "高雄市",
+              "postalCode": "806",
+              "country": "臺灣省"
+            },
+            "gender": "unknown"
+          },
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+                    "code": "I"
+                  }
+                ],
+                "text": "Insurance Company"
+              }
+            ],
+            "name": {
+              "text": "黃沖",
+              "family": "黃",
+              "given": [
+                "沖"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "email",
+                "value": "leihuang@hotmail.com"
+              },
+              {
+                "system": "phone",
+                "value": "0979097192",
+                "use": "mobile"
+              },
+              {
+                "system": "url",
+                "value": "https://line.me/ti/p/mQOw6Z0PBe"
+              }
+            ],
+            "address": {
+              "text": "000 臺灣省臺中市大甲區頂福州街564號",
+              "line": [
+                "頂福州街564號"
+              ],
+              "city": "大甲區",
+              "district": "臺中市",
+              "postalCode": "000",
+              "country": "臺灣省"
+            },
+            "gender": "other"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606991",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606991",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T19:19:08.579+00:00",
+          "source": "#fytP5aCr58xoDk9i"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eFranz \u003cb\u003eMUSTER \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e12345\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003eLeidensweg 10 \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003eSpecimendorf \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e02 October 1967\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "system": "urn:oid:1.2.36.146.595.217.0.1",
+            "value": "12345"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Muster",
+            "given": [
+              "Franz"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1967-10-02",
+        "address": [
+          {
+            "use": "home",
+            "type": "both",
+            "line": [
+              "Leidensweg 10"
+            ],
+            "city": "Specimendorf",
+            "postalCode": "9876"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606993",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606993",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T19:42:06.765+00:00",
+          "source": "#RWq2QiYOF1X2lxQc"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eHanley Strappman\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "use": "official",
+            "text": "Hanley Strappman",
+            "family": "Strappman",
+            "given": [
+              "Hanley"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2019-08-01"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606975",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606975",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T18:20:09.148+00:00",
+          "source": "#cXAnTUfpmwxv3gfX"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eChloe \u003cb\u003eLIND \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e972 Barrows Crest \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003eJoechester \u003c/span\u003e\u003cspan\u003eCA \u003c/span\u003e\u003cspan\u003eUS \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e03 March 1971\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.server/fhir/dstu2/StructureDefinition/e007a65133dbc792e0107eed8629794b35f1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "2.16.840.1.113883.5.104",
+                  "code": "2131-1",
+                  "display": "Other Race"
+                }
+              ],
+              "text": "\u003c---removed---\u003e"
+            }
+          },
+          {
+            "url": "https://fhir.server/fhir/dstu2/StructureDefinition/c0e881f12e770b210c6b440c148ea27aaf62",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "2.16.840.1.113883.5.50",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              ],
+              "text": "\u003c---removed---\u003e"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "family": "Lind",
+            "given": [
+              "Chloe"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "476-321-4543",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "374-466-2459",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "476-321-4543",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "Rashad.Stehr62@hotmail.com"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1971-03-03T07:55:51.746Z",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "972 Barrows Crest"
+            ],
+            "city": "Joechester",
+            "state": "CA",
+            "postalCode": "94000",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "text": "\u003c---removed---\u003e"
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.6.99",
+                  "code": "en",
+                  "display": "English"
+                }
+              ],
+              "text": "\u003c---removed---\u003e"
+            },
+            "preferred": true
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

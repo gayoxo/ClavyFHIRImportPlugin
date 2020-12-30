@@ -1,0 +1,910 @@
+{
+  "resourceType": "Bundle",
+  "id": "8198f9e1-a1ed-442b-b477-05d8fb4270e6",
+  "meta": {
+    "lastUpdated": "2020-12-30T10:56:58.456+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d8198f9e1-a1ed-442b-b477-05d8fb4270e6\u0026_getpagesoffset\u003d20\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    },
+    {
+      "relation": "next",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d8198f9e1-a1ed-442b-b477-05d8fb4270e6\u0026_getpagesoffset\u003d40\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    },
+    {
+      "relation": "previous",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d8198f9e1-a1ed-442b-b477-05d8fb4270e6\u0026_getpagesoffset\u003d0\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606206",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606206",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T00:26:06.017+00:00",
+          "source": "#nFkVoJl8p8HCbauV"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e太郎 \u003cb\u003e患者 \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e387\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e03 February 1951\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:0.2.440.200234.1001.1.002",
+            "value": "387"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "family": "患者",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "family": "カンジャ",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-1234-5678",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "090-2345-6789",
+            "use": "mobile"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1951-02-03",
+        "address": [
+          {
+            "use": "home",
+            "text": "東京都中央区日本橋蛎殻町 １−２−３",
+            "postalCode": "1030014"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1618027",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1618027",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T12:15:32.260+00:00",
+          "source": "#AVBgFo7HTtjMgYKM"
+        },
+        "text": {
+          "status": "generated"
+        },
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Chalmers",
+            "given": [
+              "Peter",
+              "James"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1974-12-25"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1621310",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1621310",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-27T14:35:44.906+00:00",
+          "source": "#tWTT1BgwNzDhY6DK"
+        },
+        "text": {
+          "status": "generated"
+        },
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Chalmers",
+            "given": [
+              "Peter",
+              "James"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1974-12-25"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1622721",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1622721",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-28T06:19:44.829+00:00",
+          "source": "#2MHCneumaN5oGnRc"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"/\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e09 January 1947\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "text": "Dorothy Lamons"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1947-01-09"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606178",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606178",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-14T21:50:22.239+00:00",
+          "source": "#CNzWZUnG0O4rFESP",
+          "profile": [
+            "http://poc-seguimiento.cens.cl/fhir/StructureDefinition/PocSeguimientoPatient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003ea045033d78de0231627f659aca897806 \u003cb\u003enull \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e3413425\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e03 September 1970\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://cens.cl/HCC/TipoDeIdentificacion",
+                  "code": "787300",
+                  "display": "dentificador individual único nacional (RUN)"
+                }
+              ]
+            },
+            "system": "http://minsal.cl/Identificacion",
+            "value": "3413425"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "text": "a045033d78de0231627f659aca897806 a045033d78de0231627f659aca897806 a045033d78de0231627f659aca897806",
+            "_family": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family",
+                  "valueString": "a045033d78de0231627f659aca897806"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                  "valueString": "a045033d78de0231627f659aca897806"
+                }
+              ]
+            },
+            "given": [
+              "a045033d78de0231627f659aca897806"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "8509830",
+            "use": "mobile"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1970-09-03",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://ssmso.cl/Seguimiento/TipoDireccion",
+                "valueString": "PARTICULAR"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                "valueString": "098"
+              },
+              {
+                "url": "http://ssmso.cl/Seguimiento/Comuna",
+                "valueString": "SANTIAGO"
+              },
+              {
+                "url": "http://ssmso.cl/Seguimiento/Region",
+                "valueString": "METROPOLITANA"
+              }
+            ],
+            "use": "home",
+            "type": "physical",
+            "text": "FINLANDIA"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1618020",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1618020",
+        "fhir_comments": [
+          "    a simple create operation    ",
+          "    first, the resource to create    "
+        ],
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T11:43:37.342+00:00",
+          "source": "#sGxjqNXN2AdYhdXC"
+        },
+        "text": {
+          "fhir_comments": [
+            "    no id for create operations    ",
+            "    and no metadata on this resource, though it would be valid    "
+          ],
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSome narrative\u003c/div\u003e"
+        },
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Chalmers",
+            "given": [
+              "Peter",
+              "James"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1974-12-25"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1618028",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1618028",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T12:17:11.490+00:00",
+          "source": "#6p8ibWn117rYovCB"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003ePavel Nikolaevich \u003cb\u003eKHROMOV \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e652322\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e17 September 1993\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "system": "http://acme.org/mrn",
+            "value": "652322"
+          }
+        ],
+        "name": [
+          {
+            "family": "Khromov",
+            "given": [
+              "Pavel",
+              "Nikolaevich"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1993-09-17"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1618029",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1618029",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T12:26:13.229+00:00",
+          "source": "#GVLX7RGp4ZO6N4OL"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003ePavel Nikolaevich \u003cb\u003eKHROMOV \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e652322\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e17 September 1993\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "system": "http://acme.org/mrn",
+            "value": "652322"
+          }
+        ],
+        "name": [
+          {
+            "family": "Khromov",
+            "given": [
+              "Pavel",
+              "Nikolaevich"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1993-09-17"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1618030",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1618030",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T12:28:03.636+00:00",
+          "source": "#M7tY8XT0Bn444G38"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003ePavel Nikolaevich \u003cb\u003eKHROMOV \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e652322\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e17 September 1993\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "system": "http://acme.org/mrn",
+            "value": "652322"
+          }
+        ],
+        "name": [
+          {
+            "family": "Khromov",
+            "given": [
+              "Pavel",
+              "Nikolaevich"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1993-09-17"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1618034",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1618034",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T12:42:51.785+00:00",
+          "source": "#ZLc12NJRXklkYpP0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003ePavel Nikolaevich \u003cb\u003eKHROMOV \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e652322\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e17 September 1993\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "system": "http://acme.org/mrn",
+            "value": "652322"
+          }
+        ],
+        "name": [
+          {
+            "family": "Khromov",
+            "given": [
+              "Pavel",
+              "Nikolaevich"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1993-09-17"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1618056",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1618056",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T13:22:08.707+00:00",
+          "source": "#W8vqKuIQDMzT0m5v"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003ePavel Nikolaevich \u003cb\u003eKHROMOV \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e652322\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e17 September 1993\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "system": "http://acme.org/mrn",
+            "value": "652322"
+          }
+        ],
+        "name": [
+          {
+            "family": "Khromov",
+            "given": [
+              "Pavel",
+              "Nikolaevich"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1993-09-17"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1618054",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1618054",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2020-10-26T13:23:10.465+00:00",
+          "source": "#BpgtZVelqFcjZnbX"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eFrau Mirabella \u003cb\u003eREINHARD \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eAddress\u003c/td\u003e\u003ctd\u003e\u003cspan\u003eFoostrasse 42 \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003ePostfach \u003c/span\u003e\u003cbr/\u003e\u003cspan\u003eBern \u003c/span\u003e\u003cspan\u003eBern \u003c/span\u003e\u003cspan\u003eSchweiz \u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDate of birth\u003c/td\u003e\u003ctd\u003e\u003cspan\u003e02 October 1979\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "contained": [
+          {
+            "resourceType": "Organization",
+            "id": "dbbb4f5f-ff8c-449b-9f6e-f115aaa9f68e",
+            "identifier": [
+              {
+                "system": "https://axonlab.ch/fhir/StructureDefinition/axenita-instance-system",
+                "value": "dbbb4f5f-ff8c-449b-9f6e-f115aaa9f68e"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://axonlab.ch/fhir/StructureDefinition/bank-account-details",
+            "extension": [
+              {
+                "url": "country",
+                "valueString": "CH"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.756.5.32"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Reinhard",
+            "given": [
+              "Mirabella"
+            ],
+            "prefix": [
+              "Frau"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1979-10-02",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "line": [
+              "Foostrasse 42",
+              "Postfach "
+            ],
+            "city": "Bern",
+            "state": "Bern",
+            "postalCode": "3005",
+            "country": "Schweiz"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/ValueSet/marital-status",
+              "code": "UNK"
+            }
+          ]
+        },
+        "communication": [
+          {
+            "language": {
+              "text": "de"
+            },
+            "preferred": true
+          }
+        ],
+        "managingOrganization": {
+          "reference": "#dbbb4f5f-ff8c-449b-9f6e-f115aaa9f68e"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606234",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606234",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T05:30:15.875+00:00",
+          "source": "#LKOlxgZa5K0TzSrs"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eBob \u003cb\u003eALEXANDER \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003ebc70c7cc-c5a1-4e51-9a5c-23ee70a7ee48\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "bc70c7cc-c5a1-4e51-9a5c-23ee70a7ee48"
+          }
+        ],
+        "name": [
+          {
+            "family": "Alexander",
+            "given": [
+              "Bob"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606235",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606235",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T05:30:16.222+00:00",
+          "source": "#rXbLN2f6v6QXWRUU"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eCaleb \u003cb\u003eCUSHING \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e33322653-dd03-4027-943c-7530172959ba\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "33322653-dd03-4027-943c-7530172959ba"
+          }
+        ],
+        "name": [
+          {
+            "family": "Cushing",
+            "given": [
+              "Caleb"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606246",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606246",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T05:30:17.964+00:00",
+          "source": "#f5g0OV90qsCVaVcS"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eBob \u003cb\u003eALEXANDER \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e234b6780-c4dd-4448-aeee-9f5332099802\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "234b6780-c4dd-4448-aeee-9f5332099802"
+          }
+        ],
+        "name": [
+          {
+            "family": "Alexander",
+            "given": [
+              "Bob"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606247",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606247",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T05:30:18.062+00:00",
+          "source": "#hf0JbzaFa7JSIzf5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eCaleb \u003cb\u003eCUSHING \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e89b68bd3-60ae-4a55-800f-a506a44deb8b\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "89b68bd3-60ae-4a55-800f-a506a44deb8b"
+          }
+        ],
+        "name": [
+          {
+            "family": "Cushing",
+            "given": [
+              "Caleb"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606254",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606254",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T05:30:18.773+00:00",
+          "source": "#nip9VgDt1QPUvRUN"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eBob \u003cb\u003eALEXANDER \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e478d6779-2bf6-4024-9077-136b322c6423\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "478d6779-2bf6-4024-9077-136b322c6423"
+          }
+        ],
+        "name": [
+          {
+            "family": "Alexander",
+            "given": [
+              "Bob"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606255",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606255",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T05:30:18.867+00:00",
+          "source": "#J0zZs70jtz7py6Rd"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eCaleb \u003cb\u003eCUSHING \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e49c17abb-de93-496d-86eb-0f01c9975abf\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "49c17abb-de93-496d-86eb-0f01c9975abf"
+          }
+        ],
+        "name": [
+          {
+            "family": "Cushing",
+            "given": [
+              "Caleb"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606262",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606262",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T05:30:21.863+00:00",
+          "source": "#QAoCuvRG1tMcgL9i"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eBob \u003cb\u003eALEXANDER \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003e379ce7e8-7e2d-4588-b96f-218bb5ee8743\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "379ce7e8-7e2d-4588-b96f-218bb5ee8743"
+          }
+        ],
+        "name": [
+          {
+            "family": "Alexander",
+            "given": [
+              "Bob"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1606263",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1606263",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T05:30:21.981+00:00",
+          "source": "#XlREzz0GruMs39l1"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eCaleb \u003cb\u003eCUSHING \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eIdentifier\u003c/td\u003e\u003ctd\u003eaf4a5dcc-155f-455d-8d56-f68d4e00bb39\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR"
+                }
+              ]
+            },
+            "value": "af4a5dcc-155f-455d-8d56-f68d4e00bb39"
+          }
+        ],
+        "name": [
+          {
+            "family": "Cushing",
+            "given": [
+              "Caleb"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}
