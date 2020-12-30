@@ -1,9 +1,9 @@
 package fdi.ucm.server.importparser.fhir;
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
@@ -14,6 +14,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 
@@ -21,69 +22,107 @@ import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 public class CollectionFHIR {
 	
 	private CompleteCollection Collection;
+	public boolean debugfile=false;
+	private ArrayList<String> log=new ArrayList<String>();
 	
 
 	public void procesaFHIR(String URLBase, ArrayList<String> log) {
 
+		this.log=log;
 		
-		try {
-			
-			Map<String, String> parameters = new HashMap<>();
-			parameters.put("_include", "Patient:link");
-			parameters.put("_format", "json");
-			parameters.put("_pretty", "true");
-			
-			
-			StringBuffer querryBuffer= new StringBuffer();
-			
-			querryBuffer.append(URLBase);
-			querryBuffer.append("/Patient?");
-			querryBuffer.append(ParameterStringBuilder.getParamsString(parameters));
-			
-			
-			URL url = new URL(querryBuffer.toString());
-			HttpURLConnection con = (HttpURLConnection) url.openConnection();
-			con.setRequestMethod("GET");
-			con.setRequestProperty("Content-Type", "application/json");
-			
+		cargaPacientes(URLBase);
+		
+		
+		
+		
+		
+		
+	}
 
-			con.setConnectTimeout(5000);
-			con.setReadTimeout(5000);
+	private void cargaPacientes(String URLBase) {
+		if (debugfile&& (new File("pacientes.json").exists()))
+		{
+			System.out.println("leido archivo de pacientes");
+			try {
+				File myObj = new File("pacientes.json");
+			      Scanner myReader = new Scanner(myObj);
+			      while (myReader.hasNextLine()) {
+			        String data = myReader.nextLine();
+			        System.out.println(data);
+			      }
+			      myReader.close();
+			} catch (Exception e) {
+				log.add(e.getMessage());
+			}
 			
-			int status = con.getResponseCode();
-			
-			BufferedReader in = new BufferedReader(
-					  new InputStreamReader(con.getInputStream()));
-					String inputLine;
-					StringBuffer content = new StringBuffer();
-					while ((inputLine = in.readLine()) != null) {
-					    content.append(inputLine);
-					}
-					in.close();
-					
-					System.out.println(content);
-					
-					Reader streamReader = null;
+		}else
+		{
+			try {
+				
+				Map<String, String> parameters = new HashMap<>();
+				parameters.put("_include", "Patient:link");
+				parameters.put("_format", "json");
+				parameters.put("_pretty", "true");
+				
+				
+				StringBuffer querryBuffer= new StringBuffer();
+				
+				querryBuffer.append(URLBase);
+				querryBuffer.append("/Patient?");
+				querryBuffer.append(ParameterStringBuilder.getParamsString(parameters));
+				
+				
+				URL url = new URL(querryBuffer.toString());
+				HttpURLConnection con = (HttpURLConnection) url.openConnection();
+				con.setRequestMethod("GET");
+				con.setRequestProperty("Content-Type", "application/json");
+				
 
-					if (status > 299) {
-					    streamReader = new InputStreamReader(con.getErrorStream());
-					} else {
-					    streamReader = new InputStreamReader(con.getInputStream());
-					}
-					
-					if (streamReader!=null)
-						log.add(streamReader.toString());
-					
-			con.disconnect();
-			
-		} catch (MalformedURLException e) {
-			log.add(e.getMessage());
-			e.printStackTrace();
-		} catch (IOException e) {
-			log.add(e.getMessage());
-			e.printStackTrace();
+				con.setConnectTimeout(5000);
+				con.setReadTimeout(5000);
+				
+				int status = con.getResponseCode();
+				
+				BufferedReader in = new BufferedReader(
+						  new InputStreamReader(con.getInputStream()));
+						String inputLine;
+						StringBuffer content = new StringBuffer();
+						while ((inputLine = in.readLine()) != null) {
+						    content.append(inputLine);
+						}
+						in.close();
+						
+						System.out.println(content);
+						
+						if (debugfile)
+						{
+							System.out.println("generado archivo de pacientes");
+						 FileWriter myWriter = new FileWriter("pacientes.json");
+					      myWriter.write(content.toString());
+					      myWriter.close();
+						}
+						
+						Reader streamReader = null;
+
+						if (status > 299) {
+						    streamReader = new InputStreamReader(con.getErrorStream());
+						} else {
+						    streamReader = new InputStreamReader(con.getInputStream());
+						}
+						
+						if (streamReader!=null)
+							log.add(streamReader.toString());
+						
+				con.disconnect();
+				
+			} catch (MalformedURLException e) {
+				log.add(e.getMessage());
+				e.printStackTrace();
+			} catch (IOException e) {
+				log.add(e.getMessage());
+				e.printStackTrace();
+			}
 		}
-		
 		
 	}
 
@@ -94,7 +133,7 @@ public class CollectionFHIR {
 	public static void main(String[] args) {
 		CollectionFHIR C=new CollectionFHIR();
 		ArrayList<String> log = new ArrayList<String>();
-		
+		C.debugfile=true;
 		C.procesaFHIR("http://hapi.fhir.org/baseR4", log);
 		
 		 try {
