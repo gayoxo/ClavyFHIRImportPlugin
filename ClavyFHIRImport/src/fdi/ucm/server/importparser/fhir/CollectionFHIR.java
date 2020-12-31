@@ -21,6 +21,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
+import org.apache.commons.codec.binary.Base64;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -76,6 +78,8 @@ public class CollectionFHIR {
 		Pacientes.getSons().add(CET_ID);
 		CompleteTextElementType CET_URL=new CompleteTextElementType("url", Pacientes);
 		Pacientes.getSons().add(CET_URL);
+		CompleteTextElementType CET_DESC=new CompleteTextElementType("desc", Pacientes);
+		Pacientes.getSons().add(CET_DESC);
 		CompleteTextElementType CET_GENDER=new CompleteTextElementType("gender", Pacientes);
 		Pacientes.getSons().add(CET_GENDER);
 		CompleteElementType CET_NAME=new CompleteElementType("names", Pacientes);
@@ -158,12 +162,26 @@ public class CollectionFHIR {
 			
 		}
 		
-		
+
 		for (Entry<String, HashMap<String, Object>> paciente : PACIENTES.entrySet()) {
-			CompleteDocuments CD=new CompleteDocuments(Collection, paciente.getKey(),paciente.getValue().get("DESC").toString());
-			Collection.getEstructuras().add(CD);
 			
 			HashMap<String, Object> TablaValores = paciente.getValue();
+			
+			String Desc=TablaValores.get("ID").toString();
+			
+			
+			CompleteDocuments CD=new CompleteDocuments(Collection,Desc,"");
+			Collection.getEstructuras().add(CD);
+			
+		
+			
+			
+			if (paciente.getValue().get("DESC")!=null)
+			{
+			CompleteTextElement CT_DESC=new CompleteTextElement(CET_DESC, TablaValores.get("DESC").toString());
+			CD.getDescription().add(CT_DESC);
+			}
+			
 			
 			CompleteTextElement CT_ID=new CompleteTextElement(CET_ID, TablaValores.get("ID").toString());
 			CD.getDescription().add(CT_ID);
@@ -559,19 +577,19 @@ public class CollectionFHIR {
 		C.debugfile=true;
 		C.procesaFHIR("http://hapi.fhir.org/baseR4", log,10);
 		
-//		 try {
-//				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
-//				
-//				System.out.println(FileIO);
-//				
-//				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
-//
-//				oos.writeObject(C.getColeccion());
-//
-//				oos.close();
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
+		 try {
+				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
+				
+				System.out.println(FileIO);
+				
+				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
+
+				oos.writeObject(C.getColeccion());
+
+				oos.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 	}
 
 }
