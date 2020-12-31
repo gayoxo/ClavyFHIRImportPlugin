@@ -29,6 +29,11 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
+import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
+import fdi.ucm.server.modelComplete.collection.document.CompleteTextElement;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteGrammar;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 
 public class CollectionFHIR {
@@ -52,6 +57,8 @@ public class CollectionFHIR {
 		MAXIMO_name=1;
 		MAXIMO_name_given=1;
 		
+		Collection=new CompleteCollection("Coleccion imported by URLBase", URLBase);
+		
 		cargaPacientes(URLBase,limit);
 		
 				
@@ -61,8 +68,157 @@ public class CollectionFHIR {
 	}
 
 	private void salvaPacientes() {
-		// TODO Auto-generated method stub
 		
+		CompleteGrammar Pacientes=new CompleteGrammar("Patient","Inmormation refer to patiens", Collection);
+		Collection.getMetamodelGrammar().add(Pacientes);
+		
+		CompleteTextElementType CET_ID=new CompleteTextElementType("id", Pacientes);
+		Pacientes.getSons().add(CET_ID);
+		CompleteTextElementType CET_URL=new CompleteTextElementType("url", Pacientes);
+		Pacientes.getSons().add(CET_URL);
+		CompleteTextElementType CET_GENDER=new CompleteTextElementType("gender", Pacientes);
+		Pacientes.getSons().add(CET_GENDER);
+		CompleteElementType CET_NAME=new CompleteElementType("names", Pacientes);
+		Pacientes.getSons().add(CET_NAME);
+		CET_NAME.setMultivalued(true);
+		CET_NAME.setClassOfIterator(CET_NAME);
+		
+		
+		CompleteTextElementType CET_NAME_USO=new CompleteTextElementType("use",CET_NAME,Pacientes);
+		CET_NAME.getSons().add(CET_NAME_USO);
+		CET_NAME_USO.setClassOfIterator(CET_NAME_USO);
+		
+		CompleteTextElementType CET_NAME_FAMILIA=new CompleteTextElementType("family",CET_NAME, Pacientes);
+		CET_NAME.getSons().add(CET_NAME_FAMILIA);
+		CET_NAME_FAMILIA.setClassOfIterator(CET_NAME_FAMILIA);
+
+		
+		CompleteTextElementType CET_NAME_GIVEN=new CompleteTextElementType("given",CET_NAME, Pacientes);
+		CET_NAME.getSons().add(CET_NAME_GIVEN);
+		CET_NAME_GIVEN.setClassOfIterator(CET_NAME_GIVEN);
+		CET_NAME_GIVEN.setMultivalued(true);
+		
+		
+		List<CompleteTextElementType> _NAME_USO=new LinkedList<CompleteTextElementType>();
+		List<CompleteTextElementType> _NAME_FAMILIA=new LinkedList<CompleteTextElementType>();
+		List<List<CompleteTextElementType>> _NAME_GIVEN=new LinkedList<List<CompleteTextElementType>>();
+
+		
+		_NAME_USO.add(CET_NAME_USO);
+		
+		_NAME_FAMILIA.add(CET_NAME_FAMILIA);
+		
+		LinkedList<CompleteTextElementType> _CET_NAME_GIVEN = new LinkedList<CompleteTextElementType>();
+		_CET_NAME_GIVEN.add(CET_NAME_GIVEN);
+		for (int i = 1; i < MAXIMO_name_given; i++) {
+			CompleteTextElementType CET_NAME_GIVEN_IN=new CompleteTextElementType("given",CET_NAME, Pacientes);
+			CET_NAME_GIVEN_IN.setMultivalued(true);
+			CET_NAME_GIVEN_IN.setClassOfIterator(CET_NAME_GIVEN);
+			CET_NAME.getSons().add(CET_NAME_GIVEN_IN);
+			_CET_NAME_GIVEN.add(CET_NAME_GIVEN_IN);
+		}
+		
+		
+		_NAME_GIVEN.add(_CET_NAME_GIVEN);
+		
+		for (int i = 1; i < MAXIMO_name; i++) {
+			CompleteElementType CET_NAME_IN=new CompleteElementType("names", Pacientes);
+			Pacientes.getSons().add(CET_NAME_IN);
+			CET_NAME_IN.setMultivalued(true);
+			CET_NAME_IN.setClassOfIterator(CET_NAME);
+
+			CompleteTextElementType CET_NAME_USO_IN=new CompleteTextElementType("use",CET_NAME,Pacientes);
+			CET_NAME_IN.getSons().add(CET_NAME_USO_IN);
+			CET_NAME_USO_IN.setClassOfIterator(CET_NAME_USO);
+			
+			_NAME_USO.add(CET_NAME_USO);
+					
+			CompleteTextElementType CET_NAME_FAMILIA_IN=new CompleteTextElementType("family",CET_NAME, Pacientes);
+			CET_NAME_IN.getSons().add(CET_NAME_FAMILIA_IN);
+			CET_NAME_FAMILIA_IN.setClassOfIterator(CET_NAME_FAMILIA);
+			
+			_NAME_FAMILIA.add(CET_NAME_FAMILIA);
+			
+			CompleteTextElementType CET_NAME_GIVEN_IN=new CompleteTextElementType("given",CET_NAME, Pacientes);
+			CET_NAME_IN.getSons().add(CET_NAME_GIVEN_IN);
+			CET_NAME_GIVEN_IN.setClassOfIterator(CET_NAME_GIVEN);
+			
+			
+			LinkedList<CompleteTextElementType> _CET_NAME_GIVEN_IN = new LinkedList<CompleteTextElementType>();
+			_CET_NAME_GIVEN_IN.add(CET_NAME_GIVEN_IN);
+			for (int j = 1; j < MAXIMO_name_given; j++) {
+				CompleteTextElementType CET_NAME_GIVEN_IN_2=new CompleteTextElementType("given",CET_NAME, Pacientes);
+				CET_NAME_GIVEN_IN_2.setMultivalued(true);
+				CET_NAME_GIVEN_IN_2.setClassOfIterator(CET_NAME_GIVEN);
+				CET_NAME_IN.getSons().add(CET_NAME_GIVEN_IN_2);
+				_CET_NAME_GIVEN_IN.add(CET_NAME_GIVEN_IN_2);
+			}
+			
+			_NAME_GIVEN.add(_CET_NAME_GIVEN_IN);
+			
+		}
+		
+		
+		for (Entry<String, HashMap<String, Object>> paciente : PACIENTES.entrySet()) {
+			CompleteDocuments CD=new CompleteDocuments(Collection, paciente.getKey(),paciente.getValue().get("DESC").toString());
+			Collection.getEstructuras().add(CD);
+			
+			HashMap<String, Object> TablaValores = paciente.getValue();
+			
+			CompleteTextElement CT_ID=new CompleteTextElement(CET_ID, TablaValores.get("ID").toString());
+			CD.getDescription().add(CT_ID);
+			
+			CompleteTextElement CT_URL=new CompleteTextElement(CET_URL, TablaValores.get("URL").toString());
+			CD.getDescription().add(CT_URL);
+			
+			if (TablaValores.get("GEN")!=null)
+			{
+			CompleteTextElement CT_GEN=new CompleteTextElement(CET_GENDER, TablaValores.get("GEN").toString());
+			CD.getDescription().add(CT_GEN);
+			}
+			
+			if (TablaValores.get("NAME")!=null)
+			{
+				List<HashMap<String, Object>> tablaNombre=(List<HashMap<String, Object>>) TablaValores.get("NAME");
+				for (int i = 0; i < tablaNombre.size(); i++) {
+					
+					HashMap<String, Object> ACTNAMETABLE = tablaNombre.get(i);
+					 
+					CompleteTextElementType NAME_FAM_ACT = _NAME_FAMILIA.get(i);
+					if (ACTNAMETABLE.get("FAM")!=null)
+					{
+					CompleteTextElement CT_FAM=new CompleteTextElement(NAME_FAM_ACT, ACTNAMETABLE.get("FAM").toString());
+					CD.getDescription().add(CT_FAM);
+					}
+					
+					CompleteTextElementType NAME_USO_ACT = _NAME_USO.get(i);
+					if (ACTNAMETABLE.get("USE")!=null)
+					{
+					CompleteTextElement CT_USE=new CompleteTextElement(NAME_USO_ACT, ACTNAMETABLE.get("USE").toString());
+					CD.getDescription().add(CT_USE);
+					}
+					
+					if (ACTNAMETABLE.get("GIV")!=null)
+						{
+						List<String> givennames=(List<String>) ACTNAMETABLE.get("GIV");
+						List<CompleteTextElementType>  NAME_GIVEN_ACT = _NAME_GIVEN.get(i);
+						for (int j = 0; j < givennames.size(); j++) {
+							CompleteTextElementType NAME_GIVEN_ACT_ACT = NAME_GIVEN_ACT.get(j);
+
+							CompleteTextElement CT_GIV=new CompleteTextElement(NAME_GIVEN_ACT_ACT, givennames.get(j));
+							CD.getDescription().add(CT_GIV);
+
+						}
+						
+						}
+					
+					
+					
+				}
+				
+			}
+			
+		}
 	}
 
 	private void cargaPacientes(String URLBase, int limit) {
