@@ -1,0 +1,513 @@
+{
+  "resourceType": "Bundle",
+  "id": "d20ce064-0fde-4c15-8d30-f839edbce100",
+  "meta": {
+    "lastUpdated": "2020-12-31T12:50:15.847+00:00"
+  },
+  "type": "searchset",
+  "total": 10,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hapi.fhir.org/baseR4/Encounter?_format\u003djson\u0026_pretty\u003dtrue\u0026patient\u003d1618859"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618881",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618881",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSep 24th 2020 for headache\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "GP"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30164",
+              "display": "Dr John Doe"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-09-24T18:33:17.139Z"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/1618865"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618867"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618865"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618880",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618880",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eOct 18th 2020 for sore throat\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "GP"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30164",
+              "display": "Dr John Doe"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-10-18T18:33:17.139Z"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618879",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618879",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eOct 16th 2020 for headache\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "GP"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30164",
+              "display": "Dr John Doe"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-10-16T18:33:17.139Z"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/1618863"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618878",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618878",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSep 1st 2020 for headache\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "GP"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30164",
+              "display": "Dr John Doe"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-09-01T18:33:17.139Z"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/1618861"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618861"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618877",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618877",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSep 27th 2020 for headache\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "GP"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30164",
+              "display": "Dr John Doe"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-09-27T18:33:17.139Z"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/1618869"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618865"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618876",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618876",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eOct 8th 2020 for sore throat\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "OutPatient"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30164",
+              "display": "Dr John Doe"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-10-08T18:33:17.138Z"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/1618871"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618861"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618864"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618875",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618875",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSep 5th 2020 for sore throat\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "GP"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30166",
+              "display": "Dr Annette Jones"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-09-05T18:33:17.138Z"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/1618861"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618861"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618874",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618874",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSep 24th 2020 for sore throat\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "GP"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30164",
+              "display": "Dr John Doe"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-09-24T18:33:17.138Z"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618873",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618873",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eOct 25th 2020 for sore throat\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "OutPatient"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30166",
+              "display": "Dr Annette Jones"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-10-25T18:33:17.137Z"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/1618870"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618861"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1618872",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1618872",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-26T18:33:17.201+00:00",
+          "source": "#HhEwmfshil8M3fx5"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSep 26th 2020 for sore throat\u003c/div\u003e"
+        },
+        "status": "finished",
+        "type": [
+          {
+            "text": "OutPatient"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1618859"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/30164",
+              "display": "Dr John Doe"
+            }
+          }
+        ],
+        "period": {
+          "start": "2020-09-26T18:33:17.136Z"
+        },
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/1618863"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618867"
+            }
+          },
+          {
+            "condition": {
+              "reference": "Condition/1618863"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

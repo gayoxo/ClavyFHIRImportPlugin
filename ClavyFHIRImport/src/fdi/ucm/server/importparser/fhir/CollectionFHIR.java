@@ -14,14 +14,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
-
-import org.apache.commons.codec.binary.Base64;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -47,7 +44,8 @@ public class CollectionFHIR {
 	private Map<String, HashMap<String,Object>> PACIENTES;
 	private int MAXIMO_name;
 	private int MAXIMO_name_given;
-	
+	private Map<String, CompleteDocuments> PACIENTES_CLAVY;
+	private CompleteGrammar Pacientes;
 		
 	
 
@@ -58,20 +56,165 @@ public class CollectionFHIR {
 		PACIENTES=new HashMap<String, HashMap<String,Object>>();
 		MAXIMO_name=1;
 		MAXIMO_name_given=1;
+		PACIENTES_CLAVY=new HashMap<String, CompleteDocuments>();
 		
 		Collection=new CompleteCollection("Coleccion imported by URLBase", URLBase);
 		
 		cargaPacientes(URLBase,limit);
-		
 				
+		//SALVO PERO SIN CASOS CLINICOS LINKEADOS
 		salvaPacientes();
 		
+		cargaCasosClinicos(URLBase);
+		
+		
+	}
+
+	private void cargaCasosClinicos(String URLBase) {
+		
+		
+		for (String string : PACIENTES.keySet()) {
+			if (debugfile&& (new File("casosclinicos_"+string+".json").exists()))
+			{
+				System.out.println("//////////Caso Clinico Leido " +string );
+				
+				StringBuffer SB= new StringBuffer();
+				try {
+					File myObj = new File("casosclinicos_"+string+".json");
+				      Scanner myReader = new Scanner(myObj);
+				      System.out.println("//////////INICIO  casosclinicos_"+string+".json");
+				      while (myReader.hasNextLine()) {
+				        String data = myReader.nextLine();
+				        SB.append(data);
+//				        System.out.println(data);
+				      }
+				      myReader.close();
+				      System.out.println("//////////FIN  casosclinicos_"+string+".json");
+				} catch (Exception e) {
+					log.add(e.getMessage());
+				}
+				
+				
+				JsonElement JSONELEM = new JsonParser().parse(SB.toString());
+				processJSON_CC(JSONELEM.getAsJsonObject());
+			}else
+			{
+				if (debugfile)
+					System.out.println("//////////generado archivo de caso clinico " + string);
+				
+				Map<String, String> parameters = new HashMap<>();
+				parameters.put("patient", string);
+				parameters.put("_format", "json");
+				parameters.put("_pretty", "true");
+
+				
+				StringBuffer querryBuffer= new StringBuffer();
+				
+				try {
+				querryBuffer.append(URLBase);
+				querryBuffer.append("/Encounter?");
+				
+					querryBuffer.append(ParameterStringBuilder.getParamsString(parameters));
+				} catch (UnsupportedEncodingException e1) {
+					e1.printStackTrace();
+				}
+				
+				
+				
+				String ActualURL = querryBuffer.toString();
+				
+				try {
+
+					
+					URL url = new URL(ActualURL);
+					HttpURLConnection con = (HttpURLConnection) url.openConnection();
+					con.setRequestMethod("GET");
+					con.setRequestProperty("Content-Type", "application/json; utf-8");
+					
+
+					con.setConnectTimeout(5000);
+					con.setReadTimeout(5000);
+					
+					int status = con.getResponseCode();
+					
+					BufferedReader in = new BufferedReader(
+							  new InputStreamReader(con.getInputStream()));
+							String inputLine;
+							StringBuffer content = new StringBuffer();
+							while ((inputLine = in.readLine()) != null) {
+							    content.append(inputLine);
+							}
+							in.close();
+							
+							
+							System.out.println(content);
+							
+							JsonElement JSONELEM = new JsonParser().parse(content.toString());
+							
+							if (debugfile)
+							{
+								
+								Gson gson = new GsonBuilder().setPrettyPrinting().create();
+								String jsonOutput = gson.toJson(JSONELEM);
+								
+								
+								
+							String filename = "casosclinicos_"+string+".json";
+
+							
+							 FileWriter myWriter = new FileWriter(filename);
+						      myWriter.write(jsonOutput);
+						      myWriter.close();
+						      
+						      System.out.println("//////////File->"+filename);
+
+							}
+							
+							Reader streamReader = null;
+
+							if (status > 299) {
+							    streamReader = new InputStreamReader(con.getErrorStream());
+							} else {
+							    streamReader = new InputStreamReader(con.getInputStream());
+							}
+							
+							if (streamReader!=null)
+								log.add(streamReader.toString());
+							
+					con.disconnect();
+					
+					
+
+					
+					
+					processJSON_CC(JSONELEM.getAsJsonObject());
+					
+				} catch (MalformedURLException e) {
+					log.add(e.getMessage());
+					e.printStackTrace();
+					ActualURL=null;
+				} catch (IOException e) {
+					log.add(e.getMessage());
+					e.printStackTrace();
+					ActualURL=null;
+				}
+				
+				}
+			
+		}
+		
+		
+		
+	}
+
+	private void processJSON_CC(JsonObject asJsonObject) {
+		// TODO Auto-generated method stub
 		
 	}
 
 	private void salvaPacientes() {
 		
-		CompleteGrammar Pacientes=new CompleteGrammar("Patient","Inmormation refer to patiens", Collection);
+		Pacientes=new CompleteGrammar("Patient","Inmormation refer to patiens", Collection);
 		Collection.getMetamodelGrammar().add(Pacientes);
 		
 		CompleteTextElementType CET_ID=new CompleteTextElementType("id", Pacientes);
@@ -174,6 +317,8 @@ public class CollectionFHIR {
 			
 			CompleteDocuments CD=new CompleteDocuments(Collection,Desc,"");
 			Collection.getEstructuras().add(CD);
+			
+			PACIENTES_CLAVY.put(paciente.getKey(), CD);
 			
 			if (paciente.getValue().get("BIR")!=null)
 			{
@@ -586,19 +731,19 @@ public class CollectionFHIR {
 		C.debugfile=true;
 		C.procesaFHIR("http://hapi.fhir.org/baseR4", log,10);
 		
-		 try {
-				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
-				
-				System.out.println(FileIO);
-				
-				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
-
-				oos.writeObject(C.getColeccion());
-
-				oos.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+//		 try {
+//				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
+//				
+//				System.out.println(FileIO);
+//				
+//				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
+//
+//				oos.writeObject(C.getColeccion());
+//
+//				oos.close();
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
 	}
 
 }

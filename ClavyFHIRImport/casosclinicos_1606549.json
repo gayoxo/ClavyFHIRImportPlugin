@@ -1,0 +1,15 @@
+{
+  "resourceType": "Bundle",
+  "id": "8a8e6d0d-914c-4356-8fb4-770273ea4fab",
+  "meta": {
+    "lastUpdated": "2020-12-31T12:49:53.805+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hapi.fhir.org/baseR4/Encounter?_format\u003djson\u0026_pretty\u003dtrue\u0026patient\u003d1606549"
+    }
+  ]
+}

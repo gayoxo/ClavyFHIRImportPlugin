@@ -1,0 +1,51 @@
+{
+  "resourceType": "Bundle",
+  "id": "f4e8b6e7-cdef-4e13-8836-260c3b3b0b96",
+  "meta": {
+    "lastUpdated": "2020-12-31T12:49:54.592+00:00"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hapi.fhir.org/baseR4/Encounter?_format\u003djson\u0026_pretty\u003dtrue\u0026patient\u003d1608571"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1608576",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1608576",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-16T05:30:22.297+00:00",
+          "source": "#ks20zKmhOBQAYZBq"
+        },
+        "subject": {
+          "reference": "Patient/1608571"
+        },
+        "period": {
+          "start": "2020-10-16T05:10:22+00:00"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/1608575",
+              "display": "Ward 1, Room 42d03c42-ca15-46df-81aa-02f32033e8b2, Bed 1"
+            },
+            "status": "active",
+            "period": {
+              "start": "2020-10-16T05:10:22+00:00",
+              "end": "2020-10-16T05:15:22+00:00"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

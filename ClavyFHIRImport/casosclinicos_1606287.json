@@ -1,0 +1,61 @@
+{
+  "resourceType": "Bundle",
+  "id": "db83425f-fdf2-42d3-af59-18adb6f42d44",
+  "meta": {
+    "lastUpdated": "2020-12-31T12:49:57.320+00:00"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hapi.fhir.org/baseR4/Encounter?_format\u003djson\u0026_pretty\u003dtrue\u0026patient\u003d1606287"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1606292",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1606292",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-15T05:30:24.757+00:00",
+          "source": "#cWyhI90xgUGbtSzz"
+        },
+        "subject": {
+          "reference": "Patient/1606287"
+        },
+        "period": {
+          "start": "2020-10-15T05:20:24+00:00"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/1606289",
+              "display": "ER, 53b3fdfe-77f0-4d83-8f2b-6810c451a0d2"
+            },
+            "status": "active",
+            "period": {
+              "start": "2020-10-15T05:20:24+00:00",
+              "end": "2020-10-15T05:25:24+00:00"
+            }
+          },
+          {
+            "location": {
+              "reference": "Location/1606290",
+              "display": "Ward 1, Room 0f2f879f-22d7-4167-adaf-7604958d7e0e, Bed 1"
+            },
+            "status": "active",
+            "period": {
+              "start": "2020-10-15T05:25:24+00:00"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}
