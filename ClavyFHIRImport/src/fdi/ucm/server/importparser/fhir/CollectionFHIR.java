@@ -82,6 +82,8 @@ public class CollectionFHIR {
 		Pacientes.getSons().add(CET_DESC);
 		CompleteTextElementType CET_GENDER=new CompleteTextElementType("gender", Pacientes);
 		Pacientes.getSons().add(CET_GENDER);
+		CompleteTextElementType CET_BIR=new CompleteTextElementType("birthdate", Pacientes);
+		Pacientes.getSons().add(CET_BIR);
 		CompleteElementType CET_NAME=new CompleteElementType("names", Pacientes);
 		Pacientes.getSons().add(CET_NAME);
 		CET_NAME.setMultivalued(true);
@@ -173,7 +175,11 @@ public class CollectionFHIR {
 			CompleteDocuments CD=new CompleteDocuments(Collection,Desc,"");
 			Collection.getEstructuras().add(CD);
 			
-		
+			if (paciente.getValue().get("BIR")!=null)
+			{
+			CompleteTextElement CT_BIR=new CompleteTextElement(CET_BIR, TablaValores.get("BIR").toString());
+			CD.getDescription().add(CT_BIR);
+			}
 			
 			
 			if (paciente.getValue().get("DESC")!=null)
@@ -489,6 +495,9 @@ public class CollectionFHIR {
 			
 			if (Recurso.get("gender")!=null)
 				Propiedades.put("GEN", Recurso.get("gender").getAsJsonPrimitive().getAsString());
+			
+			if (Recurso.get("birthDate")!=null)
+				Propiedades.put("BIR", Recurso.get("birthDate").getAsJsonPrimitive().getAsString());
 			
 			
 			
