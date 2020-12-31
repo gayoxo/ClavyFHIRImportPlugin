@@ -14,6 +14,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
@@ -30,12 +33,15 @@ import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 
 public class CollectionFHIR {
 	
+	private static final String TAB_ESPACE_CONST = "--";
 	private CompleteCollection Collection;
 	public boolean debugfile=false;
 	private ArrayList<String> log=new ArrayList<String>();
 	private Map<String, HashMap<String,Object>> PACIENTES;
+	private int MAXIMO_name;
+	private int MAXIMO_name_given;
 	
-	
+		
 	
 
 	public void procesaFHIR(String URLBase, ArrayList<String> log, int limit) {
@@ -43,13 +49,19 @@ public class CollectionFHIR {
 		this.log=log;
 		
 		PACIENTES=new HashMap<String, HashMap<String,Object>>();
-
+		MAXIMO_name=1;
+		MAXIMO_name_given=1;
 		
 		cargaPacientes(URLBase,limit);
 		
 				
+		salvaPacientes();
 		
 		
+	}
+
+	private void salvaPacientes() {
+		// TODO Auto-generated method stub
 		
 	}
 
@@ -262,6 +274,50 @@ public class CollectionFHIR {
 			
 			Propiedades.put("DESC", DESC.toString());
 			
+			if (Recurso.get("name")!=null)
+			{
+				JsonArray Name_arra=Recurso.get("name").getAsJsonArray();
+				LinkedList<HashMap<String,Object>> ListaNombres=
+						new LinkedList<HashMap<String,Object>>();
+				
+				if (Name_arra.size()>MAXIMO_name)
+					MAXIMO_name=Name_arra.size();
+				
+				
+				for (int j = 0; j < Name_arra.size(); j++) {
+					JsonObject nameUni=Name_arra.get(j).getAsJsonObject();
+					HashMap<String,Object> namevalue=new HashMap<String,Object>();
+					ListaNombres.add(namevalue);
+					if (nameUni.get("use")!=null)
+						namevalue.put("USE", nameUni.get("use").getAsJsonPrimitive().getAsString());
+					if (nameUni.get("family")!=null)
+						namevalue.put("FAM", nameUni.get("family").getAsJsonPrimitive().getAsString());
+					if (nameUni.get("given")!=null)
+					{
+						LinkedList<String> givenames=new LinkedList<String>();
+						JsonArray Name_given_arra=nameUni.get("given").getAsJsonArray();
+						
+						if (Name_given_arra.size()>MAXIMO_name_given)
+							MAXIMO_name_given=Name_given_arra.size();
+						
+						for (int k = 0; k < Name_given_arra.size(); k++) 
+							givenames.add(Name_given_arra.get(k).getAsJsonPrimitive().getAsString());
+						
+						namevalue.put("GIV", givenames);
+						
+					}
+					
+					
+				}
+				
+				Propiedades.put("NAME", ListaNombres);
+			}
+			
+			if (Recurso.get("gender")!=null)
+				Propiedades.put("GEN", Recurso.get("gender").getAsJsonPrimitive().getAsString());
+			
+			
+			
 		
 			if (debugfile)
 			{
@@ -271,6 +327,12 @@ public class CollectionFHIR {
 				
 				if (jsonElement.getValue() instanceof String)
 					System.out.println(jsonElement.getKey()+":"+jsonElement.getValue().toString());
+				
+				if (jsonElement.getValue() instanceof List)
+					{
+					System.out.println(jsonElement.getKey()+":");
+					processInternal((List)jsonElement.getValue(), 1);
+					}
 			}
 			
 			
@@ -280,6 +342,53 @@ public class CollectionFHIR {
 			
 			PACIENTES.put(ID,Propiedades);
 			
+		}
+		
+	}
+
+	private void processInternal(List value, int tabscont) {
+
+		for (Object elementoin : value) {
+			
+			
+			if (elementoin instanceof String)
+			{	
+				for (int i = 0; i < tabscont; i++) 
+					System.out.print(TAB_ESPACE_CONST);
+				
+				System.out.println(elementoin);
+			}
+			
+			if (elementoin instanceof HashMap)
+			{
+				for (int i = 0; i < tabscont; i++) 
+					System.out.print(TAB_ESPACE_CONST);
+				
+				System.out.println("[");
+		
+				for (Entry<String, Object> jsonElement : ((HashMap<String, Object>)elementoin).entrySet()) {
+					
+					for (int i = 0; i < tabscont; i++) 
+						System.out.print(TAB_ESPACE_CONST);
+					
+					if (jsonElement.getValue() instanceof String)
+						System.out.println(jsonElement.getKey()+":"+jsonElement.getValue().toString());
+					
+					if (jsonElement.getValue() instanceof List)
+						{
+						System.out.println(jsonElement.getKey()+":");
+						processInternal((List)jsonElement.getValue(), tabscont+1);
+						}
+
+					
+				}
+				
+				for (int i = 0; i < tabscont; i++) 
+					System.out.print(TAB_ESPACE_CONST);
+				
+				System.out.println("]");
+				
+			}
 		}
 		
 	}
