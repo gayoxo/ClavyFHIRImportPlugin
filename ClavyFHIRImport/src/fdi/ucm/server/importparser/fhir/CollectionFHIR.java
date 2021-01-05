@@ -88,7 +88,8 @@ public class CollectionFHIR {
 				System.out.println("//////////generado archivo de pacientes");
 			
 			Map<String, String> parameters = new HashMap<>();
-			parameters.put("_include", "Encounter:patient");
+			parameters.put("_include", "Condition:encounter");
+			parameters.put("_include", "Condition:patient");
 			parameters.put("_format", "json");
 			parameters.put("_pretty", "true");
 			
@@ -97,7 +98,7 @@ public class CollectionFHIR {
 			
 			try {
 			querryBuffer.append(URLBase);
-			querryBuffer.append("/Encounter?");
+			querryBuffer.append("/Condition?");
 			
 				querryBuffer.append(ParameterStringBuilder.getParamsString(parameters));
 			} catch (UnsupportedEncodingException e1) {
@@ -105,6 +106,8 @@ public class CollectionFHIR {
 			}
 			
 			//http://hapi.fhir.org/baseR4/Encounter?_include=Encounter:patient&_pretty=true
+			//http://hapi.fhir.org/baseR4/Condition?_include=Condition:encounter&_include=Condition:patient&_pretty=true
+			//http://hapi.fhir.org/baseR4/DiagnosticReport?_include=DiagnosticReport:patient&_include=DiagnosticReport:result&_pretty=true
 		
 			String ActualURL = querryBuffer.toString();
 			int conteoFile=0;
@@ -228,8 +231,8 @@ public class CollectionFHIR {
 			JsonObject oresource = entry_in.get("resource").getAsJsonObject();
 			String tResource= oresource.get("resourceType").getAsJsonPrimitive().getAsString();
 			
-			if (tResource.toLowerCase().contentEquals("encounter"))
-				processAsEncounter(oresource,fURL);
+			if (tResource.toLowerCase().contentEquals("condition"))
+				processAsCondition(oresource,fURL);
 
 			if (tResource.toLowerCase().contentEquals("patient"))
 				processAsPatient(oresource,fURL);
@@ -245,9 +248,9 @@ public class CollectionFHIR {
 		
 	}
 
-	private void processAsEncounter(JsonObject oresource, String fURL) {
+	private void processAsCondition(JsonObject oresource, String fURL) {
 		String id_text= oresource.get("id").getAsJsonPrimitive().getAsString();
-		System.out.println("Encounter"+"->"+id_text+"  "+ fURL);
+		System.out.println("Condition"+"->"+id_text+"  "+ fURL);
 		
 	}
 

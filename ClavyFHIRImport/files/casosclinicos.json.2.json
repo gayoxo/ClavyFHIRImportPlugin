@@ -1,1280 +1,1378 @@
 {
   "resourceType": "Bundle",
-  "id": "cdc55e54-c403-4158-914d-5548fd4016a4",
+  "id": "b3ad5efb-e3ac-417a-8bdd-01c2c84cdaba",
   "meta": {
-    "lastUpdated": "2021-01-05T09:44:03.563+00:00"
+    "lastUpdated": "2021-01-05T10:07:19.195+00:00"
   },
   "type": "searchset",
   "link": [
     {
       "relation": "self",
-      "url": "http://hapi.fhir.org/baseR4?_getpages\u003dcdc55e54-c403-4158-914d-5548fd4016a4\u0026_getpagesoffset\u003d40\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003db3ad5efb-e3ac-417a-8bdd-01c2c84cdaba\u0026_getpagesoffset\u003d40\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
     },
     {
       "relation": "next",
-      "url": "http://hapi.fhir.org/baseR4?_getpages\u003dcdc55e54-c403-4158-914d-5548fd4016a4\u0026_getpagesoffset\u003d60\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003db3ad5efb-e3ac-417a-8bdd-01c2c84cdaba\u0026_getpagesoffset\u003d60\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
     },
     {
       "relation": "previous",
-      "url": "http://hapi.fhir.org/baseR4?_getpages\u003dcdc55e54-c403-4158-914d-5548fd4016a4\u0026_getpagesoffset\u003d20\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003db3ad5efb-e3ac-417a-8bdd-01c2c84cdaba\u0026_getpagesoffset\u003d20\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
     }
   ],
   "entry": [
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322530",
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369360",
       "resource": {
-        "resourceType": "Encounter",
-        "id": "1322530",
+        "resourceType": "Condition",
+        "id": "1369360",
         "meta": {
           "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:40.407+00:00",
-          "source": "#T3pmD0u4Szg8FSPA"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-02-24T10:50:06-05:00",
-              "end": "2017-02-24T10:50:06-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322025",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-06T09:50:06-05:00",
-          "end": "2017-03-06T12:50:06-05:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322531",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322531",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:40.722+00:00",
-          "source": "#K7uzwak5wSRg99AM"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-03-17T11:38:31-04:00",
-              "end": "2017-03-17T11:38:31-04:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "ACUTE"
-        },
-        "subject": {
-          "reference": "Patient/1322026",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-27T10:38:31-04:00",
-          "end": "2017-03-27T15:38:31-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322532",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322532",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:40.954+00:00",
-          "source": "#VTwvAfkJ0bBob1zB"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-03-07T22:58:11-05:00",
-              "end": "2017-03-07T22:58:11-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "OBSENC"
-        },
-        "subject": {
-          "reference": "Patient/1322027",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-17T21:58:11-04:00",
-          "end": "2017-03-18T01:58:11-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322533",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322533",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:41.284+00:00",
-          "source": "#TxfmIDEi6WQcQiKu"
-        },
-        "status": "finished",
-        "statusHistory": [
-          {
-            "status": "finished",
-            "period": {
-              "start": "2017-03-20T20:41:11-04:00",
-              "end": "2017-03-20T20:41:11-04:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "OBSENC"
-        },
-        "subject": {
-          "reference": "Patient/1322028",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-30T19:41:11-04:00",
-          "end": "2017-03-31T00:41:11-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322534",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322534",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:41.537+00:00",
-          "source": "#gHpD1uEb4S977bW5"
-        },
-        "status": "finished",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-03-04T08:46:21-05:00",
-              "end": "2017-03-04T08:46:21-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "ACUTE"
-        },
-        "subject": {
-          "reference": "Patient/1322029",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-14T07:46:21-04:00",
-          "end": "2017-03-14T11:46:21-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322535",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322535",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:41.818+00:00",
-          "source": "#ddDsZnnvjc87ECDy"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-02-19T07:03:32-05:00",
-              "end": "2017-02-19T07:03:32-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "IMP"
-        },
-        "subject": {
-          "reference": "Patient/1322030",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-01T06:03:32-05:00",
-          "end": "2017-03-01T10:03:32-05:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322536",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322536",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:42.060+00:00",
-          "source": "#kLn0gTLpBhOWpQ8G"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-03-09T16:11:45-05:00",
-              "end": "2017-03-09T16:11:45-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322031",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-19T15:11:45-04:00",
-          "end": "2017-03-19T19:11:45-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322537",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322537",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:42.365+00:00",
-          "source": "#JMjW9d2xy1MuWuiA"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "finished",
-            "period": {
-              "start": "2017-03-10T16:06:53-05:00",
-              "end": "2017-03-10T16:06:53-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322032",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-20T15:06:53-04:00",
-          "end": "2017-03-20T19:06:53-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322538",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322538",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:42.600+00:00",
-          "source": "#sEaD666AFupy4nPu"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-02-28T10:30:53-05:00",
-              "end": "2017-02-28T10:30:53-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322033",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-10T09:30:53-05:00",
-          "end": "2017-03-10T12:30:53-05:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322539",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322539",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:42.845+00:00",
-          "source": "#gsB7lXKOS7EJkHDG"
-        },
-        "status": "finished",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-02-21T00:51:56-05:00",
-              "end": "2017-02-21T00:51:56-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "OBSENC"
-        },
-        "subject": {
-          "reference": "Patient/1322034",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-02T23:51:56-05:00",
-          "end": "2017-03-03T04:51:56-05:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322540",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322540",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:43.084+00:00",
-          "source": "#iGBi9SmnDJHXV8l2"
-        },
-        "status": "finished",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-03-10T16:44:29-05:00",
-              "end": "2017-03-10T16:44:29-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "OBSENC"
-        },
-        "subject": {
-          "reference": "Patient/1322035",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-20T15:44:29-04:00",
-          "end": "2017-03-20T18:44:29-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322541",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322541",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:43.318+00:00",
-          "source": "#7o42edOKAeBOMc5q"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "finished",
-            "period": {
-              "start": "2017-03-11T22:08:54-05:00",
-              "end": "2017-03-11T22:08:54-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322036",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-21T21:08:54-04:00",
-          "end": "2017-03-22T02:08:54-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322542",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322542",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:43.567+00:00",
-          "source": "#I3WV7g8wqpX8UtqN"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "finished",
-            "period": {
-              "start": "2017-03-05T23:25:13-05:00",
-              "end": "2017-03-05T23:25:13-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "ACUTE"
-        },
-        "subject": {
-          "reference": "Patient/1322037",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-15T22:25:13-04:00",
-          "end": "2017-03-16T02:25:13-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322543",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322543",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:43.872+00:00",
-          "source": "#ge5BbCsTUXFAzMjG"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "finished",
-            "period": {
-              "start": "2017-03-02T12:55:51-05:00",
-              "end": "2017-03-02T12:55:51-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322038",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-12T11:55:51-04:00",
-          "end": "2017-03-12T16:55:51-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322544",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322544",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:44.110+00:00",
-          "source": "#qosVDjJKnCDROJIZ"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-03-13T07:42:33-04:00",
-              "end": "2017-03-13T07:42:33-04:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322039",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-23T06:42:33-04:00",
-          "end": "2017-03-23T09:42:33-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322545",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322545",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:44.367+00:00",
-          "source": "#2C3D6SOR1cmhBMTb"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "finished",
-            "period": {
-              "start": "2017-02-27T21:56:46-05:00",
-              "end": "2017-02-27T21:56:46-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322040",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-09T20:56:46-05:00",
-          "end": "2017-03-09T23:56:46-05:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322546",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322546",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:44.670+00:00",
-          "source": "#kfKIfTBMFgN03rtQ"
-        },
-        "status": "finished",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-02-21T07:31:55-05:00",
-              "end": "2017-02-21T07:31:55-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322041",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-03T06:31:55-05:00",
-          "end": "2017-03-03T11:31:55-05:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322547",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322547",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:44.944+00:00",
-          "source": "#OQokzINVLcBCsR3D"
-        },
-        "status": "finished",
-        "statusHistory": [
-          {
-            "status": "finished",
-            "period": {
-              "start": "2017-03-11T12:06:51-05:00",
-              "end": "2017-03-11T12:06:51-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "SS"
-        },
-        "subject": {
-          "reference": "Patient/1322042",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-21T11:06:51-04:00",
-          "end": "2017-03-21T16:06:51-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322548",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322548",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:45.189+00:00",
-          "source": "#sZjsKJPOEVNxp5Ym"
-        },
-        "status": "planned",
-        "statusHistory": [
-          {
-            "status": "planned",
-            "period": {
-              "start": "2017-03-05T16:50:00-05:00",
-              "end": "2017-03-05T16:50:00-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "AMB"
-        },
-        "subject": {
-          "reference": "Patient/1322043",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-15T15:50:00-04:00",
-          "end": "2017-03-15T19:50:00-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322549",
-      "resource": {
-        "resourceType": "Encounter",
-        "id": "1322549",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:06:45.420+00:00",
-          "source": "#PF6hDxUoVbEAGD9P"
-        },
-        "status": "finished",
-        "statusHistory": [
-          {
-            "status": "finished",
-            "period": {
-              "start": "2017-03-11T19:17:29-05:00",
-              "end": "2017-03-11T19:17:29-05:00"
-            }
-          }
-        ],
-        "class": {
-          "code": "ACUTE"
-        },
-        "subject": {
-          "reference": "Patient/1322044",
-          "type": "Patient"
-        },
-        "period": {
-          "start": "2017-03-21T18:17:29-04:00",
-          "end": "2017-03-21T23:17:29-04:00"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322036",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322036",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:07.645+00:00",
-          "source": "#iaAstIltQpbwdVMU"
+          "lastUpdated": "2020-07-04T13:26:38.071+00:00",
+          "source": "#qBeiHkHPEm4oVCTw"
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eNorma \u003cb\u003eNURRISHT \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eOnychomycosis\u003c/div\u003e"
         },
-        "name": [
+        "category": [
           {
-            "family": "Nurrisht",
-            "given": [
-              "Norma"
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "24484000",
+              "display": "severe"
+            }
+          ],
+          "text": "severe"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "414941998",
+              "display": "onychomycosis"
+            }
+          ],
+          "text": "onychomycosis"
+        },
+        "subject": {
+          "reference": "Patient/1369349"
+        },
+        "onsetAge": {
+          "value": 77,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369355",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369355",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:26:38.071+00:00",
+          "source": "#qBeiHkHPEm4oVCTw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eNeuropathic pain\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "247389009",
+              "display": "neuropathic pain"
+            }
+          ],
+          "text": "neuropathic pain"
+        },
+        "subject": {
+          "reference": "Patient/1369349"
+        },
+        "onsetAge": {
+          "value": 75,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369354",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369354",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:26:38.071+00:00",
+          "source": "#qBeiHkHPEm4oVCTw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eDepression\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "35489007",
+              "display": "depression"
+            }
+          ],
+          "text": "depression"
+        },
+        "subject": {
+          "reference": "Patient/1369349"
+        },
+        "onsetAge": {
+          "value": 74,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369353",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369353",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:26:38.071+00:00",
+          "source": "#qBeiHkHPEm4oVCTw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eHypertension\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "255604002",
+              "display": "mild"
+            }
+          ],
+          "text": "Mild"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "38341003",
+              "display": "hypertension"
+            }
+          ],
+          "text": "hypertension"
+        },
+        "subject": {
+          "reference": "Patient/1369349"
+        },
+        "onsetAge": {
+          "value": 68,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369352",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369352",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:26:38.071+00:00",
+          "source": "#qBeiHkHPEm4oVCTw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eDiabetes\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "73211009",
+              "display": "diabetes"
+            }
+          ],
+          "text": "diabetes"
+        },
+        "subject": {
+          "reference": "Patient/1369349"
+        },
+        "onsetAge": {
+          "value": 60,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369359",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369359",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:26:38.071+00:00",
+          "source": "#qBeiHkHPEm4oVCTw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eHypercholesterolaemia\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "13644009",
+              "display": "high cholesterol"
+            }
+          ],
+          "text": "high cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/1369349"
+        },
+        "onsetAge": {
+          "value": 68,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369358",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369358",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:26:38.071+00:00",
+          "source": "#qBeiHkHPEm4oVCTw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGERD\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "235595009",
+              "display": "GERD"
+            }
+          ],
+          "text": "GERD"
+        },
+        "subject": {
+          "reference": "Patient/1369349"
+        },
+        "onsetAge": {
+          "value": 66,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369357",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369357",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:26:38.071+00:00",
+          "source": "#qBeiHkHPEm4oVCTw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eRheumatoid arthritis - left elbow\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "mild to moderate"
+            }
+          ],
+          "text": "Diagnosis"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "69896004",
+              "display": "rheumatoid arthritis"
+            }
+          ],
+          "text": "rheumatoid arthritis - left elbow"
+        },
+        "subject": {
+          "reference": "Patient/1369349"
+        },
+        "onsetAge": {
+          "value": 74,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        },
+        "evidence": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/ct",
+                    "code": "57676002",
+                    "display": "Painful Joint"
+                  }
+                ],
+                "text": "Painful joint"
+              }
             ]
           }
         ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369356",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369356",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:26:38.071+00:00",
+          "source": "#qBeiHkHPEm4oVCTw"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eRheumatoid Arthritis\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "69896004",
+              "display": "rheumatoid arthritis"
+            }
+          ],
+          "text": "rheumatoid arthritis - both hands"
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/ct",
+                "code": "12861001",
+                "display": "both hands"
+              }
+            ],
+            "text": "both hands"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1369349"
+        },
+        "onsetAge": {
+          "value": 72,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        },
+        "evidence": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/ct",
+                    "code": "57676002",
+                    "display": "Painful Joint"
+                  }
+                ],
+                "text": "Painful joint"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369518",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369518",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eRheumatoid Arthritis\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "69896004",
+              "display": "rheumatoid arthritis"
+            }
+          ],
+          "text": "rheumatoid arthritis - both hands"
+        },
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/ct",
+                "code": "12861001",
+                "display": "both hands"
+              }
+            ],
+            "text": "both hands"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 72,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        },
+        "evidence": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/ct",
+                    "code": "57676002",
+                    "display": "Painful Joint"
+                  }
+                ],
+                "text": "Painful joint"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369519",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369519",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eRheumatoid arthritis - left elbow\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "mild to moderate"
+            }
+          ],
+          "text": "Diagnosis"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "69896004",
+              "display": "rheumatoid arthritis"
+            }
+          ],
+          "text": "rheumatoid arthritis - left elbow"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 74,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        },
+        "evidence": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/ct",
+                    "code": "57676002",
+                    "display": "Painful Joint"
+                  }
+                ],
+                "text": "Painful joint"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369520",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369520",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGERD\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "235595009",
+              "display": "GERD"
+            }
+          ],
+          "text": "GERD"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 66,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369513",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369513",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eAsthma\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "mild to moderate"
+            }
+          ],
+          "text": "mild to moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "195917001",
+              "display": "asthma"
+            }
+          ],
+          "text": "asthma"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 14,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369523",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369523",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eAngina\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "194818000",
+              "display": "angina"
+            }
+          ],
+          "text": "angina"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 76,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        },
+        "evidence": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/ct",
+                    "code": "29857009",
+                    "display": "Chest Pain"
+                  }
+                ],
+                "text": "Chest Pain"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369522",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369522",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eOnychomycosis\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "24484000",
+              "display": "severe"
+            }
+          ],
+          "text": "severe"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "414941998",
+              "display": "onychomycosis"
+            }
+          ],
+          "text": "onychomycosis"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 77,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369521",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369521",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eHypercholesterolaemia\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "13644009",
+              "display": "high cholesterol"
+            }
+          ],
+          "text": "high cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 68,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369517",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369517",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eNeuropathic pain\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "247389009",
+              "display": "neuropathic pain"
+            }
+          ],
+          "text": "neuropathic pain"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 75,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369516",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369516",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eDepression\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "Moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "35489007",
+              "display": "depression"
+            }
+          ],
+          "text": "depression"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 74,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369515",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369515",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eHypertension\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "255604002",
+              "display": "mild"
+            }
+          ],
+          "text": "Mild"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "38341003",
+              "display": "hypertension"
+            }
+          ],
+          "text": "hypertension"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 68,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1369514",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1369514",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:29:51.690+00:00",
+          "source": "#ffbobhfzJV0Dzof0"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eDiabetes\u003c/div\u003e"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14657009",
+                "display": "Diagnosis"
+              }
+            ],
+            "text": "Diagnosis"
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "6736007",
+              "display": "moderate"
+            }
+          ],
+          "text": "moderate"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/ct",
+              "code": "73211009",
+              "display": "diabetes"
+            }
+          ],
+          "text": "diabetes"
+        },
+        "subject": {
+          "reference": "Patient/1369511"
+        },
+        "onsetAge": {
+          "value": 60,
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1369349",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1369349",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-04T13:26:32.551+00:00",
+          "source": "#shtUAIYcXHWqEQsk"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003ePoppy Anderson\u003c/div\u003e"
+        },
+        "identifier": [
+          {
+            "system": "http://clinfhir.com/fhir/NamingSystem/identifier",
+            "value": "321"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "text": "Poppy Anderson",
+            "family": "Anderson",
+            "given": [
+              "Poppy"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2020-07-04"
       },
       "search": {
         "mode": "include"
       }
     },
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322037",
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1369511",
       "resource": {
         "resourceType": "Patient",
-        "id": "1322037",
+        "id": "1369511",
         "meta": {
           "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:08.097+00:00",
-          "source": "#KVS3QlUB9FU8o2e9"
+          "lastUpdated": "2020-07-04T13:29:48.628+00:00",
+          "source": "#5QG3ht3hfLkGCchN"
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eMal \u003cb\u003eSTANINTERUPSHUNS \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eConnor White\u003c/div\u003e"
         },
+        "identifier": [
+          {
+            "system": "http://clinfhir.com/fhir/NamingSystem/identifier",
+            "value": "1"
+          }
+        ],
         "name": [
           {
-            "family": "Staninterupshuns",
+            "use": "official",
+            "text": "Connor White",
+            "family": "White",
             "given": [
-              "Mal"
+              "Connor"
             ]
           }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322038",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322038",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:08.412+00:00",
-          "source": "#lgF4ODtDdeNArALH"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eAnnie \u003cb\u003eSTROPHOBIA \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Strophobia",
-            "given": [
-              "Annie"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322039",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322039",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:08.704+00:00",
-          "source": "#j0Dc6pJ5Bo4oljBY"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eStanley \u003cb\u003eTHURIUM \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Thurium",
-            "given": [
-              "Stanley"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322032",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322032",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:06.483+00:00",
-          "source": "#9lgyV5XIneFJ4K5Q"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eOlive \u003cb\u003eNONMI \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Nonmi",
-            "given": [
-              "Olive"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322033",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322033",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:06.779+00:00",
-          "source": "#rHX3O5EAPQMq3l9u"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003ePerry \u003cb\u003eVERSAREE \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Versaree",
-            "given": [
-              "Perry"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322034",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322034",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:07.043+00:00",
-          "source": "#BxAwkZD5QYrwBTHB"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eHugo \u003cb\u003eLYNNE \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Lynne",
-            "given": [
-              "Hugo"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322035",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322035",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:07.370+00:00",
-          "source": "#wLhuihWHTkA5GcT1"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eDee \u003cb\u003eSAIS \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Sais",
-            "given": [
-              "Dee"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322044",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322044",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:10.135+00:00",
-          "source": "#o9txsTF9WPgPQq4E"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eJack \u003cb\u003eSIK \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Sik",
-            "given": [
-              "Jack"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322040",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322040",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:08.962+00:00",
-          "source": "#Tvdqvh4oL8dAY2kl"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eAnne \u003cb\u003eBLOSSOM \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Blossom",
-            "given": [
-              "Anne"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322041",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322041",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:09.235+00:00",
-          "source": "#HUnCGB2jNJnaJNz5"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eOscar \u003cb\u003eONNABIT \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Onnabit",
-            "given": [
-              "Oscar"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322042",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322042",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:09.489+00:00",
-          "source": "#pXCzclOvfugjJliy"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eLana \u003cb\u003eSTROPHOBIA \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Strophobia",
-            "given": [
-              "Lana"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322043",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322043",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:09.832+00:00",
-          "source": "#u4sXkvln5jtgsAEK"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eGinger \u003cb\u003eVERSAREE \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Versaree",
-            "given": [
-              "Ginger"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322028",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322028",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:05.355+00:00",
-          "source": "#gROBFjPY7c1OCVte"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eIvan \u003cb\u003eGWISTIC \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Gwistic",
-            "given": [
-              "Ivan"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322029",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322029",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:05.617+00:00",
-          "source": "#pE9uOKIm2c5SjNl9"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eManuel \u003cb\u003eSAYID \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Sayid",
-            "given": [
-              "Manuel"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322030",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322030",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:05.895+00:00",
-          "source": "#IJ0AIQIVV4biR7fZ"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eWynn \u003cb\u003eARGO \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Argo",
-            "given": [
-              "Wynn"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322031",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322031",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:06.192+00:00",
-          "source": "#ri9WeSS22ZbItwEo"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eOlive \u003cb\u003eNORMAL \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Normal",
-            "given": [
-              "Olive"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322025",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322025",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:04.462+00:00",
-          "source": "#1UX1EGNO81cUoSxP"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eAbby \u003cb\u003eGLOINDIAN \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Gloindian",
-            "given": [
-              "Abby"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322026",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322026",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:04.767+00:00",
-          "source": "#sps8fDM0bsZXL2FA"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eHugo \u003cb\u003eMANDINGBOSS \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Mandingboss",
-            "given": [
-              "Hugo"
-            ]
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322027",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1322027",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-03T19:04:05.025+00:00",
-          "source": "#vVXNDkEZnIQ9CEUW"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eWiley \u003cb\u003eNURRISHT \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
-        },
-        "name": [
-          {
-            "family": "Nurrisht",
-            "given": [
-              "Wiley"
-            ]
-          }
-        ]
+        ],
+        "gender": "male",
+        "birthDate": "2020-07-04"
       },
       "search": {
         "mode": "include"
