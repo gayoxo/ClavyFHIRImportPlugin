@@ -1,0 +1,1284 @@
+{
+  "resourceType": "Bundle",
+  "id": "cdc55e54-c403-4158-914d-5548fd4016a4",
+  "meta": {
+    "lastUpdated": "2021-01-05T09:44:03.563+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003dcdc55e54-c403-4158-914d-5548fd4016a4\u0026_getpagesoffset\u003d60\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    },
+    {
+      "relation": "next",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003dcdc55e54-c403-4158-914d-5548fd4016a4\u0026_getpagesoffset\u003d80\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    },
+    {
+      "relation": "previous",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003dcdc55e54-c403-4158-914d-5548fd4016a4\u0026_getpagesoffset\u003d40\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322550",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322550",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:45.689+00:00",
+          "source": "#HnM8xtN0sCIYfmXb"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-03-20T16:35:24-04:00",
+              "end": "2017-03-20T16:35:24-04:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "OBSENC"
+        },
+        "subject": {
+          "reference": "Patient/1322045",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-30T15:35:24-04:00",
+          "end": "2017-03-30T19:35:24-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322551",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322551",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:45.940+00:00",
+          "source": "#ThYNU8ELLErwWxpX"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-03-05T20:45:57-05:00",
+              "end": "2017-03-05T20:45:57-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "ACUTE"
+        },
+        "subject": {
+          "reference": "Patient/1322046",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-15T19:45:57-04:00",
+          "end": "2017-03-15T22:45:57-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322552",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322552",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:46.227+00:00",
+          "source": "#JreoIKbxyCuJZcWo"
+        },
+        "status": "planned",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-03-08T08:41:33-05:00",
+              "end": "2017-03-08T08:41:33-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "ACUTE"
+        },
+        "subject": {
+          "reference": "Patient/1322047",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-18T07:41:33-04:00",
+          "end": "2017-03-18T11:41:33-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322553",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322553",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:46.467+00:00",
+          "source": "#OqV6VTwUbtGN90IQ"
+        },
+        "status": "planned",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-02-28T23:27:59-05:00",
+              "end": "2017-02-28T23:27:59-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "IMP"
+        },
+        "subject": {
+          "reference": "Patient/1322048",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-10T22:27:59-05:00",
+          "end": "2017-03-11T03:27:59-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322554",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322554",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:46.715+00:00",
+          "source": "#VcFhvBfGqZPeUTIY"
+        },
+        "status": "planned",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-03-12T01:00:36-05:00",
+              "end": "2017-03-12T01:00:36-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "SS"
+        },
+        "subject": {
+          "reference": "Patient/1322049",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-22T00:00:36-04:00",
+          "end": "2017-03-22T04:00:36-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322555",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322555",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:46.948+00:00",
+          "source": "#heDDe6xG1sorQV77"
+        },
+        "status": "planned",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-03-09T21:40:43-05:00",
+              "end": "2017-03-09T21:40:43-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "IMP"
+        },
+        "subject": {
+          "reference": "Patient/1322050",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-19T20:40:43-04:00",
+          "end": "2017-03-20T00:40:43-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322556",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322556",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:47.262+00:00",
+          "source": "#fDwthpUfJ6NWVpXi"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-03-14T16:21:07-04:00",
+              "end": "2017-03-14T16:21:07-04:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "AMB"
+        },
+        "subject": {
+          "reference": "Patient/1322051",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-24T15:21:07-04:00",
+          "end": "2017-03-24T19:21:07-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322557",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322557",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:47.520+00:00",
+          "source": "#Xtnt0It6NLAh2X2K"
+        },
+        "status": "planned",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-02-23T19:07:25-05:00",
+              "end": "2017-02-23T19:07:25-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "IMP"
+        },
+        "subject": {
+          "reference": "Patient/1322052",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-05T18:07:25-05:00",
+          "end": "2017-03-05T22:07:25-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322558",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322558",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:47.940+00:00",
+          "source": "#w0qrPns5SCz7rdJj"
+        },
+        "status": "planned",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-02-19T20:15:33-05:00",
+              "end": "2017-02-19T20:15:33-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "AMB"
+        },
+        "subject": {
+          "reference": "Patient/1322053",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-01T19:15:33-05:00",
+          "end": "2017-03-02T00:15:33-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322559",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322559",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:48.280+00:00",
+          "source": "#nca4lC6GlfpmyoG3"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-03-17T06:26:47-04:00",
+              "end": "2017-03-17T06:26:47-04:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "IMP"
+        },
+        "subject": {
+          "reference": "Patient/1322054",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-27T05:26:47-04:00",
+          "end": "2017-03-27T08:26:47-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322560",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322560",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:48.555+00:00",
+          "source": "#ktOUpw12Q8cTlfP8"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-02-28T01:18:45-05:00",
+              "end": "2017-02-28T01:18:45-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "ACUTE"
+        },
+        "subject": {
+          "reference": "Patient/1322055",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-10T00:18:45-05:00",
+          "end": "2017-03-10T03:18:45-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322561",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322561",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:48.882+00:00",
+          "source": "#ablYA1I42ivAP35i"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-02-24T23:49:44-05:00",
+              "end": "2017-02-24T23:49:44-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "OBSENC"
+        },
+        "subject": {
+          "reference": "Patient/1322056",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-06T22:49:44-05:00",
+          "end": "2017-03-07T01:49:44-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322562",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322562",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:49.113+00:00",
+          "source": "#7qKypUKmBoSRO5rb"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-02-24T09:40:48-05:00",
+              "end": "2017-02-24T09:40:48-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "SS"
+        },
+        "subject": {
+          "reference": "Patient/1322057",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-06T08:40:48-05:00",
+          "end": "2017-03-06T11:40:48-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322563",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322563",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:49.422+00:00",
+          "source": "#2hv4EKxNp2kP3w9n"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-03-04T09:36:25-05:00",
+              "end": "2017-03-04T09:36:25-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "SS"
+        },
+        "subject": {
+          "reference": "Patient/1322058",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-14T08:36:25-04:00",
+          "end": "2017-03-14T11:36:25-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322564",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322564",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:49.685+00:00",
+          "source": "#2At5o1WMI9q3YL23"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-03-19T21:02:44-04:00",
+              "end": "2017-03-19T21:02:44-04:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "SS"
+        },
+        "subject": {
+          "reference": "Patient/1322059",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-29T20:02:44-04:00",
+          "end": "2017-03-30T01:02:44-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322565",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322565",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:49.967+00:00",
+          "source": "#6YKY8tUfF3jHbVgs"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "finished",
+            "period": {
+              "start": "2017-03-07T11:32:55-05:00",
+              "end": "2017-03-07T11:32:55-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "SS"
+        },
+        "subject": {
+          "reference": "Patient/1322060",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-17T10:32:55-04:00",
+          "end": "2017-03-17T15:32:55-04:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322566",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322566",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:50.215+00:00",
+          "source": "#1wdYlmMU5hnfAN2E"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-02-25T08:13:02-05:00",
+              "end": "2017-02-25T08:13:02-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "SS"
+        },
+        "subject": {
+          "reference": "Patient/1322061",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-07T07:13:02-05:00",
+          "end": "2017-03-07T11:13:02-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322567",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322567",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:50.492+00:00",
+          "source": "#EvtAFFyoEzpjTjJ4"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-02-26T21:48:26-05:00",
+              "end": "2017-02-26T21:48:26-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "ACUTE"
+        },
+        "subject": {
+          "reference": "Patient/1322062",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-08T20:48:26-05:00",
+          "end": "2017-03-09T00:48:26-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322568",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322568",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:50.732+00:00",
+          "source": "#hefgbGCNPWK1LoBG"
+        },
+        "status": "planned",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-02-23T11:10:59-05:00",
+              "end": "2017-02-23T11:10:59-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "OBSENC"
+        },
+        "subject": {
+          "reference": "Patient/1322063",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-05T10:10:59-05:00",
+          "end": "2017-03-05T13:10:59-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Encounter/1322569",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1322569",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:06:51.010+00:00",
+          "source": "#993Nn8pL9ewilLsn"
+        },
+        "status": "finished",
+        "statusHistory": [
+          {
+            "status": "planned",
+            "period": {
+              "start": "2017-02-27T16:00:14-05:00",
+              "end": "2017-02-27T16:00:14-05:00"
+            }
+          }
+        ],
+        "class": {
+          "code": "ACUTE"
+        },
+        "subject": {
+          "reference": "Patient/1322064",
+          "type": "Patient"
+        },
+        "period": {
+          "start": "2017-03-09T15:00:14-05:00",
+          "end": "2017-03-09T18:00:14-05:00"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322064",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322064",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:16.045+00:00",
+          "source": "#Uk8OnTcP2FRBGSJk"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eMal \u003cb\u003eDECCO \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Decco",
+            "given": [
+              "Mal"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322045",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322045",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:10.405+00:00",
+          "source": "#UKoWngNgs3lcGrqi"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eKaren \u003cb\u003eARGO \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Argo",
+            "given": [
+              "Karen"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322046",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322046",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:10.672+00:00",
+          "source": "#eyw4nUG6v1liZSj1"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eCol \u003cb\u003eKNIFE \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Knife",
+            "given": [
+              "Col"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322047",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322047",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:10.962+00:00",
+          "source": "#B3i5a2mhgFv7VIsC"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eNorma \u003cb\u003eARANDA \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Aranda",
+            "given": [
+              "Norma"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322052",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322052",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:12.333+00:00",
+          "source": "#ljbXJQK0JCi6mLiz"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eGinger \u003cb\u003eBLOSSOM \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Blossom",
+            "given": [
+              "Ginger"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322053",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322053",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:12.615+00:00",
+          "source": "#BBTyl5TTUAOFYAXm"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eLaura \u003cb\u003eARANDA \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Aranda",
+            "given": [
+              "Laura"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322054",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322054",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:12.945+00:00",
+          "source": "#yYKk5qsoO7VJO9ih"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eSanti \u003cb\u003eARANDA \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Aranda",
+            "given": [
+              "Santi"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322055",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322055",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:13.225+00:00",
+          "source": "#XGh4rvk2JY7gjNpH"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eColin \u003cb\u003eTICK \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Tick",
+            "given": [
+              "Colin"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322048",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322048",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:11.249+00:00",
+          "source": "#Fbz3ZvVERsTco3Oi"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eGinger \u003cb\u003eARANDA \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Aranda",
+            "given": [
+              "Ginger"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322049",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322049",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:11.514+00:00",
+          "source": "#rOSdPTsFVIK07cAa"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eRod \u003cb\u003eWANNAKRAKOUER \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Wannakrakouer",
+            "given": [
+              "Rod"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322050",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322050",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:11.783+00:00",
+          "source": "#sa8Eo8c3jvrACwXx"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eHugo \u003cb\u003eWAITES \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Waites",
+            "given": [
+              "Hugo"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322051",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322051",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:12.073+00:00",
+          "source": "#wvqqndRk5HSaiDaT"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eEmma \u003cb\u003eDOZEAPLIKAYSHUN \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Dozeaplikayshun",
+            "given": [
+              "Emma"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322060",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322060",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:14.918+00:00",
+          "source": "#yjN3pNo8QhEmz5CU"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eLynne \u003cb\u003eWAITES \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Waites",
+            "given": [
+              "Lynne"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322061",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322061",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:15.198+00:00",
+          "source": "#DxQgUBfoor3tZuUa"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eStanley \u003cb\u003eDOZEAPLIKAYSHUN \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Dozeaplikayshun",
+            "given": [
+              "Stanley"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322062",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322062",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:15.483+00:00",
+          "source": "#k2EfodInXafR5G5N"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eEmma \u003cb\u003eVERE \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Vere",
+            "given": [
+              "Emma"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322063",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322063",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:15.740+00:00",
+          "source": "#XbsMo8qgm0WmlsFr"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eCherry \u003cb\u003eSTANINTERUPSHUNS \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Staninterupshuns",
+            "given": [
+              "Cherry"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322056",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322056",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:13.538+00:00",
+          "source": "#mG5mKyGt4gpfdtHG"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eTim \u003cb\u003eGWAFRANCA \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Gwafranca",
+            "given": [
+              "Tim"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322057",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322057",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:13.815+00:00",
+          "source": "#KULZOOYmWAHy37SM"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eLaura \u003cb\u003eOWT \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Owt",
+            "given": [
+              "Laura"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322058",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322058",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:14.255+00:00",
+          "source": "#IoIicQSGp7dHT2lr"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eKaren \u003cb\u003eTREE \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Tree",
+            "given": [
+              "Karen"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1322059",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1322059",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-07-03T19:04:14.645+00:00",
+          "source": "#wmNAkhUvuWySesBg"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003eRod \u003cb\u003eGRATE \u003c/b\u003e\u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody/\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "name": [
+          {
+            "family": "Grate",
+            "given": [
+              "Rod"
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}
