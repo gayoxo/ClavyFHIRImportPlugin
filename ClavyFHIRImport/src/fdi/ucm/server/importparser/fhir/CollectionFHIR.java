@@ -108,7 +108,9 @@ public class CollectionFHIR {
 			//http://hapi.fhir.org/baseR4/Encounter?_include=Encounter:patient&_pretty=true
 			//http://hapi.fhir.org/baseR4/Condition?_include=Condition:encounter&_include=Condition:patient&_pretty=true
 			//http://hapi.fhir.org/baseR4/DiagnosticReport?_include=DiagnosticReport:patient&_include=DiagnosticReport:result&_pretty=true
-		
+			//http://hapi.fhir.org/baseR4/DiagnosticReport?_include=DiagnosticReport:patient&_include=DiagnosticReport:result&_count=1&_pretty=true
+			
+			
 			String ActualURL = querryBuffer.toString();
 			int conteoFile=0;
 
