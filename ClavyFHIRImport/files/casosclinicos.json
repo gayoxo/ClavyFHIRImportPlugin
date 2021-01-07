@@ -1,647 +1,83 @@
 {
   "resourceType": "Bundle",
-  "id": "b3ad5efb-e3ac-417a-8bdd-01c2c84cdaba",
+  "id": "484296c3-5f10-459d-953c-944bb18a86ac",
   "meta": {
-    "lastUpdated": "2021-01-05T10:07:19.195+00:00"
+    "lastUpdated": "2021-01-07T09:43:13.190+00:00"
   },
   "type": "searchset",
   "link": [
     {
       "relation": "self",
-      "url": "http://hapi.fhir.org/baseR4/Condition?_format\u003djson\u0026_include\u003dCondition%3Apatient\u0026_pretty\u003dtrue"
+      "url": "http://hapi.fhir.org/baseR4/DiagnosticReport?_count\u003d2\u0026_format\u003djson\u0026_include\u003dDiagnosticReport%3Apatient\u0026_include\u003dDiagnosticReport%3Aresult\u0026_pretty\u003dtrue"
     },
     {
       "relation": "next",
-      "url": "http://hapi.fhir.org/baseR4?_getpages\u003db3ad5efb-e3ac-417a-8bdd-01c2c84cdaba\u0026_getpagesoffset\u003d20\u0026_count\u003d20\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d484296c3-5f10-459d-953c-944bb18a86ac\u0026_getpagesoffset\u003d2\u0026_count\u003d2\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
     }
   ],
   "entry": [
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1556122",
+      "fullUrl": "http://hapi.fhir.org/baseR4/DiagnosticReport/4ce12599-3cee-4233-b24f-c54ad90de3b6",
       "resource": {
-        "resourceType": "Condition",
-        "id": "1556122",
+        "resourceType": "DiagnosticReport",
+        "id": "4ce12599-3cee-4233-b24f-c54ad90de3b6",
         "meta": {
           "versionId": "1",
-          "lastUpdated": "2020-10-10T01:41:44.596+00:00",
-          "source": "#O846Et33v4ogq5yA"
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "resolved"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "271825005",
-              "display": "Respiratory distress (finding)"
-            }
+          "lastUpdated": "2020-03-24T17:56:14.656+00:00",
+          "source": "#8jsD5D8OYkc7WR4Z",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
           ],
-          "text": "Respiratory distress (finding)"
-        },
-        "subject": {
-          "reference": "Patient/1556032"
-        },
-        "encounter": {
-          "reference": "Encounter/1556119"
-        },
-        "onsetDateTime": "2020-03-07T20:53:14-05:00",
-        "abatementDateTime": "2020-03-20T21:53:14-04:00",
-        "recordedDate": "2020-03-07T20:53:14-05:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1556121",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1556121",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:41:44.596+00:00",
-          "source": "#O846Et33v4ogq5yA"
-        },
-        "clinicalStatus": {
-          "coding": [
+          "tag": [
             {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "active"
+              "system": "https://smarthealthit.org/tags",
+              "code": "Covid19 synthetic population from Synthea"
             }
           ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "389087006",
-              "display": "Hypoxemia (disorder)"
-            }
-          ],
-          "text": "Hypoxemia (disorder)"
-        },
-        "subject": {
-          "reference": "Patient/1556032"
-        },
-        "encounter": {
-          "reference": "Encounter/1556119"
-        },
-        "onsetDateTime": "2020-03-07T20:53:14-05:00",
-        "recordedDate": "2020-03-07T20:53:14-05:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1556123",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1556123",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:41:44.596+00:00",
-          "source": "#O846Et33v4ogq5yA"
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "resolved"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "132281000119108",
-              "display": "Acute deep venous thrombosis (disorder)"
-            }
-          ],
-          "text": "Acute deep venous thrombosis (disorder)"
-        },
-        "subject": {
-          "reference": "Patient/1556032"
-        },
-        "encounter": {
-          "reference": "Encounter/1556119"
-        },
-        "onsetDateTime": "2020-03-16T21:53:14-04:00",
-        "abatementDateTime": "2020-03-20T21:53:14-04:00",
-        "recordedDate": "2020-03-16T21:53:14-04:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1556120",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1556120",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:41:44.596+00:00",
-          "source": "#O846Et33v4ogq5yA"
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "resolved"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "233604007",
-              "display": "Pneumonia (disorder)"
-            }
-          ],
-          "text": "Pneumonia (disorder)"
-        },
-        "subject": {
-          "reference": "Patient/1556032"
-        },
-        "encounter": {
-          "reference": "Encounter/1556119"
-        },
-        "onsetDateTime": "2020-03-07T20:53:14-05:00",
-        "abatementDateTime": "2020-03-20T21:53:14-04:00",
-        "recordedDate": "2020-03-07T20:53:14-05:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1556100",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1556100",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:41:44.596+00:00",
-          "source": "#O846Et33v4ogq5yA"
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "resolved"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "36955009",
-              "display": "Loss of taste (finding)"
-            }
-          ],
-          "text": "Loss of taste (finding)"
-        },
-        "subject": {
-          "reference": "Patient/1556032"
-        },
-        "encounter": {
-          "reference": "Encounter/1556094"
-        },
-        "onsetDateTime": "2020-03-07T19:22:14-05:00",
-        "abatementDateTime": "2020-03-20T21:53:14-04:00",
-        "recordedDate": "2020-03-07T19:22:14-05:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1556102",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1556102",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:41:44.596+00:00",
-          "source": "#O846Et33v4ogq5yA"
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "resolved"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "840539006",
-              "display": "COVID-19"
-            }
-          ],
-          "text": "COVID-19"
-        },
-        "subject": {
-          "reference": "Patient/1556032"
-        },
-        "encounter": {
-          "reference": "Encounter/1556094"
-        },
-        "onsetDateTime": "2020-03-07T20:28:14-05:00",
-        "abatementDateTime": "2020-03-20T21:53:14-04:00",
-        "recordedDate": "2020-03-07T20:28:14-05:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1556101",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1556101",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:41:44.596+00:00",
-          "source": "#O846Et33v4ogq5yA"
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "resolved"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "840544004",
-              "display": "Suspected COVID-19"
-            }
-          ],
-          "text": "Suspected COVID-19"
-        },
-        "subject": {
-          "reference": "Patient/1556032"
-        },
-        "encounter": {
-          "reference": "Encounter/1556094"
-        },
-        "onsetDateTime": "2020-03-07T19:22:14-05:00",
-        "abatementDateTime": "2020-03-07T20:28:14-05:00",
-        "recordedDate": "2020-03-07T19:22:14-05:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1553317",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1553317",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:40:27.460+00:00",
-          "source": "#EJCe9zCTJFz4YENN"
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "resolved"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "248595008",
-              "display": "Sputum finding (finding)"
-            }
-          ],
-          "text": "Sputum finding (finding)"
-        },
-        "subject": {
-          "reference": "Patient/1553254"
-        },
-        "encounter": {
-          "reference": "Encounter/1553316"
-        },
-        "onsetDateTime": "2020-03-07T19:22:14-05:00",
-        "abatementDateTime": "2020-03-20T21:53:14-04:00",
-        "recordedDate": "2020-03-07T19:22:14-05:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1553318",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1553318",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:40:27.460+00:00",
-          "source": "#EJCe9zCTJFz4YENN"
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "resolved"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "84229001",
-              "display": "Fatigue (finding)"
-            }
-          ],
-          "text": "Fatigue (finding)"
-        },
-        "subject": {
-          "reference": "Patient/1553254"
-        },
-        "encounter": {
-          "reference": "Encounter/1553316"
-        },
-        "onsetDateTime": "2020-03-07T19:22:14-05:00",
-        "abatementDateTime": "2020-03-20T21:53:14-04:00",
-        "recordedDate": "2020-03-07T19:22:14-05:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1553319",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1553319",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:40:27.460+00:00",
-          "source": "#EJCe9zCTJFz4YENN"
-        },
-        "clinicalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-              "code": "resolved"
-            }
-          ]
-        },
-        "verificationStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-              "code": "confirmed"
-            }
-          ]
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "267036007",
-              "display": "Dyspnea (finding)"
-            }
-          ],
-          "text": "Dyspnea (finding)"
-        },
-        "subject": {
-          "reference": "Patient/1553254"
-        },
-        "encounter": {
-          "reference": "Encounter/1553316"
-        },
-        "onsetDateTime": "2020-03-07T19:22:14-05:00",
-        "abatementDateTime": "2020-03-20T21:53:14-04:00",
-        "recordedDate": "2020-03-07T19:22:14-05:00"
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366009",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1366009",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eOnychomycosis\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e Evaluation+Plan note \u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eStatus\u003c/td\u003e\u003ctd\u003eFINAL\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIssued\u003c/td\u003e\u003ctd\u003e 08 September 2010 22:06:45\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
         },
+        "status": "final",
         "category": [
           {
             "coding": [
               {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "24484000",
-              "display": "severe"
-            }
-          ],
-          "text": "severe"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "414941998",
-              "display": "onychomycosis"
-            }
-          ],
-          "text": "onychomycosis"
-        },
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 77,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366010",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1366010",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eAngina\u003c/div\u003e"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "6736007",
-              "display": "moderate"
-            }
-          ],
-          "text": "Moderate"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "194818000",
-              "display": "angina"
-            }
-          ],
-          "text": "angina"
-        },
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 76,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        },
-        "evidence": [
-          {
-            "code": [
-              {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/ct",
-                    "code": "29857009",
-                    "display": "Chest Pain"
-                  }
-                ],
-                "text": "Chest Pain"
+                "system": "http://loinc.org",
+                "code": "51847-2",
+                "display": "Evaluation+Plan note"
               }
             ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51847-2",
+              "display": "Evaluation+Plan note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cf0d62b6-8f70-4164-95ac-1116f6ceb16d"
+        },
+        "encounter": {
+          "reference": "Encounter/cc7b66a6-8eb2-4606-8aef-a89519020757"
+        },
+        "effectiveDateTime": "2010-09-08T17:06:45-05:00",
+        "issued": "2010-09-08T17:06:45.817-05:00",
+        "performer": [
+          {
+            "reference": "Practitioner/00000171-0929-2892-0000-000000018150",
+            "display": "Dr. Lavonne167 Lubowitz58"
+          }
+        ],
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "Q2pJd01UQXRNRGt0TURnS0NpTWdRMmhwWldZZ1EyOXRjR3hoYVc1MENrNXZJR052YlhCc1lXbHVkSE11Q2dvaklFaHBjM1J2Y25rZ2IyWWdVSEpsYzJWdWRDQkpiR3h1WlhOekNrRm5iblZ6Tnprd0lHbHpJR0VnTkRBZ2VXVmhjaTF2YkdRZ2FHbHpjR0Z1YVdNZ2FHbHpjR0Z1YVdNZ1ptVnRZV3hsTGdvS0l5QlRiMk5wWVd3Z1NHbHpkRzl5ZVFwUVlYUnBaVzUwSUdseklHMWhjbkpwWldRdUlGQmhkR2xsYm5RZ2FYTWdZVzRnWVdOMGFYWmxJSE50YjJ0bGNpQmhibVFnYVhNZ1lXNGdZV3hqYjJodmJHbGpMaUJRWVhScFpXNTBJR2xrWlc1MGFXWnBaWE1nWVhNZ2FHVjBaWEp2YzJWNGRXRnNMZ29LVUdGMGFXVnVkQ0JqYjIxbGN5Qm1jbTl0SUdFZ2JXbGtaR3hsSUhOdlkybHZaV052Ym05dGFXTWdZbUZqYTJkeWIzVnVaQzRnVUdGMGFXVnVkQ0JrYVdRZ2JtOTBJR1pwYm1semFDQm9hV2RvSUhOamFHOXZiQzRnVUdGMGFXVnVkQ0JqZFhKeVpXNTBiSGtnYUdGeklGVnVhWFJsWkVobFlXeDBhR05oY21VdUNnb2pJRUZzYkdWeVoybGxjd3BPYnlCTGJtOTNiaUJCYkd4bGNtZHBaWE11Q2dvaklFMWxaR2xqWVhScGIyNXpDazV2SUVGamRHbDJaU0JOWldScFkyRjBhVzl1Y3k0S0NpTWdRWE56WlhOemJXVnVkQ0JoYm1RZ1VHeGhiZ29LQ2lNaklGQnNZVzRLVUdGMGFXVnVkQ0IzWVhNZ1oybDJaVzRnZEdobElHWnZiR3h2ZDJsdVp5QnBiVzExYm1sNllYUnBiMjV6T2lCcGJtWnNkV1Z1ZW1Fc0lITmxZWE52Ym1Gc0xDQnBibXBsWTNSaFlteGxMQ0J3Y21WelpYSjJZWFJwZG1VZ1puSmxaU3dnYUdWd0lHRXNJR0ZrZFd4MExpQUs\u003d"
           }
         ]
       },
@@ -650,498 +86,67 @@
       }
     },
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366000",
+      "fullUrl": "http://hapi.fhir.org/baseR4/DiagnosticReport/d1c9c2be-6546-4fe4-9439-f4c81cc97108",
       "resource": {
-        "resourceType": "Condition",
-        "id": "1366000",
+        "resourceType": "DiagnosticReport",
+        "id": "d1c9c2be-6546-4fe4-9439-f4c81cc97108",
         "meta": {
           "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
+          "lastUpdated": "2020-03-24T17:56:14.656+00:00",
+          "source": "#8jsD5D8OYkc7WR4Z",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ],
+          "tag": [
+            {
+              "system": "https://smarthealthit.org/tags",
+              "code": "Covid19 synthetic population from Synthea"
+            }
+          ]
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eAsthma\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e Evaluation+Plan note \u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eStatus\u003c/td\u003e\u003ctd\u003eFINAL\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIssued\u003c/td\u003e\u003ctd\u003e 26 September 2018 22:06:45\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
         },
+        "status": "final",
         "category": [
           {
             "coding": [
               {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "6736007",
-              "display": "mild to moderate"
-            }
-          ],
-          "text": "mild to moderate"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "195917001",
-              "display": "asthma"
-            }
-          ],
-          "text": "asthma"
-        },
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 14,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366003",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1366003",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eDepression\u003c/div\u003e"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "6736007",
-              "display": "moderate"
-            }
-          ],
-          "text": "Moderate"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "35489007",
-              "display": "depression"
-            }
-          ],
-          "text": "depression"
-        },
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 74,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366004",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1366004",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eNeuropathic pain\u003c/div\u003e"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "6736007",
-              "display": "moderate"
-            }
-          ],
-          "text": "moderate"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "247389009",
-              "display": "neuropathic pain"
-            }
-          ],
-          "text": "neuropathic pain"
-        },
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 75,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366001",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1366001",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eDiabetes\u003c/div\u003e"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "6736007",
-              "display": "moderate"
-            }
-          ],
-          "text": "moderate"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "73211009",
-              "display": "diabetes"
-            }
-          ],
-          "text": "diabetes"
-        },
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 60,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366002",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1366002",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eHypertension\u003c/div\u003e"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "255604002",
-              "display": "mild"
-            }
-          ],
-          "text": "Mild"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "38341003",
-              "display": "hypertension"
-            }
-          ],
-          "text": "hypertension"
-        },
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 68,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366007",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1366007",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGERD\u003c/div\u003e"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "6736007",
-              "display": "moderate"
-            }
-          ],
-          "text": "Moderate"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "235595009",
-              "display": "GERD"
-            }
-          ],
-          "text": "GERD"
-        },
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 66,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366008",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1366008",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eHypercholesterolaemia\u003c/div\u003e"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "6736007",
-              "display": "moderate"
-            }
-          ],
-          "text": "Moderate"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "13644009",
-              "display": "high cholesterol"
-            }
-          ],
-          "text": "high cholesterol"
-        },
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 68,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        }
-      },
-      "search": {
-        "mode": "match"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Condition/1366005",
-      "resource": {
-        "resourceType": "Condition",
-        "id": "1366005",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:20.297+00:00",
-          "source": "#HrUC4QIwpCydqNm3"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eRheumatoid Arthritis\u003c/div\u003e"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "14657009",
-                "display": "Diagnosis"
-              }
-            ],
-            "text": "Diagnosis"
-          }
-        ],
-        "severity": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "6736007",
-              "display": "moderate"
-            }
-          ],
-          "text": "Moderate"
-        },
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/ct",
-              "code": "69896004",
-              "display": "rheumatoid arthritis"
-            }
-          ],
-          "text": "rheumatoid arthritis - both hands"
-        },
-        "bodySite": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/ct",
-                "code": "12861001",
-                "display": "both hands"
-              }
-            ],
-            "text": "both hands"
-          }
-        ],
-        "subject": {
-          "reference": "Patient/1365998"
-        },
-        "onsetAge": {
-          "value": 72,
-          "system": "http://unitsofmeasure.org",
-          "code": "a"
-        },
-        "evidence": [
-          {
-            "code": [
-              {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/ct",
-                    "code": "57676002",
-                    "display": "Painful Joint"
-                  }
-                ],
-                "text": "Painful joint"
+                "system": "http://loinc.org",
+                "code": "51847-2",
+                "display": "Evaluation+Plan note"
               }
             ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51847-2",
+              "display": "Evaluation+Plan note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cf0d62b6-8f70-4164-95ac-1116f6ceb16d"
+        },
+        "encounter": {
+          "reference": "Encounter/6919141c-229c-463d-9157-4e3f02741d3a"
+        },
+        "effectiveDateTime": "2018-09-26T17:06:45-05:00",
+        "issued": "2018-09-26T17:06:45.817-05:00",
+        "performer": [
+          {
+            "reference": "Practitioner/00000171-0929-2892-0000-000000018150",
+            "display": "Dr. Lavonne167 Lubowitz58"
+          }
+        ],
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "Q2pJd01UZ3RNRGt0TWpZS0NpTWdRMmhwWldZZ1EyOXRjR3hoYVc1MENrNXZJR052YlhCc1lXbHVkSE11Q2dvaklFaHBjM1J2Y25rZ2IyWWdVSEpsYzJWdWRDQkpiR3h1WlhOekNrRm5iblZ6Tnprd0lHbHpJR0VnTkRnZ2VXVmhjaTF2YkdRZ2FHbHpjR0Z1YVdNZ2FHbHpjR0Z1YVdNZ1ptVnRZV3hsTGdvS0l5QlRiMk5wWVd3Z1NHbHpkRzl5ZVFwUVlYUnBaVzUwSUdseklHMWhjbkpwWldRdUlGQmhkR2xsYm5RZ2FYTWdZVzRnWVdOMGFYWmxJSE50YjJ0bGNpQmhibVFnYVhNZ1lXNGdZV3hqYjJodmJHbGpMaUJRWVhScFpXNTBJR2xrWlc1MGFXWnBaWE1nWVhNZ2FHVjBaWEp2YzJWNGRXRnNMZ29LVUdGMGFXVnVkQ0JqYjIxbGN5Qm1jbTl0SUdFZ2JXbGtaR3hsSUhOdlkybHZaV052Ym05dGFXTWdZbUZqYTJkeWIzVnVaQzRnVUdGMGFXVnVkQ0JrYVdRZ2JtOTBJR1pwYm1semFDQm9hV2RvSUhOamFHOXZiQzRnVUdGMGFXVnVkQ0JqZFhKeVpXNTBiSGtnYUdGeklGVnVhWFJsWkVobFlXeDBhR05oY21VdUNnb2pJRUZzYkdWeVoybGxjd3BPYnlCTGJtOTNiaUJCYkd4bGNtZHBaWE11Q2dvaklFMWxaR2xqWVhScGIyNXpDazV2SUVGamRHbDJaU0JOWldScFkyRjBhVzl1Y3k0S0NpTWdRWE56WlhOemJXVnVkQ0JoYm1RZ1VHeGhiZ29LQ2lNaklGQnNZVzRLVUdGMGFXVnVkQ0IzWVhNZ1oybDJaVzRnZEdobElHWnZiR3h2ZDJsdVp5QnBiVzExYm1sNllYUnBiMjV6T2lCcGJtWnNkV1Z1ZW1Fc0lITmxZWE52Ym1Gc0xDQnBibXBsWTNSaFlteGxMQ0J3Y21WelpYSjJZWFJwZG1VZ1puSmxaUzRnQ2c9PQ\u003d\u003d"
           }
         ]
       },
@@ -1150,45 +155,92 @@
       }
     },
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1553254",
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/cf0d62b6-8f70-4164-95ac-1116f6ceb16d",
       "resource": {
         "resourceType": "Patient",
-        "id": "1553254",
+        "id": "cf0d62b6-8f70-4164-95ac-1116f6ceb16d",
         "meta": {
           "versionId": "1",
-          "lastUpdated": "2020-10-10T01:40:27.460+00:00",
-          "source": "#EJCe9zCTJFz4YENN"
+          "lastUpdated": "2020-03-24T17:56:14.656+00:00",
+          "source": "#8jsD5D8OYkc7WR4Z",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ],
+          "tag": [
+            {
+              "system": "https://smarthealthit.org/tags",
+              "code": "Covid19 synthetic population from Synthea"
+            }
+          ]
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: master-branch-latest\n .   Person seed: 5547029409524515643  Population seed: 6440\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: 2177cffc\n .   Person seed: -2419631146413429618  Population seed: 12345\u003c/div\u003e"
         },
         "extension": [
           {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2131-1",
+                  "display": "Other Races"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Other"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ]
+          },
+          {
             "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
-            "valueString": "Joleen561 Effertz744"
+            "valueString": "Raina861 Rau926"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
             "valueAddress": {
-              "city": "Somerville",
-              "state": "Massachusetts",
+              "city": "Warrenville",
+              "state": "Illinois",
               "country": "US"
             }
           },
           {
             "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
-            "valueDecimal": 0.05429822354413175
+            "valueDecimal": 5.147837473860137
           },
           {
             "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
-            "valueDecimal": 27.94570177645587
+            "valueDecimal": 43.852162526139864
           }
         ],
         "identifier": [
           {
             "system": "https://github.com/synthetichealth/synthea",
-            "value": "5791f6fc-11ab-e632-5fd7-3135662b1b44"
+            "value": "ff55a9a1-9a95-40b5-a41d-6fa556a6a5e0"
           },
           {
             "type": {
@@ -1202,7 +254,7 @@
               "text": "Medical Record Number"
             },
             "system": "http://hospital.smarthealthit.org",
-            "value": "5791f6fc-11ab-e632-5fd7-3135662b1b44"
+            "value": "ff55a9a1-9a95-40b5-a41d-6fa556a6a5e0"
           },
           {
             "type": {
@@ -1216,7 +268,7 @@
               "text": "Social Security Number"
             },
             "system": "http://hl7.org/fhir/sid/us-ssn",
-            "value": "999-70-9160"
+            "value": "999-53-5902"
           },
           {
             "type": {
@@ -1230,7 +282,7 @@
               "text": "Driver\u0027s License"
             },
             "system": "urn:oid:2.16.840.1.113883.4.3.25",
-            "value": "S99957715"
+            "value": "S99927098"
           },
           {
             "type": {
@@ -1244,30 +296,40 @@
               "text": "Passport Number"
             },
             "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
-            "value": "X81242774X"
+            "value": "X42092718X"
           }
         ],
         "name": [
           {
             "use": "official",
-            "family": "Ledner144",
+            "family": "Bahringer146",
             "given": [
-              "Lindsey52"
+              "Agnus790"
             ],
             "prefix": [
-              "Mr."
+              "Mrs."
+            ]
+          },
+          {
+            "use": "maiden",
+            "family": "Carter549",
+            "given": [
+              "Agnus790"
+            ],
+            "prefix": [
+              "Mrs."
             ]
           }
         ],
         "telecom": [
           {
             "system": "phone",
-            "value": "555-725-6370",
+            "value": "555-592-1049",
             "use": "home"
           }
         ],
-        "gender": "male",
-        "birthDate": "1991-05-07",
+        "gender": "female",
+        "birthDate": "1970-09-02",
         "address": [
           {
             "extension": [
@@ -1276,20 +338,21 @@
                 "extension": [
                   {
                     "url": "latitude",
-                    "valueDecimal": 41.84269634556081
+                    "valueDecimal": 41.938880729891295
                   },
                   {
                     "url": "longitude",
-                    "valueDecimal": -70.83785688400742
+                    "valueDecimal": -87.58613202335057
                   }
                 ]
               }
             ],
             "line": [
-              "219 Hahn Row"
+              "865 Aufderhar Center Apt 22"
             ],
-            "city": "Middleborough",
-            "state": "Massachusetts",
+            "city": "Chicago",
+            "state": "IL",
+            "postalCode": "60007",
             "country": "US"
           }
         ],
@@ -1318,217 +381,6 @@
             }
           }
         ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1556032",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1556032",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-10-10T01:41:44.596+00:00",
-          "source": "#O846Et33v4ogq5yA"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: master-branch-latest\n .   Person seed: 5547029409524515643  Population seed: 6440\u003c/div\u003e"
-        },
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
-            "valueString": "Joleen561 Effertz744"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
-            "valueAddress": {
-              "city": "Somerville",
-              "state": "Massachusetts",
-              "country": "US"
-            }
-          },
-          {
-            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
-            "valueDecimal": 0.05429822354413175
-          },
-          {
-            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
-            "valueDecimal": 27.94570177645587
-          }
-        ],
-        "identifier": [
-          {
-            "system": "https://github.com/synthetichealth/synthea",
-            "value": "5791f6fc-11ab-e632-5fd7-3135662b1b44"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "MR",
-                  "display": "Medical Record Number"
-                }
-              ],
-              "text": "Medical Record Number"
-            },
-            "system": "http://hospital.smarthealthit.org",
-            "value": "5791f6fc-11ab-e632-5fd7-3135662b1b44"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "SS",
-                  "display": "Social Security Number"
-                }
-              ],
-              "text": "Social Security Number"
-            },
-            "system": "http://hl7.org/fhir/sid/us-ssn",
-            "value": "999-70-9160"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "DL",
-                  "display": "Driver\u0027s License"
-                }
-              ],
-              "text": "Driver\u0027s License"
-            },
-            "system": "urn:oid:2.16.840.1.113883.4.3.25",
-            "value": "S99957715"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "PPN",
-                  "display": "Passport Number"
-                }
-              ],
-              "text": "Passport Number"
-            },
-            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
-            "value": "X81242774X"
-          }
-        ],
-        "name": [
-          {
-            "use": "official",
-            "family": "Ledner144",
-            "given": [
-              "Lindsey52"
-            ],
-            "prefix": [
-              "Mr."
-            ]
-          }
-        ],
-        "telecom": [
-          {
-            "system": "phone",
-            "value": "555-725-6370",
-            "use": "home"
-          }
-        ],
-        "gender": "male",
-        "birthDate": "1991-05-07",
-        "address": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
-                "extension": [
-                  {
-                    "url": "latitude",
-                    "valueDecimal": 41.84269634556081
-                  },
-                  {
-                    "url": "longitude",
-                    "valueDecimal": -70.83785688400742
-                  }
-                ]
-              }
-            ],
-            "line": [
-              "219 Hahn Row"
-            ],
-            "city": "Middleborough",
-            "state": "Massachusetts",
-            "country": "US"
-          }
-        ],
-        "maritalStatus": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-              "code": "M",
-              "display": "M"
-            }
-          ],
-          "text": "M"
-        },
-        "multipleBirthBoolean": false,
-        "communication": [
-          {
-            "language": {
-              "coding": [
-                {
-                  "system": "urn:ietf:bcp:47",
-                  "code": "en-US",
-                  "display": "English"
-                }
-              ],
-              "text": "English"
-            }
-          }
-        ]
-      },
-      "search": {
-        "mode": "include"
-      }
-    },
-    {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1365998",
-      "resource": {
-        "resourceType": "Patient",
-        "id": "1365998",
-        "meta": {
-          "versionId": "1",
-          "lastUpdated": "2020-07-04T03:14:18.375+00:00",
-          "source": "#5cOECe9D7ImV6KG6"
-        },
-        "text": {
-          "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eNoah Brown\u003c/div\u003e"
-        },
-        "identifier": [
-          {
-            "system": "http://clinfhir.com/fhir/NamingSystem/identifier",
-            "value": "MRN123"
-          }
-        ],
-        "name": [
-          {
-            "use": "official",
-            "text": "Noah Brown",
-            "family": "Brown",
-            "given": [
-              "Noah"
-            ]
-          }
-        ],
-        "gender": "male",
-        "birthDate": "2020-07-04"
       },
       "search": {
         "mode": "include"

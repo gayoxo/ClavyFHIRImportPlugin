@@ -12,7 +12,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 
 import com.google.gson.Gson;
@@ -33,6 +36,33 @@ public class CollectionFHIR {
 	private ArrayList<String> log=new ArrayList<String>();
 
 		
+	
+	class Entry<K, V>{
+		
+		K Key;
+		V Value;
+		
+		public Entry(K key,V value) {
+			Key=key;
+			Value=value;
+		}
+		
+		public K getKey() {
+			return Key;
+		}
+		public void setKey(K key) {
+			Key = key;
+		}
+		public V getValue() {
+			return Value;
+		}
+		public void setValue(V value) {
+			Value = value;
+		}
+		
+		
+		
+	}
 	
 
 	public void procesaFHIR(String URLBase, ArrayList<String> log, int limit) {
@@ -87,18 +117,22 @@ public class CollectionFHIR {
 			if (debugfile)
 				System.out.println("//////////generado archivo de pacientes");
 			
-			Map<String, String> parameters = new HashMap<>();
-			parameters.put("_include", "Condition:encounter");
-			parameters.put("_include", "Condition:patient");
-			parameters.put("_format", "json");
-			parameters.put("_pretty", "true");
+			
+			List<Entry<String,String>> parameters=new LinkedList<Entry<String,String>>();
+
+			parameters.add(new Entry<String,String>("_include", "DiagnosticReport:patient"));
+			parameters.add(new Entry<String,String>("_include", "DiagnosticReport:result"));
+			parameters.add(new Entry<String,String>("_format", "json"));
+			parameters.add(new Entry<String,String>("_pretty", "true"));
+			if (limit>0)
+				parameters.add(new Entry<String,String>("_count", Integer.toString(limit)));
 			
 
 			StringBuffer querryBuffer= new StringBuffer();
 			
 			try {
 			querryBuffer.append(URLBase);
-			querryBuffer.append("/Condition?");
+			querryBuffer.append("/DiagnosticReport?");
 			
 				querryBuffer.append(ParameterStringBuilder.getParamsString(parameters));
 			} catch (UnsupportedEncodingException e1) {
@@ -109,14 +143,16 @@ public class CollectionFHIR {
 			//http://hapi.fhir.org/baseR4/Condition?_include=Condition:encounter&_include=Condition:patient&_pretty=true
 			//http://hapi.fhir.org/baseR4/DiagnosticReport?_include=DiagnosticReport:patient&_include=DiagnosticReport:result&_pretty=true
 			//http://hapi.fhir.org/baseR4/DiagnosticReport?_include=DiagnosticReport:patient&_include=DiagnosticReport:result&_count=1&_pretty=true
-			
+			//http://hapi.fhir.org/baseR4/DiagnosticReport?_include=DiagnosticReport:encounter&_include=DiagnosticReport:media&_include=DiagnosticReport:patient&_include=DiagnosticReport:result&_count=1&_format=json&_pretty=true
 			
 			String ActualURL = querryBuffer.toString();
+			
+			if (debugfile)
+				System.out.println(ActualURL);
+			
 			int conteoFile=0;
 
-			while (ActualURL!=null &&!ActualURL.isEmpty() &&
-					limit==0 || conteoFile<limit
-					)
+			while (ActualURL!=null &&!ActualURL.isEmpty())
 			
 			{
 			try {
@@ -198,11 +234,11 @@ public class CollectionFHIR {
 					
 				}
 
+				if (processCasosClinicos(JSONELEM.getAsJsonObject()))
+					ActualURL=null;
+				else
+					ActualURL=next_link;
 				
-				ActualURL=next_link;
-				
-				
-				processCasosClinicos(JSONELEM.getAsJsonObject());
 				
 			} catch (MalformedURLException e) {
 				log.add(e.getMessage());
@@ -220,7 +256,7 @@ public class CollectionFHIR {
 
 	
 
-	private void processCasosClinicos(JsonObject asJsonObject) {
+	private boolean processCasosClinicos(JsonObject asJsonObject) {
 		JsonElement ENTRYNEXT = asJsonObject.get("entry");
 		JsonArray ENTRYNEXT_Array=ENTRYNEXT.getAsJsonArray();
 		
@@ -233,14 +269,18 @@ public class CollectionFHIR {
 			JsonObject oresource = entry_in.get("resource").getAsJsonObject();
 			String tResource= oresource.get("resourceType").getAsJsonPrimitive().getAsString();
 			
-			if (tResource.toLowerCase().contentEquals("condition"))
-				processAsCondition(oresource,fURL);
-
-			if (tResource.toLowerCase().contentEquals("patient"))
-				processAsPatient(oresource,fURL);
-				
+			String id_text= oresource.get("id").getAsJsonPrimitive().getAsString();
+			System.out.println(tResource+"->"+id_text+"  "+ fURL);
 			
+//			if (tResource.toLowerCase().contentEquals("condition"))
+//				processAsCondition(oresource,fURL);
+//
+//			if (tResource.toLowerCase().contentEquals("patient"))
+//				processAsPatient(oresource,fURL);
+
 		}
+		
+		return (ENTRYNEXT_Array.size()<=20);
 		
 	}
 
@@ -264,7 +304,7 @@ public class CollectionFHIR {
 		CollectionFHIR C=new CollectionFHIR();
 		ArrayList<String> log = new ArrayList<String>();
 		C.debugfile=true;
-		C.procesaFHIR("http://hapi.fhir.org/baseR4", log,10);
+		C.procesaFHIR("http://hapi.fhir.org/baseR4", log,2);
 		
 //		 try {
 //				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
