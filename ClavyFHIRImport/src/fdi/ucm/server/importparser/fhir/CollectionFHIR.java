@@ -34,7 +34,9 @@ public class CollectionFHIR {
 	private CompleteCollection Collection;
 	public boolean debugfile=false;
 	private ArrayList<String> log=new ArrayList<String>();
-
+	private HashMap<String, List<Object>> tiposObjeto;
+	private int limit;
+	private boolean fin;
 		
 	
 	class Entry<K, V>{
@@ -68,7 +70,8 @@ public class CollectionFHIR {
 	public void procesaFHIR(String URLBase, ArrayList<String> log, int limit) {
 				
 		this.log=log;
-		
+		tiposObjeto=new HashMap<String, List<Object>>();
+		this.limit=limit;
 		
 //		http://hapi.fhir.org/baseR4/Encounter?_pretty=true
 		
@@ -151,8 +154,10 @@ public class CollectionFHIR {
 				System.out.println(ActualURL);
 			
 			int conteoFile=0;
+			
+			fin =false;
 
-			while (ActualURL!=null &&!ActualURL.isEmpty())
+			while (ActualURL!=null &&!ActualURL.isEmpty() && !fin)
 			
 			{
 			try {
@@ -234,9 +239,8 @@ public class CollectionFHIR {
 					
 				}
 
-				if (processCasosClinicos(JSONELEM.getAsJsonObject()))
-					ActualURL=null;
-				else
+				processCasosClinicos(JSONELEM.getAsJsonObject());
+				
 					ActualURL=next_link;
 				
 				
@@ -256,7 +260,7 @@ public class CollectionFHIR {
 
 	
 
-	private boolean processCasosClinicos(JsonObject asJsonObject) {
+	private void processCasosClinicos(JsonObject asJsonObject) {
 		JsonElement ENTRYNEXT = asJsonObject.get("entry");
 		JsonArray ENTRYNEXT_Array=ENTRYNEXT.getAsJsonArray();
 		
@@ -269,6 +273,23 @@ public class CollectionFHIR {
 			JsonObject oresource = entry_in.get("resource").getAsJsonObject();
 			String tResource= oresource.get("resourceType").getAsJsonPrimitive().getAsString();
 			
+			if (tResource.toLowerCase().equals("diagnosticreport")&&
+					tiposObjeto.get(tResource)!=null&&
+						tiposObjeto.get(tResource).size()==limit){
+				fin=true;
+				return;
+			}
+
+			List<Object> Lista_elem = tiposObjeto.get(tResource);	
+			
+			if (Lista_elem==null)
+				Lista_elem=new LinkedList<Object>();
+			
+			Lista_elem.add(new String(System.nanoTime()+""));
+			
+			tiposObjeto.put(tResource,Lista_elem);
+			
+			
 			String id_text= oresource.get("id").getAsJsonPrimitive().getAsString();
 			System.out.println(tResource+"->"+id_text+"  "+ fURL);
 			
@@ -279,8 +300,7 @@ public class CollectionFHIR {
 //				processAsPatient(oresource,fURL);
 
 		}
-		
-		return (ENTRYNEXT_Array.size()<=20);
+
 		
 	}
 

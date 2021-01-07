@@ -1,8 +1,8 @@
 {
   "resourceType": "Bundle",
-  "id": "484296c3-5f10-459d-953c-944bb18a86ac",
+  "id": "237c3fb0-e145-43f3-8c18-10100571b095",
   "meta": {
-    "lastUpdated": "2021-01-07T09:43:13.190+00:00"
+    "lastUpdated": "2021-01-07T11:29:57.535+00:00"
   },
   "type": "searchset",
   "link": [
@@ -12,41 +12,32 @@
     },
     {
       "relation": "next",
-      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d484296c3-5f10-459d-953c-944bb18a86ac\u0026_getpagesoffset\u003d2\u0026_count\u003d2\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d237c3fb0-e145-43f3-8c18-10100571b095\u0026_getpagesoffset\u003d2\u0026_count\u003d2\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
     }
   ],
   "entry": [
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/DiagnosticReport/4ce12599-3cee-4233-b24f-c54ad90de3b6",
+      "fullUrl": "http://hapi.fhir.org/baseR4/DiagnosticReport/1558784",
       "resource": {
         "resourceType": "DiagnosticReport",
-        "id": "4ce12599-3cee-4233-b24f-c54ad90de3b6",
+        "id": "1558784",
         "meta": {
           "versionId": "1",
-          "lastUpdated": "2020-03-24T17:56:14.656+00:00",
-          "source": "#8jsD5D8OYkc7WR4Z",
-          "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
-          ],
-          "tag": [
-            {
-              "system": "https://smarthealthit.org/tags",
-              "code": "Covid19 synthetic population from Synthea"
-            }
-          ]
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e Evaluation+Plan note \u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eStatus\u003c/td\u003e\u003ctd\u003eFINAL\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIssued\u003c/td\u003e\u003ctd\u003e 08 September 2010 22:06:45\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e Auto Differential panel - Blood \u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eStatus\u003c/td\u003e\u003ctd\u003eFINAL\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIssued\u003c/td\u003e\u003ctd\u003e 17 March 2020 01:53:14\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
         },
         "status": "final",
         "category": [
           {
             "coding": [
               {
-                "system": "http://loinc.org",
-                "code": "51847-2",
-                "display": "Evaluation+Plan note"
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
               }
             ]
           }
@@ -55,29 +46,60 @@
           "coding": [
             {
               "system": "http://loinc.org",
-              "code": "51847-2",
-              "display": "Evaluation+Plan note"
+              "code": "57023-4",
+              "display": "Auto Differential panel - Blood"
             }
-          ]
+          ],
+          "text": "Auto Differential panel - Blood"
         },
         "subject": {
-          "reference": "Patient/cf0d62b6-8f70-4164-95ac-1116f6ceb16d"
+          "reference": "Patient/1557884"
         },
         "encounter": {
-          "reference": "Encounter/cc7b66a6-8eb2-4606-8aef-a89519020757"
+          "reference": "Encounter/1557971"
         },
-        "effectiveDateTime": "2010-09-08T17:06:45-05:00",
-        "issued": "2010-09-08T17:06:45.817-05:00",
-        "performer": [
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "result": [
           {
-            "reference": "Practitioner/00000171-0929-2892-0000-000000018150",
-            "display": "Dr. Lavonne167 Lubowitz58"
-          }
-        ],
-        "presentedForm": [
+            "reference": "Observation/1558400",
+            "display": "Neutrophils/100 leukocytes in Blood by Automated count"
+          },
           {
-            "contentType": "text/plain",
-            "data": "Q2pJd01UQXRNRGt0TURnS0NpTWdRMmhwWldZZ1EyOXRjR3hoYVc1MENrNXZJR052YlhCc1lXbHVkSE11Q2dvaklFaHBjM1J2Y25rZ2IyWWdVSEpsYzJWdWRDQkpiR3h1WlhOekNrRm5iblZ6Tnprd0lHbHpJR0VnTkRBZ2VXVmhjaTF2YkdRZ2FHbHpjR0Z1YVdNZ2FHbHpjR0Z1YVdNZ1ptVnRZV3hsTGdvS0l5QlRiMk5wWVd3Z1NHbHpkRzl5ZVFwUVlYUnBaVzUwSUdseklHMWhjbkpwWldRdUlGQmhkR2xsYm5RZ2FYTWdZVzRnWVdOMGFYWmxJSE50YjJ0bGNpQmhibVFnYVhNZ1lXNGdZV3hqYjJodmJHbGpMaUJRWVhScFpXNTBJR2xrWlc1MGFXWnBaWE1nWVhNZ2FHVjBaWEp2YzJWNGRXRnNMZ29LVUdGMGFXVnVkQ0JqYjIxbGN5Qm1jbTl0SUdFZ2JXbGtaR3hsSUhOdlkybHZaV052Ym05dGFXTWdZbUZqYTJkeWIzVnVaQzRnVUdGMGFXVnVkQ0JrYVdRZ2JtOTBJR1pwYm1semFDQm9hV2RvSUhOamFHOXZiQzRnVUdGMGFXVnVkQ0JqZFhKeVpXNTBiSGtnYUdGeklGVnVhWFJsWkVobFlXeDBhR05oY21VdUNnb2pJRUZzYkdWeVoybGxjd3BPYnlCTGJtOTNiaUJCYkd4bGNtZHBaWE11Q2dvaklFMWxaR2xqWVhScGIyNXpDazV2SUVGamRHbDJaU0JOWldScFkyRjBhVzl1Y3k0S0NpTWdRWE56WlhOemJXVnVkQ0JoYm1RZ1VHeGhiZ29LQ2lNaklGQnNZVzRLVUdGMGFXVnVkQ0IzWVhNZ1oybDJaVzRnZEdobElHWnZiR3h2ZDJsdVp5QnBiVzExYm1sNllYUnBiMjV6T2lCcGJtWnNkV1Z1ZW1Fc0lITmxZWE52Ym1Gc0xDQnBibXBsWTNSaFlteGxMQ0J3Y21WelpYSjJZWFJwZG1VZ1puSmxaU3dnYUdWd0lHRXNJR0ZrZFd4MExpQUs\u003d"
+            "reference": "Observation/1558401",
+            "display": "Lymphocytes/100 leukocytes in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558402",
+            "display": "Monocytes/100 leukocytes in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558403",
+            "display": "Eosinophils/100 leukocytes in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558404",
+            "display": "Basophils/100 leukocytes in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558405",
+            "display": "Neutrophils [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558406",
+            "display": "Lymphocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558407",
+            "display": "Monocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558408",
+            "display": "Eosinophils [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558409",
+            "display": "Basophils [#/volume] in Blood by Automated count"
           }
         ]
       },
@@ -86,36 +108,27 @@
       }
     },
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/DiagnosticReport/d1c9c2be-6546-4fe4-9439-f4c81cc97108",
+      "fullUrl": "http://hapi.fhir.org/baseR4/DiagnosticReport/1558783",
       "resource": {
         "resourceType": "DiagnosticReport",
-        "id": "d1c9c2be-6546-4fe4-9439-f4c81cc97108",
+        "id": "1558783",
         "meta": {
           "versionId": "1",
-          "lastUpdated": "2020-03-24T17:56:14.656+00:00",
-          "source": "#8jsD5D8OYkc7WR4Z",
-          "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
-          ],
-          "tag": [
-            {
-              "system": "https://smarthealthit.org/tags",
-              "code": "Covid19 synthetic population from Synthea"
-            }
-          ]
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e Evaluation+Plan note \u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eStatus\u003c/td\u003e\u003ctd\u003eFINAL\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIssued\u003c/td\u003e\u003ctd\u003e 26 September 2018 22:06:45\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e Complete blood count (hemogram) panel - Blood by Automated count \u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eStatus\u003c/td\u003e\u003ctd\u003eFINAL\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIssued\u003c/td\u003e\u003ctd\u003e 17 March 2020 01:53:14\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
         },
         "status": "final",
         "category": [
           {
             "coding": [
               {
-                "system": "http://loinc.org",
-                "code": "51847-2",
-                "display": "Evaluation+Plan note"
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
               }
             ]
           }
@@ -124,29 +137,56 @@
           "coding": [
             {
               "system": "http://loinc.org",
-              "code": "51847-2",
-              "display": "Evaluation+Plan note"
+              "code": "58410-2",
+              "display": "Complete blood count (hemogram) panel - Blood by Automated count"
             }
-          ]
+          ],
+          "text": "Complete blood count (hemogram) panel - Blood by Automated count"
         },
         "subject": {
-          "reference": "Patient/cf0d62b6-8f70-4164-95ac-1116f6ceb16d"
+          "reference": "Patient/1557884"
         },
         "encounter": {
-          "reference": "Encounter/6919141c-229c-463d-9157-4e3f02741d3a"
+          "reference": "Encounter/1557971"
         },
-        "effectiveDateTime": "2018-09-26T17:06:45-05:00",
-        "issued": "2018-09-26T17:06:45.817-05:00",
-        "performer": [
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "result": [
           {
-            "reference": "Practitioner/00000171-0929-2892-0000-000000018150",
-            "display": "Dr. Lavonne167 Lubowitz58"
-          }
-        ],
-        "presentedForm": [
+            "reference": "Observation/1558391",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          },
           {
-            "contentType": "text/plain",
-            "data": "Q2pJd01UZ3RNRGt0TWpZS0NpTWdRMmhwWldZZ1EyOXRjR3hoYVc1MENrNXZJR052YlhCc1lXbHVkSE11Q2dvaklFaHBjM1J2Y25rZ2IyWWdVSEpsYzJWdWRDQkpiR3h1WlhOekNrRm5iblZ6Tnprd0lHbHpJR0VnTkRnZ2VXVmhjaTF2YkdRZ2FHbHpjR0Z1YVdNZ2FHbHpjR0Z1YVdNZ1ptVnRZV3hsTGdvS0l5QlRiMk5wWVd3Z1NHbHpkRzl5ZVFwUVlYUnBaVzUwSUdseklHMWhjbkpwWldRdUlGQmhkR2xsYm5RZ2FYTWdZVzRnWVdOMGFYWmxJSE50YjJ0bGNpQmhibVFnYVhNZ1lXNGdZV3hqYjJodmJHbGpMaUJRWVhScFpXNTBJR2xrWlc1MGFXWnBaWE1nWVhNZ2FHVjBaWEp2YzJWNGRXRnNMZ29LVUdGMGFXVnVkQ0JqYjIxbGN5Qm1jbTl0SUdFZ2JXbGtaR3hsSUhOdlkybHZaV052Ym05dGFXTWdZbUZqYTJkeWIzVnVaQzRnVUdGMGFXVnVkQ0JrYVdRZ2JtOTBJR1pwYm1semFDQm9hV2RvSUhOamFHOXZiQzRnVUdGMGFXVnVkQ0JqZFhKeVpXNTBiSGtnYUdGeklGVnVhWFJsWkVobFlXeDBhR05oY21VdUNnb2pJRUZzYkdWeVoybGxjd3BPYnlCTGJtOTNiaUJCYkd4bGNtZHBaWE11Q2dvaklFMWxaR2xqWVhScGIyNXpDazV2SUVGamRHbDJaU0JOWldScFkyRjBhVzl1Y3k0S0NpTWdRWE56WlhOemJXVnVkQ0JoYm1RZ1VHeGhiZ29LQ2lNaklGQnNZVzRLVUdGMGFXVnVkQ0IzWVhNZ1oybDJaVzRnZEdobElHWnZiR3h2ZDJsdVp5QnBiVzExYm1sNllYUnBiMjV6T2lCcGJtWnNkV1Z1ZW1Fc0lITmxZWE52Ym1Gc0xDQnBibXBsWTNSaFlteGxMQ0J3Y21WelpYSjJZWFJwZG1VZ1puSmxaUzRnQ2c9PQ\u003d\u003d"
+            "reference": "Observation/1558392",
+            "display": "Erythrocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558393",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+          {
+            "reference": "Observation/1558394",
+            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558395",
+            "display": "MCV [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "Observation/1558396",
+            "display": "MCH [Entitic mass] by Automated count"
+          },
+          {
+            "reference": "Observation/1558397",
+            "display": "MCHC [Mass/volume] by Automated count"
+          },
+          {
+            "reference": "Observation/1558398",
+            "display": "Erythrocyte distribution width [Ratio] by Automated count"
+          },
+          {
+            "reference": "Observation/1558399",
+            "display": "Platelets [#/volume] in Blood by Automated count"
           }
         ]
       },
@@ -155,92 +195,300 @@
       }
     },
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/cf0d62b6-8f70-4164-95ac-1116f6ceb16d",
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558391",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558391",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Leukocytes [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 3.6258,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558399",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558399",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Platelets [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 107.25,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558398",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558398",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "788-0",
+              "display": "Erythrocyte distribution width [Ratio] by Automated count"
+            }
+          ],
+          "text": "Erythrocyte distribution width [Ratio] by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 12.998,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558397",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558397",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "786-4",
+              "display": "MCHC [Mass/volume] by Automated count"
+            }
+          ],
+          "text": "MCHC [Mass/volume] by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 33.056,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558396",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558396",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "785-6",
+              "display": "MCH [Entitic mass] by Automated count"
+            }
+          ],
+          "text": "MCH [Entitic mass] by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 32.783,
+          "unit": "pg",
+          "system": "http://unitsofmeasure.org",
+          "code": "pg"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1557884",
       "resource": {
         "resourceType": "Patient",
-        "id": "cf0d62b6-8f70-4164-95ac-1116f6ceb16d",
+        "id": "1557884",
         "meta": {
           "versionId": "1",
-          "lastUpdated": "2020-03-24T17:56:14.656+00:00",
-          "source": "#8jsD5D8OYkc7WR4Z",
-          "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-          ],
-          "tag": [
-            {
-              "system": "https://smarthealthit.org/tags",
-              "code": "Covid19 synthetic population from Synthea"
-            }
-          ]
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: 2177cffc\n .   Person seed: -2419631146413429618  Population seed: 12345\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: master-branch-latest\n .   Person seed: 5547029409524515643  Population seed: 6440\u003c/div\u003e"
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
-            "extension": [
-              {
-                "url": "detailed",
-                "valueCoding": {
-                  "system": "urn:oid:2.16.840.1.113883.6.238",
-                  "code": "2131-1",
-                  "display": "Other Races"
-                }
-              },
-              {
-                "url": "text",
-                "valueString": "Other"
-              }
-            ]
-          },
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
-            "extension": [
-              {
-                "url": "ombCategory",
-                "valueCoding": {
-                  "system": "urn:oid:2.16.840.1.113883.6.238",
-                  "code": "2135-2",
-                  "display": "Hispanic or Latino"
-                }
-              },
-              {
-                "url": "text",
-                "valueString": "Hispanic or Latino"
-              }
-            ]
-          },
-          {
             "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
-            "valueString": "Raina861 Rau926"
-          },
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-            "valueCode": "F"
+            "valueString": "Joleen561 Effertz744"
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
             "valueAddress": {
-              "city": "Warrenville",
-              "state": "Illinois",
+              "city": "Somerville",
+              "state": "Massachusetts",
               "country": "US"
             }
           },
           {
             "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
-            "valueDecimal": 5.147837473860137
+            "valueDecimal": 0.05429822354413175
           },
           {
             "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
-            "valueDecimal": 43.852162526139864
+            "valueDecimal": 27.94570177645587
           }
         ],
         "identifier": [
           {
             "system": "https://github.com/synthetichealth/synthea",
-            "value": "ff55a9a1-9a95-40b5-a41d-6fa556a6a5e0"
+            "value": "5791f6fc-11ab-e632-5fd7-3135662b1b44"
           },
           {
             "type": {
@@ -254,7 +502,7 @@
               "text": "Medical Record Number"
             },
             "system": "http://hospital.smarthealthit.org",
-            "value": "ff55a9a1-9a95-40b5-a41d-6fa556a6a5e0"
+            "value": "5791f6fc-11ab-e632-5fd7-3135662b1b44"
           },
           {
             "type": {
@@ -268,7 +516,7 @@
               "text": "Social Security Number"
             },
             "system": "http://hl7.org/fhir/sid/us-ssn",
-            "value": "999-53-5902"
+            "value": "999-70-9160"
           },
           {
             "type": {
@@ -282,7 +530,7 @@
               "text": "Driver\u0027s License"
             },
             "system": "urn:oid:2.16.840.1.113883.4.3.25",
-            "value": "S99927098"
+            "value": "S99957715"
           },
           {
             "type": {
@@ -296,40 +544,30 @@
               "text": "Passport Number"
             },
             "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
-            "value": "X42092718X"
+            "value": "X81242774X"
           }
         ],
         "name": [
           {
             "use": "official",
-            "family": "Bahringer146",
+            "family": "Ledner144",
             "given": [
-              "Agnus790"
+              "Lindsey52"
             ],
             "prefix": [
-              "Mrs."
-            ]
-          },
-          {
-            "use": "maiden",
-            "family": "Carter549",
-            "given": [
-              "Agnus790"
-            ],
-            "prefix": [
-              "Mrs."
+              "Mr."
             ]
           }
         ],
         "telecom": [
           {
             "system": "phone",
-            "value": "555-592-1049",
+            "value": "555-725-6370",
             "use": "home"
           }
         ],
-        "gender": "female",
-        "birthDate": "1970-09-02",
+        "gender": "male",
+        "birthDate": "1991-05-07",
         "address": [
           {
             "extension": [
@@ -338,21 +576,20 @@
                 "extension": [
                   {
                     "url": "latitude",
-                    "valueDecimal": 41.938880729891295
+                    "valueDecimal": 41.84269634556081
                   },
                   {
                     "url": "longitude",
-                    "valueDecimal": -87.58613202335057
+                    "valueDecimal": -70.83785688400742
                   }
                 ]
               }
             ],
             "line": [
-              "865 Aufderhar Center Apt 22"
+              "219 Hahn Row"
             ],
-            "city": "Chicago",
-            "state": "IL",
-            "postalCode": "60007",
+            "city": "Middleborough",
+            "state": "Massachusetts",
             "country": "US"
           }
         ],
@@ -381,6 +618,720 @@
             }
           }
         ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558395",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558395",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "787-2",
+              "display": "MCV [Entitic volume] by Automated count"
+            }
+          ],
+          "text": "MCV [Entitic volume] by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 87.58,
+          "unit": "fL",
+          "system": "http://unitsofmeasure.org",
+          "code": "fL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558394",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558394",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4544-3",
+              "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+            }
+          ],
+          "text": "Hematocrit [Volume Fraction] of Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 42.103,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558393",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558393",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 13.748,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558392",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558392",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "789-8",
+              "display": "Erythrocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Erythrocytes [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 4.2799,
+          "unit": "10*6/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*6/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558407",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558407",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "742-7",
+              "display": "Monocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Monocytes [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 0.80496,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558406",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558406",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "731-0",
+              "display": "Lymphocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Lymphocytes [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 0.94424,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558405",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558405",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "751-8",
+              "display": "Neutrophils [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Neutrophils [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 2.2695,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558404",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558404",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "706-2",
+              "display": "Basophils/100 leukocytes in Blood by Automated count"
+            }
+          ],
+          "text": "Basophils/100 leukocytes in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 3.1801,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558403",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558403",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "713-8",
+              "display": "Eosinophils/100 leukocytes in Blood by Automated count"
+            }
+          ],
+          "text": "Eosinophils/100 leukocytes in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 5.8846,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558402",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558402",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "5905-5",
+              "display": "Monocytes/100 leukocytes in Blood by Automated count"
+            }
+          ],
+          "text": "Monocytes/100 leukocytes in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 6.1652,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558401",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558401",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "736-9",
+              "display": "Lymphocytes/100 leukocytes in Blood by Automated count"
+            }
+          ],
+          "text": "Lymphocytes/100 leukocytes in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 18.048,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558400",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558400",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "770-8",
+              "display": "Neutrophils/100 leukocytes in Blood by Automated count"
+            }
+          ],
+          "text": "Neutrophils/100 leukocytes in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 17.639,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558409",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558409",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "704-7",
+              "display": "Basophils [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Basophils [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 0.30928,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558408",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558408",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "711-2",
+              "display": "Eosinophils [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Eosinophils [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 0.38086,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
       },
       "search": {
         "mode": "include"

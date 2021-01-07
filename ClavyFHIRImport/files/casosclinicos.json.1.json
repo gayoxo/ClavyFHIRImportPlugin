@@ -1,0 +1,1620 @@
+{
+  "resourceType": "Bundle",
+  "id": "237c3fb0-e145-43f3-8c18-10100571b095",
+  "meta": {
+    "lastUpdated": "2021-01-07T11:29:57.535+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d237c3fb0-e145-43f3-8c18-10100571b095\u0026_getpagesoffset\u003d2\u0026_count\u003d2\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    },
+    {
+      "relation": "next",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d237c3fb0-e145-43f3-8c18-10100571b095\u0026_getpagesoffset\u003d4\u0026_count\u003d2\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    },
+    {
+      "relation": "previous",
+      "url": "http://hapi.fhir.org/baseR4?_getpages\u003d237c3fb0-e145-43f3-8c18-10100571b095\u0026_getpagesoffset\u003d0\u0026_count\u003d2\u0026_format\u003djson\u0026_pretty\u003dtrue\u0026_bundletype\u003dsearchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/DiagnosticReport/1558786",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "1558786",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e Complete blood count (hemogram) panel - Blood by Automated count \u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eStatus\u003c/td\u003e\u003ctd\u003eFINAL\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIssued\u003c/td\u003e\u003ctd\u003e 18 March 2020 01:53:14\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "Complete blood count (hemogram) panel - Blood by Automated count"
+            }
+          ],
+          "text": "Complete blood count (hemogram) panel - Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "result": [
+          {
+            "reference": "Observation/1558431",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558432",
+            "display": "Erythrocytes [#/volume] in Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558433",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          },
+          {
+            "reference": "Observation/1558434",
+            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          },
+          {
+            "reference": "Observation/1558435",
+            "display": "MCV [Entitic volume] by Automated count"
+          },
+          {
+            "reference": "Observation/1558436",
+            "display": "MCH [Entitic mass] by Automated count"
+          },
+          {
+            "reference": "Observation/1558437",
+            "display": "MCHC [Mass/volume] by Automated count"
+          },
+          {
+            "reference": "Observation/1558438",
+            "display": "Erythrocyte distribution width [Ratio] by Automated count"
+          },
+          {
+            "reference": "Observation/1558439",
+            "display": "Platelets [#/volume] in Blood by Automated count"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/DiagnosticReport/1558785",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "1558785",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cdiv class\u003d\"hapiHeaderText\"\u003e Comprehensive metabolic 2000 panel - Serum or Plasma \u003c/div\u003e\u003ctable class\u003d\"hapiPropertyTable\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eStatus\u003c/td\u003e\u003ctd\u003eFINAL\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eIssued\u003c/td\u003e\u003ctd\u003e 17 March 2020 01:53:14\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003c/div\u003e"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8",
+              "display": "Comprehensive metabolic 2000 panel - Serum or Plasma"
+            }
+          ],
+          "text": "Comprehensive metabolic 2000 panel - Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "result": [
+          {
+            "reference": "Observation/1558410",
+            "display": "Glucose [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558411",
+            "display": "Urea nitrogen [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558412",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558413",
+            "display": "Calcium [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558414",
+            "display": "Sodium intake 24 hour Estimated"
+          },
+          {
+            "reference": "Observation/1558415",
+            "display": "Potassium intake 24 hour Estimated"
+          },
+          {
+            "reference": "Observation/1558416",
+            "display": "Chloride [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558417",
+            "display": "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558418",
+            "display": "Glomerular filtration rate/1.73 sq M.predicted"
+          },
+          {
+            "reference": "Observation/1558419",
+            "display": "Protein [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558420",
+            "display": "Albumin [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558421",
+            "display": "Bilirubin.total [Mass/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558422",
+            "display": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558423",
+            "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+          },
+          {
+            "reference": "Observation/1558424",
+            "display": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558423",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558423",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6",
+              "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 0.25924,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558422",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558422",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6768-6",
+              "display": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 53.306,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558421",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558421",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2",
+              "display": "Bilirubin.total [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Bilirubin.total [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 12.779,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558420",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558420",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1751-7",
+              "display": "Albumin [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Albumin [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 5.3801,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558419",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558419",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2885-2",
+              "display": "Protein [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Protein [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 6.5656,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558418",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558418",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "Glomerular filtration rate/1.73 sq M.predicted"
+            }
+          ],
+          "text": "Glomerular filtration rate/1.73 sq M.predicted"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 7.2685,
+          "unit": "mL/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL/min"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558417",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558417",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2028-9",
+              "display": "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 23.6,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558416",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558416",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2075-0",
+              "display": "Chloride [Moles/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Chloride [Moles/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 104.48,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558431",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558431",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Leukocytes [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 3.3413,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558424",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558424",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1920-8",
+              "display": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 14.981,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558415",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558415",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "81010-1",
+              "display": "Potassium intake 24 hour Estimated"
+            }
+          ],
+          "text": "Potassium intake 24 hour Estimated"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 4.17,
+          "unit": "g",
+          "system": "http://unitsofmeasure.org",
+          "code": "g"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558414",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558414",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "81011-9",
+              "display": "Sodium intake 24 hour Estimated"
+            }
+          ],
+          "text": "Sodium intake 24 hour Estimated"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 139.83,
+          "unit": "g",
+          "system": "http://unitsofmeasure.org",
+          "code": "g"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558413",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558413",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "17861-6",
+              "display": "Calcium [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Calcium [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 9.2,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558412",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558412",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Creatinine [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 2.9696,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558411",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558411",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3094-0",
+              "display": "Urea nitrogen [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Urea nitrogen [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 13,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558410",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558410",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Glucose [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Glucose [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-16T21:53:14-04:00",
+        "issued": "2020-03-16T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 75.35,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Patient/1557884",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1557884",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "text": {
+          "status": "generated",
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eGenerated by \u003ca href\u003d\"https://github.com/synthetichealth/synthea\"\u003eSynthea\u003c/a\u003e.Version identifier: master-branch-latest\n .   Person seed: 5547029409524515643  Population seed: 6440\u003c/div\u003e"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+            "valueString": "Joleen561 Effertz744"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "city": "Somerville",
+              "state": "Massachusetts",
+              "country": "US"
+            }
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/disability-adjusted-life-years",
+            "valueDecimal": 0.05429822354413175
+          },
+          {
+            "url": "http://synthetichealth.github.io/synthea/quality-adjusted-life-years",
+            "valueDecimal": 27.94570177645587
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "5791f6fc-11ab-e632-5fd7-3135662b1b44"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "5791f6fc-11ab-e632-5fd7-3135662b1b44"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "999-70-9160"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver\u0027s License"
+                }
+              ],
+              "text": "Driver\u0027s License"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S99957715"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X81242774X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Ledner144",
+            "given": [
+              "Lindsey52"
+            ],
+            "prefix": [
+              "Mr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-725-6370",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1991-05-07",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 41.84269634556081
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -70.83785688400742
+                  }
+                ]
+              }
+            ],
+            "line": [
+              "219 Hahn Row"
+            ],
+            "city": "Middleborough",
+            "state": "Massachusetts",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "M"
+            }
+          ],
+          "text": "M"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558439",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558439",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Platelets [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 137.64,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558438",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558438",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "788-0",
+              "display": "Erythrocyte distribution width [Ratio] by Automated count"
+            }
+          ],
+          "text": "Erythrocyte distribution width [Ratio] by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 13.24,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558437",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558437",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "786-4",
+              "display": "MCHC [Mass/volume] by Automated count"
+            }
+          ],
+          "text": "MCHC [Mass/volume] by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 32.434,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558436",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558436",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "785-6",
+              "display": "MCH [Entitic mass] by Automated count"
+            }
+          ],
+          "text": "MCH [Entitic mass] by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 29.376,
+          "unit": "pg",
+          "system": "http://unitsofmeasure.org",
+          "code": "pg"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558435",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558435",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "787-2",
+              "display": "MCV [Entitic volume] by Automated count"
+            }
+          ],
+          "text": "MCV [Entitic volume] by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 95.967,
+          "unit": "fL",
+          "system": "http://unitsofmeasure.org",
+          "code": "fL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558434",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558434",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4544-3",
+              "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+            }
+          ],
+          "text": "Hematocrit [Volume Fraction] of Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 38.522,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558433",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558433",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 12.352,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseR4/Observation/1558432",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1558432",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-10-10T01:42:39.853+00:00",
+          "source": "#HbuFOy3Nquw2ZcAr"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "789-8",
+              "display": "Erythrocytes [#/volume] in Blood by Automated count"
+            }
+          ],
+          "text": "Erythrocytes [#/volume] in Blood by Automated count"
+        },
+        "subject": {
+          "reference": "Patient/1557884"
+        },
+        "encounter": {
+          "reference": "Encounter/1557971"
+        },
+        "effectiveDateTime": "2020-03-17T21:53:14-04:00",
+        "issued": "2020-03-17T21:53:14.197-04:00",
+        "valueQuantity": {
+          "value": 4.4925,
+          "unit": "10*6/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*6/uL"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}
