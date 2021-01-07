@@ -82,13 +82,17 @@ public class CollectionFHIR {
 	}
 
 	private void cargoCasosClinicos(String URLBase, int limit) {
+		
+		
+		fin =false;
+		
 		if (debugfile&& (new File("files/casosclinicos.json").exists()))
 		{
 			System.out.println("//////////Leido archivo de pacientes");
 			
 			String actual= "files/casosclinicos.json";
 			int indice=1;
-			while ((new File(actual).exists()))
+			while ((new File(actual).exists()) && !fin)
 			{
 				StringBuffer SB= new StringBuffer();
 				try {
@@ -155,7 +159,7 @@ public class CollectionFHIR {
 			
 			int conteoFile=0;
 			
-			fin =false;
+			
 
 			while (ActualURL!=null &&!ActualURL.isEmpty() && !fin)
 			
