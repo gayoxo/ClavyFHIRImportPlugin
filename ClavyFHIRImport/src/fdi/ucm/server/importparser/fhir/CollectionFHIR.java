@@ -2,9 +2,11 @@ package fdi.ucm.server.importparser.fhir;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
@@ -26,6 +28,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
+import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
+import fdi.ucm.server.modelComplete.collection.document.CompleteTextElement;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 
 public class CollectionFHIR {
@@ -34,7 +39,7 @@ public class CollectionFHIR {
 	private CompleteCollection Collection;
 	public boolean debugfile=false;
 	private ArrayList<String> log=new ArrayList<String>();
-	private HashMap<String, List<Object>> tiposObjeto;
+	private HashMap<String, TypeObject> TypetiposObjeto;
 	private int limit;
 	private boolean fin;
 		
@@ -70,14 +75,27 @@ public class CollectionFHIR {
 	public void procesaFHIR(String URLBase, ArrayList<String> log, int limit) {
 				
 		this.log=log;
-		tiposObjeto=new HashMap<String, List<Object>>();
 		this.limit=limit;
+		TypetiposObjeto= new HashMap<String, TypeObject>();
 		
 //		http://hapi.fhir.org/baseR4/Encounter?_pretty=true
 		
 		Collection=new CompleteCollection("Coleccion imported by URLBase", URLBase);
 	
 		cargoCasosClinicos(URLBase,limit);
+		processGramar();
+		
+	}
+
+	private void processGramar() {
+		for (java.util.Map.Entry<String, TypeObject> typo_wrap : TypetiposObjeto.entrySet()) {
+			Collection.getEstructuras().addAll(typo_wrap.getValue().getListaDocumentos().values());
+			if (!typo_wrap.getValue().getPath_elem().isEmpty())
+			{
+				Collection.getMetamodelGrammar().add(typo_wrap.getValue().getTgramar());
+				typo_wrap.getValue().getTgramar().setColeccion(Collection);
+			}
+		}
 		
 	}
 
@@ -273,29 +291,30 @@ public class CollectionFHIR {
 			JsonObject entry_in=ENTRYNEXT_Array.get(i).getAsJsonObject();
 
 			
-			String fURL= entry_in.get("fullUrl").getAsJsonPrimitive().getAsString();
+			
 			JsonObject oresource = entry_in.get("resource").getAsJsonObject();
 			String tResource= oresource.get("resourceType").getAsJsonPrimitive().getAsString();
 			
 			if (tResource.toLowerCase().equals("diagnosticreport")&&
-					tiposObjeto.get(tResource)!=null&&
-						tiposObjeto.get(tResource).size()==limit){
+					TypetiposObjeto.get(tResource)!=null&&
+							TypetiposObjeto.get(tResource).getListaDocumentos().size()==limit){
 				fin=true;
 				return;
 			}
 
-			List<Object> Lista_elem = tiposObjeto.get(tResource);	
 			
-			if (Lista_elem==null)
-				Lista_elem=new LinkedList<Object>();
+			TypeObject WrappedObjeto = TypetiposObjeto.get(tResource);
+			if (WrappedObjeto==null)
+				{
+				WrappedObjeto=new TypeObject(tResource);
+				TypetiposObjeto.put(tResource, WrappedObjeto);
+				}
 			
-			Lista_elem.add(new String(System.nanoTime()+""));
+		
+			produceStructureDocument(WrappedObjeto,entry_in);
 			
-			tiposObjeto.put(tResource,Lista_elem);
 			
 			
-			String id_text= oresource.get("id").getAsJsonPrimitive().getAsString();
-			System.out.println(tResource+"->"+id_text+"  "+ fURL);
 			
 //			if (tResource.toLowerCase().contentEquals("condition"))
 //				processAsCondition(oresource,fURL);
@@ -308,17 +327,35 @@ public class CollectionFHIR {
 		
 	}
 
-	private void processAsPatient(JsonObject oresource, String fURL) {
-		String id_text= oresource.get("id").getAsJsonPrimitive().getAsString();
-		System.out.println("Patient"+"->"+id_text+"  "+ fURL);
-		
+private void produceStructureDocument(TypeObject wrappedObjeto, JsonObject entry_in) {
+	String fURL= entry_in.get("fullUrl").getAsJsonPrimitive().getAsString();
+	JsonObject oresource = entry_in.get("resource").getAsJsonObject();
+	String id_text= oresource.get("id").getAsJsonPrimitive().getAsString();
+	System.out.println(wrappedObjeto.getTname()+"->"+id_text+"  "+ fURL);
+	
+	CompleteDocuments CD=new CompleteDocuments(Collection, "NO DESC", "");
+	
+	CompleteTextElementType url_elem=wrappedObjeto.createElementType("fullUrl");
+	CD.getDescription().add(new CompleteTextElement(url_elem, fURL));
+	
+	CompleteTextElementType id_elem=wrappedObjeto.createElementType("id");
+	CD.getDescription().add(new CompleteTextElement(id_elem, id_text));
+	
+	wrappedObjeto.getListaDocumentos().put(id_text, CD);
+	
 	}
 
-	private void processAsCondition(JsonObject oresource, String fURL) {
-		String id_text= oresource.get("id").getAsJsonPrimitive().getAsString();
-		System.out.println("Condition"+"->"+id_text+"  "+ fURL);
-		
-	}
+//	private void processAsPatient(JsonObject oresource, String fURL) {
+//		String id_text= oresource.get("id").getAsJsonPrimitive().getAsString();
+//		System.out.println("Patient"+"->"+id_text+"  "+ fURL);
+//		
+//	}
+//
+//	private void processAsCondition(JsonObject oresource, String fURL) {
+//		String id_text= oresource.get("id").getAsJsonPrimitive().getAsString();
+//		System.out.println("Condition"+"->"+id_text+"  "+ fURL);
+//		
+//	}
 
 	public CompleteCollection getColeccion() {
 		return Collection;
@@ -331,9 +368,9 @@ public class CollectionFHIR {
 		C.procesaFHIR("http://hapi.fhir.org/baseR4", log,2);
 		
 //		 try {
-//				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
-//				
-//				System.out.println(FileIO);
+				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
+				
+				System.out.println(FileIO);
 //				
 //				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
 //
