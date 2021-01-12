@@ -1,11 +1,11 @@
-package fdi.ucm.server.importparser.fhir;
+package fdi.ucm.server.importparser.fhir.old;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.List;
 import java.util.Map;
 
-import fdi.ucm.server.importparser.fhir.CollectionFHIR.Entry;
+import fdi.ucm.server.importparser.fhir.old.CollectionFHIR.Entry;
 
 public class ParameterStringBuilder {
 	
