@@ -90,6 +90,13 @@
   <artifactId>json-io</artifactId>
   <version>4.12.0</version>
 </dependency>
+<dependency>
+			<groupId>JSONImport</groupId>
+			<artifactId>JSONImport</artifactId>
+			<version>1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/ClavyJSONImport.jar</systemPath>
+		</dependency>
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,0 +1,42 @@
+{
+  "id": "a819497684894126",
+  "resourceType": "DiagnosticReport",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n</div>"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org/",
+        "code": "38269-7"
+      }
+    ],
+    "text": "chest PET/CT"
+  },
+  "status": "final",
+  "issued": "1986-04-22T09:23:00+10:00",
+  "subject": {
+    "reference": "Patient/siimjoe"
+  },
+  "performer": {
+    "reference": "Organization/siim",
+    "display": "Society of Imaging Informatics in Medicine"
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "http://www.siim.org/",
+      "value": "a819497684894126"
+    }
+  ],
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0074",
+        "code": "RAD"
+      }
+    ]
+  },
+  "effectiveDateTime": "1986-04-22"
+}
