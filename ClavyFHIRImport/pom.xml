@@ -91,11 +91,16 @@
   <version>4.12.0</version>
 </dependency>
 <dependency>
+    <groupId>com.fasterxml.jackson.dataformat</groupId>
+    <artifactId>jackson-dataformat-yaml</artifactId>
+    <version>2.11.1</version>
+</dependency>
+<dependency>
 			<groupId>JSONImport</groupId>
 			<artifactId>JSONImport</artifactId>
 			<version>1</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/ClavyJSONImport.jar</systemPath>
+			<systemPath>${basedir}/ClavyJSONImportPlugin/ClavyJSONImport/ClavyJSONImport.jar</systemPath>
 		</dependency>
 	</dependencies>
 	<properties>
