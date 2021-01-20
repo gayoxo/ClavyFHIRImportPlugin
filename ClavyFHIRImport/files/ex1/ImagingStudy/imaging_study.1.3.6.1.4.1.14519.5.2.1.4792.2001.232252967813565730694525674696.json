@@ -1,0 +1,73 @@
+{
+  "id": "a361814883895900",
+  "resourceType": "ImagingStudy",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Digital Left Mammogram Diagnostic</div>"
+  },
+  "started": "2008-04-22",
+  "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.4792.2001.232252967813565730694525674696",
+  "accession": {
+    "use": "usual",
+    "system": "http://www.siim.org/",
+    "value": "a361814883895900"
+  },
+  "contained": [
+    {
+		"resourceType": "Endpoint",
+		"id": "1",
+		"name": "QIDO-RS Link",
+		"status": "active",
+		"connectionType": "dicom-qido-rs",
+		"payloadType": "urn:ihe:pcc:xphr:2007",
+		"address": "http://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.4792.2001.232252967813565730694525674696"
+    }
+  ],
+  "endpoint": [
+    {
+      "reference": "#1"
+    }
+  ],
+  "numberOfSeries": 2,
+  "numberOfInstances": 2,
+  "series": [
+    {
+      "number": 5,
+      "modality": {
+        "system": "http://dicom.nema.org/medical/dicom/current/output/html/part03.html#sect_C.7.3.1.1",
+        "code": "MG"
+      },
+      "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.4792.2001.146744821244586368840068937301",
+      "description": "L ML",
+      "numberOfInstances": 1,
+      "instance": [
+        {
+          "number": 25,
+          "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.4792.2001.145360848639150080488752783872",
+          "sopClass": "1.2.840.10008.5.1.4.1.1.1.2"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "modality": {
+        "system": "http://dicom.nema.org/medical/dicom/current/output/html/part03.html#sect_C.7.3.1.1",
+        "code": "MG"
+      },
+      "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.4792.2001.749836586993208029747489805614",
+      "description": "L XCCL",
+      "numberOfInstances": 1,
+      "instance": [
+        {
+          "number": 23,
+          "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.4792.2001.339560662872714359694994877834",
+          "sopClass": "1.2.840.10008.5.1.4.1.1.1.2"
+        }
+      ]
+    }
+  ],
+  "description": "Digital Left Mammogram Diagnostic",
+  "patient": {
+    "reference": "Patient/siimsally"
+  }
+}

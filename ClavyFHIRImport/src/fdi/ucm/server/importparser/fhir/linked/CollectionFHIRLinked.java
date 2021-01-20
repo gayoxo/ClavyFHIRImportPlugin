@@ -1,38 +1,12 @@
 package fdi.ucm.server.importparser.fhir.linked;
 
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Scanner;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
 import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
-import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
-import fdi.ucm.server.modelComplete.collection.document.CompleteTextElement;
-import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 
 public class CollectionFHIRLinked {
@@ -52,6 +26,16 @@ public class CollectionFHIRLinked {
 		DiagnosticReportJSONParser.procesaJSONFolder("files/ex1/DiagnosticReport", log);
 		CompleteCollection DReportCollection = DiagnosticReportJSONParser.getCollection();
 		
+		CollectionJSON ConditionReportJSONParser=new CollectionJSON();
+		ConditionReportJSONParser.debugfile=true;
+		ConditionReportJSONParser.procesaJSONFolder("files/ex1/Condition", log);
+		CompleteCollection CReportCollection = ConditionReportJSONParser.getCollection();
+		
+		CollectionJSON ImagingStudyReportJSONParser=new CollectionJSON();
+		ImagingStudyReportJSONParser.debugfile=true;
+		ImagingStudyReportJSONParser.procesaJSONFolder("files/ex1/ImagingStudy", log);
+		CompleteCollection IReportCollection = ImagingStudyReportJSONParser.getCollection();
+		
 		CompleteCollection C=new CompleteCollection("ex1", "ex1");
 		
 
@@ -63,6 +47,14 @@ public class CollectionFHIRLinked {
 		C.getMetamodelGrammar().addAll(DReportCollection.getMetamodelGrammar());
 		C.getEstructuras().addAll(DReportCollection.getEstructuras());
 		C.getSectionValues().addAll(DReportCollection.getSectionValues());
+		
+		C.getMetamodelGrammar().addAll(CReportCollection.getMetamodelGrammar());
+		C.getEstructuras().addAll(CReportCollection.getEstructuras());
+		C.getSectionValues().addAll(CReportCollection.getSectionValues());
+		
+		C.getMetamodelGrammar().addAll(IReportCollection.getMetamodelGrammar());
+		C.getEstructuras().addAll(IReportCollection.getEstructuras());
+		C.getSectionValues().addAll(IReportCollection.getSectionValues());
 		
 		 try {
 				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";

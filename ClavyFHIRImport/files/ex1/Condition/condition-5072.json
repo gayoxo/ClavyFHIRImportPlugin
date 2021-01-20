@@ -1,0 +1,58 @@
+{
+  "id": "a411079800582267",
+  "resourceType": "Condition",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient: Andy SIIM<br/>Condition: a411079800582267<br/>Category: Diagnosis<br/>Code: 276952000 - Squamous cell carcinoma of tongue<br/>Severity: Severe<br/>Onset Date: 2000-01-28<br/>Body Site: Left upper lobe of lung</div>"
+  },
+  "subject": {
+    "reference": "Patient/siimandy"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "93880001",
+        "display": "Primary malignant neoplasm of lung"
+      }
+    ],
+    "text": "Lung cancer NOS"
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/condition-category",
+        "code": "diagnosis",
+        "display": "Diagnosis"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "439401001",
+        "display": "Diagnosis"
+      }
+    ]
+  },
+  "clinicalStatus": "active",
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "24484000",
+        "display": "Severe"
+      }
+    ]
+  },
+  "onsetDate": "2000-01-28",
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "44714003",
+          "display": "Left upper lobe of lung"
+        }
+      ],
+      "text": "Left upper lobe of lung"
+    }
+  ]
+}

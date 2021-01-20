@@ -1,0 +1,124 @@
+{
+  "id": "a411079800582267",
+  "resourceType": "ImagingStudy",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">TB TOTAL BODY</div>"
+  },
+  "started": "2000-02-23",
+  "patient": {
+    "reference": "Patient/siimandy"
+  },
+  "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.159774597133442057476528099963",
+  "accession": {
+    "use": "usual",
+    "system": "http://www.siim.org/",
+    "value": "a411079800582267"
+  },
+  "contained": [
+    {
+		"resourceType": "Endpoint",
+		"id": "1",
+		"name": "QIDO-RS Link",
+		"status": "active",
+		"connectionType": "dicom-qido-rs",
+		"payloadType": "urn:ihe:pcc:xphr:2007",
+		"address": "http://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.6450.9002.159774597133442057476528099963"
+    }
+  ],
+  "endpoint": [
+    {
+      "reference": "#1"
+    }
+  ],
+  "numberOfSeries": 5,
+  "numberOfInstances": 5,
+  "series": [
+    {
+      "modality": {
+        "system": "http://dicom.nema.org/medical/dicom/current/output/html/part03.html#sect_C.7.3.1.1",
+        "code": "NM"
+      },
+      "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.329451189839369613896222100019",
+      "description": "TB TOTAL BODY",
+      "numberOfInstances": 1,
+      "started": "2000-02-23",
+      "instance": [
+        {
+          "number": 1,
+          "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.338686788205356637301244578962",
+          "sopClass": "1.2.840.10008.5.1.4.1.1.20"
+        }
+      ]
+    },
+    {
+      "modality": {
+        "system": "http://dicom.nema.org/medical/dicom/current/output/html/part03.html#sect_C.7.3.1.1",
+        "code": "NM"
+      },
+      "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.264867910411553467234581655041",
+      "description": "TB TOTAL BODY",
+      "numberOfInstances": 1,
+      "started": "2000-02-23",
+      "instance": [
+        {
+          "number": 2,
+          "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.170358360846122715868012763596",
+          "sopClass": "1.2.840.10008.5.1.4.1.1.7"
+        }
+      ]
+    },
+    {
+      "modality": {
+        "system": "http://dicom.nema.org/medical/dicom/current/output/html/part03.html#sect_C.7.3.1.1",
+        "code": "NM"
+      },
+      "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.204170368393007669948814352536",
+      "description": "TB TOTAL BODY",
+      "numberOfInstances": 1,
+      "started": "2000-02-23",
+      "instance": [
+        {
+          "number": 0,
+          "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.291532757095019862862061405501",
+          "sopClass": "1.2.840.10008.5.1.4.1.1.20"
+        }
+      ]
+    },
+    {
+      "modality": {
+        "system": "http://dicom.nema.org/medical/dicom/current/output/html/part03.html#sect_C.7.3.1.1",
+        "code": "NM"
+      },
+      "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.300663607045648111916934763322",
+      "description": "ST STATIC",
+      "numberOfInstances": 1,
+      "started": "2000-02-23",
+      "instance": [
+        {
+          "number": 3,
+          "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.298473370323857265765347380131",
+          "sopClass": "1.2.840.10008.5.1.4.1.1.20"
+        }
+      ]
+    },
+    {
+      "modality": {
+        "system": "http://dicom.nema.org/medical/dicom/current/output/html/part03.html#sect_C.7.3.1.1",
+        "code": "NM"
+      },
+      "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.948065078518382661199820460943",
+      "description": "ST STATIC",
+      "numberOfInstances": 1,
+      "started": "2000-02-23",
+      "instance": [
+        {
+          "number": 4,
+          "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6450.9002.763532138156185413449652204531",
+          "sopClass": "1.2.840.10008.5.1.4.1.1.20"
+        }
+      ]
+    }
+  ],
+  "description": "TB TOTAL BODY"
+}

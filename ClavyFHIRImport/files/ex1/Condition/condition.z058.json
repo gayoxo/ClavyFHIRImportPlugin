@@ -1,0 +1,58 @@
+{
+  "id": "z058cond",
+  "resourceType": "Condition",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient: Joe SIIM<br/>Condition: z058cond<br/>Category: Diagnosis<br/>Code: 254626006 - Adenocarcionoma of lung<br/>Severity: Severe<br/>Onset Date: 1986-03-30<br/>Body Site: Left lower lobe of lung</div>"
+  },
+  "subject": {
+    "reference": "Patient/siimjoe"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "254626006",
+        "display": "Adenocarcionoma of lung"
+      }
+    ],
+    "text": "Adenocarcinoma of lung"
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/condition-category",
+        "code": "diagnosis",
+        "display": "Diagnosis"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "439401001",
+        "display": "Diagnosis"
+      }
+    ]
+  },
+  "clinicalStatus": "active",
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "24484000",
+        "display": "Severe"
+      }
+    ]
+  },
+  "onsetDate": "1986-03-30",
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "41224006",
+          "display": "Left lower lobe of lung"
+        }
+      ],
+      "text": "Left lower lobe"
+    }
+  ]
+}

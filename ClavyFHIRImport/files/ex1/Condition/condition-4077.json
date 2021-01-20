@@ -1,0 +1,58 @@
+{
+  "id": "a605867053656544",
+  "resourceType": "Condition",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient: Neela SIIM<br/>Condition: a605867053656544<br/>Category: Diagnosis<br/>Code: 276952000 - Squamous cell carcinoma of tongue<br/>Onset Date: 1996-04-28<br/>Severity: Severe<br/>Body Site: Base of tongue</div>"
+  },
+  "subject": {
+    "reference": "Patient/siimneela"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "276952000",
+        "display": "Squamous cell carcinoma of tongue"
+      }
+    ],
+    "text": "Squamous cell carcinoma of tongue"
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/condition-category",
+        "code": "diagnosis",
+        "display": "Diagnosis"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "439401001",
+        "display": "Diagnosis"
+      }
+    ]
+  },
+  "clinicalStatus": "active",
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "24484000",
+        "display": "Severe"
+      }
+    ]
+  },
+  "onsetDate": "1996-04-28",
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "47975008",
+          "display": "Base of tongue"
+        }
+      ],
+      "text": "Base of tongue"
+    }
+  ]
+}

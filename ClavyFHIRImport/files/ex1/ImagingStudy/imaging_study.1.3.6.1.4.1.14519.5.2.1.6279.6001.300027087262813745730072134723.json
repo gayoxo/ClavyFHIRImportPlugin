@@ -1,0 +1,55 @@
+{
+  "id": "a819497684894127",
+  "resourceType": "ImagingStudy",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Chest PA</div>"
+  },
+  "started": "2000-01-01",
+  "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6279.6001.300027087262813745730072134723",
+  "accession": {
+    "use": "usual",
+    "system": "http://www.siim.org/",
+    "value": "a819497684894127"
+  },
+  "contained": [
+    {
+		"resourceType": "Endpoint",
+		"id": "1",
+		"name": "QIDO-RS Link",
+		"status": "active",
+		"connectionType": "dicom-qido-rs",
+		"payloadType": "urn:ihe:pcc:xphr:2007",
+		"address": "http://hackathon.siim.org/dicomweb/studies/1.3.6.1.4.1.14519.5.2.1.6279.6001.300027087262813745730072134723"
+    }
+  ],
+  "endpoint": [
+    {
+      "reference": "#1"
+    }
+  ],
+  "numberOfSeries": 1,
+  "numberOfInstances": 1,
+  "series": [
+    {
+      "number": 3172,
+      "modality": {
+        "system": "http://dicom.nema.org/medical/dicom/current/output/html/part03.html#sect_C.7.3.1.1",
+        "code": "CR"
+      },
+      "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6279.6001.513114548408601984123939083099",
+      "description": "W Chest PA",
+      "numberOfInstances": 1,
+      "instance": [
+        {
+          "number": 1,
+          "uid": "urn:oid:1.3.6.1.4.1.14519.5.2.1.6279.6001.197993217821785409800235232773",
+          "sopClass": "1.2.840.10008.5.1.4.1.1.1"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/siimravi"
+  }
+}
