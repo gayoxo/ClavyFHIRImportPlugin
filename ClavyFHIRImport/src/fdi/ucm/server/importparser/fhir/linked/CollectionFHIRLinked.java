@@ -6,6 +6,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -14,6 +17,14 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
+import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
+import fdi.ucm.server.modelComplete.collection.document.CompleteElement;
+import fdi.ucm.server.modelComplete.collection.document.CompleteLinkElement;
+import fdi.ucm.server.modelComplete.collection.document.CompleteTextElement;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteGrammar;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteLinkElementType;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 
 public class CollectionFHIRLinked {
@@ -22,42 +33,49 @@ public class CollectionFHIRLinked {
 
 	
 	public static void main(String[] args) {
+		
+		HashMap<String, CollectionJSON> nombre_parser=new HashMap<String, CollectionJSON>();
+		List<CollectionJSON> ColeccionesUnion=new LinkedList<CollectionJSON>();
+		
 		CollectionJSON PatientJSONParser=new CollectionJSON();
 		ArrayList<String> log = new ArrayList<String>();
 		PatientJSONParser.procesaJSONFolder("files/ex1/Patient", log);
-		CompleteCollection patientCollection = PatientJSONParser.getCollection();
+		PatientJSONParser.getCollection().setName("Patient");
+		nombre_parser.put(PatientJSONParser.getCollection().getName(), PatientJSONParser);
+		ColeccionesUnion.add(PatientJSONParser);
 		
 		CollectionJSON DiagnosticReportJSONParser=new CollectionJSON();
 		DiagnosticReportJSONParser.procesaJSONFolder("files/ex1/DiagnosticReport", log);
-		CompleteCollection DReportCollection = DiagnosticReportJSONParser.getCollection();
+		DiagnosticReportJSONParser.getCollection().setName("DiagnosticReport");
+		nombre_parser.put(DiagnosticReportJSONParser.getCollection().getName(), DiagnosticReportJSONParser);
+		ColeccionesUnion.add(DiagnosticReportJSONParser);
+
 		
 		CollectionJSON ConditionReportJSONParser=new CollectionJSON();
 		ConditionReportJSONParser.procesaJSONFolder("files/ex1/Condition", log);
-		CompleteCollection CReportCollection = ConditionReportJSONParser.getCollection();
+		ConditionReportJSONParser.getCollection().setName("Condition");
+		nombre_parser.put(ConditionReportJSONParser.getCollection().getName(), ConditionReportJSONParser);
+		ColeccionesUnion.add(ConditionReportJSONParser);
+
 		
-		CollectionJSON ImagingStudyReportJSONParser=new CollectionJSON();
-		ImagingStudyReportJSONParser.procesaJSONFolder("files/ex1/ImagingStudy", log);
-		CompleteCollection IReportCollection = ImagingStudyReportJSONParser.getCollection();
+//		CollectionJSON ImagingStudyReportJSONParser=new CollectionJSON();
+//		ImagingStudyReportJSONParser.procesaJSONFolder("files/ex1/ImagingStudy", log);
+//		ImagingStudyReportJSONParser.getCollection().setName("ImagingStudy");
+//		nombre_parser.put(ImagingStudyReportJSONParser.getCollection().getName(), ImagingStudyReportJSONParser);
+//		ColeccionesUnion.add(ImagingStudyReportJSONParser);
+
 		
 		CompleteCollection C=new CompleteCollection("ex1", "ex1");
 		
 
+		for (CollectionJSON collectionJSON : ColeccionesUnion) {
+			C.getMetamodelGrammar().addAll(collectionJSON.getCollection().getMetamodelGrammar());
+			C.getEstructuras().addAll(collectionJSON.getCollection().getEstructuras());
+			C.getSectionValues().addAll(collectionJSON.getCollection().getSectionValues());
+		}
 		
-		C.getMetamodelGrammar().addAll(patientCollection.getMetamodelGrammar());
-		C.getEstructuras().addAll(patientCollection.getEstructuras());
-		C.getSectionValues().addAll(patientCollection.getSectionValues());
+	
 		
-		C.getMetamodelGrammar().addAll(DReportCollection.getMetamodelGrammar());
-		C.getEstructuras().addAll(DReportCollection.getEstructuras());
-		C.getSectionValues().addAll(DReportCollection.getSectionValues());
-		
-		C.getMetamodelGrammar().addAll(CReportCollection.getMetamodelGrammar());
-		C.getEstructuras().addAll(CReportCollection.getEstructuras());
-		C.getSectionValues().addAll(CReportCollection.getSectionValues());
-		
-		C.getMetamodelGrammar().addAll(IReportCollection.getMetamodelGrammar());
-		C.getEstructuras().addAll(IReportCollection.getEstructuras());
-		C.getSectionValues().addAll(IReportCollection.getSectionValues());
 		
 		
 		ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
@@ -78,36 +96,55 @@ public class CollectionFHIRLinked {
 		}
 		
 		for (ConfigFHIRYAMLBrowse Browse : order.getBrowseable()) {
-			String GrammarAPp=Browse.getGrammar().toLowerCase();
-			switch (GrammarAPp) {
-			case "patient":
+			String GrammarAPp=Browse.getGrammar();
+			CollectionJSON aplicar = nombre_parser.get(GrammarAPp);
+			if (aplicar!=null)
+			{
 				
-				break;
-				
-			case "diagnosticreport":
-				
-				break;
-
-			default:
-				break;
 			}
+
 			
 		}
 		
-		for (ConfigFHIRYAMLlink Browse : order.getLink()) {
-			String GrammarAPp=Browse.getGrammar().toLowerCase();
-			switch (GrammarAPp) {
-			case "patient":
+		
+		
+		HashMap<String,HashMap<String, CompleteDocuments>> listaElemDoc=new HashMap<String, HashMap<String,CompleteDocuments>>();
+		
+		for (CollectionJSON collectionJSON : ColeccionesUnion) {
+			CompleteElementType valorclave = collectionJSON.getPathFinder().get("id");
+			if (valorclave!=null&&valorclave instanceof CompleteTextElementType)
+			{
+				HashMap<String, CompleteDocuments> listaElemDocClave = new HashMap<String, CompleteDocuments>();
 				
-				break;
+				for (CompleteDocuments document : collectionJSON.getCollection().getEstructuras()) {
+					for (CompleteElement elem : document.getDescription()) {
+						if (elem.getHastype()==valorclave && elem instanceof CompleteTextElement)
+							{
+							listaElemDocClave.put(((CompleteTextElement)elem).getValue(), document);
+							break;
+							}
+					}
+				}
 				
-			case "diagnosticreport":
-//				DiagnosticReportJSONParser.getPath()
-				break;
-
-			default:
-				break;
+				listaElemDoc.put(collectionJSON.getCollection().getName(), listaElemDocClave);
 			}
+		}
+		
+		
+		
+		for (ConfigFHIRYAMLlink linkedede : order.getLink()) {
+			String GrammarAPp=linkedede.getGrammar();
+			CollectionJSON aplicar = nombre_parser.get(GrammarAPp);
+			if (aplicar!=null)
+			{
+				String PathSelect=linkedede.getPathOrigen();
+				CompleteElementType PasarALink = aplicar.getPathFinder().get(PathSelect);
+				if (PasarALink instanceof CompleteTextElementType)
+					ConvierteEnLink((CompleteTextElementType)PasarALink,aplicar.getCollection().getEstructuras(),listaElemDoc
+						);
+			}
+			
+			
 			
 		}
 		
@@ -125,6 +162,90 @@ public class CollectionFHIRLinked {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+	}
+
+
+	private static void ConvierteEnLink(CompleteTextElementType pasarALink, List<CompleteDocuments> estructuras,
+			HashMap<String,HashMap<String, CompleteDocuments>> coleccionesUnion) {
+		CompleteLinkElementType NuevoElemento= new CompleteLinkElementType(pasarALink.getName(),pasarALink.getFather(),pasarALink.getCollectionFather());
+		
+		if (pasarALink.getFather()==null)
+		{
+			CompleteGrammar CG=NuevoElemento.getCollectionFather();
+			int yo=-1;
+			for (int i = 0; i < CG.getSons().size(); i++) 
+				if (CG.getSons().get(i)==pasarALink)
+					yo=i;
+			
+			
+			if (yo>=0)
+			{
+				CG.getSons().remove(yo);
+				CG.getSons().add(yo, NuevoElemento);
+			}
+			
+		}
+		else
+		{
+			int yo=-1;
+			for (int i = 0; i < pasarALink.getFather().getSons().size(); i++) 
+				if (pasarALink.getFather().getSons().get(i)==pasarALink)
+					yo=i;
+			
+			
+			if (yo>=0)
+			{
+				pasarALink.getFather().getSons().remove(yo);
+				pasarALink.getFather().getSons().add(yo, NuevoElemento);
+			}
+		}
+		
+		
+		
+		
+		for (CompleteDocuments completeDocuments : estructuras) { 
+			
+			List<CompleteElement> quitar=new LinkedList<CompleteElement>();
+			List<CompleteElement> agregar=new LinkedList<CompleteElement>();
+			
+			for (CompleteElement elementoDoc : completeDocuments.getDescription())
+				if (elementoDoc.getHastype()==pasarALink && elementoDoc instanceof CompleteTextElement)
+					{
+					
+					String valueP=((CompleteTextElement)elementoDoc).getValue();
+					
+					String[] ListaSP = valueP.split("/");
+					
+					if (ListaSP.length==2)
+					{
+						String GramOrigen = ListaSP[0].trim();
+						String IDDestino = ListaSP[1].trim();
+						
+						HashMap<String, CompleteDocuments> aquiGram = coleccionesUnion.get(GramOrigen);
+						
+						if (aquiGram != null)
+						{
+							CompleteDocuments DocumeDes = aquiGram.get(IDDestino);
+							if (DocumeDes!=null)
+								{
+								CompleteLinkElement LL=new CompleteLinkElement(NuevoElemento, DocumeDes);
+								quitar.add(elementoDoc);
+								agregar.add(LL);
+								}
+						}
+						
+						
+
+					}
+					
+					}
+			
+			completeDocuments.getDescription().removeAll(quitar);
+			completeDocuments.getDescription().addAll(agregar);
+		}
+		
+		
+		
 	}
 
 
