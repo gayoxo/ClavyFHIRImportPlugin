@@ -183,7 +183,7 @@ public class CollectionFHIRLinked {
 				CompleteElementType completeElementType=PadreSeries.getSons().get(i);
 				
 				if (completeElementType.getClassOfIterator()!=null&&completeElementType.getClassOfIterator()==entryinstanceentry)
-					ListaEntry.add(PadreSeries);
+					ListaEntry.add(completeElementType);
 
 				}
 
@@ -231,11 +231,14 @@ public class CollectionFHIRLinked {
 						ListaEntryinstanceentry.add(entry_act_sons);
 				}
 				
+				if (ListaEntryinstanceentry.size()>0)
+				{
 				CompleteElementType Representante = ListaEntryinstanceentry.get(0);
 				for (CompleteElementType representado : ListaEntryinstance) {
 					equivalencia.put(representado, Representante);
 					if (representado!=Representante)
 						representado.getFather().getSons().remove(representado);
+				}
 				}
 				
 			}
