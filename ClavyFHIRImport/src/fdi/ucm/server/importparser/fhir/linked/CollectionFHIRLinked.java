@@ -7,13 +7,18 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
+
+import org.json.simple.JSONArray;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.google.gson.JsonPrimitive;
 
 import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
@@ -58,12 +63,13 @@ public class CollectionFHIRLinked {
 		ColeccionesUnion.add(ConditionReportJSONParser);
 
 		
-//		CollectionJSON ImagingStudyReportJSONParser=new CollectionJSON();
-//		ImagingStudyReportJSONParser.procesaJSONFolder("files/ex1/ImagingStudy", log);
-//		ImagingStudyReportJSONParser.getCollection().setName("ImagingStudy");
-//		nombre_parser.put(ImagingStudyReportJSONParser.getCollection().getName(), ImagingStudyReportJSONParser);
-//		ColeccionesUnion.add(ImagingStudyReportJSONParser);
+		CollectionJSON ImagingStudyReportJSONParser=new CollectionJSON();
+		ImagingStudyReportJSONParser.procesaJSONFolder("files/ex1/ImagingStudy", log);
+		ImagingStudyReportJSONParser.getCollection().setName("ImagingStudy");
+		nombre_parser.put(ImagingStudyReportJSONParser.getCollection().getName(), ImagingStudyReportJSONParser);
+		ColeccionesUnion.add(ImagingStudyReportJSONParser);
 
+		CompactarImagen(ImagingStudyReportJSONParser);
 		
 		CompleteCollection C=new CompleteCollection("ex1", "ex1");
 		
@@ -162,6 +168,124 @@ public class CollectionFHIRLinked {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+	}
+
+
+	@SuppressWarnings("unchecked")
+	private static void CompactarImagen(CollectionJSON imagingStudyReportJSONParser) {
+		
+		CompleteElementType entryinstanceentry = imagingStudyReportJSONParser.getPathFinder().get("series/entry");
+
+			CompleteElementType PadreSeries = entryinstanceentry.getFather();
+
+			List<CompleteElementType> ListaEntry=new LinkedList<CompleteElementType>();
+			for (int i = 0; i < PadreSeries.getSons().size(); i++) {
+				CompleteElementType completeElementType=PadreSeries.getSons().get(i);
+				
+				if (completeElementType.getClassOfIterator()!=null&&completeElementType.getClassOfIterator()==entryinstanceentry)
+					ListaEntry.add(PadreSeries);
+
+				}
+
+			CompleteElementType entryinstance_enty = imagingStudyReportJSONParser.getPathFinder().get("series/entry/instance");
+			
+			List<CompleteElementType> ListaEntryinstance=new LinkedList<CompleteElementType>();
+			for (CompleteElementType entry_act : ListaEntry) {
+				for (CompleteElementType entry_act_sons : entry_act.getSons()) {
+					if (entry_act_sons.getClassOfIterator()==entryinstance_enty)
+						ListaEntryinstance.add(entry_act_sons);
+				}
+			}
+			
+			
+			CompleteElementType entryinstance = imagingStudyReportJSONParser.getPathFinder().get("series/entry/instance/entry");
+			
+			
+			HashSet<CompleteElementType> ListaQuitar = new HashSet<CompleteElementType>();
+			
+			Stack<CompleteElementType> porProcesar= new Stack<CompleteElementType>();
+			
+			porProcesar.push(entryinstance);
+			
+			CompleteElementType actualElem = null;
+			
+			while (!porProcesar.isEmpty())
+			{
+				actualElem=porProcesar.pop();
+				ListaQuitar.add(actualElem);
+				for (CompleteElementType completeElementType : actualElem.getSons()) 
+					porProcesar.add(completeElementType);
+				
+			}
+			
+			
+			
+			
+			HashMap<CompleteElementType, CompleteElementType> equivalencia=new HashMap<CompleteElementType, CompleteElementType>();
+			
+			for (CompleteElementType entry_act : ListaEntryinstance) {
+				List<CompleteElementType> ListaEntryinstanceentry=new LinkedList<CompleteElementType>();
+				
+				for (CompleteElementType entry_act_sons : entry_act.getSons()) {
+					if (entry_act_sons.getClassOfIterator()==entryinstance)
+						ListaEntryinstanceentry.add(entry_act_sons);
+				}
+				
+				CompleteElementType Representante = ListaEntryinstanceentry.get(0);
+				for (CompleteElementType representado : ListaEntryinstance) {
+					equivalencia.put(representado, Representante);
+					if (representado!=Representante)
+						representado.getFather().getSons().remove(representado);
+				}
+				
+			}
+
+			
+
+		
+		List<CompleteDocuments> documentos = imagingStudyReportJSONParser.getCollection().getEstructuras();
+		for (CompleteDocuments documento_uni : documentos) {
+			HashMap<CompleteElementType, List<String>> TextoFinal=new HashMap<CompleteElementType, List<String>>();
+			List<CompleteElement> ElementosRepresentados=new LinkedList<CompleteElement>();
+			List<CompleteElement> aQuitar=new LinkedList<CompleteElement>();
+			for (CompleteElement docu_eleme : documento_uni.getDescription()) {
+				CompleteElementType equivalente = equivalencia.get(docu_eleme.getHastype());
+				if (equivalente!=null)
+				{
+					List<String> Listvalor = TextoFinal.get(equivalente);
+					if (Listvalor==null)
+						Listvalor=new LinkedList<String>();
+					
+					if (docu_eleme instanceof CompleteTextElement)
+						Listvalor.add(((CompleteTextElement) docu_eleme).getValue());
+					
+					TextoFinal.put(equivalente, Listvalor);
+					
+					if (docu_eleme.getHastype()==equivalente)
+						ElementosRepresentados.add(docu_eleme);
+					
+				}
+				
+				if (ListaQuitar.contains(docu_eleme.getHastype().getClassOfIterator())
+						&&docu_eleme.getHastype()!=docu_eleme.getHastype().getClassOfIterator())
+					aQuitar.add(docu_eleme);
+			}
+			
+			
+			documento_uni.getDescription().removeAll(aQuitar);
+			for (CompleteElement elementofinal : ElementosRepresentados) {
+				List<String> ListaElemS = TextoFinal.get(elementofinal.getHastype());
+				JSONArray JA=new JSONArray();
+				for (String stre : ListaElemS) 
+					JA.add(new JsonPrimitive(stre));
+				
+				if (elementofinal instanceof CompleteTextElement)
+					((CompleteTextElement) elementofinal).setValue(JA.toJSONString());
+			}
+			
+			
+		}
+		
 	}
 
 
