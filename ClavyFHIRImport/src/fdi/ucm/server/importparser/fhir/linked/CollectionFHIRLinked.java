@@ -21,6 +21,10 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 
 import fdi.ucm.server.importparser.json.CollectionJSON;
@@ -365,6 +369,8 @@ public class CollectionFHIRLinked {
 			
 			for (Entry<CompleteElementType, JSONArray> serie : serie_JSONArray.entrySet()) {
 				CompleteTextElementType tipovalido = serie_new_entry.get(serie.getKey());
+				
+				
 				CompleteTextElement nuevo=new CompleteTextElement(tipovalido, serie.getValue().toJSONString());
 				documento_uni.getDescription().add(nuevo);
 			}

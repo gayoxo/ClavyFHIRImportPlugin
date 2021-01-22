@@ -6,3 +6,7 @@ browseable:
 link:
  - grammar: DiagnosticReport
    pathOrigen: subject/reference
+ - grammar: Condition
+   pathOrigen: subject/reference
+ - grammar: ImagingStudy
+   pathOrigen: patient/reference
