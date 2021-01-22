@@ -10,8 +10,11 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.Stack;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.json.simple.JSONArray;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -178,37 +181,47 @@ public class CollectionFHIRLinked {
 
 			CompleteElementType PadreSeries = entryinstanceentry.getFather();
 
-			List<CompleteElementType> ListaEntry=new LinkedList<CompleteElementType>();
+			List<CompleteElementType> ListaEntrySeries=new LinkedList<CompleteElementType>();
 			for (int i = 0; i < PadreSeries.getSons().size(); i++) {
 				CompleteElementType completeElementType=PadreSeries.getSons().get(i);
 				
 				if (completeElementType.getClassOfIterator()!=null&&completeElementType.getClassOfIterator()==entryinstanceentry)
-					ListaEntry.add(completeElementType);
+					ListaEntrySeries.add(completeElementType);
 
 				}
 
 			CompleteElementType entryinstance_enty = imagingStudyReportJSONParser.getPathFinder().get("series/entry/instance");
 			
 			List<CompleteElementType> ListaEntryinstance=new LinkedList<CompleteElementType>();
-			for (CompleteElementType entry_act : ListaEntry) {
-				for (CompleteElementType entry_act_sons : entry_act.getSons()) {
+			HashMap<CompleteElementType,CompleteElementType> instancia_serie=new HashMap<CompleteElementType, CompleteElementType>();
+			
+			for (CompleteElementType act_serie_pro : ListaEntrySeries) {
+				for (CompleteElementType entry_act_sons : act_serie_pro.getSons()) {
 					if (entry_act_sons.getClassOfIterator()==entryinstance_enty)
+						{
 						ListaEntryinstance.add(entry_act_sons);
+						instancia_serie.put(entry_act_sons, act_serie_pro);
+						}
 				}
 			}
 			
-			
-			CompleteElementType entryinstance = imagingStudyReportJSONParser.getPathFinder().get("series/entry/instance/entry");
-			
-			
-			HashSet<CompleteElementType> ListaQuitar = new HashSet<CompleteElementType>();
-			
+			CompleteElementType entryinstance_enty_entry = imagingStudyReportJSONParser.getPathFinder().get("series/entry/instance/entry");
+		
 			Stack<CompleteElementType> porProcesar= new Stack<CompleteElementType>();
+			HashSet<CompleteElementType> ListaQuitar = new HashSet<CompleteElementType>();
+			HashMap<CompleteElementType,CompleteElementType> entry_serie =new HashMap<CompleteElementType, CompleteElementType>();
 			
-			porProcesar.push(entryinstance);
-			
+			for (CompleteElementType instancia : ListaEntryinstance) {
+				porProcesar.add(instancia);
+				instancia.getFather().getSons().remove(instancia);
+				for (CompleteElementType completeElementType : instancia.getSons()) {
+					if (completeElementType.getClassOfIterator()==entryinstance_enty_entry)
+						entry_serie.put(completeElementType, instancia_serie.get(instancia));
+				}
+			}
+
 			CompleteElementType actualElem = null;
-			
+	
 			while (!porProcesar.isEmpty())
 			{
 				actualElem=porProcesar.pop();
@@ -218,73 +231,147 @@ public class CollectionFHIRLinked {
 				
 			}
 			
-			
-			
-			
-			HashMap<CompleteElementType, CompleteElementType> equivalencia=new HashMap<CompleteElementType, CompleteElementType>();
-			
-			for (CompleteElementType entry_act : ListaEntryinstance) {
-				List<CompleteElementType> ListaEntryinstanceentry=new LinkedList<CompleteElementType>();
-				
-				for (CompleteElementType entry_act_sons : entry_act.getSons()) {
-					if (entry_act_sons.getClassOfIterator()==entryinstance)
-						ListaEntryinstanceentry.add(entry_act_sons);
-				}
-				
-				if (ListaEntryinstanceentry.size()>0)
-				{
-				CompleteElementType Representante = ListaEntryinstanceentry.get(0);
-				for (CompleteElementType representado : ListaEntryinstance) {
-					equivalencia.put(representado, Representante);
-					if (representado!=Representante)
-						representado.getFather().getSons().remove(representado);
-				}
-				}
-				
-			}
+			//AQUI ES EL PUNTO CLAVE
 
 			
+			CompleteElementType entryinstance_uid = imagingStudyReportJSONParser.getPathFinder().get("series/entry/instance/entry/uid");
+			CompleteElementType entryinstance_number = imagingStudyReportJSONParser.getPathFinder().get("series/entry/instance/entry/number");
+			CompleteElementType entryinstance_sopClass = imagingStudyReportJSONParser.getPathFinder().get("series/entry/instance/entry/sopClass");
+
+			HashMap<CompleteElementType,CompleteTextElementType> serie_new_entry =new HashMap<CompleteElementType, CompleteTextElementType>();
+			
+			for (CompleteElementType completeElementType : ListaEntrySeries) {
+				CompleteTextElementType nuevo=new CompleteTextElementType("compacted_instance", completeElementType, completeElementType.getCollectionFather());
+				completeElementType.getSons().add(nuevo);
+				serie_new_entry.put(completeElementType, nuevo);
+			}
 
 		
 		List<CompleteDocuments> documentos = imagingStudyReportJSONParser.getCollection().getEstructuras();
+		
 		for (CompleteDocuments documento_uni : documentos) {
-			HashMap<CompleteElementType, List<String>> TextoFinal=new HashMap<CompleteElementType, List<String>>();
-			List<CompleteElement> ElementosRepresentados=new LinkedList<CompleteElement>();
+			
+			HashMap<CompleteElementType, JSONObject> entry_JSONObject = new HashMap<CompleteElementType, JSONObject>();
+			HashMap<CompleteElementType, JSONArray> serie_JSONArray = new HashMap<CompleteElementType, JSONArray>();
+
+			
 			List<CompleteElement> aQuitar=new LinkedList<CompleteElement>();
 			for (CompleteElement docu_eleme : documento_uni.getDescription()) {
-				CompleteElementType equivalente = equivalencia.get(docu_eleme.getHastype());
-				if (equivalente!=null)
+
+				if (docu_eleme.getHastype().getClassOfIterator()==entryinstance_uid&&
+						docu_eleme instanceof CompleteTextElement)
 				{
-					List<String> Listvalor = TextoFinal.get(equivalente);
-					if (Listvalor==null)
-						Listvalor=new LinkedList<String>();
+					CompleteElementType entryFather = docu_eleme.getHastype().getFather();
+					CompleteElementType entryserie = entry_serie.get(entryFather);
+					JSONObject JSONObject_entry = entry_JSONObject.get(entryFather);
+					JSONArray JSONArray_serie = serie_JSONArray.get(entryserie);
 					
-					if (docu_eleme instanceof CompleteTextElement)
-						Listvalor.add(((CompleteTextElement) docu_eleme).getValue());
+					if (JSONObject_entry==null)
+						{
+						JSONObject_entry= new JSONObject();
+						
+						if (JSONArray_serie == null)
+							{
+							JSONArray_serie = new JSONArray();
+							serie_JSONArray.put(entryserie, JSONArray_serie);
+							}
+						
+						JSONArray_serie.add(JSONObject_entry);
+						
+						entry_JSONObject.put(entryFather, JSONObject_entry);
+						}
 					
-					TextoFinal.put(equivalente, Listvalor);
+					try {
+						JSONObject_entry.put("uid",((CompleteTextElement)docu_eleme).getValue() );
+					} catch (JSONException e) {
+						e.printStackTrace();
+					}
 					
-					if (docu_eleme.getHastype()==equivalente)
-						ElementosRepresentados.add(docu_eleme);
 					
 				}
 				
-				if (ListaQuitar.contains(docu_eleme.getHastype().getClassOfIterator())
-						&&docu_eleme.getHastype()!=docu_eleme.getHastype().getClassOfIterator())
+				
+				if (docu_eleme.getHastype().getClassOfIterator()==entryinstance_number&&
+						docu_eleme instanceof CompleteTextElement)
+				{
+					CompleteElementType entryFather = docu_eleme.getHastype().getFather();
+					CompleteElementType entryserie = entry_serie.get(entryFather);
+					JSONObject JSONObject_entry = entry_JSONObject.get(entryFather);
+					JSONArray JSONArray_serie = serie_JSONArray.get(entryserie);
+					
+					if (JSONObject_entry==null)
+						{
+						JSONObject_entry= new JSONObject();
+						
+						if (JSONArray_serie == null)
+							{
+							JSONArray_serie = new JSONArray();
+							serie_JSONArray.put(entryserie, JSONArray_serie);
+							}
+						
+						JSONArray_serie.add(JSONObject_entry);
+						
+						entry_JSONObject.put(entryFather, JSONObject_entry);
+						}
+					
+					try {
+						JSONObject_entry.put("number",((CompleteTextElement)docu_eleme).getValue() );
+					} catch (JSONException e) {
+						e.printStackTrace();
+					}
+					
+					
+				}
+				
+				if (docu_eleme.getHastype().getClassOfIterator()==entryinstance_sopClass&&
+						docu_eleme instanceof CompleteTextElement)
+				{
+					CompleteElementType entryFather = docu_eleme.getHastype().getFather();
+					CompleteElementType entryserie = entry_serie.get(entryFather);
+					JSONObject JSONObject_entry = entry_JSONObject.get(entryFather);
+					JSONArray JSONArray_serie = serie_JSONArray.get(entryserie);
+					
+					if (JSONObject_entry==null)
+						{
+						JSONObject_entry= new JSONObject();
+						
+						if (JSONArray_serie == null)
+							{
+							JSONArray_serie = new JSONArray();
+							serie_JSONArray.put(entryserie, JSONArray_serie);
+							}
+						
+						JSONArray_serie.add(JSONObject_entry);
+						
+						entry_JSONObject.put(entryFather, JSONObject_entry);
+						}
+					
+					try {
+						JSONObject_entry.put("sopClass",((CompleteTextElement)docu_eleme).getValue() );
+					} catch (JSONException e) {
+						e.printStackTrace();
+					}
+					
+					
+				}
+				
+				
+				
+				
+				
+				if (ListaQuitar.contains(docu_eleme.getHastype()))
 					aQuitar.add(docu_eleme);
+			}
+			
+			for (Entry<CompleteElementType, JSONArray> serie : serie_JSONArray.entrySet()) {
+				CompleteTextElementType tipovalido = serie_new_entry.get(serie.getKey());
+				CompleteTextElement nuevo=new CompleteTextElement(tipovalido, serie.getValue().toJSONString());
+				documento_uni.getDescription().add(nuevo);
 			}
 			
 			
 			documento_uni.getDescription().removeAll(aQuitar);
-			for (CompleteElement elementofinal : ElementosRepresentados) {
-				List<String> ListaElemS = TextoFinal.get(elementofinal.getHastype());
-				JSONArray JA=new JSONArray();
-				for (String stre : ListaElemS) 
-					JA.add(new JsonPrimitive(stre));
-				
-				if (elementofinal instanceof CompleteTextElement)
-					((CompleteTextElement) elementofinal).setValue(JA.toJSONString());
-			}
+		
 			
 			
 		}
