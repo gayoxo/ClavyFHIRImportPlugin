@@ -1,0 +1,595 @@
+{
+  "conceptId" : "41224006",
+  "fsn" : {
+    "term" : "Structure of lower lobe of left lung (body structure)",
+    "lang" : "en"
+  },
+  "pt" : {
+    "term" : "Structure of lower lobe of left lung",
+    "lang" : "en"
+  },
+  "active" : true,
+  "effectiveTime" : "20050131",
+  "released" : true,
+  "releasedEffectiveTime" : 20050131,
+  "moduleId" : "900000000000207008",
+  "definitionStatus" : "FULLY_DEFINED",
+  "descriptions" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "492919017",
+    "term" : "Structure of left lower lobe of lung",
+    "conceptId" : "41224006",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "68766011",
+    "term" : "Left lower lobe of lung",
+    "conceptId" : "41224006",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "3319698014",
+    "term" : "Structure of lower lobe of left lung (body structure)",
+    "conceptId" : "41224006",
+    "typeId" : "900000000000003001",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "FSN",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170131,
+    "descriptionId" : "777989019",
+    "term" : "Structure of left lower lobe of lung (body structure)",
+    "conceptId" : "41224006",
+    "typeId" : "900000000000003001",
+    "acceptabilityMap" : { },
+    "type" : "FSN",
+    "inactivationIndicator" : "INAPPROPRIATE",
+    "lang" : "en",
+    "caseSignificance" : "INITIAL_CHARACTER_CASE_INSENSITIVE",
+    "effectiveTime" : "20170131"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "492920011",
+    "term" : "Lower lobe of left lung",
+    "conceptId" : "41224006",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "3319699018",
+    "term" : "Structure of lower lobe of left lung",
+    "conceptId" : "41224006",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "descriptionId" : "68767019",
+    "term" : "Left lower lobe of lung, NOS",
+    "conceptId" : "41224006",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : { },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "INITIAL_CHARACTER_CASE_INSENSITIVE",
+    "effectiveTime" : "20020131"
+  } ],
+  "classAxioms" : [ {
+    "axiomId" : "a4eb0f91-0ac2-409e-b1bc-17ba5d284628",
+    "moduleId" : "900000000000207008",
+    "active" : true,
+    "released" : true,
+    "definitionStatusId" : "900000000000073002",
+    "relationships" : [ {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "41224006",
+      "destinationId" : "362899007",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "362899007",
+        "definitionStatus" : "FULLY_DEFINED",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Structure of lobe of left lung (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Structure of lobe of left lung",
+          "lang" : "en"
+        },
+        "id" : "362899007"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "41224006",
+      "destinationId" : "90572001",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "90572001",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Structure of lower lobe of lung (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Structure of lower lobe of lung",
+          "lang" : "en"
+        },
+        "id" : "90572001"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "41224006",
+      "destinationId" : "7771000",
+      "typeId" : "272741003",
+      "type" : {
+        "conceptId" : "272741003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Laterality (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Laterality",
+          "lang" : "en"
+        },
+        "id" : "272741003"
+      },
+      "target" : {
+        "conceptId" : "7771000",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Left (qualifier value)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Left",
+          "lang" : "en"
+        },
+        "id" : "7771000"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    } ],
+    "definitionStatus" : "FULLY_DEFINED",
+    "id" : "a4eb0f91-0ac2-409e-b1bc-17ba5d284628",
+    "effectiveTime" : 20190731
+  } ],
+  "gciAxioms" : [ ],
+  "relationships" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "215271029",
+    "sourceId" : "41224006",
+    "destinationId" : "362899007",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "362899007",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Structure of lobe of left lung (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Structure of lobe of left lung",
+        "lang" : "en"
+      },
+      "id" : "362899007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "215271029"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "215272020",
+    "sourceId" : "41224006",
+    "destinationId" : "90572001",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "90572001",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Structure of lower lobe of lung (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Structure of lower lobe of lung",
+        "lang" : "en"
+      },
+      "id" : "90572001"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "215272020"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "775044026",
+    "sourceId" : "41224006",
+    "destinationId" : "7771000",
+    "typeId" : "272741003",
+    "type" : {
+      "conceptId" : "272741003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Laterality (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Laterality",
+        "lang" : "en"
+      },
+      "id" : "272741003"
+    },
+    "target" : {
+      "conceptId" : "7771000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Left (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Left",
+        "lang" : "en"
+      },
+      "id" : "7771000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "775044026"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20050731,
+    "relationshipId" : "215270028",
+    "sourceId" : "41224006",
+    "destinationId" : "44029006",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "44029006",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Left lung structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Left lung structure",
+        "lang" : "en"
+      },
+      "id" : "44029006"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20050731",
+    "id" : "215270028"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4016237025",
+    "sourceId" : "41224006",
+    "destinationId" : "362899007",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "362899007",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Structure of lobe of left lung (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Structure of lobe of left lung",
+        "lang" : "en"
+      },
+      "id" : "362899007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4016237025"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4016236023",
+    "sourceId" : "41224006",
+    "destinationId" : "90572001",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "90572001",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Structure of lower lobe of lung (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Structure of lower lobe of lung",
+        "lang" : "en"
+      },
+      "id" : "90572001"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4016236023"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4354886020",
+    "sourceId" : "41224006",
+    "destinationId" : "7771000",
+    "typeId" : "272741003",
+    "type" : {
+      "conceptId" : "272741003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Laterality (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Laterality",
+        "lang" : "en"
+      },
+      "id" : "272741003"
+    },
+    "target" : {
+      "conceptId" : "7771000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Left (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Left",
+        "lang" : "en"
+      },
+      "id" : "7771000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4354886020"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190131,
+    "relationshipId" : "775043021",
+    "sourceId" : "41224006",
+    "destinationId" : "361982005",
+    "typeId" : "123005000",
+    "type" : {
+      "conceptId" : "123005000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Part of (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Part of",
+        "lang" : "en"
+      },
+      "id" : "123005000"
+    },
+    "target" : {
+      "conceptId" : "361982005",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Entire left lung (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Entire left lung",
+        "lang" : "en"
+      },
+      "id" : "361982005"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "ADDITIONAL_RELATIONSHIP",
+    "effectiveTime" : "20190131",
+    "id" : "775043021"
+  } ]
+}

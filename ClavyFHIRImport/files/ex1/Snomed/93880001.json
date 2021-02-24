@@ -1,0 +1,1190 @@
+{
+  "conceptId" : "93880001",
+  "fsn" : {
+    "term" : "Primary malignant neoplasm of lung (disorder)",
+    "lang" : "en"
+  },
+  "pt" : {
+    "term" : "Primary malignant neoplasm of lung",
+    "lang" : "en"
+  },
+  "active" : true,
+  "effectiveTime" : "20020131",
+  "released" : true,
+  "releasedEffectiveTime" : 20020131,
+  "moduleId" : "900000000000207008",
+  "definitionStatus" : "FULLY_DEFINED",
+  "descriptions" : [ {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "descriptionId" : "155357011",
+    "term" : "Malignant neoplasm of lung",
+    "conceptId" : "93880001",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : { },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "INITIAL_CHARACTER_CASE_INSENSITIVE",
+    "effectiveTime" : "20020131"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "510792012",
+    "term" : "Primary malignant neoplasm of lung",
+    "conceptId" : "93880001",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "3288586014",
+    "term" : "Lung cancer",
+    "conceptId" : "93880001",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "descriptionId" : "155358018",
+    "term" : "Malignant neoplasm of lung, NOS",
+    "conceptId" : "93880001",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : { },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "INITIAL_CHARACTER_CASE_INSENSITIVE",
+    "effectiveTime" : "20020131"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "837706010",
+    "term" : "Primary malignant neoplasm of lung (disorder)",
+    "conceptId" : "93880001",
+    "typeId" : "900000000000003001",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "FSN",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  } ],
+  "classAxioms" : [ {
+    "axiomId" : "196259b2-72b6-4162-ba8f-95b316708cb4",
+    "moduleId" : "900000000000207008",
+    "active" : true,
+    "released" : true,
+    "definitionStatusId" : "900000000000073002",
+    "relationships" : [ {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "93880001",
+      "destinationId" : "64572001",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "64572001",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Disease (disorder)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Disease",
+          "lang" : "en"
+        },
+        "id" : "64572001"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "93880001",
+      "destinationId" : "39607008",
+      "typeId" : "363698007",
+      "type" : {
+        "conceptId" : "363698007",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Finding site (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Finding site",
+          "lang" : "en"
+        },
+        "id" : "363698007"
+      },
+      "target" : {
+        "conceptId" : "39607008",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Lung structure (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Lung structure",
+          "lang" : "en"
+        },
+        "id" : "39607008"
+      },
+      "groupId" : 1,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "93880001",
+      "destinationId" : "86049000",
+      "typeId" : "116676008",
+      "type" : {
+        "conceptId" : "116676008",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Associated morphology (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Associated morphology",
+          "lang" : "en"
+        },
+        "id" : "116676008"
+      },
+      "target" : {
+        "conceptId" : "86049000",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Malignant neoplasm, primary (morphologic abnormality)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Neoplasm, malignant (primary)",
+          "lang" : "en"
+        },
+        "id" : "86049000"
+      },
+      "groupId" : 1,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    } ],
+    "definitionStatus" : "FULLY_DEFINED",
+    "id" : "196259b2-72b6-4162-ba8f-95b316708cb4",
+    "effectiveTime" : 20190731
+  } ],
+  "gciAxioms" : [ ],
+  "relationships" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "303254020",
+    "sourceId" : "93880001",
+    "destinationId" : "363358000",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "363358000",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant tumor of lung (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant tumor of lung",
+        "lang" : "en"
+      },
+      "id" : "363358000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "303254020"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "1686854024",
+    "sourceId" : "93880001",
+    "destinationId" : "93841009",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "93841009",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Primary malignant neoplasm of intrathoracic organs (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Primary malignant neoplasm of intrathoracic organs",
+        "lang" : "en"
+      },
+      "id" : "93841009"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "1686854024"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "1686853029",
+    "sourceId" : "93880001",
+    "destinationId" : "93986008",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "93986008",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Primary malignant neoplasm of respiratory tract (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Primary malignant neoplasm of respiratory tract",
+        "lang" : "en"
+      },
+      "id" : "93986008"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "1686853029"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "3377379023",
+    "sourceId" : "93880001",
+    "destinationId" : "39607008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "39607008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lung structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lung structure",
+        "lang" : "en"
+      },
+      "id" : "39607008"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "3377379023"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "3377378026",
+    "sourceId" : "93880001",
+    "destinationId" : "86049000",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "86049000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant neoplasm, primary (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Neoplasm, malignant (primary)",
+        "lang" : "en"
+      },
+      "id" : "86049000"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "3377378026"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "6423941025",
+    "sourceId" : "93880001",
+    "destinationId" : "64572001",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "64572001",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Disease (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Disease",
+        "lang" : "en"
+      },
+      "id" : "64572001"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "6423941025"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "303255021",
+    "sourceId" : "93880001",
+    "destinationId" : "38807002",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "38807002",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Disorder: Primary malignant neoplasm (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant neoplastic disease (primary)",
+        "lang" : "en"
+      },
+      "id" : "38807002"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "303255021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20160131,
+    "relationshipId" : "4086143027",
+    "sourceId" : "93880001",
+    "destinationId" : "363358000",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "363358000",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant tumor of lung (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant tumor of lung",
+        "lang" : "en"
+      },
+      "id" : "363358000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20160131",
+    "id" : "4086143027"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "303256022",
+    "sourceId" : "93880001",
+    "destinationId" : "269462001",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "269462001",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant tumor of respiratory and intrathoracic organ (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant tumor of respiratory AND/OR intrathoracic organ",
+        "lang" : "en"
+      },
+      "id" : "269462001"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "303256022"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20160131,
+    "relationshipId" : "4086142021",
+    "sourceId" : "93880001",
+    "destinationId" : "372087000",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "372087000",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Primary malignant neoplasm (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Primary malignant neoplasm",
+        "lang" : "en"
+      },
+      "id" : "372087000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20160131",
+    "id" : "4086142021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "919055022",
+    "sourceId" : "93880001",
+    "destinationId" : "53452003",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "53452003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Ill-defined topographic site (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Ill-defined topographic site",
+        "lang" : "en"
+      },
+      "id" : "53452003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "919055022"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "919051029",
+    "sourceId" : "93880001",
+    "destinationId" : "264048004",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "264048004",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Intrathoracic organ (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Intrathoracic organ",
+        "lang" : "en"
+      },
+      "id" : "264048004"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "919051029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "919050028",
+    "sourceId" : "93880001",
+    "destinationId" : "272626006",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "272626006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Respiratory organ (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Respiratory organ",
+        "lang" : "en"
+      },
+      "id" : "272626006"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "919050028"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "919053026",
+    "sourceId" : "93880001",
+    "destinationId" : "367636007",
+    "typeId" : "308489006",
+    "type" : {
+      "conceptId" : "308489006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Pathological process (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Pathological process",
+        "lang" : "en"
+      },
+      "id" : "308489006"
+    },
+    "target" : {
+      "conceptId" : "367636007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant neoplastic process (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant neoplastic process",
+        "lang" : "en"
+      },
+      "id" : "367636007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "919053026"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "919054021",
+    "sourceId" : "93880001",
+    "destinationId" : "367640003",
+    "typeId" : "308489006",
+    "type" : {
+      "conceptId" : "308489006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Pathological process (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Pathological process",
+        "lang" : "en"
+      },
+      "id" : "308489006"
+    },
+    "target" : {
+      "conceptId" : "367640003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Neoplastic process (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Neoplastic process",
+        "lang" : "en"
+      },
+      "id" : "367640003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "919054021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20030131,
+    "relationshipId" : "1784169020",
+    "sourceId" : "93880001",
+    "destinationId" : "82094008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "82094008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lower respiratory tract structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lower respiratory tract structure",
+        "lang" : "en"
+      },
+      "id" : "82094008"
+    },
+    "groupId" : 8,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20030131",
+    "id" : "1784169020"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20030131,
+    "relationshipId" : "1784167022",
+    "sourceId" : "93880001",
+    "destinationId" : "72410000",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "72410000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Mediastinal structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Mediastinal structure",
+        "lang" : "en"
+      },
+      "id" : "72410000"
+    },
+    "groupId" : 8,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20030131",
+    "id" : "1784167022"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20030131,
+    "relationshipId" : "1784168028",
+    "sourceId" : "93880001",
+    "destinationId" : "108369006",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "108369006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Neoplasm (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Neoplasm",
+        "lang" : "en"
+      },
+      "id" : "108369006"
+    },
+    "groupId" : 8,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20030131",
+    "id" : "1784168028"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4449250023",
+    "sourceId" : "93880001",
+    "destinationId" : "39607008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "39607008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lung structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lung structure",
+        "lang" : "en"
+      },
+      "id" : "39607008"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4449250023"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "919049028",
+    "sourceId" : "93880001",
+    "destinationId" : "39607008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "39607008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lung structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lung structure",
+        "lang" : "en"
+      },
+      "id" : "39607008"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "919049028"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "919052020",
+    "sourceId" : "93880001",
+    "destinationId" : "367651003",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "367651003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant Neoplasm (Morphology)",
+        "lang" : "en"
+      },
+      "id" : "367651003"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "919052020"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4374074020",
+    "sourceId" : "93880001",
+    "destinationId" : "86049000",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "86049000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant neoplasm, primary (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Neoplasm, malignant (primary)",
+        "lang" : "en"
+      },
+      "id" : "86049000"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4374074020"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "919056023",
+    "sourceId" : "93880001",
+    "destinationId" : "86049000",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "86049000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant neoplasm, primary (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Neoplasm, malignant (primary)",
+        "lang" : "en"
+      },
+      "id" : "86049000"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "919056023"
+  } ]
+}

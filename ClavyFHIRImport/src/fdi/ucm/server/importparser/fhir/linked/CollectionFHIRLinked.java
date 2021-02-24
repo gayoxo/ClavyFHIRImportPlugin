@@ -21,12 +21,6 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonPrimitive;
-
 import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
@@ -68,7 +62,7 @@ public class CollectionFHIRLinked {
 		ConditionReportJSONParser.getCollection().setName("Condition");
 		nombre_parser.put(ConditionReportJSONParser.getCollection().getName(), ConditionReportJSONParser);
 		ColeccionesUnion.add(ConditionReportJSONParser);
-
+		
 		
 		CollectionJSON ImagingStudyReportJSONParser=new CollectionJSON();
 		ImagingStudyReportJSONParser.procesaJSONFolder("files/ex1/ImagingStudy", log);
@@ -77,6 +71,14 @@ public class CollectionFHIRLinked {
 		ColeccionesUnion.add(ImagingStudyReportJSONParser);
 
 		CompactarImagen(ImagingStudyReportJSONParser);
+	
+		CollectionJSON ConditionSNOWMEDReportJSONParser=new CollectionJSON();
+		ConditionSNOWMEDReportJSONParser.procesaJSONFolder("files/ex1/Snomed", log);
+		ConditionSNOWMEDReportJSONParser.getCollection().setName("Snomed");
+		nombre_parser.put(ConditionSNOWMEDReportJSONParser.getCollection().getName(), ConditionSNOWMEDReportJSONParser);
+		ColeccionesUnion.add(ConditionSNOWMEDReportJSONParser);
+		
+		LimpiaSnomed(ConditionSNOWMEDReportJSONParser);
 		
 		CompleteCollection C=new CompleteCollection("ex1", "ex1");
 		
@@ -174,6 +176,51 @@ public class CollectionFHIRLinked {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+	}
+
+
+	private static void LimpiaSnomed(CollectionJSON conditionSNOWMEDReportJSONParser) {
+		
+		
+		Stack<CompleteElementType> aBorrar=new Stack<CompleteElementType>();
+		
+		CompleteElementType classAxioms = conditionSNOWMEDReportJSONParser.getPathFinder().get("classAxioms");
+		if (classAxioms!=null)
+			aBorrar.add(classAxioms);
+		CompleteElementType gciAxioms = conditionSNOWMEDReportJSONParser.getPathFinder().get("gciAxioms");
+		if (gciAxioms!=null)
+			aBorrar.add(gciAxioms);
+		CompleteElementType relationships = conditionSNOWMEDReportJSONParser.getPathFinder().get("relationships");
+		if (relationships!=null)
+			aBorrar.add(relationships);
+		
+		List<CompleteElementType> Borrame=new LinkedList<CompleteElementType>(aBorrar);
+		CompleteGrammar gramaticaborra = conditionSNOWMEDReportJSONParser.getCollection().getMetamodelGrammar().get(0);
+		
+		
+		for (CompleteElementType completeElementType : gramaticaborra.getSons()) 
+			if (aBorrar.contains(completeElementType)||aBorrar.contains(completeElementType.getClassOfIterator()))
+				Borrame.add(completeElementType);
+		
+		gramaticaborra.getSons().removeAll(Borrame);
+		
+		HashSet<CompleteElementType> listaborrra=new HashSet<CompleteElementType>();
+
+		while (!aBorrar.isEmpty())
+		{
+			listaborrra.add(aBorrar.peek());
+			aBorrar.addAll(aBorrar.pop().getSons());
+		}
+
+		for (CompleteDocuments doco : conditionSNOWMEDReportJSONParser.getCollection().getEstructuras()) {
+			ArrayList<CompleteElement> listaborrraElem=new ArrayList<CompleteElement>();
+			for (CompleteElement elem : doco.getDescription()) 
+				if (listaborrra.contains(elem.getHastype()))
+					listaborrraElem.add(elem);
+			
+			doco.getDescription().removeAll(listaborrraElem);
+		}
+		
 	}
 
 

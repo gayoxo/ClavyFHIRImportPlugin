@@ -1,0 +1,1414 @@
+{
+  "conceptId" : "276952000",
+  "fsn" : {
+    "term" : "Squamous cell carcinoma of tongue (disorder)",
+    "lang" : "en"
+  },
+  "pt" : {
+    "term" : "Squamous cell carcinoma of tongue",
+    "lang" : "en"
+  },
+  "active" : true,
+  "effectiveTime" : "20020731",
+  "released" : true,
+  "releasedEffectiveTime" : 20020731,
+  "moduleId" : "900000000000207008",
+  "definitionStatus" : "FULLY_DEFINED",
+  "descriptions" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "descriptionId" : "413334017",
+    "term" : "SCC - Squamous cell carcinoma of tongue",
+    "conceptId" : "276952000",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "ENTIRE_TERM_CASE_SENSITIVE",
+    "effectiveTime" : "20020131"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "669929011",
+    "term" : "Squamous cell carcinoma of tongue (disorder)",
+    "conceptId" : "276952000",
+    "typeId" : "900000000000003001",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "FSN",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "413333011",
+    "term" : "Squamous cell carcinoma of tongue",
+    "conceptId" : "276952000",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  } ],
+  "classAxioms" : [ {
+    "axiomId" : "9b967022-99e5-484b-aa63-3d24a2b66fea",
+    "moduleId" : "900000000000207008",
+    "active" : true,
+    "released" : true,
+    "definitionStatusId" : "900000000000073002",
+    "relationships" : [ {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "276952000",
+      "destinationId" : "64572001",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "64572001",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Disease (disorder)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Disease",
+          "lang" : "en"
+        },
+        "id" : "64572001"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "276952000",
+      "destinationId" : "8001006",
+      "typeId" : "363698007",
+      "type" : {
+        "conceptId" : "363698007",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Finding site (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Finding site",
+          "lang" : "en"
+        },
+        "id" : "363698007"
+      },
+      "target" : {
+        "conceptId" : "8001006",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Structure of mucous membrane of tongue (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Structure of mucous membrane of tongue",
+          "lang" : "en"
+        },
+        "id" : "8001006"
+      },
+      "groupId" : 1,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "276952000",
+      "destinationId" : "400155002",
+      "typeId" : "116676008",
+      "type" : {
+        "conceptId" : "116676008",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Associated morphology (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Associated morphology",
+          "lang" : "en"
+        },
+        "id" : "116676008"
+      },
+      "target" : {
+        "conceptId" : "400155002",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Squamous cell carcinoma - category (morphologic abnormality)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Squamous cell carcinoma - category",
+          "lang" : "en"
+        },
+        "id" : "400155002"
+      },
+      "groupId" : 1,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    } ],
+    "definitionStatus" : "FULLY_DEFINED",
+    "id" : "9b967022-99e5-484b-aa63-3d24a2b66fea",
+    "effectiveTime" : 20190731
+  } ],
+  "gciAxioms" : [ ],
+  "relationships" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20030731,
+    "relationshipId" : "2222422021",
+    "sourceId" : "276952000",
+    "destinationId" : "363375006",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "363375006",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant tumor of tongue (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant tumor of tongue",
+        "lang" : "en"
+      },
+      "id" : "363375006"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20030731",
+    "id" : "2222422021"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20060131,
+    "relationshipId" : "2835534023",
+    "sourceId" : "276952000",
+    "destinationId" : "419842002",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "419842002",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Squamous cell carcinoma of oral mucous membrane (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Squamous cell carcinoma of oral mucous membrane",
+        "lang" : "en"
+      },
+      "id" : "419842002"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20060131",
+    "id" : "2835534023"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "3425494022",
+    "sourceId" : "276952000",
+    "destinationId" : "8001006",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "8001006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Structure of mucous membrane of tongue (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Structure of mucous membrane of tongue",
+        "lang" : "en"
+      },
+      "id" : "8001006"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "3425494022"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "3425493027",
+    "sourceId" : "276952000",
+    "destinationId" : "400155002",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "400155002",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Squamous cell carcinoma - category (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Squamous cell carcinoma - category",
+        "lang" : "en"
+      },
+      "id" : "400155002"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "3425493027"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20060131,
+    "relationshipId" : "2222420029",
+    "sourceId" : "276952000",
+    "destinationId" : "128046007",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "128046007",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Disorder of oral mucous membrane (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Disorder of oral mucous membrane",
+        "lang" : "en"
+      },
+      "id" : "128046007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20060131",
+    "id" : "2222420029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20030731,
+    "relationshipId" : "1661436020",
+    "sourceId" : "276952000",
+    "destinationId" : "69244009",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "69244009",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Disorder of tongue (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Disorder of tongue",
+        "lang" : "en"
+      },
+      "id" : "69244009"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20030731",
+    "id" : "1661436020"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20060131,
+    "relationshipId" : "2648619024",
+    "sourceId" : "276952000",
+    "destinationId" : "276320009",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "276320009",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lesion of mucosa (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lesion of mucosa",
+        "lang" : "en"
+      },
+      "id" : "276320009"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20060131",
+    "id" : "2648619024"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20040731,
+    "relationshipId" : "2458083028",
+    "sourceId" : "276952000",
+    "destinationId" : "363392002",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "363392002",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant tumor of oropharynx (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant tumor of oropharynx",
+        "lang" : "en"
+      },
+      "id" : "363392002"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20040731",
+    "id" : "2458083028"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20030131,
+    "relationshipId" : "1661438021",
+    "sourceId" : "276952000",
+    "destinationId" : "126600002",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "126600002",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Neoplasm of soft tissue (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Neoplasm of soft tissue",
+        "lang" : "en"
+      },
+      "id" : "126600002"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20030131",
+    "id" : "1661438021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "94719024",
+    "sourceId" : "276952000",
+    "destinationId" : "94101009",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "94101009",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Primary malignant neoplasm of tongue (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Primary malignant neoplasm of tongue",
+        "lang" : "en"
+      },
+      "id" : "94101009"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "94719024"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "3916497025",
+    "sourceId" : "276952000",
+    "destinationId" : "307502000",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "307502000",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Squamous cell carcinoma of mouth (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Squamous cell carcinoma of mouth",
+        "lang" : "en"
+      },
+      "id" : "307502000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "3916497025"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20060131,
+    "relationshipId" : "1661437027",
+    "sourceId" : "276952000",
+    "destinationId" : "307502000",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "307502000",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Squamous cell carcinoma of mouth (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Squamous cell carcinoma of mouth",
+        "lang" : "en"
+      },
+      "id" : "307502000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20060131",
+    "id" : "1661437027"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20040731,
+    "relationshipId" : "2458082022",
+    "sourceId" : "276952000",
+    "destinationId" : "408649007",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "408649007",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Squamous cell carcinoma of pharynx (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Squamous cell carcinoma of pharynx",
+        "lang" : "en"
+      },
+      "id" : "408649007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20040731",
+    "id" : "2458082022"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20060131,
+    "relationshipId" : "2222421025",
+    "sourceId" : "276952000",
+    "destinationId" : "402811003",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "402811003",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Squamous neoplasm of surface epithelium (disorder)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Squamous neoplasm of surface epithelium",
+        "lang" : "en"
+      },
+      "id" : "402811003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20060131",
+    "id" : "2222421025"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "601578026",
+    "sourceId" : "276952000",
+    "destinationId" : "53452003",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "53452003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Ill-defined topographic site (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Ill-defined topographic site",
+        "lang" : "en"
+      },
+      "id" : "53452003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "601578026"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "601574029",
+    "sourceId" : "276952000",
+    "destinationId" : "661005",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "661005",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Jaw region structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Jaw region structure",
+        "lang" : "en"
+      },
+      "id" : "661005"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "601574029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20030731,
+    "relationshipId" : "601577020",
+    "sourceId" : "276952000",
+    "destinationId" : "21974007",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "21974007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Tongue structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Tongue structure",
+        "lang" : "en"
+      },
+      "id" : "21974007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20030731",
+    "id" : "601577020"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "601579023",
+    "sourceId" : "276952000",
+    "destinationId" : "367636007",
+    "typeId" : "308489006",
+    "type" : {
+      "conceptId" : "308489006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Pathological process (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Pathological process",
+        "lang" : "en"
+      },
+      "id" : "308489006"
+    },
+    "target" : {
+      "conceptId" : "367636007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant neoplastic process (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant neoplastic process",
+        "lang" : "en"
+      },
+      "id" : "367636007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "601579023"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "601582029",
+    "sourceId" : "276952000",
+    "destinationId" : "367640003",
+    "typeId" : "308489006",
+    "type" : {
+      "conceptId" : "308489006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Pathological process (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Pathological process",
+        "lang" : "en"
+      },
+      "id" : "308489006"
+    },
+    "target" : {
+      "conceptId" : "367640003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Neoplastic process (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Neoplastic process",
+        "lang" : "en"
+      },
+      "id" : "367640003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "601582029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "601575028",
+    "sourceId" : "276952000",
+    "destinationId" : "123851003",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "123851003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Mouth region structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Mouth region structure",
+        "lang" : "en"
+      },
+      "id" : "123851003"
+    },
+    "groupId" : 3,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "601575028"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "601581020",
+    "sourceId" : "276952000",
+    "destinationId" : "86251006",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "86251006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Neoplasm, uncertain whether benign or malignant (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Neoplasm, uncertain whether benign or malignant",
+        "lang" : "en"
+      },
+      "id" : "86251006"
+    },
+    "groupId" : 3,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "601581020"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "601576027",
+    "sourceId" : "276952000",
+    "destinationId" : "123851003",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "123851003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Mouth region structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Mouth region structure",
+        "lang" : "en"
+      },
+      "id" : "123851003"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "601576027"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20030731,
+    "relationshipId" : "1739467025",
+    "sourceId" : "276952000",
+    "destinationId" : "74262004",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "74262004",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Oral cavity structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Oral cavity structure",
+        "lang" : "en"
+      },
+      "id" : "74262004"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20030731",
+    "id" : "1739467025"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4442750020",
+    "sourceId" : "276952000",
+    "destinationId" : "8001006",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "8001006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Structure of mucous membrane of tongue (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Structure of mucous membrane of tongue",
+        "lang" : "en"
+      },
+      "id" : "8001006"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4442750020"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "2257597029",
+    "sourceId" : "276952000",
+    "destinationId" : "8001006",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "8001006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Structure of mucous membrane of tongue (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Structure of mucous membrane of tongue",
+        "lang" : "en"
+      },
+      "id" : "8001006"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "2257597029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020731,
+    "relationshipId" : "601580021",
+    "sourceId" : "276952000",
+    "destinationId" : "367651003",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "367651003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Malignant Neoplasm (Morphology)",
+        "lang" : "en"
+      },
+      "id" : "367651003"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020731",
+    "id" : "601580021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "2257596022",
+    "sourceId" : "276952000",
+    "destinationId" : "400155002",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "400155002",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Squamous cell carcinoma - category (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Squamous cell carcinoma - category",
+        "lang" : "en"
+      },
+      "id" : "400155002"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "2257596022"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4307981026",
+    "sourceId" : "276952000",
+    "destinationId" : "400155002",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "400155002",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Squamous cell carcinoma - category (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Squamous cell carcinoma - category",
+        "lang" : "en"
+      },
+      "id" : "400155002"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4307981026"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20030731,
+    "relationshipId" : "1739466023",
+    "sourceId" : "276952000",
+    "destinationId" : "28899001",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "28899001",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Squamous cell carcinoma, no International Classification of Diseases for Oncology subtype (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Squamous cell carcinoma",
+        "lang" : "en"
+      },
+      "id" : "28899001"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20030731",
+    "id" : "1739466023"
+  } ]
+}

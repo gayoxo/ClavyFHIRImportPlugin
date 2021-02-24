@@ -1,0 +1,305 @@
+{
+  "conceptId" : "6736007",
+  "fsn" : {
+    "term" : "Moderate (severity modifier) (qualifier value)",
+    "lang" : "en"
+  },
+  "pt" : {
+    "term" : "Moderate",
+    "lang" : "en"
+  },
+  "active" : true,
+  "effectiveTime" : "20020131",
+  "released" : true,
+  "releasedEffectiveTime" : 20020131,
+  "moduleId" : "900000000000207008",
+  "definitionStatus" : "PRIMITIVE",
+  "descriptions" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "descriptionId" : "12165011",
+    "term" : "Midgrade",
+    "conceptId" : "6736007",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "ENTIRE_TERM_CASE_SENSITIVE",
+    "effectiveTime" : "20020131"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "2671601019",
+    "term" : "Moderate (severity modifier)",
+    "conceptId" : "6736007",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "807076019",
+    "term" : "Moderate (severity modifier) (qualifier value)",
+    "conceptId" : "6736007",
+    "typeId" : "900000000000003001",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "FSN",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "12164010",
+    "term" : "Moderate",
+    "conceptId" : "6736007",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  } ],
+  "classAxioms" : [ {
+    "axiomId" : "6900ac74-032b-45bd-b878-afab186fc816",
+    "moduleId" : "900000000000207008",
+    "active" : true,
+    "released" : true,
+    "definitionStatusId" : "900000000000074008",
+    "relationships" : [ {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "6736007",
+      "destinationId" : "272141005",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "272141005",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Severities (qualifier value)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Severities",
+          "lang" : "en"
+        },
+        "id" : "272141005"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    } ],
+    "definitionStatus" : "PRIMITIVE",
+    "id" : "6900ac74-032b-45bd-b878-afab186fc816",
+    "effectiveTime" : 20190731
+  } ],
+  "gciAxioms" : [ ],
+  "relationships" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "257697027",
+    "sourceId" : "6736007",
+    "destinationId" : "272141005",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "272141005",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Severities (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Severities",
+        "lang" : "en"
+      },
+      "id" : "272141005"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "257697027"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4046123021",
+    "sourceId" : "6736007",
+    "destinationId" : "272141005",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "272141005",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Severities (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Severities",
+        "lang" : "en"
+      },
+      "id" : "272141005"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4046123021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20100131,
+    "relationshipId" : "4544097024",
+    "sourceId" : "6736007",
+    "destinationId" : "43749003",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "43749003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Severity of illness (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Severity of illness",
+        "lang" : "en"
+      },
+      "id" : "43749003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20100131",
+    "id" : "4544097024"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20100131,
+    "relationshipId" : "257698021",
+    "sourceId" : "6736007",
+    "destinationId" : "43749003",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "43749003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Severity of illness (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Severity of illness",
+        "lang" : "en"
+      },
+      "id" : "43749003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20100131",
+    "id" : "257698021"
+  } ]
+}

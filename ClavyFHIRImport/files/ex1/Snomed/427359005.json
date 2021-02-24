@@ -1,0 +1,784 @@
+{
+  "conceptId" : "427359005",
+  "fsn" : {
+    "term" : "Solitary nodule of lung (finding)",
+    "lang" : "en"
+  },
+  "pt" : {
+    "term" : "Solitary nodule of lung",
+    "lang" : "en"
+  },
+  "active" : true,
+  "effectiveTime" : "20070731",
+  "released" : true,
+  "releasedEffectiveTime" : 20070731,
+  "moduleId" : "900000000000207008",
+  "definitionStatus" : "PRIMITIVE",
+  "descriptions" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "3289019014",
+    "term" : "Solitary pulmonary nodule",
+    "conceptId" : "427359005",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "2674145019",
+    "term" : "Solitary nodule of lung",
+    "conceptId" : "427359005",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "2662337018",
+    "term" : "Solitary nodule of lung (finding)",
+    "conceptId" : "427359005",
+    "typeId" : "900000000000003001",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "FSN",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  } ],
+  "classAxioms" : [ {
+    "axiomId" : "613cb93c-8fff-428b-a933-456e0a8e37db",
+    "moduleId" : "900000000000207008",
+    "active" : true,
+    "released" : true,
+    "definitionStatusId" : "900000000000074008",
+    "relationships" : [ {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "427359005",
+      "destinationId" : "300580009",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "300580009",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Single lesion (finding)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Single lesion",
+          "lang" : "en"
+        },
+        "id" : "300580009"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "427359005",
+      "destinationId" : "39607008",
+      "typeId" : "363698007",
+      "type" : {
+        "conceptId" : "363698007",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Finding site (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Finding site",
+          "lang" : "en"
+        },
+        "id" : "363698007"
+      },
+      "target" : {
+        "conceptId" : "39607008",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Lung structure (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Lung structure",
+          "lang" : "en"
+        },
+        "id" : "39607008"
+      },
+      "groupId" : 1,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "427359005",
+      "destinationId" : "27925004",
+      "typeId" : "116676008",
+      "type" : {
+        "conceptId" : "116676008",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Associated morphology (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Associated morphology",
+          "lang" : "en"
+        },
+        "id" : "116676008"
+      },
+      "target" : {
+        "conceptId" : "27925004",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Nodule (morphologic abnormality)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Nodule",
+          "lang" : "en"
+        },
+        "id" : "27925004"
+      },
+      "groupId" : 1,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    } ],
+    "definitionStatus" : "PRIMITIVE",
+    "id" : "613cb93c-8fff-428b-a933-456e0a8e37db",
+    "effectiveTime" : 20190731
+  } ],
+  "gciAxioms" : [ ],
+  "relationships" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "11471804023",
+    "sourceId" : "427359005",
+    "destinationId" : "786838002",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "786838002",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Nodule of lung (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Nodule of lung",
+        "lang" : "en"
+      },
+      "id" : "786838002"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "11471804023"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20070731,
+    "relationshipId" : "3183388024",
+    "sourceId" : "427359005",
+    "destinationId" : "300580009",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "300580009",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Single lesion (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Single lesion",
+        "lang" : "en"
+      },
+      "id" : "300580009"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20070731",
+    "id" : "3183388024"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "6472014025",
+    "sourceId" : "427359005",
+    "destinationId" : "364636000",
+    "typeId" : "363714003",
+    "type" : {
+      "conceptId" : "363714003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Interprets (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Interprets",
+        "lang" : "en"
+      },
+      "id" : "363714003"
+    },
+    "target" : {
+      "conceptId" : "364636000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lesion observable (observable entity)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lesion observable",
+        "lang" : "en"
+      },
+      "id" : "364636000"
+    },
+    "groupId" : 2,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "6472014025"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "3358645026",
+    "sourceId" : "427359005",
+    "destinationId" : "39607008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "39607008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lung structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lung structure",
+        "lang" : "en"
+      },
+      "id" : "39607008"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "3358645026"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "3358644027",
+    "sourceId" : "427359005",
+    "destinationId" : "27925004",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "27925004",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Nodule (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Nodule",
+        "lang" : "en"
+      },
+      "id" : "27925004"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "3358644027"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20150131,
+    "relationshipId" : "3179568021",
+    "sourceId" : "427359005",
+    "destinationId" : "301232003",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "301232003",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lesion of lung (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lesion of lung",
+        "lang" : "en"
+      },
+      "id" : "301232003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20150131",
+    "id" : "3179568021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4243596021",
+    "sourceId" : "427359005",
+    "destinationId" : "301232003",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "301232003",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lesion of lung (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lesion of lung",
+        "lang" : "en"
+      },
+      "id" : "301232003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4243596021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "3174901023",
+    "sourceId" : "427359005",
+    "destinationId" : "309529002",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "309529002",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lung mass (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lung mass",
+        "lang" : "en"
+      },
+      "id" : "309529002"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "3174901023"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4243595020",
+    "sourceId" : "427359005",
+    "destinationId" : "300580009",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "300580009",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Single lesion (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Single lesion",
+        "lang" : "en"
+      },
+      "id" : "300580009"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4243595020"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20100731,
+    "relationshipId" : "3197442029",
+    "sourceId" : "427359005",
+    "destinationId" : "32750006",
+    "typeId" : "418775008",
+    "type" : {
+      "conceptId" : "418775008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding method (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding method",
+        "lang" : "en"
+      },
+      "id" : "418775008"
+    },
+    "target" : {
+      "conceptId" : "32750006",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Inspection (procedure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Inspection",
+        "lang" : "en"
+      },
+      "id" : "32750006"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20100731",
+    "id" : "3197442029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "3210918029",
+    "sourceId" : "427359005",
+    "destinationId" : "39607008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "39607008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lung structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lung structure",
+        "lang" : "en"
+      },
+      "id" : "39607008"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "3210918029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4411123026",
+    "sourceId" : "427359005",
+    "destinationId" : "39607008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "39607008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lung structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lung structure",
+        "lang" : "en"
+      },
+      "id" : "39607008"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4411123026"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4510290027",
+    "sourceId" : "427359005",
+    "destinationId" : "27925004",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "27925004",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Nodule (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Nodule",
+        "lang" : "en"
+      },
+      "id" : "27925004"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4510290027"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "relationshipId" : "3190804028",
+    "sourceId" : "427359005",
+    "destinationId" : "27925004",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "27925004",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Nodule (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Nodule",
+        "lang" : "en"
+      },
+      "id" : "27925004"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20080731",
+    "id" : "3190804028"
+  } ]
+}

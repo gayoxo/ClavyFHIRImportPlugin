@@ -1,0 +1,754 @@
+{
+  "conceptId" : "47975008",
+  "fsn" : {
+    "term" : "Structure of root of tongue (body structure)",
+    "lang" : "en"
+  },
+  "pt" : {
+    "term" : "Structure of root of tongue",
+    "lang" : "en"
+  },
+  "active" : true,
+  "effectiveTime" : "20020131",
+  "released" : true,
+  "releasedEffectiveTime" : 20020131,
+  "moduleId" : "900000000000207008",
+  "definitionStatus" : "PRIMITIVE",
+  "descriptions" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "79953010",
+    "term" : "Root of tongue",
+    "conceptId" : "47975008",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "2478725019",
+    "term" : "Base of tongue",
+    "conceptId" : "47975008",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "2478724015",
+    "term" : "Posterior third of tongue",
+    "conceptId" : "47975008",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "descriptionId" : "2884595017",
+    "term" : "The root of the tongue is the posterior third, the dorsal surface of which forms the anterior wall of the oropharynx; it rests on the floor of the mouth, and the nerves and vessels that supply the intrinsic muscles of the tongue traverse it.",
+    "conceptId" : "47975008",
+    "typeId" : "900000000000550004",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "TEXT_DEFINITION",
+    "lang" : "en",
+    "caseSignificance" : "ENTIRE_TERM_CASE_SENSITIVE",
+    "effectiveTime" : "20080731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "1230537014",
+    "term" : "Posterior one-third of tongue",
+    "conceptId" : "47975008",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "785492018",
+    "term" : "Structure of root of tongue (body structure)",
+    "conceptId" : "47975008",
+    "typeId" : "900000000000003001",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "FSN",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "descriptionId" : "2885014017",
+    "term" : "The pharyngeal part of the tongue, forming the anterior wall of the oropharynx",
+    "conceptId" : "47975008",
+    "typeId" : "900000000000550004",
+    "acceptabilityMap" : { },
+    "type" : "TEXT_DEFINITION",
+    "lang" : "en",
+    "caseSignificance" : "ENTIRE_TERM_CASE_SENSITIVE",
+    "effectiveTime" : "20080731"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20080731,
+    "descriptionId" : "2885022012",
+    "term" : "The part of the tongue that is on the floor of the mouth, and is not covered by mucous membrane",
+    "conceptId" : "47975008",
+    "typeId" : "900000000000550004",
+    "acceptabilityMap" : { },
+    "type" : "TEXT_DEFINITION",
+    "lang" : "en",
+    "caseSignificance" : "ENTIRE_TERM_CASE_SENSITIVE",
+    "effectiveTime" : "20080731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "494968018",
+    "term" : "Structure of root of tongue",
+    "conceptId" : "47975008",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  } ],
+  "classAxioms" : [ {
+    "axiomId" : "ff9da3e9-7337-40d5-a113-1727839cfb66",
+    "moduleId" : "900000000000207008",
+    "active" : true,
+    "released" : true,
+    "definitionStatusId" : "900000000000074008",
+    "relationships" : [ {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "47975008",
+      "destinationId" : "31389004",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "31389004",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Oropharyngeal structure (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Oropharyngeal structure",
+          "lang" : "en"
+        },
+        "id" : "31389004"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "47975008",
+      "destinationId" : "119255006",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "119255006",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Supraglottis structure (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Supraglottis structure",
+          "lang" : "en"
+        },
+        "id" : "119255006"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "47975008",
+      "destinationId" : "119207006",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "119207006",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Tongue part (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Tongue part",
+          "lang" : "en"
+        },
+        "id" : "119207006"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    } ],
+    "definitionStatus" : "PRIMITIVE",
+    "id" : "ff9da3e9-7337-40d5-a113-1727839cfb66",
+    "effectiveTime" : 20190731
+  } ],
+  "gciAxioms" : [ ],
+  "relationships" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "226177026",
+    "sourceId" : "47975008",
+    "destinationId" : "31389004",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "31389004",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Oropharyngeal structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Oropharyngeal structure",
+        "lang" : "en"
+      },
+      "id" : "31389004"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "226177026"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "226178020",
+    "sourceId" : "47975008",
+    "destinationId" : "119255006",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "119255006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Supraglottis structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Supraglottis structure",
+        "lang" : "en"
+      },
+      "id" : "119255006"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "226178020"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "226176024",
+    "sourceId" : "47975008",
+    "destinationId" : "119207006",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "119207006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Tongue part (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Tongue part",
+        "lang" : "en"
+      },
+      "id" : "119207006"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "226176024"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4036544028",
+    "sourceId" : "47975008",
+    "destinationId" : "31389004",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "31389004",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Oropharyngeal structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Oropharyngeal structure",
+        "lang" : "en"
+      },
+      "id" : "31389004"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4036544028"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4036543023",
+    "sourceId" : "47975008",
+    "destinationId" : "119255006",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "119255006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Supraglottis structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Supraglottis structure",
+        "lang" : "en"
+      },
+      "id" : "119255006"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4036543023"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4036542029",
+    "sourceId" : "47975008",
+    "destinationId" : "119207006",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "119207006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Tongue part (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Tongue part",
+        "lang" : "en"
+      },
+      "id" : "119207006"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4036542029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190131,
+    "relationshipId" : "792387022",
+    "sourceId" : "47975008",
+    "destinationId" : "181212004",
+    "typeId" : "123005000",
+    "type" : {
+      "conceptId" : "123005000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Part of (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Part of",
+        "lang" : "en"
+      },
+      "id" : "123005000"
+    },
+    "target" : {
+      "conceptId" : "181212004",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Entire larynx (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Entire larynx",
+        "lang" : "en"
+      },
+      "id" : "181212004"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "ADDITIONAL_RELATIONSHIP",
+    "effectiveTime" : "20190131",
+    "id" : "792387022"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190131,
+    "relationshipId" : "792386029",
+    "sourceId" : "47975008",
+    "destinationId" : "281488008",
+    "typeId" : "123005000",
+    "type" : {
+      "conceptId" : "123005000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Part of (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Part of",
+        "lang" : "en"
+      },
+      "id" : "123005000"
+    },
+    "target" : {
+      "conceptId" : "281488008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Entire lower respiratory tract (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Entire lower respiratory tract",
+        "lang" : "en"
+      },
+      "id" : "281488008"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "ADDITIONAL_RELATIONSHIP",
+    "effectiveTime" : "20190131",
+    "id" : "792386029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190131,
+    "relationshipId" : "792385025",
+    "sourceId" : "47975008",
+    "destinationId" : "362606005",
+    "typeId" : "123005000",
+    "type" : {
+      "conceptId" : "123005000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Part of (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Part of",
+        "lang" : "en"
+      },
+      "id" : "123005000"
+    },
+    "target" : {
+      "conceptId" : "362606005",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Entire organ cavity (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Entire organ cavity",
+        "lang" : "en"
+      },
+      "id" : "362606005"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "ADDITIONAL_RELATIONSHIP",
+    "effectiveTime" : "20190131",
+    "id" : "792385025"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190131,
+    "relationshipId" : "792388028",
+    "sourceId" : "47975008",
+    "destinationId" : "181211006",
+    "typeId" : "123005000",
+    "type" : {
+      "conceptId" : "123005000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Part of (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Part of",
+        "lang" : "en"
+      },
+      "id" : "123005000"
+    },
+    "target" : {
+      "conceptId" : "181211006",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Entire pharynx (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Entire pharynx",
+        "lang" : "en"
+      },
+      "id" : "181211006"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "ADDITIONAL_RELATIONSHIP",
+    "effectiveTime" : "20190131",
+    "id" : "792388028"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190131,
+    "relationshipId" : "792384026",
+    "sourceId" : "47975008",
+    "destinationId" : "181226008",
+    "typeId" : "123005000",
+    "type" : {
+      "conceptId" : "123005000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Part of (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Part of",
+        "lang" : "en"
+      },
+      "id" : "123005000"
+    },
+    "target" : {
+      "conceptId" : "181226008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Entire tongue (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Entire tongue",
+        "lang" : "en"
+      },
+      "id" : "181226008"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "ADDITIONAL_RELATIONSHIP",
+    "effectiveTime" : "20190131",
+    "id" : "792384026"
+  } ]
+}

@@ -1,0 +1,473 @@
+{
+  "conceptId" : "361716006",
+  "fsn" : {
+    "term" : "Entire left breast (body structure)",
+    "lang" : "en"
+  },
+  "pt" : {
+    "term" : "Entire left breast",
+    "lang" : "en"
+  },
+  "active" : true,
+  "effectiveTime" : "20050131",
+  "released" : true,
+  "releasedEffectiveTime" : 20050131,
+  "moduleId" : "900000000000207008",
+  "definitionStatus" : "FULLY_DEFINED",
+  "descriptions" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "479153012",
+    "term" : "Entire left breast",
+    "conceptId" : "361716006",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "746973018",
+    "term" : "Entire left breast (body structure)",
+    "conceptId" : "361716006",
+    "typeId" : "900000000000003001",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "FSN",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  } ],
+  "classAxioms" : [ {
+    "axiomId" : "3c7a4b1a-c8e5-42ab-9d4b-c6e13f2f889b",
+    "moduleId" : "900000000000207008",
+    "active" : true,
+    "released" : true,
+    "definitionStatusId" : "900000000000073002",
+    "relationships" : [ {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "361716006",
+      "destinationId" : "181131000",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "181131000",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Entire breast (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Entire breast",
+          "lang" : "en"
+        },
+        "id" : "181131000"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "361716006",
+      "destinationId" : "80248007",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "80248007",
+        "definitionStatus" : "FULLY_DEFINED",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Left breast structure (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Left breast structure",
+          "lang" : "en"
+        },
+        "id" : "80248007"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "361716006",
+      "destinationId" : "7771000",
+      "typeId" : "272741003",
+      "type" : {
+        "conceptId" : "272741003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Laterality (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Laterality",
+          "lang" : "en"
+        },
+        "id" : "272741003"
+      },
+      "target" : {
+        "conceptId" : "7771000",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Left (qualifier value)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Left",
+          "lang" : "en"
+        },
+        "id" : "7771000"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    } ],
+    "definitionStatus" : "FULLY_DEFINED",
+    "id" : "3c7a4b1a-c8e5-42ab-9d4b-c6e13f2f889b",
+    "effectiveTime" : 20190731
+  } ],
+  "gciAxioms" : [ ],
+  "relationships" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "177901020",
+    "sourceId" : "361716006",
+    "destinationId" : "181131000",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "181131000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Entire breast (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Entire breast",
+        "lang" : "en"
+      },
+      "id" : "181131000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "177901020"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "177902029",
+    "sourceId" : "361716006",
+    "destinationId" : "80248007",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "80248007",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Left breast structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Left breast structure",
+        "lang" : "en"
+      },
+      "id" : "80248007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "177902029"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "718629025",
+    "sourceId" : "361716006",
+    "destinationId" : "7771000",
+    "typeId" : "272741003",
+    "type" : {
+      "conceptId" : "272741003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Laterality (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Laterality",
+        "lang" : "en"
+      },
+      "id" : "272741003"
+    },
+    "target" : {
+      "conceptId" : "7771000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Left (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Left",
+        "lang" : "en"
+      },
+      "id" : "7771000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "718629025"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "3985697023",
+    "sourceId" : "361716006",
+    "destinationId" : "181131000",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "181131000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Entire breast (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Entire breast",
+        "lang" : "en"
+      },
+      "id" : "181131000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "3985697023"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "3985696025",
+    "sourceId" : "361716006",
+    "destinationId" : "80248007",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "80248007",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Left breast structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Left breast structure",
+        "lang" : "en"
+      },
+      "id" : "80248007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "3985696025"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4351398021",
+    "sourceId" : "361716006",
+    "destinationId" : "7771000",
+    "typeId" : "272741003",
+    "type" : {
+      "conceptId" : "272741003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Laterality (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Laterality",
+        "lang" : "en"
+      },
+      "id" : "272741003"
+    },
+    "target" : {
+      "conceptId" : "7771000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Left (qualifier value)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Left",
+        "lang" : "en"
+      },
+      "id" : "7771000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4351398021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190131,
+    "relationshipId" : "718630024",
+    "sourceId" : "361716006",
+    "destinationId" : "362683004",
+    "typeId" : "123005000",
+    "type" : {
+      "conceptId" : "123005000",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Part of (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Part of",
+        "lang" : "en"
+      },
+      "id" : "123005000"
+    },
+    "target" : {
+      "conceptId" : "362683004",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Entire left thorax (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Entire left thorax",
+        "lang" : "en"
+      },
+      "id" : "362683004"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "ADDITIONAL_RELATIONSHIP",
+    "effectiveTime" : "20190131",
+    "id" : "718630024"
+  } ]
+}

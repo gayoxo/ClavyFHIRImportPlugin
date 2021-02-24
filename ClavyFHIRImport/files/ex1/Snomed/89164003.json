@@ -1,0 +1,740 @@
+{
+  "conceptId" : "89164003",
+  "fsn" : {
+    "term" : "Breast lump (finding)",
+    "lang" : "en"
+  },
+  "pt" : {
+    "term" : "Breast lump",
+    "lang" : "en"
+  },
+  "active" : true,
+  "effectiveTime" : "20020131",
+  "released" : true,
+  "releasedEffectiveTime" : 20020131,
+  "moduleId" : "900000000000207008",
+  "definitionStatus" : "FULLY_DEFINED",
+  "descriptions" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "832000019",
+    "term" : "Breast lump (finding)",
+    "conceptId" : "89164003",
+    "typeId" : "900000000000003001",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "FSN",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "147851010",
+    "term" : "Lumpy breasts",
+    "conceptId" : "89164003",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "508378013",
+    "term" : "Breast irregular nodularity",
+    "conceptId" : "89164003",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "descriptionId" : "147849011",
+    "term" : "Lump in breast",
+    "conceptId" : "89164003",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : { },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "INITIAL_CHARACTER_CASE_INSENSITIVE",
+    "effectiveTime" : "20020131"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "508381015",
+    "term" : "Breast lump",
+    "conceptId" : "89164003",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "PREFERRED",
+      "900000000000508004" : "PREFERRED"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "508379017",
+    "term" : "Breast mass",
+    "conceptId" : "89164003",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "508380019",
+    "term" : "Lumpy breast",
+    "conceptId" : "89164003",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20170731,
+    "descriptionId" : "147850011",
+    "term" : "Mass in breast",
+    "conceptId" : "89164003",
+    "typeId" : "900000000000013009",
+    "acceptabilityMap" : {
+      "900000000000509007" : "ACCEPTABLE",
+      "900000000000508004" : "ACCEPTABLE"
+    },
+    "type" : "SYNONYM",
+    "lang" : "en",
+    "caseSignificance" : "CASE_INSENSITIVE",
+    "effectiveTime" : "20170731"
+  } ],
+  "classAxioms" : [ {
+    "axiomId" : "75466e4f-e3c5-47c7-a6d3-4cc1964873e0",
+    "moduleId" : "900000000000207008",
+    "active" : true,
+    "released" : true,
+    "definitionStatusId" : "900000000000073002",
+    "relationships" : [ {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "89164003",
+      "destinationId" : "290073004",
+      "typeId" : "116680003",
+      "type" : {
+        "conceptId" : "116680003",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Is a (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Is a",
+          "lang" : "en"
+        },
+        "id" : "116680003"
+      },
+      "target" : {
+        "conceptId" : "290073004",
+        "definitionStatus" : "FULLY_DEFINED",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Lesion of breast (finding)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Lesion of breast",
+          "lang" : "en"
+        },
+        "id" : "290073004"
+      },
+      "groupId" : 0,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "89164003",
+      "destinationId" : "76752008",
+      "typeId" : "363698007",
+      "type" : {
+        "conceptId" : "363698007",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Finding site (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Finding site",
+          "lang" : "en"
+        },
+        "id" : "363698007"
+      },
+      "target" : {
+        "conceptId" : "76752008",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Breast structure (body structure)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Breast structure",
+          "lang" : "en"
+        },
+        "id" : "76752008"
+      },
+      "groupId" : 1,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    }, {
+      "active" : true,
+      "moduleId" : "900000000000207008",
+      "released" : false,
+      "sourceId" : "89164003",
+      "destinationId" : "4147007",
+      "typeId" : "116676008",
+      "type" : {
+        "conceptId" : "116676008",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000012004",
+        "fsn" : {
+          "term" : "Associated morphology (attribute)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Associated morphology",
+          "lang" : "en"
+        },
+        "id" : "116676008"
+      },
+      "target" : {
+        "conceptId" : "4147007",
+        "definitionStatus" : "PRIMITIVE",
+        "moduleId" : "900000000000207008",
+        "fsn" : {
+          "term" : "Mass (morphologic abnormality)",
+          "lang" : "en"
+        },
+        "pt" : {
+          "term" : "Mass",
+          "lang" : "en"
+        },
+        "id" : "4147007"
+      },
+      "groupId" : 1,
+      "modifier" : "EXISTENTIAL",
+      "characteristicType" : "STATED_RELATIONSHIP"
+    } ],
+    "definitionStatus" : "FULLY_DEFINED",
+    "id" : "75466e4f-e3c5-47c7-a6d3-4cc1964873e0",
+    "effectiveTime" : 20190731
+  } ],
+  "gciAxioms" : [ ],
+  "relationships" : [ {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20020131,
+    "relationshipId" : "293834029",
+    "sourceId" : "89164003",
+    "destinationId" : "290073004",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "290073004",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lesion of breast (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lesion of breast",
+        "lang" : "en"
+      },
+      "id" : "290073004"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20020131",
+    "id" : "293834029"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20090131,
+    "relationshipId" : "3505694028",
+    "sourceId" : "89164003",
+    "destinationId" : "440299000",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "440299000",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Mass of thoracic structure (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Mass of thoracic structure",
+        "lang" : "en"
+      },
+      "id" : "440299000"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20090131",
+    "id" : "3505694028"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20090731,
+    "relationshipId" : "3447044020",
+    "sourceId" : "89164003",
+    "destinationId" : "76752008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "76752008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Breast structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Breast structure",
+        "lang" : "en"
+      },
+      "id" : "76752008"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20090731",
+    "id" : "3447044020"
+  }, {
+    "active" : true,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20090731,
+    "relationshipId" : "3372311021",
+    "sourceId" : "89164003",
+    "destinationId" : "4147007",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "4147007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Mass (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Mass",
+        "lang" : "en"
+      },
+      "id" : "4147007"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20090731",
+    "id" : "3372311021"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4083114029",
+    "sourceId" : "89164003",
+    "destinationId" : "290073004",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "290073004",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Lesion of breast (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Lesion of breast",
+        "lang" : "en"
+      },
+      "id" : "290073004"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4083114029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20050131,
+    "relationshipId" : "2464050025",
+    "sourceId" : "89164003",
+    "destinationId" : "300848003",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "300848003",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Mass of body structure (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Mass of body structure",
+        "lang" : "en"
+      },
+      "id" : "300848003"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20050131",
+    "id" : "2464050025"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20090131,
+    "relationshipId" : "2698305029",
+    "sourceId" : "89164003",
+    "destinationId" : "309524007",
+    "typeId" : "116680003",
+    "type" : {
+      "conceptId" : "116680003",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Is a (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Is a",
+        "lang" : "en"
+      },
+      "id" : "116680003"
+    },
+    "target" : {
+      "conceptId" : "309524007",
+      "definitionStatus" : "FULLY_DEFINED",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Mass of trunk (finding)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Mass of trunk",
+        "lang" : "en"
+      },
+      "id" : "309524007"
+    },
+    "groupId" : 0,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20090131",
+    "id" : "2698305029"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4373674027",
+    "sourceId" : "89164003",
+    "destinationId" : "76752008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "76752008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Breast structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Breast structure",
+        "lang" : "en"
+      },
+      "id" : "76752008"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4373674027"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20090731,
+    "relationshipId" : "898069022",
+    "sourceId" : "89164003",
+    "destinationId" : "76752008",
+    "typeId" : "363698007",
+    "type" : {
+      "conceptId" : "363698007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Finding site (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Finding site",
+        "lang" : "en"
+      },
+      "id" : "363698007"
+    },
+    "target" : {
+      "conceptId" : "76752008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Breast structure (body structure)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Breast structure",
+        "lang" : "en"
+      },
+      "id" : "76752008"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20090731",
+    "id" : "898069022"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20190731,
+    "relationshipId" : "4373675026",
+    "sourceId" : "89164003",
+    "destinationId" : "4147007",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "4147007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Mass (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Mass",
+        "lang" : "en"
+      },
+      "id" : "4147007"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "STATED_RELATIONSHIP",
+    "effectiveTime" : "20190731",
+    "id" : "4373675026"
+  }, {
+    "active" : false,
+    "moduleId" : "900000000000207008",
+    "released" : true,
+    "releasedEffectiveTime" : 20090731,
+    "relationshipId" : "898070023",
+    "sourceId" : "89164003",
+    "destinationId" : "4147007",
+    "typeId" : "116676008",
+    "type" : {
+      "conceptId" : "116676008",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000012004",
+      "fsn" : {
+        "term" : "Associated morphology (attribute)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Associated morphology",
+        "lang" : "en"
+      },
+      "id" : "116676008"
+    },
+    "target" : {
+      "conceptId" : "4147007",
+      "definitionStatus" : "PRIMITIVE",
+      "moduleId" : "900000000000207008",
+      "fsn" : {
+        "term" : "Mass (morphologic abnormality)",
+        "lang" : "en"
+      },
+      "pt" : {
+        "term" : "Mass",
+        "lang" : "en"
+      },
+      "id" : "4147007"
+    },
+    "groupId" : 1,
+    "modifier" : "EXISTENTIAL",
+    "characteristicType" : "INFERRED_RELATIONSHIP",
+    "effectiveTime" : "20090731",
+    "id" : "898070023"
+  } ]
+}
