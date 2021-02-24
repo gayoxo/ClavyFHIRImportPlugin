@@ -111,10 +111,9 @@ public class CollectionFHIRLinked {
 		for (ConfigFHIRYAMLBrowse Browse : order.getBrowseable()) {
 			String GrammarAPp=Browse.getGrammar();
 			CollectionJSON aplicar = nombre_parser.get(GrammarAPp);
-			if (aplicar!=null)
-			{
-				
-			}
+			if (aplicar!=null &&
+					(aplicar.getPathFinder().get(Browse.getPath())!=null))
+				aplicar.getPathFinder().get(Browse.getPath()).setBrowseable(true);
 
 			
 		}
