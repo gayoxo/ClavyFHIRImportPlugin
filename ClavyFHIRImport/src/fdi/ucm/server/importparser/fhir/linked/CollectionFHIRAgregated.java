@@ -7,11 +7,8 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
-
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,15 +17,12 @@ import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
 import fdi.ucm.server.modelComplete.collection.document.CompleteElement;
-import fdi.ucm.server.modelComplete.collection.document.CompleteLinkElement;
 import fdi.ucm.server.modelComplete.collection.document.CompleteTextElement;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
-import fdi.ucm.server.modelComplete.collection.grammar.CompleteGrammar;
-import fdi.ucm.server.modelComplete.collection.grammar.CompleteLinkElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 
-public class CollectionFHIRLinked extends CollectionFHIR_UnLinked{
+public class CollectionFHIRAgregated extends CollectionFHIRLinked{
 	
 	public boolean debugfile=false;
 
@@ -172,138 +166,9 @@ public class CollectionFHIRLinked extends CollectionFHIR_UnLinked{
 				e.printStackTrace();
 			}
 		 
-	}
-
-
-	protected static void LimpiaSnomed(CollectionJSON conditionSNOWMEDReportJSONParser) {
-		
-		
-		Stack<CompleteElementType> aBorrar=new Stack<CompleteElementType>();
-		
-		CompleteElementType classAxioms = conditionSNOWMEDReportJSONParser.getPathFinder().get("classAxioms");
-		if (classAxioms!=null)
-			aBorrar.add(classAxioms);
-		CompleteElementType gciAxioms = conditionSNOWMEDReportJSONParser.getPathFinder().get("gciAxioms");
-		if (gciAxioms!=null)
-			aBorrar.add(gciAxioms);
-		CompleteElementType relationships = conditionSNOWMEDReportJSONParser.getPathFinder().get("relationships");
-		if (relationships!=null)
-			aBorrar.add(relationships);
-		
-		List<CompleteElementType> Borrame=new LinkedList<CompleteElementType>(aBorrar);
-		CompleteGrammar gramaticaborra = conditionSNOWMEDReportJSONParser.getCollection().getMetamodelGrammar().get(0);
-		
-		
-		for (CompleteElementType completeElementType : gramaticaborra.getSons()) 
-			if (aBorrar.contains(completeElementType)||aBorrar.contains(completeElementType.getClassOfIterator()))
-				Borrame.add(completeElementType);
-		
-		gramaticaborra.getSons().removeAll(Borrame);
-		
-		HashSet<CompleteElementType> listaborrra=new HashSet<CompleteElementType>();
-
-		while (!aBorrar.isEmpty())
-		{
-			listaborrra.add(aBorrar.peek());
-			aBorrar.addAll(aBorrar.pop().getSons());
-		}
-
-		for (CompleteDocuments doco : conditionSNOWMEDReportJSONParser.getCollection().getEstructuras()) {
-			ArrayList<CompleteElement> listaborrraElem=new ArrayList<CompleteElement>();
-			for (CompleteElement elem : doco.getDescription()) 
-				if (listaborrra.contains(elem.getHastype()))
-					listaborrraElem.add(elem);
-			
-			doco.getDescription().removeAll(listaborrraElem);
-		}
-		
-	}
-
-
-	
-
-
-	protected static void ConvierteEnLink(CompleteTextElementType pasarALink, List<CompleteDocuments> estructuras,
-			HashMap<String,HashMap<String, CompleteDocuments>> coleccionesUnion) {
-		CompleteLinkElementType NuevoElemento= new CompleteLinkElementType(pasarALink.getName(),pasarALink.getFather(),pasarALink.getCollectionFather());
-		
-		if (pasarALink.getFather()==null)
-		{
-			CompleteGrammar CG=NuevoElemento.getCollectionFather();
-			int yo=-1;
-			for (int i = 0; i < CG.getSons().size(); i++) 
-				if (CG.getSons().get(i)==pasarALink)
-					yo=i;
-			
-			
-			if (yo>=0)
-			{
-				CG.getSons().remove(yo);
-				CG.getSons().add(yo, NuevoElemento);
-			}
-			
-		}
-		else
-		{
-			int yo=-1;
-			for (int i = 0; i < pasarALink.getFather().getSons().size(); i++) 
-				if (pasarALink.getFather().getSons().get(i)==pasarALink)
-					yo=i;
-			
-			
-			if (yo>=0)
-			{
-				pasarALink.getFather().getSons().remove(yo);
-				pasarALink.getFather().getSons().add(yo, NuevoElemento);
-			}
-		}
-		
-		
-		
-		
-		for (CompleteDocuments completeDocuments : estructuras) { 
-			
-			List<CompleteElement> quitar=new LinkedList<CompleteElement>();
-			List<CompleteElement> agregar=new LinkedList<CompleteElement>();
-			
-			for (CompleteElement elementoDoc : completeDocuments.getDescription())
-				if (elementoDoc.getHastype()==pasarALink && elementoDoc instanceof CompleteTextElement)
-					{
-					
-					String valueP=((CompleteTextElement)elementoDoc).getValue();
-					
-					String[] ListaSP = valueP.split("/");
-					
-					if (ListaSP.length==2)
-					{
-						String GramOrigen = ListaSP[0].trim();
-						String IDDestino = ListaSP[1].trim();
-						
-						HashMap<String, CompleteDocuments> aquiGram = coleccionesUnion.get(GramOrigen);
-						
-						if (aquiGram != null)
-						{
-							CompleteDocuments DocumeDes = aquiGram.get(IDDestino);
-							if (DocumeDes!=null)
-								{
-								CompleteLinkElement LL=new CompleteLinkElement(NuevoElemento, DocumeDes);
-								quitar.add(elementoDoc);
-								agregar.add(LL);
-								}
-						}
-						
-						
-
-					}
-					
-					}
-			
-			completeDocuments.getDescription().removeAll(quitar);
-			completeDocuments.getDescription().addAll(agregar);
-		}
-		
-		
-		
+		 
+		 
+		 //TODO AHORA HARIA LA OTRA TRANSFORMACION.
 	}
 
 
