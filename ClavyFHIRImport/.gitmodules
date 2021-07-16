@@ -1,0 +1,3 @@
+[submodule "ClavyFHIRImport/ClavyJSONImportPlugin"]
+	path = ClavyFHIRImport/ClavyJSONImportPlugin
+	url = git@github.com:gayoxo/ClavyJSONImportPlugin.git
