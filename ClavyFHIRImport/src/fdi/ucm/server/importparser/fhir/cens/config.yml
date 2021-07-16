@@ -1,0 +1,12 @@
+browseable:
+ - grammar: Patient
+   path: id
+ - grammar: DiagnosticReport
+   path: id
+link:
+ - grammar: DiagnosticReport
+   pathOrigen: subject/reference
+ - grammar: Condition
+   pathOrigen: subject/reference
+ - grammar: ImagingStudy
+   pathOrigen: patient/reference
