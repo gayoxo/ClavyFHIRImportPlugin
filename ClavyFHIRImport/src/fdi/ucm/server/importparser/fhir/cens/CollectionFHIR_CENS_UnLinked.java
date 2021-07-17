@@ -89,6 +89,10 @@ public class CollectionFHIR_CENS_UnLinked {
 		for (Entry<String, List<JsonObject>> resoty_valu : resource_values.entrySet()) {
 			
 			JsonArray JS=new JsonArray(resoty_valu.getValue().size());
+			for (int i = 0; i < resoty_valu.getValue().size(); i++) 
+				JS.add(resoty_valu.getValue().get(i));
+			
+			
 			
 			CollectionJSON PatientJSONParser=new CollectionJSON();
 			ArrayList<String> log = new ArrayList<String>();
