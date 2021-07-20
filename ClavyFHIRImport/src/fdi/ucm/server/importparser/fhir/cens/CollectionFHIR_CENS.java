@@ -31,6 +31,7 @@ public class CollectionFHIR_CENS {
 	
 	public static void main(String[] args) {
 		
+		String basetext=Long.toString(System.currentTimeMillis());
 		int fases=1;
 		try {
 			fases=Integer.parseInt(args[0]);
@@ -47,16 +48,9 @@ public class CollectionFHIR_CENS {
 		System.out.println("Fase 1");
 		CompleteCollection C = CollectionFHIR_CENS_EXTRACT.Apply();
 		
-		if (fases>1)
-			{
-			System.out.println("Fase 2");
-			C=CollectionFHIR_CENS_TRANSFORM1.Apply(C);
-			}
-		
-		
-		
+
 		 try {
-		String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
+		String FileIO = System.getProperty("user.home")+File.separator+basetext+"_Fase1.clavy";
 		
 		System.out.println(FileIO);
 		
@@ -68,6 +62,29 @@ public class CollectionFHIR_CENS {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
+		
+		if (fases>1)
+			{
+			System.out.println("Fase 2");
+			C=CollectionFHIR_CENS_TRANSFORM1.Apply(C);
+			try {
+				String FileIO = System.getProperty("user.home")+File.separator+basetext+"_Fase2.clavy";
+				
+				System.out.println(FileIO);
+				
+				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
+
+				oos.writeObject(C);
+
+				oos.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			}
+		
+		
+		
+		 
  
 		 
 
