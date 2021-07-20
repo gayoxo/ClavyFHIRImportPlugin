@@ -28,7 +28,7 @@ import fdi.ucm.server.modelComplete.collection.grammar.CompleteLinkElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 
-public class CollectionFHIRLinked extends CollectionFHIR_CENS_UnLinked{
+public class CollectionFHIRLinked extends CollectionFHIR_CENS{
 	
 	public boolean debugfile=false;
 

@@ -2,29 +2,18 @@ package fdi.ucm.server.importparser.fhir.cens;
 
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
-import java.util.Properties;
 import java.util.Stack;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.simple.JSONArray;
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonSyntaxException;
 
 import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
@@ -35,84 +24,36 @@ import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 
-public class CollectionFHIR_CENS_UnLinked {
+public class CollectionFHIR_CENS {
 	
 	public boolean debugfile=false;
 
 	
 	public static void main(String[] args) {
 		
-		JsonElement JSONELEM=null;
-		
+		int fases=1;
 		try {
-			JSONELEM = new JsonParser().parse(new FileReader("cens/bundle1.json"));
-		} catch (JsonIOException e1) {
-			System.err.println("Error IO");
-			e1.printStackTrace();
-		} catch (JsonSyntaxException e1) {
-			System.err.println("Error Syntax");
-			e1.printStackTrace();
-		} catch (FileNotFoundException e1) {
-			System.err.println("Error NotFound");
-			e1.printStackTrace();
+			fases=Integer.parseInt(args[0]);
+		} catch (Exception e) {
+			System.err.println("sin configurar, solo fase 1");
 		}
 		
-		if (JSONELEM==null)
+		if (fases<1)
+		{
+			fases=1;
+			System.err.println("debe aplicarse al menos una fase");
+		}
+		
+		System.out.println("Fase 1");
+		CompleteCollection C = CollectionFHIR_CENS_EXTRACT.Apply();
+		
+		if (fases>1)
 			{
-			System.err.println("Error found exiting");
-			System.exit(1);
+			System.out.println("Fase 2");
+			C=CollectionFHIR_CENS_TRANSFORM1.Apply(C);
 			}
 		
 		
-		HashMap<String, List<JsonObject>> resource_values=new HashMap<String, List<JsonObject>>(8);
-		
-		
-		JsonArray DocuemntosProcesar = JSONELEM.getAsJsonObject().get("entry").getAsJsonArray();
-		
-		for (JsonElement jsonElement : DocuemntosProcesar) {
-			JsonObject objetoindividual= jsonElement.getAsJsonObject().get("resource").getAsJsonObject();
-			
-			String resourceType = objetoindividual.get("resourceType").getAsJsonPrimitive().getAsString();
-			
-			List<JsonObject> listatemp_ = resource_values.get(resourceType);
-			if (listatemp_==null)
-				listatemp_=new LinkedList<JsonObject>();
-			listatemp_.add(objetoindividual);
-			
-			resource_values.put(resourceType, listatemp_);
-
-		}
-		
-		List<CollectionJSON> ColeccionesUnion=new LinkedList<CollectionJSON>();
-		HashMap<String, CollectionJSON> nombre_parser=new HashMap<String, CollectionJSON>();
-		
-		for (Entry<String, List<JsonObject>> resoty_valu : resource_values.entrySet()) {
-			
-			JsonArray JS=new JsonArray(resoty_valu.getValue().size());
-			for (int i = 0; i < resoty_valu.getValue().size(); i++) 
-				JS.add(resoty_valu.getValue().get(i));
-			
-			
-			
-			CollectionJSON PatientJSONParser=new CollectionJSON();
-			ArrayList<String> log = new ArrayList<String>();
-
-			Properties prop=new Properties();
-			prop.put("desc", "id");
-			
-			PatientJSONParser.procesaJSONArrayFolder(JS, log, resoty_valu.getKey(), prop);
-			nombre_parser.put(PatientJSONParser.getCollection().getName(), PatientJSONParser);
-			ColeccionesUnion.add(PatientJSONParser);
-		}
-		
-		CompleteCollection C=new CompleteCollection("bundle1", "bundle1");
-		
-
-		for (CollectionJSON collectionJSON : ColeccionesUnion) {
-			C.getMetamodelGrammar().addAll(collectionJSON.getCollection().getMetamodelGrammar());
-			C.getEstructuras().addAll(collectionJSON.getCollection().getEstructuras());
-			C.getSectionValues().addAll(collectionJSON.getCollection().getSectionValues());
-		}
 		
 		 try {
 		String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
@@ -128,66 +69,7 @@ public class CollectionFHIR_CENS_UnLinked {
 		e.printStackTrace();
 	}
  
-		
-//DEAD CODE
-//		HashMap<String, CollectionJSON> nombre_parser=new HashMap<String, CollectionJSON>();
-//		List<CollectionJSON> ColeccionesUnion=new LinkedList<CollectionJSON>();
-//		
-//		CollectionJSON PatientJSONParser=new CollectionJSON();
-//		ArrayList<String> log = new ArrayList<String>();
-//		PatientJSONParser.procesaJSONFolder("files/ex1/Patient", log);
-//		PatientJSONParser.getCollection().setName("Patient");
-//		nombre_parser.put(PatientJSONParser.getCollection().getName(), PatientJSONParser);
-//		ColeccionesUnion.add(PatientJSONParser);
-//		
-//		CollectionJSON DiagnosticReportJSONParser=new CollectionJSON();
-//		DiagnosticReportJSONParser.procesaJSONFolder("files/ex1/DiagnosticReport", log);
-//		DiagnosticReportJSONParser.getCollection().setName("DiagnosticReport");
-//		nombre_parser.put(DiagnosticReportJSONParser.getCollection().getName(), DiagnosticReportJSONParser);
-//		ColeccionesUnion.add(DiagnosticReportJSONParser);
-//
-//		
-//		CollectionJSON ConditionReportJSONParser=new CollectionJSON();
-//		ConditionReportJSONParser.procesaJSONFolder("files/ex1/Condition", log);
-//		ConditionReportJSONParser.getCollection().setName("Condition");
-//		nombre_parser.put(ConditionReportJSONParser.getCollection().getName(), ConditionReportJSONParser);
-//		ColeccionesUnion.add(ConditionReportJSONParser);
-//		
-//		
-//		CollectionJSON ImagingStudyReportJSONParser=new CollectionJSON();
-//		ImagingStudyReportJSONParser.procesaJSONFolder("files/ex1/ImagingStudy", log);
-//		ImagingStudyReportJSONParser.getCollection().setName("ImagingStudy");
-//		nombre_parser.put(ImagingStudyReportJSONParser.getCollection().getName(), ImagingStudyReportJSONParser);
-//		ColeccionesUnion.add(ImagingStudyReportJSONParser);
-//
-//		CompactarImagen(ImagingStudyReportJSONParser);
-//	
-//
-//		CompleteCollection C=new CompleteCollection("ex1", "ex1");
-//		
-//
-//		for (CollectionJSON collectionJSON : ColeccionesUnion) {
-//			C.getMetamodelGrammar().addAll(collectionJSON.getCollection().getMetamodelGrammar());
-//			C.getEstructuras().addAll(collectionJSON.getCollection().getEstructuras());
-//			C.getSectionValues().addAll(collectionJSON.getCollection().getSectionValues());
-//		}
-//		
-//	
-//		
-//		 try {
-//				String FileIO = System.getProperty("user.home")+File.separator+System.currentTimeMillis()+".clavy";
-//				
-//				System.out.println(FileIO);
-//				
-//				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
-//
-//				oos.writeObject(C);
-//
-//				oos.close();
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//		 
+		 
 
 	}
 
