@@ -23,6 +23,7 @@ public class CollectionFHIR_CENS_EXTRACT {
 
 	public static CompleteCollection Apply() {
 		CollectionFHIR_CENS_EXTRACT main=new CollectionFHIR_CENS_EXTRACT();
+		System.out.println("Extractor de la informacion");
 		return main.apply();
 	}
 

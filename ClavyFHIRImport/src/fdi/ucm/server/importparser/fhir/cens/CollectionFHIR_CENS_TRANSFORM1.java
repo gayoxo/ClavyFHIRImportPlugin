@@ -17,6 +17,7 @@ public class CollectionFHIR_CENS_TRANSFORM1 {
 
 	public static CompleteCollection Apply(CompleteCollection c) {
 		CollectionFHIR_CENS_TRANSFORM1 main=new CollectionFHIR_CENS_TRANSFORM1();
+		System.out.println("Transformacion que convierte elementos en Links cuando detecta el link en forma gramatica/identificador");
 		return main.apply(c);
 	}
 
