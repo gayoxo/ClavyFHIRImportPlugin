@@ -30,6 +30,9 @@ public class CollectionFHIR_CENS_TRANSFORM3 {
 		 
 		HashSet<String> TablaResources=loadtable();
 		
+		
+		//TODO AQU IEMPEZAR A REVISAR
+		
 		HashMap<CompleteElementType, CompleteResourceElementType> ResorvalidValid=
 				new HashMap<CompleteElementType, CompleteResourceElementType>();
 		
