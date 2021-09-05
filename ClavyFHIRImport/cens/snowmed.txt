@@ -1,0 +1,2 @@
+Condition/code/coding/entry/code
+DiagnosticReport/code/coding/entry/code
