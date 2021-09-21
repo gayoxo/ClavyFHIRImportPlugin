@@ -1,7 +1,12 @@
 package fdi.ucm.server.importparser.fhir.cens;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.ArrayList;
@@ -9,13 +14,30 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
+import java.util.Map.Entry;
+import java.util.Properties;
+
+import org.json.JSONArray;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+
+import java.util.Set;
+
+import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
 import fdi.ucm.server.modelComplete.collection.document.CompleteElement;
+import fdi.ucm.server.modelComplete.collection.document.CompleteLinkElement;
 import fdi.ucm.server.modelComplete.collection.document.CompleteResourceElementURL;
 import fdi.ucm.server.modelComplete.collection.document.CompleteTextElement;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteGrammar;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteLinkElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteResourceElementType;
 
 public class CollectionFHIR_CENS_TRANSFORM3 {
@@ -29,12 +51,10 @@ public class CollectionFHIR_CENS_TRANSFORM3 {
 	private CompleteCollection apply(CompleteCollection c_input) {
 		 
 		HashSet<String> TablaResources=loadtable();
+		HashMap<String, CompleteDocuments> DocumentosSnowmed=new HashMap<>();
 		
-		
-		//TODO AQU IEMPEZAR A REVISAR
-		
-		HashMap<CompleteElementType, CompleteResourceElementType> ResorvalidValid=
-				new HashMap<CompleteElementType, CompleteResourceElementType>();
+		HashMap<CompleteElementType, CompleteLinkElementType> ResorvalidValid=
+				new HashMap<CompleteElementType, CompleteLinkElementType>();
 		
 		
 		for (CompleteGrammar gramatica : c_input.getMetamodelGrammar()) 
@@ -51,41 +71,183 @@ public class CollectionFHIR_CENS_TRANSFORM3 {
 		for (CompleteDocuments docuemnto : c_input.getEstructuras()) {
 			
 			List<CompleteElement>  nuevo=new LinkedList<CompleteElement>();
-			List<CompleteElement>  viejo=new LinkedList<CompleteElement>();
+//			List<CompleteElement>  viejo=new LinkedList<CompleteElement>();
 			for (CompleteElement elemento : docuemnto.getDescription()) {
 				if (ResorvalidValid.get(elemento.getHastype())!=null)
 				{
-					nuevo.add(new CompleteResourceElementURL(ResorvalidValid.get(elemento.getHastype()), 
-							((CompleteTextElement)elemento).getValue()));
-					viejo.add(elemento);
+					CompleteLinkElementType ElementoPropio = ResorvalidValid.get(elemento.getHastype());
+					
+					if (isSnowmed(ElementoPropio, docuemnto.getDescription())) 
+					{
+						CompleteDocuments DocumenLinky=foundSnowLink(((CompleteTextElement)elemento).getValue(),DocumentosSnowmed,c_input); 
+						
+						if (DocumenLinky!=null)
+							nuevo.add(new CompleteLinkElement(ElementoPropio, 
+									DocumenLinky));
+								
+					}
+//						nuevo.add(new CompleteResourceElementURL(ElementoPropio, 
+//								((CompleteTextElement)elemento).getValue()));
+//					viejo.add(elemento);
 				}
 			}
 			docuemnto.getDescription().addAll(nuevo);
-			docuemnto.getDescription().removeAll(viejo);
+//			docuemnto.getDescription().removeAll(viejo);
 		
 		}
 		
 		
-		for (CompleteResourceElementType completeElementType : ResorvalidValid.values()) 
+		for (CompleteLinkElementType completeElementType : ResorvalidValid.values()) 
 			if (completeElementType.getClassOfIterator()!=null)
 				completeElementType.setClassOfIterator(ResorvalidValid.get(completeElementType.getClassOfIterator()));
+		
+		
+		CompleteCollection SNOWMED=LoadCompleteLoad(DocumentosSnowmed.keySet());
+		
+		
 		
 		
 		return c_input;
 	}
 
+	private CompleteCollection LoadCompleteLoad(Set<String> keySet) {
+		JsonArray JA=new JsonArray();
+		
+		for (String string : keySet) {
+			
+			if ((new File("/tmp/snowmed/"+string+".json").exists()))
+			{
+				StringBuffer SB= new StringBuffer();
+				try {
+					File myObj = new File("/tmp/snowmed/"+string+".json");
+				      Scanner myReader = new Scanner(myObj);
+				      System.out.println("//////////INICIO "+string);
+				      while (myReader.hasNextLine()) {
+				        String data = myReader.nextLine();
+				        SB.append(data);
+//				        System.out.println(data);
+				      }
+				      myReader.close();
+				      System.out.println("//////////FIN "+string);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+
+				
+				JsonElement JSONELEM = new JsonParser().parse(SB.toString());
+				JA.add(JSONELEM);
+			}
+			
+			try {
+				URL url = new URL(ActualURL);
+				HttpURLConnection con = (HttpURLConnection) url.openConnection();
+				con.setRequestMethod("GET");
+				con.setRequestProperty("Content-Type", "application/json; utf-8");
+				
+
+				con.setConnectTimeout(5000);
+				con.setReadTimeout(5000);
+				
+				int status = con.getResponseCode();
+				
+				BufferedReader in = new BufferedReader(
+						  new InputStreamReader(con.getInputStream()));
+						String inputLine;
+						StringBuffer content = new StringBuffer();
+						while ((inputLine = in.readLine()) != null) {
+						    content.append(inputLine);
+						}
+						in.close();
+						
+						
+//						System.out.println(content);
+						
+						JsonElement JSONELEM = new JsonParser().parse(content.toString());
+						
+						
+						JA.add(JSONELEM);
+						
+						
+						Gson gson = new GsonBuilder().setPrettyPrinting().create();
+						String jsonOutput = gson.toJson(JSONELEM);
+						
+						
+						
+					String filename = "/tmp/snowmed/"+string+".json";
+					
+					
+					 FileWriter myWriter = new FileWriter(filename);
+				      myWriter.write(jsonOutput);
+				      myWriter.close();
+				      
+				      System.out.println("//////////File->"+filename);
+				      
+						
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			
+			
+		}
+		
+		
+		CollectionJSON SNOWMEDCOl=new CollectionJSON();
+		
+		Properties prop=new Properties();
+		prop.put("desc", "id");
+		
+		SNOWMEDCOl.procesaJSONArrayFolder(JA, new ArrayList<String>(), "SNOWMED", prop);
+		return null;
+	}
+
+	private CompleteDocuments foundSnowLink(String value, HashMap<String, CompleteDocuments> documentosSnowmed, CompleteCollection c_input) {
+		CompleteDocuments documentoFound = documentosSnowmed.get(value);
+		if (documentoFound!=null)
+			return documentoFound;
+		
+		documentoFound = new CompleteDocuments(c_input, value, "");
+		c_input.getEstructuras().add(documentoFound);
+		documentosSnowmed.put(value, documentoFound);
+		
+		return documentoFound;
+	}
+
+	private boolean isSnowmed(CompleteLinkElementType elementoPropio, List<CompleteElement> description) {
+		CompleteElementType CarpetaPadre = elementoPropio.getFather();
+		CompleteElementType systemType=null;
+		for (CompleteElementType completeElement : CarpetaPadre.getSons()){ 
+			if (completeElement.getName().toLowerCase().equals("system")){
+					systemType=completeElement;
+			}
+		}
+		if (systemType==null)
+			return false;
+		
+		for (CompleteElement completeElement : description) {
+			if (completeElement.getHastype()==systemType && 
+					completeElement instanceof CompleteTextElement &&
+						((CompleteTextElement)completeElement).getValue().toLowerCase().contains("snowmed"))
+							return true;
+		}
+		
+		
+		return false;
+	}
+
 	private void processHijos(List<CompleteElementType> sons, HashSet<String> tablaResources,
-			HashMap<CompleteElementType, CompleteResourceElementType> resorvalidValid,
+			HashMap<CompleteElementType, CompleteLinkElementType> resorvalidValid,
 			String baseAcumulada, List<CompleteDocuments> listDocuments) {
 		for (CompleteElementType elementoEndpoint : sons) {
 			String Base=baseAcumulada+"/"+elementoEndpoint.getName().trim();
 			if (tablaResources.contains(Base))
 			{
-				System.out.println("Convirtiendo a Recurso->"+Base);
+				System.out.println("Agregando Recurso->"+Base);
 
 
 
-							CompleteResourceElementType copia=new CompleteResourceElementType(elementoEndpoint.getName(),
+							CompleteLinkElementType copia=new CompleteLinkElementType(elementoEndpoint.getName(),
 									elementoEndpoint.getFather(), elementoEndpoint.getCollectionFather());
 							
 							copia.setMultivalued(elementoEndpoint.isMultivalued());
@@ -99,40 +261,19 @@ public class CollectionFHIR_CENS_TRANSFORM3 {
 							for (CompleteElementType hijonuevo : copia.getSons())
 								hijonuevo.setFather(copia);
 							
-							ArrayList<CompleteElementType> Nuevalista=new ArrayList<CompleteElementType>();
-							boolean Found=false;
-							
+							ArrayList<CompleteElementType> Nuevalista;
+
 							if (elementoEndpoint.getFather()==null) {
-								for(CompleteElementType hijosA: elementoEndpoint.getCollectionFather().getSons())
-									if (hijosA==elementoEndpoint)
-										{
-										Nuevalista.add(copia);
-										Found=true;
-										}
-									else
-										Nuevalista.add(hijosA);
-								
-								
-								if (!Found)
-									Nuevalista.add(copia);
+								Nuevalista=new ArrayList<CompleteElementType>(elementoEndpoint.getCollectionFather().getSons()); 
+								Nuevalista.add(copia);
 								
 								elementoEndpoint.getCollectionFather().setSons(Nuevalista);
 							}
 							else
 							{
-								
-								for(CompleteElementType hijosA: elementoEndpoint.getFather().getSons())
-									if (hijosA==elementoEndpoint)
-										{
-										Nuevalista.add(copia);
-										Found=true;
-										}
-									else
-										Nuevalista.add(hijosA);
-								
-								
-								if (!Found)
-									Nuevalista.add(copia);
+								Nuevalista=new ArrayList<CompleteElementType>(elementoEndpoint.getFather().getSons()); 
+								Nuevalista.add(copia);
+
 								
 								elementoEndpoint.getFather().setSons(Nuevalista);
 							}
@@ -159,7 +300,7 @@ public class CollectionFHIR_CENS_TRANSFORM3 {
 				if (!found)
 				{
 					
-					System.out.println("Convirtiendo a Basico->"+Base);
+					System.out.println("Agregando Basico->"+Base);
 
 
 
