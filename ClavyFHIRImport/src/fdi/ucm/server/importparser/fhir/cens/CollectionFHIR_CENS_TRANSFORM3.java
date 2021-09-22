@@ -106,6 +106,10 @@ public class CollectionFHIR_CENS_TRANSFORM3 {
 		
 		CompleteCollection SNOMED=LoadCompleteLoad(DocumentosSnowmed.keySet());
 		
+//		Aplicamos Transformada 2 de nuevo para limpiar la gramtica de SNOWMED
+//		SNOMED=CollectionFHIR_CENS_TRANSFORM1.Apply(SNOMED);
+		SNOMED=CollectionFHIR_CENS_TRANSFORM2.Apply(SNOMED);
+		
 		c_input.getMetamodelGrammar().addAll(SNOMED.getMetamodelGrammar());
 		
 
