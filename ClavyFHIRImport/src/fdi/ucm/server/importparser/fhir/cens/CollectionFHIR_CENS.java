@@ -101,6 +101,25 @@ public class CollectionFHIR_CENS {
 			e.printStackTrace();
 		}
 		}
+		
+		if (fases>2)
+		{
+		System.out.println("Fase 4");
+		C=CollectionFHIR_CENS_TRANSFORM3.Apply(C);
+		try {
+			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_Fase4.clavy";
+			
+			System.out.println(FileIO);
+			
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
+
+			oos.writeObject(C);
+
+			oos.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		}
 		 
  
 		 
