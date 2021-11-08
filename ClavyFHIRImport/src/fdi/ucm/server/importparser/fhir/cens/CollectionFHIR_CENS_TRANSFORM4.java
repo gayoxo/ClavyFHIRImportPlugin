@@ -185,7 +185,7 @@ public class CollectionFHIR_CENS_TRANSFORM4 {
 	private List<CompleteElementType> procesaLink(CompleteLinkElementType element, List<CompleteDocuments> documentos) {
 		List<CompleteElementType> nuevos=new ArrayList<CompleteElementType>();
 		
-		//TODO AQUI HAY QUE METER MANO
+		//TODO AQUI HAY QUE METER MANO CUIDADO LOS BUCLES, no se procesa si es la misma gramatica (asi se evita)
 		
 		return nuevos;
 	}
