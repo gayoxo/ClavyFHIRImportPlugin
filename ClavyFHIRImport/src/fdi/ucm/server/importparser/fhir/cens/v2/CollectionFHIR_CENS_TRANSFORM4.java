@@ -115,9 +115,9 @@ public class CollectionFHIR_CENS_TRANSFORM4 {
 			if (!completeGrammar.getNombre().equals(esquemaBase))
 				GramaticasAQuitar.add(completeGrammar);
 		
-		c_input.getMetamodelGrammar().removeAll(GramaticasAQuitar);
-		
-		c_input.setEstructuras(AProcesar);
+//		c_input.getMetamodelGrammar().removeAll(GramaticasAQuitar);
+//		
+//		c_input.setEstructuras(AProcesar);
 		
 		return c_input;
 	}
