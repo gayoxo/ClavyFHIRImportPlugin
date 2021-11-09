@@ -46,10 +46,10 @@ import fdi.ucm.server.modelComplete.collection.grammar.CompleteLinkElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteResourceElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
-public class CollectionFHIR_CENS_TRANSFORM4_OLVERSION {
+public class CollectionFHIR_CENS_TRANSFORM4_COMPLETE {
 
 	public static CompleteCollection Apply(CompleteCollection c, String EsquemaBase) {
-		CollectionFHIR_CENS_TRANSFORM4_OLVERSION main=new CollectionFHIR_CENS_TRANSFORM4_OLVERSION();
+		CollectionFHIR_CENS_TRANSFORM4_COMPLETE main=new CollectionFHIR_CENS_TRANSFORM4_COMPLETE();
 		System.out.println("Unificacion de esquemas");
 		return main.apply(c,EsquemaBase);
 	}

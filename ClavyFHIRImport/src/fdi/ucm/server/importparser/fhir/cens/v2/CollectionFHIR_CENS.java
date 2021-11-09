@@ -124,7 +124,7 @@ public class CollectionFHIR_CENS {
 		if (fases>4)
 		{
 		System.out.println("Fase T4");
-		C=CollectionFHIR_CENS_TRANSFORM4.Apply(C,args[1]);
+		C=CollectionFHIR_CENS_TRANSFORM4_SEPARADO.Apply(C,args[1]);
 		try {
 			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT4.clavy";
 			
