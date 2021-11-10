@@ -1,4 +1,4 @@
-package fdi.ucm.server.importparser.fhir.cens.v2;
+package fdi.ucm.server.importparser.fhir.cens.v2.alternative;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -28,6 +28,7 @@ import java.util.Set;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 
+import fdi.ucm.server.importparser.fhir.cens.InvalidCertificateTrustManager;
 import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
@@ -38,11 +39,11 @@ import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteGrammar;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteLinkElementType;
 
-public class CollectionFHIR_CENS_TRANSFORM2 {
+public class CollectionFHIR_CENS_TRANSFORM2_V2_ALT {
 
 	public static CompleteCollection Apply(CompleteCollection c) {
-		CollectionFHIR_CENS_TRANSFORM2 main=new CollectionFHIR_CENS_TRANSFORM2();
-		System.out.println("Snomed procesamiento y recoleccion");
+		CollectionFHIR_CENS_TRANSFORM2_V2_ALT main=new CollectionFHIR_CENS_TRANSFORM2_V2_ALT();
+		System.out.println("Snomed procesamiento y recoleccion ( Y me quedo solo lo que me interesa ) ");
 		return main.apply(c);
 	}
 

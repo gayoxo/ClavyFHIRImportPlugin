@@ -18,10 +18,10 @@ import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteGrammar;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteResourceElementType;
 
-public class CollectionFHIR_CENS_TRANSFORM3 {
+public class CollectionFHIR_CENS_TRANSFORM3_V2 {
 
 	public static CompleteCollection Apply(CompleteCollection c) {
-		CollectionFHIR_CENS_TRANSFORM3 main=new CollectionFHIR_CENS_TRANSFORM3();
+		CollectionFHIR_CENS_TRANSFORM3_V2 main=new CollectionFHIR_CENS_TRANSFORM3_V2();
 		System.out.println("Transformacion que convierte elementos en otras naturalezas");
 		return main.apply(c);
 	}

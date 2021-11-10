@@ -1,4 +1,4 @@
-package fdi.ucm.server.importparser.fhir.cens.v2;
+package fdi.ucm.server.importparser.fhir.cens.v2.alternative;
 
 
 import java.io.File;
@@ -17,6 +17,8 @@ import org.json.simple.JSONArray;
 
 import fdi.ucm.server.importparser.fhir.cens.CollectionFHIR_CENS_EXTRACT;
 import fdi.ucm.server.importparser.fhir.cens.CollectionFHIR_CENS_TRANSFORM1;
+import fdi.ucm.server.importparser.fhir.cens.v2.CollectionFHIR_CENS_TRANSFORM3_V2;
+import fdi.ucm.server.importparser.fhir.cens.v2.CollectionFHIR_CENS_TRANSFORM4_SEPARADO;
 import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
@@ -88,7 +90,7 @@ public class CollectionFHIR_CENS {
 		if (fases>2)
 		{
 		System.out.println("Fase T2");
-		C=CollectionFHIR_CENS_TRANSFORM2_V2.Apply(C);
+		C=CollectionFHIR_CENS_TRANSFORM2_V2_ALT.Apply(C);
 		try {
 			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT2.clavy";
 			
