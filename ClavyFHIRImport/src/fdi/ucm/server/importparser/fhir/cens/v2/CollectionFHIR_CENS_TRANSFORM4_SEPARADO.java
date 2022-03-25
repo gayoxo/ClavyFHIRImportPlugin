@@ -65,6 +65,9 @@ public class CollectionFHIR_CENS_TRANSFORM4_SEPARADO {
 			{
 			HashSet<CompleteDocuments> ListaFinal = new HashSet<CompleteDocuments>();
 			procesaDocument(completeDocuments,c_input,ListaFinal);
+			
+			procesaTodosContraMi(completeDocuments,c_input,ListaFinal);
+			
 			ListaFinal.remove(completeDocuments);
 			
 			HashMap<CompleteGrammar, List<CompleteDocuments>> ListaAgrega=new HashMap<CompleteGrammar, List<CompleteDocuments>>();
@@ -122,6 +125,18 @@ public class CollectionFHIR_CENS_TRANSFORM4_SEPARADO {
 		return c_input;
 	}
 
+private void procesaTodosContraMi(CompleteDocuments yodocument, CompleteCollection c_input,
+			HashSet<CompleteDocuments> listaFinal) {
+		for (CompleteDocuments documentoBase : c_input.getEstructuras()) {
+			for (CompleteElement completeelementdoc : documentoBase.getDescription()) {
+				if (completeelementdoc instanceof CompleteLinkElement)
+					if (((CompleteLinkElement) completeelementdoc).getValue()==yodocument)
+						listaFinal.add(documentoBase);
+			}
+		}
+		
+	}
+
 private void AgregaADoc(CompleteDocuments completeDocuments, CompleteDocuments documentosAgrega,
 			CompleteGrammar gramaticaAgrega, CompleteGrammar padre, boolean ismultivalued, 
 			HashMap<CompleteGrammar, List<CompleteElementType>> listaAgregaTotal) {
@@ -138,7 +153,12 @@ private void AgregaADoc(CompleteDocuments completeDocuments, CompleteDocuments d
 		listaAgregaTotal.put(gramaticaAgrega,nuevo);
 		}
 	else
+		{
 		RootA.setClassOfIterator(listaAgregaTotal.get(gramaticaAgrega).get(0));
+		List<CompleteElementType> nuevo=listaAgregaTotal.get(gramaticaAgrega);
+		nuevo.add(RootA);
+		listaAgregaTotal.put(gramaticaAgrega,nuevo);
+		}
 
 	
 	generaHaciaAbajo(gramaticaAgrega.getSons(),RootA,documentosAgrega.getDescription(),completeDocuments);

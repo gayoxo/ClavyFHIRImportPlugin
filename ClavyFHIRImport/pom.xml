@@ -102,7 +102,7 @@
 			<artifactId>JSONImport</artifactId>
 			<version>1</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/ClavyJSONImportPlugin/ClavyJSONImport/ClavyJSONImport.jar</systemPath>
+			<systemPath>${basedir}/ClavyJSONImportPlugin/ClavyJSONImport/target/ClavyJSONImport-0.0.1-SNAPSHOT.jar</systemPath>
 		</dependency>
 	</dependencies>
 	<properties>

@@ -124,6 +124,26 @@ public class CollectionFHIR_CENS {
 			e.printStackTrace();
 		}
 		}
+		
+		if (fases>3)
+		{
+		System.out.println("Fase T3-1");
+		C=CollectionFHIR_CENS_CLEAN_SNOWMED.Apply(C);
+		try {
+			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT3_1.clavy";
+			
+			System.out.println(FileIO);
+			
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
+
+			oos.writeObject(C);
+
+			oos.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		}
+		
 		 
 		if (fases>4)
 		{
@@ -131,6 +151,25 @@ public class CollectionFHIR_CENS {
 		C=CollectionFHIR_CENS_TRANSFORM4_SEPARADO.Apply(C,args[1]);
 		try {
 			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT4.clavy";
+			
+			System.out.println(FileIO);
+			
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
+
+			oos.writeObject(C);
+
+			oos.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		}
+		
+		if (fases>5)
+		{
+		System.out.println("Fase T5");
+		C=CollectionFHIR_CENS_TRANSFORM5_BORRASOBRANTE.Apply(C,args[1]);
+		try {
+			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT5.clavy";
 			
 			System.out.println(FileIO);
 			
