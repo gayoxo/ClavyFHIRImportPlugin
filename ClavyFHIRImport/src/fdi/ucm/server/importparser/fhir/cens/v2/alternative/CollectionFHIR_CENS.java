@@ -182,6 +182,25 @@ public class CollectionFHIR_CENS {
 			e.printStackTrace();
 		}
 		}
+		
+		if (fases>6)
+		{
+		System.out.println("Fase T6");
+		C=CollectionFHIR_CENS_TRANSFORM6_CENS.Apply(C);
+		try {
+			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT5.clavy";
+			
+			System.out.println(FileIO);
+			
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
+
+			oos.writeObject(C);
+
+			oos.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		}
 		 
 
 	}
