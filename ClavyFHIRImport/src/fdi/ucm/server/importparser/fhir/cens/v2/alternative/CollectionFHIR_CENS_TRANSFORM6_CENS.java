@@ -11,6 +11,7 @@ import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
 import fdi.ucm.server.modelComplete.collection.document.CompleteElement;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteGrammar;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteResourceElementType;
 
 public class CollectionFHIR_CENS_TRANSFORM6_CENS {
 
@@ -31,9 +32,17 @@ public class CollectionFHIR_CENS_TRANSFORM6_CENS {
 				for (CompleteElement cElemento : allDocuments.getDescription()) 
 					if (ListaCEt.contains(cElemento.getHastype()))
 						CD.add(allDocuments);
-				
 			
-				//TODO AQUI DALE DALE
+			List<CompleteDocuments> ListaResto=new LinkedList<CompleteDocuments>(c.getEstructuras());
+			ListaResto.removeAll(CD);
+			
+//			for (CompleteDocuments completeDocuments : ListaResto) {
+//				for (CompleteElement elemenT : completeDocuments.getDescription()) {
+//					if (elemenT instanceof CompleteResourceElementType)
+//				}
+//			}
+			
+		
 		}
 		return c;
 	}
