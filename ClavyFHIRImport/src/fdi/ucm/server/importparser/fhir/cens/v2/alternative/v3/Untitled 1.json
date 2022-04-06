@@ -1,5 +1,7 @@
 {
   "description" : "Texto plano funcional",
+  "unionid" : "Patient/id",
+  "grammarname" : "Clinical Case",
   "structure" : [ {
     "name" : "Patient Data",
     "sons" : [ {
@@ -15,5 +17,16 @@
       "name" : "Gender",
       "eq" : "Patient/gender"
     } ]
-  } ]
+  },
+  {
+  "name" : "Diagnortic Data",
+  "sons" : [ {
+ 	 "name" : "Birth Date",
+      "eq" : "Observation/Observation"
+  
+  }]
+  }
+  
+  
+   ]
 }
