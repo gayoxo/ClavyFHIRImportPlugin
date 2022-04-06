@@ -1,4 +1,4 @@
-package fdi.ucm.server.importparser.fhir.cens.v2.alternative;
+package fdi.ucm.server.importparser.fhir.cens.v2.alternative.v3;
 
 
 import java.io.File;
@@ -18,7 +18,8 @@ import org.json.simple.JSONArray;
 import fdi.ucm.server.importparser.fhir.cens.CollectionFHIR_CENS_EXTRACT;
 import fdi.ucm.server.importparser.fhir.cens.CollectionFHIR_CENS_TRANSFORM1;
 import fdi.ucm.server.importparser.fhir.cens.v2.CollectionFHIR_CENS_TRANSFORM3_V2;
-import fdi.ucm.server.importparser.fhir.cens.v2.CollectionFHIR_CENS_TRANSFORM4_SEPARADO;
+import fdi.ucm.server.importparser.fhir.cens.v2.alternative.CollectionFHIR_CENS_CLEAN_SNOWMED;
+import fdi.ucm.server.importparser.fhir.cens.v2.alternative.CollectionFHIR_CENS_TRANSFORM2_V2_ALT;
 import fdi.ucm.server.importparser.json.CollectionJSON;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
@@ -28,7 +29,7 @@ import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 
-public class CollectionFHIR_CENS {
+public class CollectionFHIR_CENS_V3 {
 	
 	public boolean debugfile=false;
 
@@ -153,62 +154,7 @@ public class CollectionFHIR_CENS {
 		 * Mi teoria es que esto deberia ser la megatransformada con procesado base.
 		 */
 		 
-		if (fases>4)
-		{
-		System.out.println("Fase T4 Unificacion de Esquemas");
-		C=CollectionFHIR_CENS_TRANSFORM4_SEPARADO.Apply(C,args[1]);
-		try {
-			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT4.clavy";
-			
-			System.out.println(FileIO);
-			
-			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
-
-			oos.writeObject(C);
-
-			oos.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		}
 		
-		if (fases>5)
-		{
-		System.out.println("Fase T5 Borrado Gemeral");
-		C=CollectionFHIR_CENS_TRANSFORM5_BORRASOBRANTE.Apply(C,args[1]);
-		try {
-			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT5.clavy";
-			
-			System.out.println(FileIO);
-			
-			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
-
-			oos.writeObject(C);
-
-			oos.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		}
-		
-		if (fases>6)
-		{
-		System.out.println("Fase T6");
-		C=CollectionFHIR_CENS_TRANSFORM6_CENS.Apply(C);
-		try {
-			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT5.clavy";
-			
-			System.out.println(FileIO);
-			
-			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
-
-			oos.writeObject(C);
-
-			oos.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		}
 		 
 
 	}

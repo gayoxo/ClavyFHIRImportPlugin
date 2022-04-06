@@ -13,9 +13,14 @@ import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 public class CollectionFHIR_CENS_CLEAN_SNOWMED {
 
+	public static CompleteCollection Apply(CompleteCollection c) {
+		CollectionFHIR_CENS_CLEAN_SNOWMED main=new CollectionFHIR_CENS_CLEAN_SNOWMED();
+		System.out.println("Transformacion que Recupera de SNOWMED solo los terminos Sinonimos");
+		return main.apply(c);
+	}
 
 	
-	public static CompleteCollection Apply(CompleteCollection c) {
+	public CompleteCollection apply(CompleteCollection c) {
 		CompleteGrammar CCSnowmed=null;
 		for (CompleteGrammar cetG : c.getMetamodelGrammar()) 
 			if (cetG.getNombre().toLowerCase().equals("snomed"))
