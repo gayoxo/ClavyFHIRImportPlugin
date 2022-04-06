@@ -1,0 +1,19 @@
+{
+  "description" : "Texto plano funcional",
+  "structure" : [ {
+    "name" : "Patient Data",
+    "sons" : [ {
+      "name" : "Patient Description",
+      "eq" : "Patient/text/div"
+    }, {
+      "name" : "Name",
+      "eq" : [ "Patient/name/entry/given/entry", "Patient/name/entry/given/family" ]
+    }, {
+      "name" : "Birth Date",
+      "eq" : "Patient/birthDate"
+    }, {
+      "name" : "Gender",
+      "eq" : "Patient/gender"
+    } ]
+  } ]
+}
