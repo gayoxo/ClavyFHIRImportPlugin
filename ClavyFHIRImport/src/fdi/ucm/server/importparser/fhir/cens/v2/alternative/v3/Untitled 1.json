@@ -1,55 +1,123 @@
 {
-  "description" : "Texto plano funcional",
-  "unionid" : "Patient/id",
-  "grammarname" : "Clinical Case",
-  "structure" : [ {
-    "name" : "Patient Data",
-    "eq" : "Patient",
-    "multitype": "doc",
-    "sons" : [ {
-      "name" : "Patient Description",
-      "eq" : "Patient/text/div"
-    }, {
-      "name" : "Name",
-      "eq" : [ "Patient/name/entry/given/entry", "Patient/name/entry/given/family" ]
-    }, {
-      "name" : "Birth Date",
-      "eq" : "Patient/birthDate"
-    }, {
-      "name" : "Gender",
-      "eq" : "Patient/gender"
-    } ]
-  }, {
-    "name" : "Diagnortic Data",
-    "sons" : [ {
-      "name" : "Observation",
-      "eq" : "Observation",
-      "multitype": "doc",
-      "sons" : [ {
-        "name" : "LOINC",
-        "eq" : "Observation/code/coding/entry",
-        "multitype": "elem",
-        "sons" :
-        [{
-        "name" : "Value",
-         "eq" : [ "Observation/code/coding/entry/display", "Observation/code/coding/entry/code" ]
-        }]
-       
-      }, {
-        "name" : "Observation Date",
-        "eq" : "Observation/effectiveDateTime"
-      }, {
-        "name" : "Category",
-        "multitype": "elem",
-        "eq" : "Observation/category/entry/",
-        "sons": [
-        {
-         "name" : "Codigo",
-        "eq" : "Observation/category/entry/coding/entry/display"
-        }
-        ]
-        
-      } ]
-    } ]
-  } ]
+	"description": "Texto plano funcional",
+	"unionid": "Patient/id",
+	"grammarname": "Clinical Case",
+	"structure": [
+		{
+			"name": "Patient Data",
+			"eq": "Patient",
+			"multitype": "doc",
+			"sons": [
+				{
+					"name": "Patient Description",
+					"eq": "Patient/text/div"
+				},
+				{
+					"name": "Name",
+					"eq": [
+						"Patient/name/entry/given/entry",
+						"Patient/name/entry/given/family"
+					]
+				},
+				{
+					"name": "Birth Date",
+					"eq": "Patient/birthDate"
+				},
+				{
+					"name": "Gender",
+					"eq": "Patient/gender"
+				}
+			]
+		},
+		{
+			"name": "Diagnortic Data",
+			"sons": [
+				{
+					"name": "Observation",
+					"eq": "Observation",
+					"multitype": "doc",
+					"sons": [
+					{
+							"name": "Description",
+							"eq": "Observation/text/div"
+							
+						},
+						{
+							"name": "LOINC",
+							"eq": "Observation/code/coding/entry",
+							"multitype": "elem",
+							"sons": [
+								{
+									"name": "Value",
+									"eq": [
+										"Observation/code/coding/entry/display",
+										"Observation/code/coding/entry/code"
+									]
+								}
+							]
+						},
+						{
+							"name": "Observation Date",
+							"eq": "Observation/effectiveDateTime"
+						},
+						{
+							"name": "Category",
+							"multitype": "elem",
+							"eq": "Observation/category/entry/",
+							"sons": [
+								{
+									"name": "Codigo",
+									"eq": "Observation/category/entry/coding/entry/display"
+								}
+							]
+						},
+						{
+							"name": "Range",
+							"sons":[{
+							"name": "Low",
+							"eq": ["Observation/valueRange/low/value", "Observation/valueRange/low/code"]
+							},{
+							"name": "Hight",
+							"eq": ["Observation/valueRange/hight/value", "Observation/valueRange/hight/code"]
+							}]
+							
+						},
+						{
+							"name": "Measure",
+							"eq": ["Observation/valueQuantity/value", "Observation/valueQuantity/code"]
+	
+						},
+						{
+							"name": "Measure",
+							"multitype": "elem",
+							"eq": "Observation/component/entry",
+							"sons":[
+							{
+							"name": "Code",
+							"eq": "Observation/component/entry/code/coding/entry/display"
+							
+							},
+							{
+							"name": "Value",
+							"eq": ["Observation/component/valueQuantity/value","Observation/component/valueQuantity/code"]
+							}
+							]
+	
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"eq": "Endpoint/address",
+			"multitype": "doc",
+			"sons": [
+				{
+					"name": "Description",
+					"eq": "Endpoint/name"
+				}
+			]
+		}
+	]
 }
