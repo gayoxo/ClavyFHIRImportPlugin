@@ -118,6 +118,18 @@
 					"eq": "Endpoint/name"
 				}
 			]
+		},
+		{
+			"name": "Conditions",
+			"eq": "SNOMED",
+			"multitype": "doc",
+			"sons": [
+				{
+					"name": "Description term",
+					"eq": "SNOMED/term"
+				}
+			]
 		}
+		
 	]
 }
