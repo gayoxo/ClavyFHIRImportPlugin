@@ -4,6 +4,7 @@
   "grammarname" : "Clinical Case",
   "structure" : [ {
     "name" : "Patient Data",
+    "eq" : "Patient",
     "sons" : [ {
       "name" : "Patient Description",
       "eq" : "Patient/text/div"
@@ -17,16 +18,21 @@
       "name" : "Gender",
       "eq" : "Patient/gender"
     } ]
-  },
-  {
-  "name" : "Diagnortic Data",
-  "sons" : [ {
- 	 "name" : "Birth Date",
-      "eq" : "Observation/Observation"
-  
-  }]
-  }
-  
-  
-   ]
+  }, {
+    "name" : "Diagnortic Data",
+    "sons" : [ {
+      "name" : "Observation",
+      "eq" : "Observation",
+      "sons" : [ {
+        "name" : "LOINC",
+        "eq" : [ "Observation/code/coding/entry/display", "Observation/code/coding/entry/code" ]
+      }, {
+        "name" : "Observation Date",
+        "eq" : "Observation/effectiveDateTime"
+      }, {
+        "name" : "Category",
+        "eq" : "Observation/category/entry/coding/entry/display"
+      } ]
+    } ]
+  } ]
 }
