@@ -5,6 +5,7 @@
   "structure" : [ {
     "name" : "Patient Data",
     "eq" : "Patient",
+    "multitype": "doc",
     "sons" : [ {
       "name" : "Patient Description",
       "eq" : "Patient/text/div"
@@ -23,15 +24,31 @@
     "sons" : [ {
       "name" : "Observation",
       "eq" : "Observation",
+      "multitype": "doc",
       "sons" : [ {
         "name" : "LOINC",
-        "eq" : [ "Observation/code/coding/entry/display", "Observation/code/coding/entry/code" ]
+        "eq" : "Observation/code/coding/entry",
+        "multitype": "elem",
+        "sons" :
+        [{
+        "name" : "Value",
+         "eq" : [ "Observation/code/coding/entry/display", "Observation/code/coding/entry/code" ]
+        }]
+       
       }, {
         "name" : "Observation Date",
         "eq" : "Observation/effectiveDateTime"
       }, {
         "name" : "Category",
+        "multitype": "elem",
+        "eq" : "Observation/category/entry/",
+        "sons": [
+        {
+         "name" : "Codigo",
         "eq" : "Observation/category/entry/coding/entry/display"
+        }
+        ]
+        
       } ]
     } ]
   } ]
