@@ -129,6 +129,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 			{
 				CompleteElementType equiElem=null;
 				equiElem =find(c.getMetamodelGrammar(),equi);
+				System.out.println(equiElem.getName());
 			}
 			
 			
