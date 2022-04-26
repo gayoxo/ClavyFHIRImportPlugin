@@ -154,7 +154,24 @@ public class CollectionFHIR_CENS_V3 {
 		 * Mi teoria es que esto deberia ser la megatransformada con procesado base.
 		 */
 		 
-		
+		if (fases>4)
+		{
+		System.out.println("Fase T4 Limpia SNOWMED para quedarse con sinonimos");
+		C=CollectionFHIR_PROCESALIMPIA.Apply(C);
+		try {
+			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT4.clavy";
+			
+			System.out.println(FileIO);
+			
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FileIO));
+
+			oos.writeObject(C);
+
+			oos.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		}
 		 
 
 	}

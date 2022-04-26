@@ -5,8 +5,6 @@
 	"structure": [
 		{
 			"name": "Patient Data",
-			"eq": "Patient",
-			"multitype": "doc",
 			"sons": [
 				{
 					"name": "Patient Description",
