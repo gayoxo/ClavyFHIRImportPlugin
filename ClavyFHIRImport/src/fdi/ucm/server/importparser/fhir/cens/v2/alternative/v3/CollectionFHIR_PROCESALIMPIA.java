@@ -231,8 +231,23 @@ public class CollectionFHIR_PROCESALIMPIA {
 			List<CompleteLinkElement> nuevosLinksRev=new LinkedList<CompleteLinkElement>();
 			List<CompleteLinkElement> nuevosLinksFor=new LinkedList<CompleteLinkElement>();
 			
+			for (CompleteElement elementodale : completeDocuments.getDescription())
+				if (elementodale instanceof CompleteLinkElement)
+					if (!set.contains(((CompleteLinkElement) elementodale).getValue()))
+						nuevosLinksFor.add((CompleteLinkElement) elementodale);
+			
+			for (CompleteDocuments completeDocumentsTotal : c.getEstructuras()) 
+				if (!set.contains(completeDocumentsTotal))
+				{
+					for (CompleteElement elementodale : completeDocumentsTotal.getDescription())
+						if (elementodale instanceof CompleteLinkElement)
+							if (((CompleteLinkElement) elementodale).getValue()==completeDocuments)
+								nuevosLinksRev.add((CompleteLinkElement) elementodale);
+				}
+				
 			
 			
+			//AQUI Esta la movida
 			
 		}
 		
