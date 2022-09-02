@@ -24,6 +24,7 @@ import org.json.simple.parser.JSONParser;
 import fdi.ucm.server.modelComplete.collection.CompleteCollection;
 import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
 import fdi.ucm.server.modelComplete.collection.document.CompleteElement;
+import fdi.ucm.server.modelComplete.collection.document.CompleteFile;
 import fdi.ucm.server.modelComplete.collection.document.CompleteLinkElement;
 import fdi.ucm.server.modelComplete.collection.document.CompleteTextElement;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
@@ -47,6 +48,9 @@ public class CollectionFHIR_PROCESALIMPIA {
 			
 			CompleteCollection nuevac=new CompleteCollection(c.getName(), c.getDescription());
 			
+			
+			//Aqui cargo los datos basicos de la coleccion Resultado
+			
 			String g_nuevac = (String) obj.get("grammarname");
 			String g_nuevac_des = (String) obj.get("description");
 			String unionid = (String) obj.get("unionid");
@@ -62,7 +66,8 @@ public class CollectionFHIR_PROCESALIMPIA {
 			JSONArray g_nuevac_hijos = (JSONArray) obj.get("structure");
 			
 			HashMap<CompleteDocuments, CompleteDocuments> listaCuadra=new HashMap<CompleteDocuments, CompleteDocuments>();
-			HashMap<CompleteDocuments, Set<CompleteDocuments>> listaCuadraDoble=new HashMap<CompleteDocuments, Set<CompleteDocuments>>();
+			
+			//Aqui Creo las estrucuras base que pueden ser una o varias.
 			
 			for (CompleteDocuments docucrea : c.getEstructuras()) {
 				for (CompleteElement docuelem : docucrea.getDescription()) {
@@ -76,7 +81,31 @@ public class CollectionFHIR_PROCESALIMPIA {
 			}
 			
 			
-			CompleteGrammar GramaticainicialCierre = ID.getCollectionFather();
+			//Aqui proceso los archivos, si los hay
+			nuevac.getSectionValues().addAll(c.getSectionValues());
+			
+			
+			
+			
+			//Creo la lista con la gramatica sobre la que cierro
+			List<CompleteGrammar> GramaticasProcesadas=new LinkedList<CompleteGrammar>();
+			GramaticasProcesadas.add(ID.getCollectionFather());
+			
+			procesaCierre(c,nuevac,GramaticasProcesadas,listaCuadra.keySet());			
+			
+			
+			
+			//Ahora hay que explotar mientras se pueda.
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			
@@ -100,9 +129,6 @@ public class CollectionFHIR_PROCESALIMPIA {
 			List<CompleteLinkElement> nuevosLinksRev=new LinkedList<CompleteLinkElement>();
 			List<CompleteLinkElement> nuevosLinksFor=new LinkedList<CompleteLinkElement>();
 
-			
-			
-			
 			
 			for (CompleteDocuments docuExplore : c.getEstructuras()) {
 				for (CompleteElement elexplore : docuExplore.getDescription()) {
@@ -196,6 +222,20 @@ public class CollectionFHIR_PROCESALIMPIA {
 		
 		
 		return c;
+	}
+
+	private static void procesaCierre(CompleteCollection c, CompleteCollection nuevac,
+			List<CompleteGrammar> gramaticasProcesadas, Set<CompleteDocuments> set) {
+
+		for (CompleteDocuments completeDocuments : set) {
+			List<CompleteLinkElement> nuevosLinksRev=new LinkedList<CompleteLinkElement>();
+			List<CompleteLinkElement> nuevosLinksFor=new LinkedList<CompleteLinkElement>();
+			
+			
+			
+			
+		}
+		
 	}
 
 	private static CompleteElementType find(List<CompleteGrammar> metamodelGrammar, String unionid) {

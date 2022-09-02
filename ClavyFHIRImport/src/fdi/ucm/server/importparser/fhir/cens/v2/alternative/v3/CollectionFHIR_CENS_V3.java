@@ -156,7 +156,7 @@ public class CollectionFHIR_CENS_V3 {
 		 
 		if (fases>4)
 		{
-		System.out.println("Fase T4 Limpia SNOWMED para quedarse con sinonimos");
+		System.out.println("Fase T4 Supertransformada");
 		C=CollectionFHIR_PROCESALIMPIA.Apply(C);
 		try {
 			String FileIO = System.getProperty("user.home")+File.separator+basetext+"_FaseT4.clavy";

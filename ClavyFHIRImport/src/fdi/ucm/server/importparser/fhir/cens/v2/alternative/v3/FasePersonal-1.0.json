@@ -1,5 +1,5 @@
 {
-	"description": "Texto plano funcional",
+	"description": "Grammar for clinical cases",
 	"unionid": "Patient/id",
 	"grammarname": "Clinical Case",
 	"structure": [
