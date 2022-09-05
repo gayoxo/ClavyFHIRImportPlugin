@@ -28,7 +28,7 @@
 			]
 		},
 		{
-			"name": "Diagnortic Data",
+			"name": "Diagnostic Data",
 			"sons": [
 				{
 					"name": "Observation",

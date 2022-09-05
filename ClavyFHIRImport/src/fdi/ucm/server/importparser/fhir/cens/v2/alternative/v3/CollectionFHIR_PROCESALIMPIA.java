@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Queue;
 import java.util.Set;
+import java.util.Stack;
 
 import javax.crypto.spec.GCMParameterSpec;
 
@@ -58,16 +59,12 @@ public class CollectionFHIR_PROCESALIMPIA {
 		    CompleteElementType ID=null;
 		    ID =find(c.getMetamodelGrammar(),unionid);
 		    
-			
-			CompleteGrammar CGFinal=new CompleteGrammar(g_nuevac,g_nuevac_des,nuevac);
-			
-			nuevac.getMetamodelGrammar().add(CGFinal);
-				
-			JSONArray g_nuevac_hijos = (JSONArray) obj.get("structure");
+
 			
 			HashMap<CompleteDocuments, CompleteDocuments> listaCuadra=new HashMap<CompleteDocuments, CompleteDocuments>();
-			
-			//Aqui Creo las estrucuras base que pueden ser una o varias.
+
+
+			//Aqui Creo las estrucuras base que pueden ser una o varias. Luego las tenia que crear igual con lo que adelanto.
 			
 			for (CompleteDocuments docucrea : c.getEstructuras()) {
 				for (CompleteElement docuelem : docucrea.getDescription()) {
@@ -86,98 +83,94 @@ public class CollectionFHIR_PROCESALIMPIA {
 			
 			
 			
-			
-			//Creo la lista con la gramatica sobre la que cierro
-			List<CompleteGrammar> GramaticasProcesadas=new LinkedList<CompleteGrammar>();
-			GramaticasProcesadas.add(ID.getCollectionFather());
-			
-			procesaCierre(c,nuevac,GramaticasProcesadas,listaCuadra.keySet());			
+			//En minuscula
+			FileReader readerFor = new FileReader(new File("src/fdi/ucm/server/importparser/fhir/cens/v2/alternative/v3/FasePersonal-1.0-FOR.json"));
 			
 			
+			JSONArray objFor = (JSONArray) jsonParser.parse(readerFor);
 			
-			//Ahora hay que explotar mientras se pueda.
+			Set<String> listaFor=new HashSet<String>();
 			
-			
-			
-			
-			
+			listaFor.addAll(Arrays.asList(Arrays.asList(objFor.toArray()).toArray(new String[objFor.toArray().length])));
 			
 			
+			//En minuscula
+			FileReader readerTo = new FileReader(new File("src/fdi/ucm/server/importparser/fhir/cens/v2/alternative/v3/FasePersonal-1.0-To.json"));
+			
+		
+			JSONArray objTo = (JSONArray) jsonParser.parse(readerTo);
+			
+			Set<String> listaTo=new HashSet<String>();
+			
+			listaTo.addAll(Arrays.asList(Arrays.asList(objTo.toArray()).toArray(new String[objTo.toArray().length])));
 			
 			
+			//Ahora hay que recorrer para cadauno de manera descendiente.
 			
+			HashMap<CompleteDocuments, Set<CompleteDocuments>> listaCuadraDoble= new HashMap<CompleteDocuments, Set<CompleteDocuments>>();
+
 			
-			
-			
+	
 			for (CompleteDocuments actualDoc : listaCuadra.keySet()) {
 				
 			
+			//Para procesar todos los documentos tenemos la de pendientes y procesados.
+				Queue<CompleteDocuments> Pendientes=new LinkedList<CompleteDocuments>();
 			
-			Set<CompleteGrammar> Pendientes=new HashSet<CompleteGrammar>(c.getMetamodelGrammar());
-			
-			Pendientes.remove(GramaticainicialCierre);
+			Pendientes.add(actualDoc);
 			
 			HashSet<CompleteDocuments> ListaIDsParse=new HashSet<CompleteDocuments>();
 			
 			ListaIDsParse.add(actualDoc);
 			
-			boolean continua = true;
 			
-			while (continua)
+			
+			while (!Pendientes.isEmpty())
 			{
-				continua=false;
-			List<CompleteLinkElement> nuevosLinksRev=new LinkedList<CompleteLinkElement>();
-			List<CompleteLinkElement> nuevosLinksFor=new LinkedList<CompleteLinkElement>();
-
-			
-			for (CompleteDocuments docuExplore : c.getEstructuras()) {
-				for (CompleteElement elexplore : docuExplore.getDescription()) {
-					if (elexplore instanceof CompleteLinkElement)
+				
+				
+				CompleteDocuments DocumentoActual = Pendientes.poll();
+				
+				for (CompleteElement elementoARevisar : DocumentoActual.getDescription()) {
+					if ( elementoARevisar instanceof CompleteLinkElement &&
+							listaFor.contains(elementoARevisar.getHastype().getCollectionFather().getNombre().toLowerCase()))
 					{
-						if (Pendientes.contains(elexplore.getHastype().getCollectionFather())&&
-								ListaIDsParse.contains(((CompleteLinkElement)elexplore).getValue()))
-										{
-										nuevosLinksRev.add((CompleteLinkElement) elexplore);
-										//minireparacion por si acaso
-										if (elexplore.getDocumentsFather()==null)
-											elexplore.setDocumentsFather(docuExplore);
-										}
 						
-						if (ListaIDsParse.contains(docuExplore)&&
-								!elexplore.getHastype().getCollectionFather().getNombre().toLowerCase().equals("snomed")&&
-								Pendientes.contains(elexplore.getHastype().getCollectionFather()))
-							nuevosLinksFor.add((CompleteLinkElement) elexplore);
+						//Si no esta Lo añado al proceso.
+						CompleteDocuments DocumentoActualLinked=((CompleteLinkElement)elementoARevisar).getValue();
+						
+						if (!ListaIDsParse.contains(DocumentoActualLinked))
+						{	
+						ListaIDsParse.add(DocumentoActualLinked);
+						Pendientes.add(DocumentoActualLinked);
+						}
 						
 					}
 				}
-			}
-			
-			
-			
-			
-			
-			
-			for (CompleteLinkElement linkvalidos : nuevosLinksFor) {
+
 				
-				if (linkvalidos.getValue()!=null)
-					{
-					ListaIDsParse.add(linkvalidos.getValue());
-					if (!linkvalidos.getHastype().getCollectionFather().getNombre().toLowerCase().equals("snomed"))
-						if (Pendientes.remove(linkvalidos.getHastype().getCollectionFather()))
-							continua = true;
+				for (CompleteDocuments docuExplore : c.getEstructuras()) {
+					for (CompleteElement elexplore : docuExplore.getDescription()) {
+						if ( elexplore instanceof CompleteLinkElement &&
+								listaTo.contains(elexplore.getHastype().getCollectionFather().getNombre().toLowerCase()))
+						{
+							
+							//Si no esta Lo añado al proceso.
+							CompleteDocuments DocumentoActualLinked=((CompleteLinkElement)elexplore).getValue();
+							
+							if (ListaIDsParse.contains(DocumentoActualLinked)
+									&&
+									!ListaIDsParse.contains(docuExplore))
+							{	
+							ListaIDsParse.add(docuExplore);
+							Pendientes.add(docuExplore);
+							}
+							
+						}
 					}
-			}
-			
-			for (CompleteLinkElement linkvalidos : nuevosLinksRev) {
+				}
 				
-				if (linkvalidos.getDocumentsFather()!=null)
-					{
-					ListaIDsParse.add(linkvalidos.getDocumentsFather());
-					if (!linkvalidos.getHastype().getCollectionFather().getNombre().toLowerCase().equals("snomed"))
-						Pendientes.remove(linkvalidos.getHastype().getCollectionFather());
-						continua = true;
-					}
-			}
+			
 			
 
 			
@@ -188,6 +181,52 @@ public class CollectionFHIR_PROCESALIMPIA {
 			listaCuadraDoble.put(actualDoc, new HashSet<CompleteDocuments>(ListaIDsParse));
 			
 			}
+			
+			
+			
+			
+			//genero la nueva gramatica.
+			
+			CompleteGrammar CGFinal=new CompleteGrammar(g_nuevac,g_nuevac_des,nuevac);
+			
+			nuevac.getMetamodelGrammar().add(CGFinal);
+				
+			JSONArray g_nuevac_hijos = (JSONArray) obj.get("structure");
+			
+			
+			HashMap<CompleteGrammar, Integer> calculadora=new HashMap<CompleteGrammar, Integer>();
+			
+			
+			for (Entry<CompleteDocuments, Set<CompleteDocuments>> entryreverse : listaCuadraDoble.entrySet())  {
+				
+				Set<CompleteDocuments> asociados=entryreverse.getValue();
+				for (CompleteGrammar gramaticaaContar : c.getMetamodelGrammar()) {
+					int i=0;
+					for (CompleteDocuments docu : asociados) {
+						for (CompleteElement elemento : docu.getDescription()) {
+							if ((!(elemento instanceof CompleteLinkElement))&&
+									elemento.getHastype().getCollectionFather()==gramaticaaContar)
+								{
+								i++;
+								break;
+								}
+						}
+					}
+					
+					if (calculadora.get(gramaticaaContar)==null||calculadora.get(gramaticaaContar)<i)
+						calculadora.put(gramaticaaContar, new Integer(i));
+					
+				}
+				
+				
+			}
+			
+			System.out.println("Calculos de Gramatica");
+			//calculos
+			for (Entry<CompleteGrammar, Integer> eleme : calculadora.entrySet()) {
+				System.out.println("->"+eleme.getKey().getNombre()+"=="+eleme.getValue());
+			}
+			
 			
 			
 			HashMap<CompleteDocuments, Set<CompleteDocuments>> listaCuadraDobleRever=new HashMap<CompleteDocuments, Set<CompleteDocuments>>();
@@ -204,6 +243,16 @@ public class CollectionFHIR_PROCESALIMPIA {
 			
 			
 			
+			System.out.println("Lista Normal sobre A");
+			for (Entry<CompleteDocuments, Set<CompleteDocuments>> entryreverse : listaCuadraDoble.entrySet())  {
+				System.out.println("->"+entryreverse.getKey().getDescriptionText());
+				for (CompleteDocuments object : entryreverse.getValue()) {
+					System.out.println("------->"+object.getDescriptionText());
+				}
+			}
+			
+			
+			System.out.println("Lista Reverse sobre A");
 			for (Entry<CompleteDocuments, Set<CompleteDocuments>> entryreverse : listaCuadraDobleRever.entrySet())  {
 				System.out.println("->"+entryreverse.getKey().getDescriptionText());
 				for (CompleteDocuments object : entryreverse.getValue()) {
@@ -224,34 +273,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 		return c;
 	}
 
-	private static void procesaCierre(CompleteCollection c, CompleteCollection nuevac,
-			List<CompleteGrammar> gramaticasProcesadas, Set<CompleteDocuments> set) {
-
-		for (CompleteDocuments completeDocuments : set) {
-			List<CompleteLinkElement> nuevosLinksRev=new LinkedList<CompleteLinkElement>();
-			List<CompleteLinkElement> nuevosLinksFor=new LinkedList<CompleteLinkElement>();
-			
-			for (CompleteElement elementodale : completeDocuments.getDescription())
-				if (elementodale instanceof CompleteLinkElement)
-					if (!set.contains(((CompleteLinkElement) elementodale).getValue()))
-						nuevosLinksFor.add((CompleteLinkElement) elementodale);
-			
-			for (CompleteDocuments completeDocumentsTotal : c.getEstructuras()) 
-				if (!set.contains(completeDocumentsTotal))
-				{
-					for (CompleteElement elementodale : completeDocumentsTotal.getDescription())
-						if (elementodale instanceof CompleteLinkElement)
-							if (((CompleteLinkElement) elementodale).getValue()==completeDocuments)
-								nuevosLinksRev.add((CompleteLinkElement) elementodale);
-				}
-				
-			
-			
-			//AQUI Esta la movida
-			
-		}
-		
-	}
+	
 
 	private static CompleteElementType find(List<CompleteGrammar> metamodelGrammar, String unionid) {
 		String[] splited = unionid.split("/");
