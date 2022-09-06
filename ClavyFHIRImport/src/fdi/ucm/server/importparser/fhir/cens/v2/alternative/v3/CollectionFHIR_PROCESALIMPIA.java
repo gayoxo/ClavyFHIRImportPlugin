@@ -225,16 +225,31 @@ public class CollectionFHIR_PROCESALIMPIA {
 			HashMap<CompleteGrammar,List<CompleteElementType>> calculadoraFinal=
 					new HashMap<CompleteGrammar, List<CompleteElementType>>();
 			
+			HashMap<CompleteElementType,CompleteElementType> TablaCruceElemtos=
+					new HashMap<CompleteElementType,CompleteElementType>();
+			
 			for (int i = 0; i < g_nuevac_hijos.size(); i++) {
 				JSONObject Objetolista = (JSONObject) g_nuevac_hijos.get(i);
-				procesaElementoDescendant(CGFinal,calculadora,Objetolista,
-						c.getMetamodelGrammar(),calculadoraFinal);
+				procesaElementoDescendant(CGFinal,null,calculadora,Objetolista,
+						c.getMetamodelGrammar(),calculadoraFinal,TablaCruceElemtos);
 				
 			}
 			
+			
+			
+			
+			
+			System.out.println("Print Estructura");
 			System.out.println("->"+CGFinal.getNombre());
 			
 			printGrammar(CGFinal.getSons(),"->");
+			
+			System.out.println("Print Copias");
+			for (Entry<CompleteElementType,CompleteElementType> elemenTableKeyval : TablaCruceElemtos.entrySet()) {
+				System.out.println("--"+elemenTableKeyval.getKey().getName()+"=="+elemenTableKeyval.getValue().getName());
+			}
+			
+			
 			
 			
 			System.out.println("Calculos de Gramatica");
@@ -307,95 +322,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 
 
 
-	private static void procesaElementoDescendant(CompleteGrammar cGFinal,
-			HashMap<CompleteGrammar, Integer> calculadora, JSONObject objetolista,
-			List<CompleteGrammar> listaGrammar,
-			HashMap<CompleteGrammar,List<CompleteElementType>> calculadoraFinal) {
-		
-		
-//		System.out.println(objetolista.toJSONString());
-		String nombre = (String) objetolista.get("name");
-
-		JSONArray sons=null;
-		
-		if (objetolista.get("sons")!=null)
-			sons = (JSONArray) objetolista.get("sons");
-		
-		CompleteElementType elementoClave;
-		
-		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
-			elementoClave=new CompleteTextElementType(nombre, cGFinal);
-		else
-			elementoClave=new CompleteElementType(nombre, cGFinal);
-			
-			
-			
-
-
-		cGFinal.getSons().add(elementoClave);
-		
-		if (objetolista.get("grammar")==null)
-		{
-			
-			//caso seguimos enla gramatica que tenemos de base
-			if (sons!=null)
-				for (int i = 0; i < sons.size(); i++) {
-					JSONObject Objetolista = (JSONObject) sons.get(i);
-					procesaElementoDescendant(cGFinal,elementoClave,calculadora,
-							Objetolista,listaGrammar,calculadoraFinal);
-				}
-			
-		}
-		else
-		{
-			CompleteGrammar CG=findGrammar(listaGrammar,(String) objetolista.get("grammar"));
-			if (CG!=null)
-			{
-				Integer numero=calculadora.get(CG);
-				if (numero==null)
-					numero=1;
-				
-				elementoClave.setMultivalued(true);
-				elementoClave.setClassOfIterator(elementoClave);
-				
-				List<CompleteElementType> listaCopias=new LinkedList<CompleteElementType>();
-				listaCopias.add(elementoClave);
-				
-				if (sons!=null)
-					for (int i = 0; i < sons.size(); i++) {
-						JSONObject Objetolista = (JSONObject) sons.get(i);
-						procesaElementoDescendant(cGFinal,elementoClave,calculadora
-								,Objetolista,listaGrammar,calculadoraFinal);
-					}
-
-				
-				for (int i = 0; i < numero-1; i++) {
-					CompleteElementType elementoClave2 = new CompleteElementType(nombre, cGFinal);
-					elementoClave2.setMultivalued(true);
-					elementoClave2.setClassOfIterator(elementoClave);
-					cGFinal.getSons().add(elementoClave2);
-					listaCopias.add(elementoClave2);
-					
-					if (sons!=null)
-						for (int j = 0; j < sons.size(); j++) {
-							JSONObject Objetolista = (JSONObject) sons.get(i);
-							procesaElementoDescendant(cGFinal,elementoClave2,
-									calculadora,Objetolista,listaGrammar,calculadoraFinal);
-						}
-				}
-				
-				
-				calculadoraFinal.put(CG, listaCopias);
-				
-				
-
-				
-			}
-			//ataca a otra gramatica de la calculadora
-		}
-		
-		
-	}
+	
 
 
 
@@ -413,7 +340,8 @@ public class CollectionFHIR_PROCESALIMPIA {
 	private static void procesaElementoDescendant(CompleteGrammar cGFinal, CompleteElementType elementoClavePadre,
 			HashMap<CompleteGrammar, Integer> calculadora, JSONObject objetolista,
 			List<CompleteGrammar> listaGrammar,
-			HashMap<CompleteGrammar,List<CompleteElementType>> calculadoraFinal) {
+			HashMap<CompleteGrammar,List<CompleteElementType>> calculadoraFinal,
+			HashMap<CompleteElementType, CompleteElementType> tablaCruceElemtos) {
 //		System.out.println(objetolista.toJSONString());
 		String nombre = (String) objetolista.get("name");
 		
@@ -425,18 +353,171 @@ public class CollectionFHIR_PROCESALIMPIA {
 		
 		CompleteElementType elementoClave;
 		
+		if (elementoClavePadre==null)
+		{
+			//Padre Gramatica
+			if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
+				elementoClave=new CompleteTextElementType(nombre, cGFinal);
+	
+			else
+				elementoClave=new CompleteElementType(nombre, cGFinal);
+
+			cGFinal.getSons().add(elementoClave);
+			
+		}
+		else
+		{
+		
+		//Padre Elemento
+
 		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
 			
 			elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
 		else
 			elementoClave=new CompleteElementType(nombre,elementoClavePadre, cGFinal);
 
-			
-			
-			
-
 
 		elementoClavePadre.getSons().add(elementoClave);
+		}
+		
+		
+		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
+		{
+			
+
+			if (objetolista.get("eq") instanceof JSONArray)
+					{
+					
+					elementoClave.setMultivalued(true);
+					elementoClave.setClassOfIterator(elementoClave);
+					
+					JSONArray listaEQ = (JSONArray)objetolista.get("eq");
+					
+					String equivalunico=(String)listaEQ.get(0);
+					CompleteElementType CC=find(listaGrammar,equivalunico);
+					if (CC!=null)
+						tablaCruceElemtos.put(CC, elementoClave);
+					
+					for (int k = 1; k < listaEQ.size(); k++) {
+						
+						CompleteElementType elementoClave2;
+						
+						if (elementoClavePadre==null)
+						{
+						
+							elementoClave2= new CompleteTextElementType(nombre, cGFinal);
+							elementoClave2.setMultivalued(true);
+							elementoClave2.setClassOfIterator(elementoClave);
+							cGFinal.getSons().add(elementoClave2);
+							
+							if (sons!=null)
+								for (int j = 0; j < sons.size(); j++) {
+									JSONObject Objetolista = (JSONObject) sons.get(j);
+									procesaElementoDescendant(cGFinal,elementoClave2,
+											calculadora,Objetolista,listaGrammar,
+											calculadoraFinal,tablaCruceElemtos);
+								}
+						
+						}else
+						{
+							elementoClave2 = new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+							elementoClave2.setMultivalued(true);
+							elementoClave2.setClassOfIterator(elementoClave);
+							elementoClavePadre.getSons().add(elementoClave2);
+							
+							if (sons!=null)
+								for (int j = 0; j < sons.size(); j++) {
+									JSONObject Objetolista = (JSONObject) sons.get(j);
+									procesaElementoDescendant(cGFinal,elementoClave2,
+											calculadora,Objetolista,listaGrammar,
+											calculadoraFinal,tablaCruceElemtos);
+								}
+						}
+						
+						
+						String equivalunico2=(String)listaEQ.get(k);
+						CompleteElementType CC2=find(listaGrammar,equivalunico2);
+						if (CC2!=null)
+							tablaCruceElemtos.put(CC2, elementoClave2);
+					}
+						
+					
+				}else
+				{
+
+				CompleteElementType CC=find(listaGrammar,(String)objetolista.get("eq"));
+				
+				
+				///TODO DEAD CODE
+//				if (CC!=null)
+//					if (CC.isMultivalued())
+//						{
+//						CC=CC.getClassOfIterator();
+//						List<CompleteElementType> listaMulti=new LinkedList<CompleteElementType>();
+//						CompleteElementType padre = CC.getFather();
+//						List<CompleteElementType> ListaHijos = null;
+//						if (padre!=null)
+//							ListaHijos=padre.getSons();
+//						else
+//							ListaHijos=CC.getCollectionFather().getSons();
+//						
+//						listaMulti.add(CC);
+//						for (CompleteElementType completeElementType : ListaHijos) 
+//							if (completeElementType.getClassOfIterator()==CC&&completeElementType!=CC)
+//								listaMulti.add(completeElementType);
+//						
+//						tablaCruceElemtos.put(CC, elementoClave);
+//						
+//						for (CompleteElementType completeElementType : listaMulti) {
+//							
+//							CompleteElementType elementoClave2;
+//							
+//							if (elementoClavePadre==null)
+//							{
+//							
+//								elementoClave2= new CompleteTextElementType(nombre, cGFinal);
+//								elementoClave2.setMultivalued(true);
+//								elementoClave2.setClassOfIterator(elementoClave);
+//								cGFinal.getSons().add(elementoClave2);
+//								
+//								if (sons!=null)
+//									for (int j = 0; j < sons.size(); j++) {
+//										JSONObject Objetolista = (JSONObject) sons.get(j);
+//										procesaElementoDescendant(cGFinal,elementoClave2,
+//												calculadora,Objetolista,listaGrammar,
+//												calculadoraFinal,tablaCruceElemtos);
+//									}
+//							
+//							}else
+//							{
+//								elementoClave2 = new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+//								elementoClave2.setMultivalued(true);
+//								elementoClave2.setClassOfIterator(elementoClave);
+//								elementoClavePadre.getSons().add(elementoClave2);
+//								
+//								if (sons!=null)
+//									for (int j = 0; j < sons.size(); j++) {
+//										JSONObject Objetolista = (JSONObject) sons.get(j);
+//										procesaElementoDescendant(cGFinal,elementoClave2,
+//												calculadora,Objetolista,listaGrammar,
+//												calculadoraFinal,tablaCruceElemtos);
+//									}
+//							}
+//							
+//							
+//							tablaCruceElemtos.put(completeElementType, elementoClave2);
+//						}
+//						
+//						}
+//					else
+//						
+						//FIN DEAD CODE
+						tablaCruceElemtos.put(CC, elementoClave);
+				}
+
+			
+		}
+		
 		
 		if (objetolista.get("grammar")==null)
 		{
@@ -446,7 +527,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 				for (int i = 0; i < sons.size(); i++) {
 					JSONObject Objetolista = (JSONObject) sons.get(i);
 					procesaElementoDescendant(cGFinal,elementoClave,
-							calculadora,Objetolista,listaGrammar,calculadoraFinal);
+							calculadora,Objetolista,listaGrammar,calculadoraFinal,tablaCruceElemtos);
 				}
 			
 		}
@@ -470,23 +551,47 @@ public class CollectionFHIR_PROCESALIMPIA {
 					for (int i = 0; i < sons.size(); i++) {
 						JSONObject Objetolista = (JSONObject) sons.get(i);
 						procesaElementoDescendant(cGFinal,elementoClave,calculadora
-								,Objetolista,listaGrammar,calculadoraFinal);
+								,Objetolista,listaGrammar,calculadoraFinal,tablaCruceElemtos);
 					}
 
 				
 				for (int i = 0; i < numero-1; i++) {
-					CompleteElementType elementoClave2 = new CompleteElementType(nombre, cGFinal);
-					elementoClave2.setMultivalued(true);
-					elementoClave2.setClassOfIterator(elementoClave);
-					cGFinal.getSons().add(elementoClave2);
-					listaCopias.add(elementoClave2);
 					
-					if (sons!=null)
-						for (int j = 0; j < sons.size(); j++) {
-							JSONObject Objetolista = (JSONObject) sons.get(j);
-							procesaElementoDescendant(cGFinal,elementoClave2,
-									calculadora,Objetolista,listaGrammar,calculadoraFinal);
-						}
+					if (elementoClavePadre==null)
+					{
+						CompleteElementType elementoClave2 = new CompleteElementType(nombre, cGFinal);
+						elementoClave2.setMultivalued(true);
+						elementoClave2.setClassOfIterator(elementoClave);
+						cGFinal.getSons().add(elementoClave2);
+						listaCopias.add(elementoClave2);
+						
+						if (sons!=null)
+							for (int j = 0; j < sons.size(); j++) {
+								JSONObject Objetolista = (JSONObject) sons.get(j);
+								procesaElementoDescendant(cGFinal,elementoClave2,
+										calculadora,Objetolista,listaGrammar,
+										calculadoraFinal,tablaCruceElemtos);
+							}
+						
+					}else
+					{
+						CompleteElementType elementoClave2 = new CompleteElementType(nombre,elementoClavePadre, cGFinal);
+						elementoClave2.setMultivalued(true);
+						elementoClave2.setClassOfIterator(elementoClave);
+						elementoClavePadre.getSons().add(elementoClave2);
+						listaCopias.add(elementoClave2);
+						
+						if (sons!=null)
+							for (int j = 0; j < sons.size(); j++) {
+								JSONObject Objetolista = (JSONObject) sons.get(j);
+								procesaElementoDescendant(cGFinal,elementoClave2,
+										calculadora,Objetolista,listaGrammar,
+										calculadoraFinal,tablaCruceElemtos);
+							}
+					}
+					
+					
+					
 				}
 				
 				
@@ -532,78 +637,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 		return null;
 	}
 
-//	private static void procesaHijos(JSONArray g_nuevac_hijos, CompleteGrammar cGFinal, CompleteCollection c,
-//			HashMap<Long, CompleteDocuments> listaCuadra, HashMap<Long, List<Long>> haciaDelanteReverse) {
-//		for (int i = 0; i < g_nuevac_hijos.size(); i++) {
-//			JSONObject array_element = (JSONObject) g_nuevac_hijos.get(i);
-//			
-//			
-//			String name = (String) array_element.get("name");
-//			String equi=null;
-//			if (array_element.get("eq")!=null)
-//				equi = (String) array_element.get("eq");
-//			String multitype = null;
-//			if (array_element.get("multitype")!=null)
-//				multitype = (String) array_element.get("multitype");
-//			
-//			if (equi==null)
-//				cGFinal.getSons().add(new CompleteElementType(name,cGFinal));
-//			else
-//			{
-//				CompleteElementType equiElem=null;
-//				equiElem =find(c.getMetamodelGrammar(),equi);
-//				if (equiElem!=null)
-//				{
-//				HashMap<Long, List<String>> document_values=colectValues(c,equiElem,listaCuadra,haciaDelanteReverse);
-//				}
-//			}
-//			
-//			
-//			
-//			
-//		}
-//		
-//	}
 
-//	private static HashMap<Long, List<String>> colectValues(CompleteCollection c, CompleteElementType equiElem,
-//			HashMap<Long, CompleteDocuments> listaCuadra, HashMap<Long, List<Long>> haciaDelanteReverse) {
-//		HashMap<Long, List<String>> Salida=new HashMap<Long, List<String>>();
-//		
-//		for (CompleteDocuments cd : c.getEstructuras()) {
-//			for (CompleteElement daleElemento : cd.getDescription()) {
-//				
-//				if (daleElemento.getHastype()==equiElem)
-//				{
-//					if (listaCuadra.containsKey(cd.getClavilenoid()))
-//						{
-//						Long id_docAdd=cd.getClavilenoid();
-//						List<String> minima=Salida.get(id_docAdd);
-//						if (minima==null)
-//							minima=new LinkedList<String>();
-//						if (daleElemento instanceof CompleteTextElement)
-//							minima.add(((CompleteTextElement) daleElemento).getValue());
-//						
-//						Salida.put(id_docAdd, minima);
-//						
-//						}
-//					else
-//						{
-//						
-//						List<Long> Enlazados=haciaDelanteReverse.get(cd.getClavilenoid());
-//
-//						for (iterable_type iterable_element : iterable) {
-//							
-//						}
-//						
-//						}
-//					
-//				}
-//				
-//			}
-//		}
-//		
-//		return Salida;
-//	}
 
 
 
