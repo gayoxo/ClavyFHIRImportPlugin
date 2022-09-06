@@ -222,14 +222,19 @@ public class CollectionFHIR_PROCESALIMPIA {
 				
 			}
 			
+			HashMap<CompleteGrammar,List<CompleteElementType>> calculadoraFinal=
+					new HashMap<CompleteGrammar, List<CompleteElementType>>();
 			
 			for (int i = 0; i < g_nuevac_hijos.size(); i++) {
 				JSONObject Objetolista = (JSONObject) g_nuevac_hijos.get(i);
-				procesaElementoDescendant(CGFinal,calculadora,Objetolista);
+				procesaElementoDescendant(CGFinal,calculadora,Objetolista,
+						c.getMetamodelGrammar(),calculadoraFinal);
 				
 			}
 			
+			System.out.println("->"+CGFinal.getNombre());
 			
+			printGrammar(CGFinal.getSons(),"->");
 			
 			
 			System.out.println("Calculos de Gramatica");
@@ -286,20 +291,42 @@ public class CollectionFHIR_PROCESALIMPIA {
 
 	
 
+	private static void printGrammar(List<CompleteElementType> sons, String string) {
+		String string2 = "-"+string;
+		for (CompleteElementType completeElementType : sons) {
+			String T="N";
+
+			if (completeElementType instanceof CompleteTextElementType)
+				T="T";
+			
+			System.out.println(string2+completeElementType.getName()+"---"+T);
+			printGrammar(completeElementType.getSons(), string2);
+		}
+		
+	}
+
+
+
 	private static void procesaElementoDescendant(CompleteGrammar cGFinal,
-			HashMap<CompleteGrammar, Integer> calculadora, JSONObject objetolista) {
+			HashMap<CompleteGrammar, Integer> calculadora, JSONObject objetolista,
+			List<CompleteGrammar> listaGrammar,
+			HashMap<CompleteGrammar,List<CompleteElementType>> calculadoraFinal) {
 		
 		
 //		System.out.println(objetolista.toJSONString());
 		String nombre = (String) objetolista.get("name");
-		JSONArray sons = (JSONArray) objetolista.get("sons");
+
+		JSONArray sons=null;
+		
+		if (objetolista.get("sons")!=null)
+			sons = (JSONArray) objetolista.get("sons");
 		
 		CompleteElementType elementoClave;
 		
-		if (objetolista.get("eq")==null)
-			elementoClave=new CompleteElementType(nombre, cGFinal);
-		else
+		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
 			elementoClave=new CompleteTextElementType(nombre, cGFinal);
+		else
+			elementoClave=new CompleteElementType(nombre, cGFinal);
 			
 			
 			
@@ -311,15 +338,59 @@ public class CollectionFHIR_PROCESALIMPIA {
 		{
 			
 			//caso seguimos enla gramatica que tenemos de base
-			
-			for (int i = 0; i < sons.size(); i++) {
-				JSONObject Objetolista = (JSONObject) sons.get(i);
-				procesaElementoDescendant(cGFinal,elementoClave,calculadora,Objetolista);
-			}
+			if (sons!=null)
+				for (int i = 0; i < sons.size(); i++) {
+					JSONObject Objetolista = (JSONObject) sons.get(i);
+					procesaElementoDescendant(cGFinal,elementoClave,calculadora,
+							Objetolista,listaGrammar,calculadoraFinal);
+				}
 			
 		}
 		else
 		{
+			CompleteGrammar CG=findGrammar(listaGrammar,(String) objetolista.get("grammar"));
+			if (CG!=null)
+			{
+				Integer numero=calculadora.get(CG);
+				if (numero==null)
+					numero=1;
+				
+				elementoClave.setMultivalued(true);
+				elementoClave.setClassOfIterator(elementoClave);
+				
+				List<CompleteElementType> listaCopias=new LinkedList<CompleteElementType>();
+				listaCopias.add(elementoClave);
+				
+				if (sons!=null)
+					for (int i = 0; i < sons.size(); i++) {
+						JSONObject Objetolista = (JSONObject) sons.get(i);
+						procesaElementoDescendant(cGFinal,elementoClave,calculadora
+								,Objetolista,listaGrammar,calculadoraFinal);
+					}
+
+				
+				for (int i = 0; i < numero-1; i++) {
+					CompleteElementType elementoClave2 = new CompleteElementType(nombre, cGFinal);
+					elementoClave2.setMultivalued(true);
+					elementoClave2.setClassOfIterator(elementoClave);
+					cGFinal.getSons().add(elementoClave2);
+					listaCopias.add(elementoClave2);
+					
+					if (sons!=null)
+						for (int j = 0; j < sons.size(); j++) {
+							JSONObject Objetolista = (JSONObject) sons.get(i);
+							procesaElementoDescendant(cGFinal,elementoClave2,
+									calculadora,Objetolista,listaGrammar,calculadoraFinal);
+						}
+				}
+				
+				
+				calculadoraFinal.put(CG, listaCopias);
+				
+				
+
+				
+			}
 			//ataca a otra gramatica de la calculadora
 		}
 		
@@ -328,20 +399,38 @@ public class CollectionFHIR_PROCESALIMPIA {
 
 
 
+	private static CompleteGrammar findGrammar(List<CompleteGrammar> listaGrammar,
+			String grammarnombrebuscar) {
+		for (CompleteGrammar completeGrammar : listaGrammar) {
+			if (completeGrammar.getNombre().equals(grammarnombrebuscar))
+				return completeGrammar;
+		}
+		return null;
+	}
+
+
+
 	private static void procesaElementoDescendant(CompleteGrammar cGFinal, CompleteElementType elementoClavePadre,
-			HashMap<CompleteGrammar, Integer> calculadora, JSONObject objetolista) {
+			HashMap<CompleteGrammar, Integer> calculadora, JSONObject objetolista,
+			List<CompleteGrammar> listaGrammar,
+			HashMap<CompleteGrammar,List<CompleteElementType>> calculadoraFinal) {
 //		System.out.println(objetolista.toJSONString());
 		String nombre = (String) objetolista.get("name");
 		
-		//AQUI FALTA UN IF PARA EL ULTIMO
-		JSONArray sons = (JSONArray) objetolista.get("sons");
+
+		JSONArray sons=null;
+		
+		if (objetolista.get("sons")!=null)
+			sons = (JSONArray) objetolista.get("sons");
 		
 		CompleteElementType elementoClave;
 		
-		if (objetolista.get("eq")==null)
-			elementoClave=new CompleteElementType(nombre,elementoClavePadre, cGFinal);
-		else
+		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
+			
 			elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+		else
+			elementoClave=new CompleteElementType(nombre,elementoClavePadre, cGFinal);
+
 			
 			
 			
@@ -353,16 +442,60 @@ public class CollectionFHIR_PROCESALIMPIA {
 		{
 			
 			//caso seguimos enla gramatica que tenemos de base
-			
-			for (int i = 0; i < sons.size(); i++) {
-				JSONObject Objetolista = (JSONObject) sons.get(i);
-				procesaElementoDescendant(cGFinal,elementoClave,calculadora,Objetolista);
-			}
+			if (sons!=null)
+				for (int i = 0; i < sons.size(); i++) {
+					JSONObject Objetolista = (JSONObject) sons.get(i);
+					procesaElementoDescendant(cGFinal,elementoClave,
+							calculadora,Objetolista,listaGrammar,calculadoraFinal);
+				}
 			
 		}
 		else
 		{
 			//ataca a otra gramatica de la calculadora
+			CompleteGrammar CG=findGrammar(listaGrammar,(String) objetolista.get("grammar"));
+			if (CG!=null)
+			{
+				Integer numero=calculadora.get(CG);
+				if (numero==null)
+					numero=1;
+				
+				elementoClave.setMultivalued(true);
+				elementoClave.setClassOfIterator(elementoClave);
+				
+				List<CompleteElementType> listaCopias=new LinkedList<CompleteElementType>();
+				listaCopias.add(elementoClave);
+				
+				if (sons!=null)
+					for (int i = 0; i < sons.size(); i++) {
+						JSONObject Objetolista = (JSONObject) sons.get(i);
+						procesaElementoDescendant(cGFinal,elementoClave,calculadora
+								,Objetolista,listaGrammar,calculadoraFinal);
+					}
+
+				
+				for (int i = 0; i < numero-1; i++) {
+					CompleteElementType elementoClave2 = new CompleteElementType(nombre, cGFinal);
+					elementoClave2.setMultivalued(true);
+					elementoClave2.setClassOfIterator(elementoClave);
+					cGFinal.getSons().add(elementoClave2);
+					listaCopias.add(elementoClave2);
+					
+					if (sons!=null)
+						for (int j = 0; j < sons.size(); j++) {
+							JSONObject Objetolista = (JSONObject) sons.get(j);
+							procesaElementoDescendant(cGFinal,elementoClave2,
+									calculadora,Objetolista,listaGrammar,calculadoraFinal);
+						}
+				}
+				
+				
+				calculadoraFinal.put(CG, listaCopias);
+				
+				
+
+				
+			}
 		}
 		
 	}
