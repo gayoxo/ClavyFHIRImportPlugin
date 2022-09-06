@@ -30,6 +30,7 @@ import fdi.ucm.server.modelComplete.collection.document.CompleteLinkElement;
 import fdi.ucm.server.modelComplete.collection.document.CompleteTextElement;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteGrammar;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 /**
  * @author jgayoso
@@ -221,6 +222,16 @@ public class CollectionFHIR_PROCESALIMPIA {
 				
 			}
 			
+			
+			for (int i = 0; i < g_nuevac_hijos.size(); i++) {
+				JSONObject Objetolista = (JSONObject) g_nuevac_hijos.get(i);
+				procesaElementoDescendant(CGFinal,calculadora,Objetolista);
+				
+			}
+			
+			
+			
+			
 			System.out.println("Calculos de Gramatica");
 			//calculos
 			for (Entry<CompleteGrammar, Integer> eleme : calculadora.entrySet()) {
@@ -274,6 +285,89 @@ public class CollectionFHIR_PROCESALIMPIA {
 	}
 
 	
+
+	private static void procesaElementoDescendant(CompleteGrammar cGFinal,
+			HashMap<CompleteGrammar, Integer> calculadora, JSONObject objetolista) {
+		
+		
+//		System.out.println(objetolista.toJSONString());
+		String nombre = (String) objetolista.get("name");
+		JSONArray sons = (JSONArray) objetolista.get("sons");
+		
+		CompleteElementType elementoClave;
+		
+		if (objetolista.get("eq")==null)
+			elementoClave=new CompleteElementType(nombre, cGFinal);
+		else
+			elementoClave=new CompleteTextElementType(nombre, cGFinal);
+			
+			
+			
+
+
+		cGFinal.getSons().add(elementoClave);
+		
+		if (objetolista.get("grammar")==null)
+		{
+			
+			//caso seguimos enla gramatica que tenemos de base
+			
+			for (int i = 0; i < sons.size(); i++) {
+				JSONObject Objetolista = (JSONObject) sons.get(i);
+				procesaElementoDescendant(cGFinal,elementoClave,calculadora,Objetolista);
+			}
+			
+		}
+		else
+		{
+			//ataca a otra gramatica de la calculadora
+		}
+		
+		
+	}
+
+
+
+	private static void procesaElementoDescendant(CompleteGrammar cGFinal, CompleteElementType elementoClavePadre,
+			HashMap<CompleteGrammar, Integer> calculadora, JSONObject objetolista) {
+//		System.out.println(objetolista.toJSONString());
+		String nombre = (String) objetolista.get("name");
+		
+		//AQUI FALTA UN IF PARA EL ULTIMO
+		JSONArray sons = (JSONArray) objetolista.get("sons");
+		
+		CompleteElementType elementoClave;
+		
+		if (objetolista.get("eq")==null)
+			elementoClave=new CompleteElementType(nombre,elementoClavePadre, cGFinal);
+		else
+			elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+			
+			
+			
+
+
+		elementoClavePadre.getSons().add(elementoClave);
+		
+		if (objetolista.get("grammar")==null)
+		{
+			
+			//caso seguimos enla gramatica que tenemos de base
+			
+			for (int i = 0; i < sons.size(); i++) {
+				JSONObject Objetolista = (JSONObject) sons.get(i);
+				procesaElementoDescendant(cGFinal,elementoClave,calculadora,Objetolista);
+			}
+			
+		}
+		else
+		{
+			//ataca a otra gramatica de la calculadora
+		}
+		
+	}
+
+
 
 	private static CompleteElementType find(List<CompleteGrammar> metamodelGrammar, String unionid) {
 		String[] splited = unionid.split("/");

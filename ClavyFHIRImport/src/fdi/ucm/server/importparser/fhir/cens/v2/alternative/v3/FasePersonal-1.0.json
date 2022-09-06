@@ -33,6 +33,7 @@
 				{
 					"name": "Observation",
 					"eq": "Observation",
+					"grammar": "Observation",
 					"multitype": "doc",
 					"sons": [
 					{
@@ -109,6 +110,7 @@
 		{
 			"name": "Images",
 			"eq": "Endpoint/address",
+			"grammar": "Endpoint",
 			"multitype": "doc",
 			"sons": [
 				{
@@ -120,6 +122,7 @@
 		{
 			"name": "Conditions",
 			"eq": "SNOMED",
+			"grammar": "SNOMED",
 			"multitype": "doc",
 			"sons": [
 				{
