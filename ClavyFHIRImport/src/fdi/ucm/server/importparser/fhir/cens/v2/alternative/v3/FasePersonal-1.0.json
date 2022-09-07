@@ -114,6 +114,10 @@
 				{
 					"name": "Description",
 					"eq": "Endpoint/name"
+				},
+				{
+					"name": "Image",
+					"eq": "Endpoint/address"
 				}
 			]
 		},

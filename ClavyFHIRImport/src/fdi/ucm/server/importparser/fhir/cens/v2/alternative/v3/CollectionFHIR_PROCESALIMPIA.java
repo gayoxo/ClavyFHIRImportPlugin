@@ -74,6 +74,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 						CompleteDocuments crear=new CompleteDocuments(nuevac, docucrea.getDescriptionText(), docucrea.getIcon());
 						
 						listaCuadra.put(docucrea, crear);
+						nuevac.getEstructuras().add(crear);
 					}
 				}
 			}
@@ -236,7 +237,43 @@ public class CollectionFHIR_PROCESALIMPIA {
 			}
 			
 			
-			
+			for (Entry<CompleteDocuments, CompleteDocuments> elemento : listaCuadra.entrySet()) {
+				CompleteDocuments original = elemento.getKey();
+				CompleteDocuments nuevo = elemento.getValue();
+				
+				for (CompleteElement cetetet : original.getDescription()) {
+					if (cetetet instanceof CompleteTextElement)
+						if (cetetet.getHastype() instanceof CompleteTextElementType &&
+								TablaCruceElemtos.get(cetetet.getHastype())!=null)
+						{
+							CompleteTextElement nuevoelementoAgrega=new CompleteTextElement(
+									(CompleteTextElementType) TablaCruceElemtos.get(cetetet.getHastype()),
+									((CompleteTextElement) cetetet).getValue());
+							nuevo.getDescription().add(nuevoelementoAgrega);
+						}
+				
+					
+				}
+				
+				Set<CompleteDocuments> listaMete = listaCuadraDoble.get(original);
+				
+				for (CompleteDocuments cdocumentoi : listaMete) {
+					for (CompleteElement cetetet : cdocumentoi.getDescription()) {
+						if (cetetet instanceof CompleteTextElement)
+							if (cetetet.getHastype() instanceof CompleteTextElementType &&
+									TablaCruceElemtos.get(cetetet.getHastype())!=null)
+							{
+								CompleteTextElement nuevoelementoAgrega=new CompleteTextElement(
+										(CompleteTextElementType) TablaCruceElemtos.get(cetetet.getHastype()),
+										((CompleteTextElement) cetetet).getValue());
+								nuevo.getDescription().add(nuevoelementoAgrega);
+							}
+					
+						
+					}
+				}
+				
+			}
 			
 			
 			System.out.println("Print Estructura");
@@ -249,47 +286,53 @@ public class CollectionFHIR_PROCESALIMPIA {
 				System.out.println("--"+elemenTableKeyval.getKey().getName()+"=="+elemenTableKeyval.getValue().getName());
 			}
 			
-			
-			
-			
-			System.out.println("Calculos de Gramatica");
-			//calculos
-			for (Entry<CompleteGrammar, Integer> eleme : calculadora.entrySet()) {
-				System.out.println("->"+eleme.getKey().getNombre()+"=="+eleme.getValue());
-			}
-			
-			
-			
-			HashMap<CompleteDocuments, Set<CompleteDocuments>> listaCuadraDobleRever=new HashMap<CompleteDocuments, Set<CompleteDocuments>>();
-			
-			for (Entry<CompleteDocuments, Set<CompleteDocuments>> entryreverse : listaCuadraDoble.entrySet()) {
-				for (CompleteDocuments docenuevakey : entryreverse.getValue()) {
-					Set<CompleteDocuments> listatemp=listaCuadraDobleRever.get(docenuevakey);
-					if (listatemp==null)
-						listatemp=new HashSet<CompleteDocuments>();
-					listatemp.add(entryreverse.getKey());
-					listaCuadraDobleRever.put(docenuevakey, listatemp);
+			System.out.println("Print Documentos");
+			for (Entry<CompleteDocuments, CompleteDocuments> elemento : listaCuadra.entrySet())
+				{
+				System.out.println("--S "+elemento.getValue().getDescriptionText());
+				for (CompleteElement cetetet : elemento.getValue().getDescription())
+					System.out.println("------S "+cetetet.getHastype().getName() +" ===" +((CompleteTextElement) cetetet).getValue());
 				}
-			}
 			
 			
-			
-			System.out.println("Lista Normal sobre A");
-			for (Entry<CompleteDocuments, Set<CompleteDocuments>> entryreverse : listaCuadraDoble.entrySet())  {
-				System.out.println("->"+entryreverse.getKey().getDescriptionText());
-				for (CompleteDocuments object : entryreverse.getValue()) {
-					System.out.println("------->"+object.getDescriptionText());
-				}
-			}
-			
-			
-			System.out.println("Lista Reverse sobre A");
-			for (Entry<CompleteDocuments, Set<CompleteDocuments>> entryreverse : listaCuadraDobleRever.entrySet())  {
-				System.out.println("->"+entryreverse.getKey().getDescriptionText());
-				for (CompleteDocuments object : entryreverse.getValue()) {
-					System.out.println("------->"+object.getDescriptionText());
-				}
-			}
+//			System.out.println("Calculos de Gramatica");
+//			//calculos
+//			for (Entry<CompleteGrammar, Integer> eleme : calculadora.entrySet()) {
+//				System.out.println("->"+eleme.getKey().getNombre()+"=="+eleme.getValue());
+//			}
+//			
+//			
+//			
+//			HashMap<CompleteDocuments, Set<CompleteDocuments>> listaCuadraDobleRever=new HashMap<CompleteDocuments, Set<CompleteDocuments>>();
+//			
+//			for (Entry<CompleteDocuments, Set<CompleteDocuments>> entryreverse : listaCuadraDoble.entrySet()) {
+//				for (CompleteDocuments docenuevakey : entryreverse.getValue()) {
+//					Set<CompleteDocuments> listatemp=listaCuadraDobleRever.get(docenuevakey);
+//					if (listatemp==null)
+//						listatemp=new HashSet<CompleteDocuments>();
+//					listatemp.add(entryreverse.getKey());
+//					listaCuadraDobleRever.put(docenuevakey, listatemp);
+//				}
+//			}
+//			
+//			
+//			
+//			System.out.println("Lista Normal sobre A");
+//			for (Entry<CompleteDocuments, Set<CompleteDocuments>> entryreverse : listaCuadraDoble.entrySet())  {
+//				System.out.println("->"+entryreverse.getKey().getDescriptionText());
+//				for (CompleteDocuments object : entryreverse.getValue()) {
+//					System.out.println("------->"+object.getDescriptionText());
+//				}
+//			}
+//			
+//			
+//			System.out.println("Lista Reverse sobre A");
+//			for (Entry<CompleteDocuments, Set<CompleteDocuments>> entryreverse : listaCuadraDobleRever.entrySet())  {
+//				System.out.println("->"+entryreverse.getKey().getDescriptionText());
+//				for (CompleteDocuments object : entryreverse.getValue()) {
+//					System.out.println("------->"+object.getDescriptionText());
+//				}
+//			}
 			
 			return nuevac;
 			
@@ -396,7 +439,11 @@ public class CollectionFHIR_PROCESALIMPIA {
 					String equivalunico=(String)listaEQ.get(0);
 					CompleteElementType CC=find(listaGrammar,equivalunico);
 					if (CC!=null)
-						tablaCruceElemtos.put(CC, elementoClave);
+						if (testMultievaluado(CC))
+							ProcesaCopiaMultievaluada(CC,listaGrammar,tablaCruceElemtos,elementoClave,
+									elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,nombre);
+						else
+							tablaCruceElemtos.put(CC, elementoClave);
 					
 					for (int k = 1; k < listaEQ.size(); k++) {
 						
@@ -437,8 +484,13 @@ public class CollectionFHIR_PROCESALIMPIA {
 						
 						String equivalunico2=(String)listaEQ.get(k);
 						CompleteElementType CC2=find(listaGrammar,equivalunico2);
+						
 						if (CC2!=null)
-							tablaCruceElemtos.put(CC2, elementoClave2);
+							if (testMultievaluado(CC2))
+								ProcesaCopiaMultievaluada(CC2,listaGrammar,tablaCruceElemtos,elementoClave2,
+										elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,nombre);
+							else
+								tablaCruceElemtos.put(CC2, elementoClave2);
 					}
 						
 					
@@ -448,71 +500,14 @@ public class CollectionFHIR_PROCESALIMPIA {
 				CompleteElementType CC=find(listaGrammar,(String)objetolista.get("eq"));
 				
 				
-				///TODO DEAD CODE
-//				if (CC!=null)
-//					if (CC.isMultivalued())
-//						{
-//						CC=CC.getClassOfIterator();
-//						List<CompleteElementType> listaMulti=new LinkedList<CompleteElementType>();
-//						CompleteElementType padre = CC.getFather();
-//						List<CompleteElementType> ListaHijos = null;
-//						if (padre!=null)
-//							ListaHijos=padre.getSons();
-//						else
-//							ListaHijos=CC.getCollectionFather().getSons();
-//						
-//						listaMulti.add(CC);
-//						for (CompleteElementType completeElementType : ListaHijos) 
-//							if (completeElementType.getClassOfIterator()==CC&&completeElementType!=CC)
-//								listaMulti.add(completeElementType);
-//						
-//						tablaCruceElemtos.put(CC, elementoClave);
-//						
-//						for (CompleteElementType completeElementType : listaMulti) {
-//							
-//							CompleteElementType elementoClave2;
-//							
-//							if (elementoClavePadre==null)
-//							{
-//							
-//								elementoClave2= new CompleteTextElementType(nombre, cGFinal);
-//								elementoClave2.setMultivalued(true);
-//								elementoClave2.setClassOfIterator(elementoClave);
-//								cGFinal.getSons().add(elementoClave2);
-//								
-//								if (sons!=null)
-//									for (int j = 0; j < sons.size(); j++) {
-//										JSONObject Objetolista = (JSONObject) sons.get(j);
-//										procesaElementoDescendant(cGFinal,elementoClave2,
-//												calculadora,Objetolista,listaGrammar,
-//												calculadoraFinal,tablaCruceElemtos);
-//									}
-//							
-//							}else
-//							{
-//								elementoClave2 = new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
-//								elementoClave2.setMultivalued(true);
-//								elementoClave2.setClassOfIterator(elementoClave);
-//								elementoClavePadre.getSons().add(elementoClave2);
-//								
-//								if (sons!=null)
-//									for (int j = 0; j < sons.size(); j++) {
-//										JSONObject Objetolista = (JSONObject) sons.get(j);
-//										procesaElementoDescendant(cGFinal,elementoClave2,
-//												calculadora,Objetolista,listaGrammar,
-//												calculadoraFinal,tablaCruceElemtos);
-//									}
-//							}
-//							
-//							
-//							tablaCruceElemtos.put(completeElementType, elementoClave2);
-//						}
-//						
-//						}
-//					else
-//						
-						//FIN DEAD CODE
+				if (CC!=null)
+					if (testMultievaluado(CC))
+						ProcesaCopiaMultievaluada(CC,listaGrammar,tablaCruceElemtos,elementoClave,
+								elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,nombre);
+					else
 						tablaCruceElemtos.put(CC, elementoClave);
+
+						
 				}
 
 			
@@ -601,6 +596,104 @@ public class CollectionFHIR_PROCESALIMPIA {
 
 				
 			}
+		}
+		
+	}
+
+
+
+	private static boolean testMultievaluado(CompleteElementType cC) {
+		if (cC.isMultivalued())
+			return true;
+		else
+			if (cC.getFather()!=null)
+				return testMultievaluado(cC.getFather());
+			else
+				return false;
+	}
+
+
+
+	private static void ProcesaCopiaMultievaluada(CompleteElementType cC, List<CompleteGrammar> listaGrammar,
+			HashMap<CompleteElementType, CompleteElementType> tablaCruceElemtos,
+			CompleteElementType elementoClave,
+			CompleteElementType elementoClavePadre,
+			CompleteGrammar cGFinal,JSONArray sons,
+			HashMap<CompleteGrammar, Integer> calculadora, HashMap<CompleteGrammar,
+			List<CompleteElementType>> calculadoraFinal,
+			String nombre) {
+		
+		if (cC.getClassOfIterator()!=null)
+			cC=cC.getClassOfIterator();
+		
+		List<CompleteElementType> listaMulti=new LinkedList<CompleteElementType>();
+		
+		findList(listaGrammar,cC,listaMulti);
+		
+		listaMulti.remove(cC);
+		
+		tablaCruceElemtos.put(cC, elementoClave);
+		
+		for (CompleteElementType completeElementType : listaMulti) {
+			
+			CompleteElementType elementoClave2;
+			
+			if (elementoClavePadre==null)
+			{
+			
+				elementoClave2= new CompleteTextElementType(nombre, cGFinal);
+				elementoClave2.setMultivalued(true);
+				elementoClave2.setClassOfIterator(elementoClave);
+				cGFinal.getSons().add(elementoClave2);
+				
+				if (sons!=null)
+					for (int j = 0; j < sons.size(); j++) {
+						JSONObject Objetolista = (JSONObject) sons.get(j);
+						procesaElementoDescendant(cGFinal,elementoClave2,
+								calculadora,Objetolista,listaGrammar,
+								calculadoraFinal,tablaCruceElemtos);
+					}
+			
+			}else
+			{
+				elementoClave2 = new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+				elementoClave2.setMultivalued(true);
+				elementoClave2.setClassOfIterator(elementoClave);
+				elementoClavePadre.getSons().add(elementoClave2);
+				
+				if (sons!=null)
+					for (int j = 0; j < sons.size(); j++) {
+						JSONObject Objetolista = (JSONObject) sons.get(j);
+						procesaElementoDescendant(cGFinal,elementoClave2,
+								calculadora,Objetolista,listaGrammar,
+								calculadoraFinal,tablaCruceElemtos);
+					}
+			}
+			
+			tablaCruceElemtos.put(completeElementType, elementoClave2);
+			
+		}
+
+	}
+
+
+
+	private static void findList(List<CompleteGrammar> listaGrammar,
+			CompleteElementType cC, List<CompleteElementType> listaMulti) {
+		for (CompleteGrammar completeGrammar : listaGrammar) {
+			findListEL(completeGrammar.getSons(),cC,listaMulti);
+		}
+	}
+
+
+
+	private static void findListEL(List<CompleteElementType> sons, CompleteElementType cC,
+			List<CompleteElementType> listaMulti) {
+		for (CompleteElementType completeElementType : sons) {
+			if (completeElementType.getClassOfIterator()==cC)
+				listaMulti.add(completeElementType);
+			
+			findListEL(completeElementType.getSons(), cC, listaMulti);
 		}
 		
 	}
