@@ -27,9 +27,12 @@ import fdi.ucm.server.modelComplete.collection.document.CompleteDocuments;
 import fdi.ucm.server.modelComplete.collection.document.CompleteElement;
 import fdi.ucm.server.modelComplete.collection.document.CompleteFile;
 import fdi.ucm.server.modelComplete.collection.document.CompleteLinkElement;
+import fdi.ucm.server.modelComplete.collection.document.CompleteResourceElementFile;
+import fdi.ucm.server.modelComplete.collection.document.CompleteResourceElementURL;
 import fdi.ucm.server.modelComplete.collection.document.CompleteTextElement;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteGrammar;
+import fdi.ucm.server.modelComplete.collection.grammar.CompleteResourceElementType;
 import fdi.ucm.server.modelComplete.collection.grammar.CompleteTextElementType;
 
 /**
@@ -250,7 +253,23 @@ public class CollectionFHIR_PROCESALIMPIA {
 									(CompleteTextElementType) TablaCruceElemtos.get(cetetet.getHastype()),
 									((CompleteTextElement) cetetet).getValue());
 							nuevo.getDescription().add(nuevoelementoAgrega);
+						}else {
+							
 						}
+						else
+							if (cetetet.getHastype() instanceof CompleteResourceElementType)
+								if (TablaCruceElemtos.get(cetetet.getHastype())!=null)
+								{
+									CompleteElement nuevoelementoAgrega;
+									
+									if (cetetet instanceof CompleteResourceElementFile)
+										nuevoelementoAgrega=new CompleteResourceElementFile((CompleteResourceElementType)TablaCruceElemtos.get(cetetet.getHastype()),
+												((CompleteResourceElementFile) cetetet).getValue());
+									else
+										nuevoelementoAgrega=new CompleteResourceElementURL((CompleteResourceElementType)TablaCruceElemtos.get(cetetet.getHastype()),
+												((CompleteResourceElementURL) cetetet).getValue());
+									nuevo.getDescription().add(nuevoelementoAgrega);
+								}
 				
 					
 				}
@@ -267,7 +286,23 @@ public class CollectionFHIR_PROCESALIMPIA {
 										(CompleteTextElementType) TablaCruceElemtos.get(cetetet.getHastype()),
 										((CompleteTextElement) cetetet).getValue());
 								nuevo.getDescription().add(nuevoelementoAgrega);
+							}else {
+								
 							}
+							else
+								if (cetetet.getHastype() instanceof CompleteResourceElementType)
+									if (TablaCruceElemtos.get(cetetet.getHastype())!=null)
+									{
+										CompleteElement nuevoelementoAgrega;
+										
+										if (cetetet instanceof CompleteResourceElementFile)
+											nuevoelementoAgrega=new CompleteResourceElementFile((CompleteResourceElementType)TablaCruceElemtos.get(cetetet.getHastype()),
+													((CompleteResourceElementFile) cetetet).getValue());
+										else
+											nuevoelementoAgrega=new CompleteResourceElementURL((CompleteResourceElementType)TablaCruceElemtos.get(cetetet.getHastype()),
+													((CompleteResourceElementURL) cetetet).getValue());
+										nuevo.getDescription().add(nuevoelementoAgrega);
+									}
 					
 						
 					}
@@ -290,8 +325,14 @@ public class CollectionFHIR_PROCESALIMPIA {
 			for (Entry<CompleteDocuments, CompleteDocuments> elemento : listaCuadra.entrySet())
 				{
 				System.out.println("--S "+elemento.getValue().getDescriptionText());
-				for (CompleteElement cetetet : elemento.getValue().getDescription())
-					System.out.println("------S "+cetetet.getHastype().getName() +" ===" +((CompleteTextElement) cetetet).getValue());
+				for (CompleteElement cetetet : elemento.getValue().getDescription()) {
+					if (cetetet instanceof CompleteTextElement)
+						System.out.println("------S "+cetetet.getHastype().getName() +" ===" +((CompleteTextElement) cetetet).getValue());
+					if (cetetet instanceof CompleteResourceElementURL)
+						System.out.println("------S "+cetetet.getHastype().getName() +" ===" +((CompleteResourceElementURL) cetetet).getValue());
+					if (cetetet instanceof CompleteResourceElementFile)
+						System.out.println("------S "+cetetet.getHastype().getName() +" ===" +((CompleteResourceElementFile) cetetet).getValue().getPath());
+				}
 				}
 			
 			
@@ -394,65 +435,130 @@ public class CollectionFHIR_PROCESALIMPIA {
 		if (objetolista.get("sons")!=null)
 			sons = (JSONArray) objetolista.get("sons");
 		
+		
+		
+//		// Aqui calculo el primero muy alegremente
+//		CompleteElementType elementoClave;
+//		
+//		if (elementoClavePadre==null)
+//		{
+//			//Padre Gramatica
+//			if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
+//				elementoClave=new CompleteTextElementType(nombre, cGFinal);
+//	
+//			else
+//				elementoClave=new CompleteElementType(nombre, cGFinal);
+//
+//			cGFinal.getSons().add(elementoClave);
+//			
+//		}
+//		else
+//		{
+//		
+//		//Padre Elemento Ahora esta abajo dentro del siguiente if, porque necesito saber si es TEXT o NO
+//
+//		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
+//			elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+//			
+//		else
+//			elementoClave=new CompleteElementType(nombre,elementoClavePadre, cGFinal);
+//
+//
+//		elementoClavePadre.getSons().add(elementoClave);
+//		}
+		
 		CompleteElementType elementoClave;
 		
-		if (elementoClavePadre==null)
-		{
-			//Padre Gramatica
-			if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
-				elementoClave=new CompleteTextElementType(nombre, cGFinal);
-	
-			else
-				elementoClave=new CompleteElementType(nombre, cGFinal);
-
-			cGFinal.getSons().add(elementoClave);
-			
-		}
-		else
-		{
-		
-		//Padre Elemento
-
-		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
-			
-			elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
-		else
-			elementoClave=new CompleteElementType(nombre,elementoClavePadre, cGFinal);
-
-
-		elementoClavePadre.getSons().add(elementoClave);
-		}
-		
 		
 		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
 		{
+			
+			boolean _isResource=false;
 			
 
 			if (objetolista.get("eq") instanceof JSONArray)
 					{
 					
-					elementoClave.setMultivalued(true);
-					elementoClave.setClassOfIterator(elementoClave);
+				
+					
 					
 					JSONArray listaEQ = (JSONArray)objetolista.get("eq");
 					
 					String equivalunico=(String)listaEQ.get(0);
 					CompleteElementType CC=find(listaGrammar,equivalunico);
+					
+					if (CC instanceof CompleteResourceElementType)
+						_isResource=true;
+					
+					
+					
+					if (elementoClavePadre==null)
+					{
+						//Padre Gramatica
+							if (!_isResource)
+								elementoClave=new CompleteTextElementType(nombre, cGFinal);
+							else
+								elementoClave=new CompleteResourceElementType(nombre, cGFinal);
+				
+
+			
+						cGFinal.getSons().add(elementoClave);
+						
+					}
+					else
+					{
+					
+					//Padre Elemento Ahora esta abajo dentro del siguiente if, porque necesito saber si es TEXT o NO
+			
+						if (!_isResource)
+							elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+						else
+							elementoClave=new CompleteResourceElementType(nombre,elementoClavePadre, cGFinal);
+
+			
+			
+					elementoClavePadre.getSons().add(elementoClave);
+					}
+					
+					
+					elementoClave.setMultivalued(true);
+					elementoClave.setClassOfIterator(elementoClave);
+					
+					
+
+					
+					
 					if (CC!=null)
 						if (testMultievaluado(CC))
 							ProcesaCopiaMultievaluada(CC,listaGrammar,tablaCruceElemtos,elementoClave,
-									elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,nombre);
+									elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,
+									nombre,_isResource);
 						else
 							tablaCruceElemtos.put(CC, elementoClave);
 					
 					for (int k = 1; k < listaEQ.size(); k++) {
+						
+						
+						
+						String equivalunico2=(String)listaEQ.get(k);
+						CompleteElementType CC2=find(listaGrammar,equivalunico2);
+						
+						boolean _isResource2=false;
+						
+						if (CC2 instanceof CompleteResourceElementType)
+							_isResource2=true;
+						
 						
 						CompleteElementType elementoClave2;
 						
 						if (elementoClavePadre==null)
 						{
 						
-							elementoClave2= new CompleteTextElementType(nombre, cGFinal);
+							if (!_isResource)
+								elementoClave2= new CompleteTextElementType(nombre, cGFinal);
+							else
+								elementoClave2= new CompleteResourceElementType(nombre, cGFinal);
+							
 							elementoClave2.setMultivalued(true);
 							elementoClave2.setClassOfIterator(elementoClave);
 							cGFinal.getSons().add(elementoClave2);
@@ -467,7 +573,11 @@ public class CollectionFHIR_PROCESALIMPIA {
 						
 						}else
 						{
-							elementoClave2 = new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+							if (!_isResource)
+								elementoClave2 = new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+							else
+								elementoClave2 = new CompleteResourceElementType(nombre,elementoClavePadre, cGFinal);
+
 							elementoClave2.setMultivalued(true);
 							elementoClave2.setClassOfIterator(elementoClave);
 							elementoClavePadre.getSons().add(elementoClave2);
@@ -482,13 +592,11 @@ public class CollectionFHIR_PROCESALIMPIA {
 						}
 						
 						
-						String equivalunico2=(String)listaEQ.get(k);
-						CompleteElementType CC2=find(listaGrammar,equivalunico2);
 						
 						if (CC2!=null)
 							if (testMultievaluado(CC2))
 								ProcesaCopiaMultievaluada(CC2,listaGrammar,tablaCruceElemtos,elementoClave2,
-										elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,nombre);
+										elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,nombre,_isResource2);
 							else
 								tablaCruceElemtos.put(CC2, elementoClave2);
 					}
@@ -496,14 +604,51 @@ public class CollectionFHIR_PROCESALIMPIA {
 					
 				}else
 				{
+					
+				
 
 				CompleteElementType CC=find(listaGrammar,(String)objetolista.get("eq"));
+				
+				if (CC instanceof CompleteResourceElementType)
+					_isResource=true;
+				
+				
+				if (elementoClavePadre==null)
+				{
+					//Padre Gramatica
+						if (!_isResource)
+							elementoClave=new CompleteTextElementType(nombre, cGFinal);
+						else
+							elementoClave=new CompleteResourceElementType(nombre, cGFinal);
+
+		
+					cGFinal.getSons().add(elementoClave);
+					
+				}
+				else
+				{
+				
+				//Padre Elemento Ahora esta abajo dentro del siguiente if, porque necesito saber si es TEXT o NO
+		
+
+					if (!_isResource)
+						elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+					else
+						elementoClave=new CompleteResourceElementType(nombre,elementoClavePadre, cGFinal);
+
+
+		
+		
+				elementoClavePadre.getSons().add(elementoClave);
+				}
+				
 				
 				
 				if (CC!=null)
 					if (testMultievaluado(CC))
 						ProcesaCopiaMultievaluada(CC,listaGrammar,tablaCruceElemtos,elementoClave,
-								elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,nombre);
+								elementoClavePadre,cGFinal,sons,calculadora,
+								calculadoraFinal,nombre,_isResource);
 					else
 						tablaCruceElemtos.put(CC, elementoClave);
 
@@ -511,7 +656,31 @@ public class CollectionFHIR_PROCESALIMPIA {
 				}
 
 			
-		}
+		}else
+			{
+			
+			if (elementoClavePadre==null)
+			{
+				//Padre Gramatica
+
+					elementoClave=new CompleteElementType(nombre, cGFinal);
+	
+				cGFinal.getSons().add(elementoClave);
+				
+			}
+			else
+			{
+			
+			//Padre Elemento Ahora esta abajo dentro del siguiente if, porque necesito saber si es TEXT o NO
+
+				elementoClave=new CompleteElementType(nombre,elementoClavePadre, cGFinal);
+	
+	
+			elementoClavePadre.getSons().add(elementoClave);
+			}
+			
+			
+			}
 		
 		
 		if (objetolista.get("grammar")==null)
@@ -621,7 +790,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 			CompleteGrammar cGFinal,JSONArray sons,
 			HashMap<CompleteGrammar, Integer> calculadora, HashMap<CompleteGrammar,
 			List<CompleteElementType>> calculadoraFinal,
-			String nombre) {
+			String nombre, boolean _isResource) {
 		
 		if (cC.getClassOfIterator()!=null)
 			cC=cC.getClassOfIterator();
@@ -641,7 +810,11 @@ public class CollectionFHIR_PROCESALIMPIA {
 			if (elementoClavePadre==null)
 			{
 			
-				elementoClave2= new CompleteTextElementType(nombre, cGFinal);
+				if (!_isResource)
+					elementoClave2= new CompleteTextElementType(nombre, cGFinal);
+				else
+					elementoClave2= new CompleteResourceElementType(nombre, cGFinal);
+
 				elementoClave2.setMultivalued(true);
 				elementoClave2.setClassOfIterator(elementoClave);
 				cGFinal.getSons().add(elementoClave2);
@@ -656,7 +829,11 @@ public class CollectionFHIR_PROCESALIMPIA {
 			
 			}else
 			{
-				elementoClave2 = new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+				if (!_isResource)
+					elementoClave2 = new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+				else
+					elementoClave2 = new CompleteResourceElementType(nombre,elementoClavePadre, cGFinal);
+
 				elementoClave2.setMultivalued(true);
 				elementoClave2.setClassOfIterator(elementoClave);
 				elementoClavePadre.getSons().add(elementoClave2);
