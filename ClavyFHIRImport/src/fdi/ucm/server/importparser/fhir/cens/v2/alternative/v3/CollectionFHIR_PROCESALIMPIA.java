@@ -61,7 +61,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 			String unionid = (String) obj.get("unionid");
 			
 		    CompleteElementType ID=null;
-		    ID =find(c.getMetamodelGrammar(),unionid);
+		    ID =find(c.getMetamodelGrammar(),unionid,null);
 		    
 
 			
@@ -234,7 +234,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 			
 			for (int i = 0; i < g_nuevac_hijos.size(); i++) {
 				JSONObject Objetolista = (JSONObject) g_nuevac_hijos.get(i);
-				procesaElementoDescendant(CGFinal,null,calculadora,Objetolista,
+				procesaElementoDescendant(CGFinal,null,null,calculadora,Objetolista,
 						c.getMetamodelGrammar(),calculadoraFinal,TablaCruceElemtos);
 				
 			}
@@ -421,7 +421,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 
 
 
-	private static void procesaElementoDescendant(CompleteGrammar cGFinal, CompleteElementType elementoClavePadre,
+	private static void procesaElementoDescendant(CompleteGrammar cGFinal, CompleteElementType elementoClavePadre, CompleteElementType padreReal,
 			HashMap<CompleteGrammar, Integer> calculadora, JSONObject objetolista,
 			List<CompleteGrammar> listaGrammar,
 			HashMap<CompleteGrammar,List<CompleteElementType>> calculadoraFinal,
@@ -437,43 +437,16 @@ public class CollectionFHIR_PROCESALIMPIA {
 		
 		
 		
-//		// Aqui calculo el primero muy alegremente
-//		CompleteElementType elementoClave;
-//		
-//		if (elementoClavePadre==null)
-//		{
-//			//Padre Gramatica
-//			if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
-//				elementoClave=new CompleteTextElementType(nombre, cGFinal);
-//	
-//			else
-//				elementoClave=new CompleteElementType(nombre, cGFinal);
-//
-//			cGFinal.getSons().add(elementoClave);
-//			
-//		}
-//		else
-//		{
-//		
-//		//Padre Elemento Ahora esta abajo dentro del siguiente if, porque necesito saber si es TEXT o NO
-//
-//		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
-//			elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
-//			
-//		else
-//			elementoClave=new CompleteElementType(nombre,elementoClavePadre, cGFinal);
-//
-//
-//		elementoClavePadre.getSons().add(elementoClave);
-//		}
+
 		
-		CompleteElementType elementoClave;
+		CompleteElementType elementoClave = null;
 		
 		
 		if (objetolista.get("eq")!=null&&objetolista.get("grammar")==null)
 		{
 			
 			boolean _isResource=false;
+			boolean _isText=false;
 			
 
 			if (objetolista.get("eq") instanceof JSONArray)
@@ -485,21 +458,28 @@ public class CollectionFHIR_PROCESALIMPIA {
 					JSONArray listaEQ = (JSONArray)objetolista.get("eq");
 					
 					String equivalunico=(String)listaEQ.get(0);
-					CompleteElementType CC=find(listaGrammar,equivalunico);
+					CompleteElementType CC=find(listaGrammar,equivalunico,padreReal);
 					
 					if (CC instanceof CompleteResourceElementType)
 						_isResource=true;
+					
+					if (CC instanceof CompleteTextElementType)
+						_isText=true;
 					
 					
 					
 					if (elementoClavePadre==null)
 					{
 						//Padre Gramatica
-							if (!_isResource)
-								elementoClave=new CompleteTextElementType(nombre, cGFinal);
-							else
+							if (_isResource)
 								elementoClave=new CompleteResourceElementType(nombre, cGFinal);
-				
+							
+							if (_isText)
+								elementoClave=new CompleteTextElementType(nombre, cGFinal);
+
+								
+							if (elementoClave==null)
+								elementoClave=new CompleteElementType(nombre, cGFinal);
 
 			
 						cGFinal.getSons().add(elementoClave);
@@ -510,10 +490,15 @@ public class CollectionFHIR_PROCESALIMPIA {
 					
 					//Padre Elemento Ahora esta abajo dentro del siguiente if, porque necesito saber si es TEXT o NO
 			
-						if (!_isResource)
-							elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
-						else
+						if (_isResource)
 							elementoClave=new CompleteResourceElementType(nombre,elementoClavePadre, cGFinal);
+						
+						if (_isText)
+							elementoClave=new CompleteTextElementType(nombre,elementoClavePadre, cGFinal);
+			
+							
+						if (elementoClave==null)
+							elementoClave=new CompleteElementType(nombre,elementoClavePadre, cGFinal);
 
 			
 			
@@ -541,7 +526,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 						
 						
 						String equivalunico2=(String)listaEQ.get(k);
-						CompleteElementType CC2=find(listaGrammar,equivalunico2);
+						CompleteElementType CC2=find(listaGrammar,equivalunico2,padreReal);
 						
 						boolean _isResource2=false;
 						
@@ -566,7 +551,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 							if (sons!=null)
 								for (int j = 0; j < sons.size(); j++) {
 									JSONObject Objetolista = (JSONObject) sons.get(j);
-									procesaElementoDescendant(cGFinal,elementoClave2,
+									procesaElementoDescendant(cGFinal,elementoClave2,null,
 											calculadora,Objetolista,listaGrammar,
 											calculadoraFinal,tablaCruceElemtos);
 								}
@@ -585,7 +570,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 							if (sons!=null)
 								for (int j = 0; j < sons.size(); j++) {
 									JSONObject Objetolista = (JSONObject) sons.get(j);
-									procesaElementoDescendant(cGFinal,elementoClave2,
+									procesaElementoDescendant(cGFinal,elementoClave2,null,
 											calculadora,Objetolista,listaGrammar,
 											calculadoraFinal,tablaCruceElemtos);
 								}
@@ -607,7 +592,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 					
 				
 
-				CompleteElementType CC=find(listaGrammar,(String)objetolista.get("eq"));
+				CompleteElementType CC=find(listaGrammar,(String)objetolista.get("eq"),padreReal);
 				
 				if (CC instanceof CompleteResourceElementType)
 					_isResource=true;
@@ -690,7 +675,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 			if (sons!=null)
 				for (int i = 0; i < sons.size(); i++) {
 					JSONObject Objetolista = (JSONObject) sons.get(i);
-					procesaElementoDescendant(cGFinal,elementoClave,
+					procesaElementoDescendant(cGFinal,elementoClave,null,
 							calculadora,Objetolista,listaGrammar,calculadoraFinal,tablaCruceElemtos);
 				}
 			
@@ -714,7 +699,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 				if (sons!=null)
 					for (int i = 0; i < sons.size(); i++) {
 						JSONObject Objetolista = (JSONObject) sons.get(i);
-						procesaElementoDescendant(cGFinal,elementoClave,calculadora
+						procesaElementoDescendant(cGFinal,elementoClave,null,calculadora
 								,Objetolista,listaGrammar,calculadoraFinal,tablaCruceElemtos);
 					}
 
@@ -732,7 +717,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 						if (sons!=null)
 							for (int j = 0; j < sons.size(); j++) {
 								JSONObject Objetolista = (JSONObject) sons.get(j);
-								procesaElementoDescendant(cGFinal,elementoClave2,
+								procesaElementoDescendant(cGFinal,elementoClave2,null,
 										calculadora,Objetolista,listaGrammar,
 										calculadoraFinal,tablaCruceElemtos);
 							}
@@ -748,7 +733,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 						if (sons!=null)
 							for (int j = 0; j < sons.size(); j++) {
 								JSONObject Objetolista = (JSONObject) sons.get(j);
-								procesaElementoDescendant(cGFinal,elementoClave2,
+								procesaElementoDescendant(cGFinal,elementoClave2,null,
 										calculadora,Objetolista,listaGrammar,
 										calculadoraFinal,tablaCruceElemtos);
 							}
@@ -799,9 +784,9 @@ public class CollectionFHIR_PROCESALIMPIA {
 		
 		findList(listaGrammar,cC,listaMulti);
 		
-		listaMulti.remove(cC);
+//		listaMulti.remove(cC);
 		
-		tablaCruceElemtos.put(cC, elementoClave);
+//		tablaCruceElemtos.put(cC, elementoClave);
 		
 		for (CompleteElementType completeElementType : listaMulti) {
 			
@@ -822,7 +807,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 				if (sons!=null)
 					for (int j = 0; j < sons.size(); j++) {
 						JSONObject Objetolista = (JSONObject) sons.get(j);
-						procesaElementoDescendant(cGFinal,elementoClave2,
+						procesaElementoDescendant(cGFinal,elementoClave2,completeElementType,
 								calculadora,Objetolista,listaGrammar,
 								calculadoraFinal,tablaCruceElemtos);
 					}
@@ -841,7 +826,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 				if (sons!=null)
 					for (int j = 0; j < sons.size(); j++) {
 						JSONObject Objetolista = (JSONObject) sons.get(j);
-						procesaElementoDescendant(cGFinal,elementoClave2,
+						procesaElementoDescendant(cGFinal,elementoClave2,completeElementType,
 								calculadora,Objetolista,listaGrammar,
 								calculadoraFinal,tablaCruceElemtos);
 					}
@@ -877,13 +862,41 @@ public class CollectionFHIR_PROCESALIMPIA {
 
 
 
-	private static CompleteElementType find(List<CompleteGrammar> metamodelGrammar, String unionid) {
+	private static CompleteElementType find(List<CompleteGrammar> metamodelGrammar,
+			String unionid, CompleteElementType father) {
 		String[] splited = unionid.split("/");
 		Queue<String> queue = new LinkedList<>(Arrays.asList(splited));
 		String grammar = queue.poll();
 		for (CompleteGrammar completeGrammar : metamodelGrammar) {
 			if (grammar.equals(completeGrammar.getNombre()))
-				return find(completeGrammar.getSons(),(Queue<String>) new LinkedList<String>(queue));
+				if (father == null)
+					return find(completeGrammar.getSons(),(Queue<String>) new LinkedList<String>(queue));
+				else
+					return find(completeGrammar.getSons(),
+							(Queue<String>) new LinkedList<String>(queue),father);
+					
+		}
+		return null;
+	}
+
+
+
+	private static CompleteElementType find(ArrayList<CompleteElementType> sons,
+			Queue<String> queue, CompleteElementType father) {
+		String elem=queue.poll();
+		for (CompleteElementType celemEva : sons) {
+			if (celemEva.getName().equals(elem)&&celemEva.getFather()==father)
+				if (queue.isEmpty())
+					{
+					return celemEva;
+					}
+				else
+					{ 
+					CompleteElementType salida=find(celemEva.getSons(), new LinkedList<String>(queue));
+							if (salida!=null)
+								return salida;
+					}
+			
 		}
 		return null;
 	}
