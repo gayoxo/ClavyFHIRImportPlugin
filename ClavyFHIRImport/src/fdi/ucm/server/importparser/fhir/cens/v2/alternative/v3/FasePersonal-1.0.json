@@ -127,7 +127,7 @@
 			"grammar": "SNOMED",
 			"sons": [
 				{
-					"name": "Description term",
+					"name": "Condition Value",
 					"eq": "SNOMED/term"
 				}
 			]

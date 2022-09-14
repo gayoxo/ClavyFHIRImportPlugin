@@ -511,12 +511,12 @@ public class CollectionFHIR_PROCESALIMPIA {
 					
 					
 
-					
+					//Aqui esta el rollo a pensar
 					
 					if (CC!=null)
 						if (testMultievaluado(CC))
 							ProcesaCopiaMultievaluada(CC,listaGrammar,tablaCruceElemtos,elementoClave,
-									elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,
+									elementoClavePadre,padreReal,cGFinal,sons,calculadora,calculadoraFinal,
 									nombre,_isResource);
 						else
 							tablaCruceElemtos.put(CC, elementoClave);
@@ -527,6 +527,10 @@ public class CollectionFHIR_PROCESALIMPIA {
 						
 						String equivalunico2=(String)listaEQ.get(k);
 						CompleteElementType CC2=find(listaGrammar,equivalunico2,padreReal);
+						
+						
+						
+						
 						
 						boolean _isResource2=false;
 						
@@ -581,7 +585,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 						if (CC2!=null)
 							if (testMultievaluado(CC2))
 								ProcesaCopiaMultievaluada(CC2,listaGrammar,tablaCruceElemtos,elementoClave2,
-										elementoClavePadre,cGFinal,sons,calculadora,calculadoraFinal,nombre,_isResource2);
+										elementoClavePadre,padreReal,cGFinal,sons,calculadora,calculadoraFinal,nombre,_isResource2);
 							else
 								tablaCruceElemtos.put(CC2, elementoClave2);
 					}
@@ -632,7 +636,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 				if (CC!=null)
 					if (testMultievaluado(CC))
 						ProcesaCopiaMultievaluada(CC,listaGrammar,tablaCruceElemtos,elementoClave,
-								elementoClavePadre,cGFinal,sons,calculadora,
+								elementoClavePadre,padreReal,cGFinal,sons,calculadora,
 								calculadoraFinal,nombre,_isResource);
 					else
 						tablaCruceElemtos.put(CC, elementoClave);
@@ -772,6 +776,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 			HashMap<CompleteElementType, CompleteElementType> tablaCruceElemtos,
 			CompleteElementType elementoClave,
 			CompleteElementType elementoClavePadre,
+			CompleteElementType elementoClavePadreReal,
 			CompleteGrammar cGFinal,JSONArray sons,
 			HashMap<CompleteGrammar, Integer> calculadora, HashMap<CompleteGrammar,
 			List<CompleteElementType>> calculadoraFinal,
@@ -782,7 +787,7 @@ public class CollectionFHIR_PROCESALIMPIA {
 		
 		List<CompleteElementType> listaMulti=new LinkedList<CompleteElementType>();
 		
-		findList(listaGrammar,cC,listaMulti);
+		findList(listaGrammar,cC,listaMulti,elementoClavePadreReal);
 		
 //		listaMulti.remove(cC);
 		
@@ -841,21 +846,26 @@ public class CollectionFHIR_PROCESALIMPIA {
 
 
 	private static void findList(List<CompleteGrammar> listaGrammar,
-			CompleteElementType cC, List<CompleteElementType> listaMulti) {
+			CompleteElementType cC, List<CompleteElementType> listaMulti, CompleteElementType padreReal) {
 		for (CompleteGrammar completeGrammar : listaGrammar) {
-			findListEL(completeGrammar.getSons(),cC,listaMulti);
+			findListEL(completeGrammar.getSons(),cC,listaMulti,padreReal);
 		}
 	}
 
 
 
 	private static void findListEL(List<CompleteElementType> sons, CompleteElementType cC,
-			List<CompleteElementType> listaMulti) {
+			List<CompleteElementType> listaMulti, CompleteElementType padreReal) {
 		for (CompleteElementType completeElementType : sons) {
-			if (completeElementType.getClassOfIterator()==cC)
-				listaMulti.add(completeElementType);
+			if ((completeElementType.getClassOfIterator()==null&&completeElementType==cC)
+					||completeElementType.getClassOfIterator()==cC)
+				if (padreReal==null)
+					listaMulti.add(completeElementType);
+				else
+					if (completeElementType.getFather()==padreReal)
+						listaMulti.add(completeElementType);
 			
-			findListEL(completeElementType.getSons(), cC, listaMulti);
+			findListEL(completeElementType.getSons(), cC, listaMulti,padreReal);
 		}
 		
 	}
