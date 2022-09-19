@@ -336,11 +336,11 @@ public class CollectionFHIR_PROCESALIMPIA {
 				}
 			
 			
-//			System.out.println("Calculos de Gramatica");
-//			//calculos
-//			for (Entry<CompleteGrammar, Integer> eleme : calculadora.entrySet()) {
-//				System.out.println("->"+eleme.getKey().getNombre()+"=="+eleme.getValue());
-//			}
+			System.out.println("Calculos de Gramatica");
+			//calculos
+			for (Entry<CompleteGrammar, Integer> eleme : calculadora.entrySet()) {
+				System.out.println("->"+eleme.getKey().getNombre()+"=="+eleme.getValue());
+			}
 //			
 //			
 //			
@@ -436,8 +436,13 @@ public class CollectionFHIR_PROCESALIMPIA {
 			sons = (JSONArray) objetolista.get("sons");
 		
 		
+		Object multitype=null;
 		
+		if (objetolista.get("multitype")!=null)
+			multitype = objetolista.get("multitype");
 
+		if (multitype!=null)
+			System.out.println("Error");
 		
 		CompleteElementType elementoClave = null;
 		
@@ -789,9 +794,9 @@ public class CollectionFHIR_PROCESALIMPIA {
 		
 		findList(listaGrammar,cC,listaMulti,elementoClavePadreReal);
 		
-//		listaMulti.remove(cC);
+		listaMulti.remove(cC);
 		
-//		tablaCruceElemtos.put(cC, elementoClave);
+		tablaCruceElemtos.put(cC, elementoClave);
 		
 		for (CompleteElementType completeElementType : listaMulti) {
 			
