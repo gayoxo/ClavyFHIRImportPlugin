@@ -146,9 +146,7 @@ public class CollectionFHIR_CENS_V3 {
 		}
 		
 		
-		
-		
-		//HASTA AQUI SERIA EL PROCESO A CLAVY -> Extraccion Completa. 
+
 		
 		/** 
 		 * Mi teoria es que esto deberia ser la megatransformada con procesado base.

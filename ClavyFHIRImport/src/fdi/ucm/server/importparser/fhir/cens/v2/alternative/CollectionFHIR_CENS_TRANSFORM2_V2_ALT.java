@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Properties;
 
@@ -55,16 +56,31 @@ public class CollectionFHIR_CENS_TRANSFORM2_V2_ALT {
 		HashMap<CompleteElementType, CompleteLinkElementType> ResorvalidValid=
 				new HashMap<CompleteElementType, CompleteLinkElementType>();
 		
+		HashMap<CompleteElementType, CompleteElementType> listaCaudre=new HashMap<CompleteElementType, CompleteElementType>();
+		HashMap<CompleteElementType, CompleteElementType> listaCaudreClaseUnica=new HashMap<CompleteElementType, CompleteElementType>();;
 		
 		for (CompleteGrammar gramatica : c_input.getMetamodelGrammar()) 
 		{
 			String Base=gramatica.getNombre().trim();
 			processHijos(gramatica.getSons(),TablaResources,
-					ResorvalidValid,Base,c_input.getEstructuras());
+					ResorvalidValid,Base,c_input.getEstructuras(),
+					listaCaudre,listaCaudreClaseUnica);
 			
 			
 			
 		}
+		
+		for (Entry<CompleteElementType, CompleteElementType> ori_new : listaCaudre.entrySet()) {
+			CompleteElementType copia = ori_new.getKey();
+			CompleteElementType clasof = listaCaudreClaseUnica.get(ori_new.getValue());
+			
+		if (clasof==null)
+			clasof=copia;
+		
+		copia.setClassOfIterator(clasof);
+		
+		}
+		
 		
 		
 		for (CompleteDocuments docuemnto : c_input.getEstructuras()) {
@@ -288,7 +304,9 @@ public class CollectionFHIR_CENS_TRANSFORM2_V2_ALT {
 
 	private void processHijos(List<CompleteElementType> sons, HashSet<String> tablaResources,
 			HashMap<CompleteElementType, CompleteLinkElementType> resorvalidValid,
-			String baseAcumulada, List<CompleteDocuments> listDocuments) {
+			String baseAcumulada, List<CompleteDocuments> listDocuments,
+			HashMap<CompleteElementType, CompleteElementType> listaCaudre,
+			HashMap<CompleteElementType, CompleteElementType> listaCaudreClaseUnica) {
 		for (CompleteElementType elementoEndpoint : sons) {
 			String Base=baseAcumulada+"/"+elementoEndpoint.getName().trim();
 			if (tablaResources.contains(Base))
@@ -307,6 +325,19 @@ public class CollectionFHIR_CENS_TRANSFORM2_V2_ALT {
 							
 							copia.setShows(elementoEndpoint.getShows());
 							copia.setSons(elementoEndpoint.getSons());
+							
+							
+							CompleteElementType ClassOfIterator = elementoEndpoint.getClassOfIterator();
+							if (ClassOfIterator==null)
+								ClassOfIterator=elementoEndpoint;
+							
+							if (ClassOfIterator==elementoEndpoint)
+								listaCaudreClaseUnica.put(elementoEndpoint, copia);
+
+							
+							listaCaudre.put(copia, ClassOfIterator);
+							
+							
 							
 							for (CompleteElementType hijonuevo : copia.getSons())
 								hijonuevo.setFather(copia);
@@ -365,6 +396,18 @@ public class CollectionFHIR_CENS_TRANSFORM2_V2_ALT {
 					copia.setShows(elementoEndpoint.getShows());
 					copia.setSons(elementoEndpoint.getSons());
 					
+					
+					CompleteElementType ClassOfIterator = elementoEndpoint.getClassOfIterator();
+					if (ClassOfIterator==null)
+						ClassOfIterator=elementoEndpoint;
+					
+					if (ClassOfIterator==elementoEndpoint)
+						listaCaudreClaseUnica.put(elementoEndpoint, copia);
+
+					
+					listaCaudre.put(copia, ClassOfIterator);
+					
+					
 					for (CompleteElementType hijonuevo : copia.getSons())
 						hijonuevo.setFather(copia);
 					
@@ -412,7 +455,8 @@ public class CollectionFHIR_CENS_TRANSFORM2_V2_ALT {
 			}
 			
 			
-			processHijos(elementoEndpoint.getSons(), tablaResources, resorvalidValid, Base,listDocuments);
+			processHijos(elementoEndpoint.getSons(), tablaResources, resorvalidValid,
+					Base,listDocuments,listaCaudre,listaCaudreClaseUnica);
 			
 		}
 		
