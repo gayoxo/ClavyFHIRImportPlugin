@@ -53,6 +53,7 @@
       "resource" : 
       {
         "resourceType" : "Endpoint",
+        "id": "ep-01",
         "status" : "active",
         "connectionType" : {
           "coding": [
