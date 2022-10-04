@@ -53,6 +53,7 @@
       "resource" : 
       {
         "resourceType" : "Endpoint",
+        "id": "ep-01",
         "status" : "active",
         "connectionType" : {
           "coding": [
@@ -958,7 +959,7 @@
         "imagingStudy":[
             
             {
-              "reference": "imagingStudy/is-01"
+              "reference": "ImagingStudy/is-01"
             }
 
         ]
